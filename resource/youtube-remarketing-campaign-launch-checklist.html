@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Remarketing Campaign Launch Checklist | Bora Media</title>
+  <meta name="description" content="A step-by-step checklist to launch high-performing YouTube remarketing campaigns: audiences, exclusions, creative, and campaign setup." />
+  <link rel="canonical" href="https://www.boramedianetwork.com/resources/youtube-remarketing-launch-checklist" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="YouTube Remarketing Campaign Launch Checklist" />
+  <meta property="og:description" content="Everything you need to launch: pixel, segments, exclusions, creatives, and campaign patterns." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.boramedianetwork.com/resources/youtube-remarketing-launch-checklist" />
+  <meta property="og:image" content="https://www.boramedianetwork.com/images/og/youtube-remarketing-checklist.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="YouTube Remarketing Campaign Launch Checklist" />
+  <meta name="twitter:description" content="Everything you need to launch: pixel, segments, exclusions, creatives, and campaign patterns." />
+  <meta name="twitter:image" content="https://www.boramedianetwork.com/images/og/youtube-remarketing-checklist.png" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp" />
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB; --bg:#0C254B;
+      --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+      --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (kept consistent with site) */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;list-style:none;gap:26px}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;position:relative;font-weight:700}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+    nav a:hover::after, nav a[aria-current="page"]::after{width:100%}
+    .has-dd{position:relative}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.10)}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.15)}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink)}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* HERO */
+    .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#071B3A 0%, #0C254B 100%);color:#fff;padding:110px 0 60px}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22}
+    .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px}
+    .hero h1{font-size:clamp(30px,5vw,52px);line-height:1.15;text-align:center;margin:0 auto 12px;max-width:900px;font-weight:900}
+    .lead{text-align:center;color:rgba(255,255,255,.9);max-width:760px;margin:0 auto 22px}
+    .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+    /* PAGE SECTIONS */
+    .section{padding:70px 0}
+    .muted{background:var(--muted)}
+    .title{text-align:center;font-size:clamp(24px,4vw,36px);line-height:1.2;margin-bottom:14px;font-weight:900}
+
+    /* Checklist layout */
+    .layout{display:grid;grid-template-columns:1fr 420px;gap:22px}
+    .card{background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:16px;box-shadow:var(--shadow);padding:18px}
+    .card h3{font-size:20px;margin-bottom:8px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(25,208,201,.12);border:1px solid rgba(25,208,201,.3);font-weight:700;color:#0b4c49}
+    .table{width:100%;border-collapse:separate;border-spacing:0 8px;margin-top:8px}
+    .table th,.table td{padding:12px 12px;background:#fff;border:1px solid rgba(6,26,56,.10)}
+    .table th:first-child,.table td:first-child{border-top-left-radius:12px;border-bottom-left-radius:12px}
+    .table th:last-child,.table td:last-child{border-top-right-radius:12px;border-bottom-right-radius:12px}
+    .hint{font-size:14px;opacity:.8;margin-top:8px}
+    .stack > * + *{margin-top:14px}
+
+    /* Right column */
+    .sticky{position:sticky;top:90px;display:flex;flex-direction:column;gap:14px}
+    .download{display:flex;align-items:center;justify-content:space-between;gap:14px}
+    .download p{color:rgba(6,26,56,.8)}
+    .pdf-wrap{height:720px;border-radius:16px;overflow:hidden;border:1px solid rgba(6,26,56,.10);box-shadow:var(--shadow)}
+    .pdf-wrap iframe{width:100%;height:100%;border:0}
+
+    /* Footer (kept consistent) */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .social{display:flex;gap:12px;margin-top:14px}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+    /* Responsive */
+    @media (max-width:980px){ .layout{grid-template-columns:1fr} .sticky{position:static} .pdf-wrap{height:560px} }
+    @media (max-width:860px){ nav{display:none}.hamburger{display:block} .f-cols{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:560px){ .f-cols{grid-template-columns:1fr} .f-bottom{flex-direction:column;text-align:center} }
+  </style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources" aria-current="page">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources" aria-current="page">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" role="banner">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob2" aria-hidden="true"></div>
+    <div class="container">
+      <h1>YouTube Remarketing Campaign Launch Checklist</h1>
+      <p class="lead">Launch confidently with the exact segments, exclusions, creatives, and campaign patterns we use.</p>
+      <div class="cta-row">
+        <!-- Update the href to the final public URL of your PDF -->
+        <a class="btn" href="/downloads/youtube-remarketing-checklist.pdf" download>Download the Checklist</a>
+        <a class="btn alt" href="#checklist">Scroll the checklist</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <main class="section" id="checklist">
+    <div class="container layout">
+      <!-- Left: structured HTML checklist -->
+      <div class="stack">
+
+        <div class="card">
+          <h3>1) Tracking foundations</h3>
+          <p class="hint">Confirm measurement is live before building audiences.</p>
+          <ul>
+            <li>Google Ads (or GA4) tag / pixel installed and firing <span class="pill">required</span>.</li>
+          </ul>
+          <p class="hint">Source: tracking prerequisite in the checklist. :contentReference[oaicite:2]{index=2}</p>
+        </div>
+
+        <div class="card">
+          <h3>2) Audience segments (build across 30/90/180 days)</h3>
+          <table class="table" aria-label="Remarketing audiences">
+            <thead>
+              <tr><th>Segment</th><th>Timeframe</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>All website visitors</td><td>30, 90, 180 days</td><td>Anyone that has visited your website.</td></tr>
+              <tr><td>Pricing / demo / trial / case-study bouncers</td><td>30 days</td><td>Viewed high-intent pages and left.</td></tr>
+              <tr><td>All YouTube video viewers</td><td>30, 90, 180 days</td><td>Anyone that watched 50–100% of your videos.</td></tr>
+              <tr><td>All YouTube subscribers</td><td>30, 90, 180 days</td><td>Anyone subscribed to your channel.</td></tr>
+            </tbody>
+          </table>
+          <p class="hint">Build all cohorts for coverage and testing. :contentReference[oaicite:3]{index=3}</p>
+        </div>
+
+        <div class="card">
+          <h3>3) Exclusions (apply account-wide)</h3>
+          <table class="table" aria-label="Exclusions">
+            <thead>
+              <tr><th>Exclusion</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Age ranges &lt; 25</td><td>Exclude users under 25 if not in your ICP.</td></tr>
+              <tr><td>All thank-you page visits</td><td>Exclude users who already submitted a form.</td></tr>
+              <tr><td>Existing customers</td><td>Exclude current customers/contacts.</td></tr>
+              <tr><td>Music channels</td><td>Exclude YouTube music inventory.</td></tr>
+              <tr><td>Kids channels</td><td>Exclude children’s channels.</td></tr>
+              <tr><td>Foreign-language channels</td><td>Exclude channels outside your language.</td></tr>
+            </tbody>
+          </table>
+          <p class="hint">Keeps budget focused on net-new, relevant users. :contentReference[oaicite:4]{index=4}</p>
+        </div>
+
+        <div class="card">
+          <h3>4) Creative set (map assets to cohorts)</h3>
+          <table class="table" aria-label="Creative by cohort">
+            <thead>
+              <tr><th>Asset theme</th><th>Timeframe</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Product marketing</td><td>30, 90 days</td><td>Show capabilities and outcomes.</td></tr>
+              <tr><td>Thought leadership</td><td>90, 180 days</td><td>Teach and build authority.</td></tr>
+              <tr><td>Social proof</td><td>30, 90 days</td><td>Results, testimonials, case studies.</td></tr>
+              <tr><td>Offers</td><td>30, 90 days</td><td>Demo, trial, or other conversion offer.</td></tr>
+            </tbody>
+          </table>
+          <p class="hint">Pair fresher cohorts with harder CTAs; older cohorts with value content. :contentReference[oaicite:5]{index=5}</p>
+        </div>
+
+        <div class="card">
+          <h3>5) Campaign setup</h3>
+          <ul class="stack">
+            <li>Disable <strong>Targeting expansion</strong> to keep cohorts pure. <span class="pill">important</span></li>
+            <li>Name patterns for clarity:
+              <ul>
+                <li><code>{Location} | {Offer} | Remarketing (30D) | {Ad Type} | {Objective}</code></li>
+                <li><code>{Location} | {Offer} | Remarketing (90D) | {Ad Type} | {Objective}</code></li>
+                <li><code>{Location} | {Offer} | Remarketing (180D) | {Ad Type} | {Objective}</code></li>
+                <li><code>{Location} | {Offer} | {Offer Name Bouncers} (30D) | {Ad Type} | {Objective}</code></li>
+              </ul>
+            </li>
+            <li>Create all applicable remarketing campaigns before launch.</li>
+          </ul>
+          <p class="hint">Keeps reporting tidy and aligned to intent &amp; recency. :contentReference[oaicite:6]{index=6}</p>
+        </div>
+
+      </div>
+
+      <!-- Right: download + embedded PDF -->
+      <aside class="sticky" aria-label="Download and preview">
+        <div class="card download">
+          <div>
+            <h3 style="margin:0 0 4px">Download</h3>
+            <p style="margin:0">Prefer a printable version? Grab the PDF.</p>
+          </div>
+          <!-- Update the href to your hosted PDF -->
+          <a class="btn" href="/downloads/youtube-remarketing-checklist.pdf" download>Download the Checklist</a>
+        </div>
+
+        <!-- Inline PDF preview (optional; shows the attached file when hosted) -->
+        <div class="pdf-wrap" aria-label="Checklist preview">
+          <!-- Replace src with your final public PDF URL -->
+          <iframe src="/downloads/youtube-remarketing-checklist.pdf#view=FitH" title="YouTube Remarketing Checklist PDF"></iframe>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Need help standing this up?</h2>
+      <p>We’ll set up audiences, exclusions, and creative testing, then tune budget to the cohorts that convert.</p>
+      <a class="btn" href="/contact">Book a Strategy Call</a>
+    </div>
+  </section>
+
+  <!-- Footer (kept consistent with site) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.youtube.com" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+            <a href="https://x.com" aria-label="X"><svg viewBox="0 0 24 24" fill="none"><path d="M18 3h3l-7.5 8.6L22 21h-6.6L9.8 14l-4.6 7H2l8-9.7L2.8 3h6.7l4.3 5.9L18 3Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="f-links">
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/guides">Guides</a></li>
+            <li><a href="/webinars">Webinars</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TechArticle",
+    "headline":"YouTube Remarketing Campaign Launch Checklist",
+    "about":["YouTube Ads","Remarketing","Advertising"],
+    "publisher":{"@type":"Organization","name":"Bora Media","logo":{"@type":"ImageObject","url":"https://www.boramedianetwork.com/images/bora-logo.webp"}},
+    "image":"https://www.boramedianetwork.com/images/og/youtube-remarketing-checklist.png",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.boramedianetwork.com/resources/youtube-remarketing-launch-checklist"}
+  }
+  </script>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav
+    const burger=document.getElementById('hamburger');
+    const panel=document.getElementById('mobilePanel');
+    burger?.addEventListener('click',()=>{
+      const open=panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded',String(open));
+      document.body.style.overflow=open?'hidden':'';
+    });
+  </script>
+</body>
+</html>

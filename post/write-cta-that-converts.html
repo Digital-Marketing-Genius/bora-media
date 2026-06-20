@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Write CTAs That Convert: 9 Patterns that Win Always | Bora Media</title>
+  <meta name="description" content="Steal 9 proven CTA patterns—with real brand examples—to lift clicks, sign-ups, and sales. Clear guidance, swipeable ideas, and practical tips you can ship today." />
+  <link rel="canonical" href="https://www.boramedianetwork.com/blog/write-ctas-that-convert" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Write CTAs That Convert: 9 Patterns that Win Always" />
+  <meta property="og:description" content="Steal 9 proven CTA patterns—with real brand examples—to lift clicks, sign-ups, and sales." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.boramedianetwork.com/blog/write-ctas-that-convert" />
+  <meta property="og:image" content="https://www.boramedianetwork.com/images/og/ctas-that-convert.jpg" />
+  <meta property="article:section" content="Copywriting" />
+  <meta property="article:tag" content="Copywriting, CRO, UX Writing, Google Ads" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Write CTAs That Convert: 9 Patterns that Win Always" />
+  <meta name="twitter:description" content="Steal 9 proven CTA patterns—with real brand examples—to lift clicks, sign-ups, and sales." />
+  <meta name="twitter:image" content="https://www.boramedianetwork.com/images/og/ctas-that-convert.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp" />
+
+  <!-- Helpful -->
+  <meta name="theme-color" content="#071B3A" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+      --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+      --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{overflow-x:hidden} /* prevent accidental horizontal scroll on mobile */
+    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (consistent) */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;gap:26px;list-style:none}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+    nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+    .has-dd{position:relative}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.1)}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.15)}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:96px 0 64px;position:relative;overflow:hidden}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22;animation:float 16s infinite ease-in-out}
+    .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin-bottom:8px;font-weight:900}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;color:rgba(255,255,255,.85);font-weight:600}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25)}
+    .cta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+
+    /* Layout */
+    .content-wrap{display:grid;grid-template-columns:260px 1fr 320px;gap:22px;padding:40px 0}
+    .toc{position:sticky;top:84px;background:var(--muted);border-radius:14px;padding:14px}
+    .toc h4{font-weight:900;margin-bottom:8px}
+    .toc a{display:block;text-decoration:none;color:var(--ink);padding:8px;border-radius:10px;font-weight:600}
+    .toc a:hover,.toc a.active{background:#fff;border:1px solid rgba(6,26,56,.12)}
+    article h2{font-size:clamp(22px,3vw,28px);line-height:1.25;margin:26px 0 8px;font-weight:900}
+    article h3{font-size:clamp(18px,2.5vw,22px);margin:18px 0 6px;font-weight:900}
+    article p{margin:14px 0}
+    .k{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;background:rgba(6,26,56,.06);padding:2px 6px;border-radius:6px}
+    ul{margin:10px 0 10px 18px}
+    .examples{background:var(--muted);border-radius:14px;padding:14px}
+    .protip{background:rgba(25,208,201,.12);border:1px dashed rgba(25,208,201,.5);padding:12px;border-radius:12px;margin:16px 0}
+
+    /* Share row */
+    .share{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+    .share a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(6,26,56,.16);padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:800}
+
+    /* Right rail card */
+    .rail{position:sticky;top:84px}
+    .author{background:var(--muted);border-radius:14px;padding:16px}
+    .author .row{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+    .author img{width:42px;height:42px;border-radius:50%}
+    .promo{background:#071B3A;color:#fff;border-radius:14px;padding:16px;margin-top:14px}
+    .promo p{color:rgba(255,255,255,.88)}
+    .promo .btn{margin-top:10px}
+
+    /* Related */
+    .related{background:var(--muted);padding:60px 0}
+    .title{text-align:center;font-weight:900;font-size:clamp(24px,4vw,34px);margin-bottom:8px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .card{background:var(--card);color:#fff;border-radius:16px;padding:16px;text-decoration:none;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+    .tag{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:#8AF1EC;font-weight:800}
+    .card h3{margin-top:8px;font-size:20px;line-height:1.3}
+    .read{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:800;border:1px solid rgba(255,255,255,.22);padding:8px 10px;border-radius:10px}
+
+    /* Final CTA + Footer (consistent) */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .social{display:flex;gap:12px;margin-top:14px}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+    /* Responsive tweaks — MOBILE POLISH ONLY */
+    @media (max-width:1100px){
+      .content-wrap{grid-template-columns:1fr;}
+      .rail{position:static}
+      .toc{position:static;order:-1;margin-bottom:10px}
+    }
+    @media (max-width:860px){
+      nav{display:none}
+      .hamburger{display:block}
+      .grid{grid-template-columns:1fr 1fr}
+      .container{padding:0 22px}          /* more breathing room on tablets/large phones */
+      .hero{padding:86px 0 54px}          /* slightly tighter but safe */
+      .content-wrap{padding:30px 0}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      .f-cols{grid-template-columns:1fr}
+      .f-bottom{flex-direction:column;text-align:center}
+      .container{padding:0 22px}          /* extra side padding on small phones */
+      .hero{padding:80px 0 46px}
+      .content-wrap{padding:26px 0}
+      .share a{white-space:nowrap}        /* keep share chips tidy */
+    }
+  </style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob2" aria-hidden="true"></div>
+    <div class="container">
+      <h1>Write CTAs That Convert: 9 Patterns that Win Always</h1>
+      <div class="meta">
+        <span class="badge">Copywriting</span>
+        <span class="badge">CRO</span>
+        <span class="badge">UX Writing</span>
+        <span>•</span>
+        <span>10 min read</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="/contact">Work With Us</a>
+        <a class="btn alt" href="/resources">Free Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <main class="container content-wrap" id="content">
+    <!-- TOC -->
+    <aside class="toc" aria-label="Table of contents">
+      <h4>Table of Contents</h4>
+      <nav>
+        <a href="#why" class="toc-link">Why CTAs matter</a>
+        <a href="#patterns" class="toc-link">The 9 winning patterns</a>
+        <a href="#placement" class="toc-link">Placement & friction</a>
+        <a href="#testing" class="toc-link">Testing your CTAs</a>
+        <a href="#wrap" class="toc-link">To sum up</a>
+      </nav>
+      <div class="share" aria-label="Share">
+        <a href="https://twitter.com/intent/tweet?text=Write%20CTAs%20That%20Convert&url=https://www.boramedianetwork.com/blog/write-ctas-that-convert">Share on X</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.boramedianetwork.com/blog/write-ctas-that-convert">Share on LinkedIn</a>
+        <a href="mailto:?subject=Write CTAs That Convert&body=Great read: https://www.boramedianetwork.com/blog/write-ctas-that-convert">Email</a>
+      </div>
+    </aside>
+
+    <!-- Article -->
+    <article itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="headline" content="Write CTAs That Convert: 9 Patterns that Win Always"/>
+      <meta itemprop="author" content="Oluwatayo Alofun"/>
+      <meta itemprop="datePublished" content="2025-09-11"/>
+      <meta itemprop="dateModified" content="2025-09-11"/>
+      <meta itemprop="image" content="https://www.boramedianetwork.com/images/og/ctas-that-convert.jpg"/>
+
+      <!-- Intro split into 3 paragraphs -->
+      <p id="why">Your call-to-action is the <em>hinge</em> of conversion. Great traffic, lovely design, strong copy—none of it pays off if the CTA doesn’t nudge action. The good news? You don’t need magic words. You need reliable patterns that map to human motivation and reduce friction.</p>
+      <p id="why"><strong>What’s a CTA?</strong> A call-to-action (CTA) is the clickable nudge that turns interest into action—buying, signing up, booking a call, or downloading a resource. It’s the hinge between “looks good” and “we got the conversion,” guiding users to the exact next step you want them to take.</p>
+      <p><strong>Commonly used CTAs:</strong> You’ve seen these everywhere—“Buy Now,” “Learn More,” “Subscribe Today,” “Download Your Free Trial,” “Register for Our Webinar,” “Join Our Mailing List,” and “Contact Us Today.” Most CTAs take one of two forms: a button or a linked line of text. The magic happens when wording, placement, and surrounding context align with user intent.</p>
+      <p><strong>Key characteristics of a good CTA:</strong> It uses power words and strong command verbs; aligns with the platform and context; sparks curiosity without being vague; shows benefits and, when possible, proof; and visually grabs attention. Better CTAs reduce friction and clarify value so the “click” feels like the obvious choice.</p>
+
+      <h2 id="patterns">The 9 winning CTA patterns (with brand-style examples)</h2>
+
+      <h3>1) Value-First CTA</h3>
+      <p>Lead with the result the user gets immediately after clicking. This shifts attention from your internal action (“Submit”) to their outcome (“Get My Report”), which reduces perceived effort. Pair it with nearby benefit copy so the promise is unmistakable.</p>
+      <div class="examples">
+        <p><strong>Examples:</strong></p>
+        <ul>
+          <li>SaaS dashboard: <span class="k">Start Free Trial</span> → “Get My First Insights”</li>
+          <li>Finance app: <span class="k">Create Account</span> → “Track My Spend”</li>
+          <li>Analytics tool: “See My Dashboard”</li>
+        </ul>
+      </div>
+
+      <h3>2) Specific Next-Step CTA</h3>
+      <p>Tell users exactly what happens next to lower uncertainty and boost momentum. Specificity (“Pick a Time”) outperforms generic (“Request Demo”) because it sets expectations and feels faster. This is especially effective on high-intent pages.</p>
+      <div class="examples">
+        <ul>
+          <li>Streaming app: “Watch the First Episode”</li>
+          <li>B2B demo: “Pick a Time”</li>
+          <li>Delivery app: “See Restaurants Near Me”</li>
+        </ul>
+      </div>
+
+      <h3>3) Social Proof CTA</h3>
+      <p>Anchor the button with credibility—ratings, counts, or known logos—to remove risk. When users see peers or authorities validating your offer, the cost of clicking feels lower. Keep proof tight and within the immediate button vicinity.</p>
+      <div class="examples">
+        <ul>
+          <li>“Join 12,000+ marketers” + <span class="k">Get the Playbook</span></li>
+          <li>“Rated 4.8/5 on G2” + <span class="k">Compare Plans</span></li>
+          <li>Logo bar above button + <span class="k">Start My Trial</span></li>
+        </ul>
+      </div>
+
+      <h3>4) Time/Scarcity CTA</h3>
+      <p>Real scarcity focuses attention and increases readiness to act. Use dates, remaining capacity, or expiring bonuses—but only if true, or you erode trust. Pair with a clear benefit to avoid feeling pushy.</p>
+      <div class="examples">
+        <ul>
+          <li>Event: “Save My Seat — 32 Left”</li>
+          <li>Bootcamp: “Apply by Friday”</li>
+          <li>E-commerce: “Claim 10% Today”</li>
+        </ul>
+      </div>
+
+      <h3>5) Risk-Reversal CTA</h3>
+      <p>Offset the biggest mental objection right at the point of action. Guarantees, trials, and “no card required” details reduce perceived downside so users feel safe to proceed. This is powerful for subscription or higher-commitment actions.</p>
+      <div class="examples">
+        <ul>
+          <li>SaaS: <span class="k">Start Free Trial</span> + “No card required”</li>
+          <li>Subscription: <span class="k">Try It Free</span> + “Cancel anytime”</li>
+          <li>Agency: <span class="k">Book a Strategy Call</span> + “No obligation”</li>
+        </ul>
+      </div>
+
+      <h3>6) Curiosity Teaser CTA</h3>
+      <p>Tease a meaningful reveal—data, savings, rankings—so the click promises instant insight. Curiosity works best when the outcome is personally relevant and quick to consume. Avoid vague teasing; say what will be revealed.</p>
+      <div class="examples">
+        <ul>
+          <li>SEO tool: “Reveal My Top Keywords”</li>
+          <li>Pricing calculator: “Calculate My Savings”</li>
+          <li>Heatmaps: “See Where Users Click”</li>
+        </ul>
+      </div>
+
+      <h3>7) Personalized/Contextual CTA</h3>
+      <p>Tailor the button to the user’s segment, device, or context to feel hyper-relevant. Even simple switches—industry, geo, or role—can improve clicks because the CTA mirrors their reality. Personalization works best when the page content also aligns.</p>
+      <div class="examples">
+        <ul>
+          <li>Location-aware: “Find Services Near Calgary”</li>
+          <li>Industry landing: “Get the SaaS Template”</li>
+          <li>Device-aware: “Text the App to My Phone”</li>
+        </ul>
+      </div>
+
+      <h3>8) Two-Step CTA (Micro-commitments)</h3>
+      <p>Ask for a low-friction micro-action before the bigger ask. This builds momentum and screens for intent, improving completion rates downstream. Make step one genuinely easy and instantly rewarding.</p>
+      <div class="examples">
+        <ul>
+          <li>Step 1: “Check Availability” → Step 2: dates &amp; details</li>
+          <li>Step 1: “See If You Qualify” → Step 2: form</li>
+          <li>Step 1: “Preview Template” → Step 2: email capture</li>
+        </ul>
+      </div>
+
+      <h3>9) Command + Benefit Combo</h3>
+      <p>Combine a clear imperative with the payoff so the user gets both direction and reward. This classic direct-response approach works across channels because it reduces ambiguity. Keep it short and punchy.</p>
+      <div class="examples">
+        <ul>
+          <li>“Download the Guide — Grow Organic Traffic”</li>
+          <li>“Start Free Trial — Forecast Profitability”</li>
+          <li>“Book a Call — Fix Wasted Ad Spend”</li>
+        </ul>
+      </div>
+
+      <div class="protip"><strong>Pro tip:</strong> Keep buttons scannable. Aim for 2–4 words in the button, with supporting copy (risk, proof, time) within 40px of the CTA.</div>
+
+      <h2 id="placement">Placement, design, and friction</h2>
+      <ul>
+        <li><strong>Above the fold</strong> for primary action; repeat at natural “decision” points.</li>
+        <li><strong>Contrast & size:</strong> Your primary CTA should be visually dominant and consistent.</li>
+        <li><strong>Whitespace:</strong> Buttons need breathing room—clutter kills clicks.</li>
+        <li><strong>Mobile first:</strong> Big tap targets (min ~44px height), sticky footer CTA on long pages.</li>
+        <li><strong>One primary action:</strong> Secondary links look secondary (outline/ghost).</li>
+      </ul>
+
+      <h2 id="testing">How to test CTAs (fast)</h2>
+      <ul>
+        <li><strong>Message:</strong> Run head-to-head tests between value-first (“Get My Audit”) vs. curiosity (“See Your Gaps”) vs. risk-reversal (“Try It Free”). Different offers unlock different motivations, so isolate one variable at a time. Track not just CTR but completion of the next meaningful step.</li>
+        <li><strong>Microcopy:</strong> Test reassurance lines right under the button—“No credit card required,” “Takes 2 minutes,” or “Cancel anytime.” These lines directly counter common objections and often lift conversion without changing the core CTA. Keep them short and specific.</li>
+        <li><strong>Location:</strong> Try inline CTAs vs. sticky bars vs. modal prompts and measure engagement by scroll depth. Some journeys convert best when the CTA appears <em>after</em> proof; others need it immediately. Use heatmaps and click maps to see where attention concentrates.</li>
+        <li><strong>Audience:</strong> Personalize CTAs by segment (industry, role, lifecycle stage) and compare lift. If the rest of the page is segmented, a generic CTA becomes the weakest link. Maintain naming conventions so reporting is clean across variants.</li>
+        <li><strong>Success metric:</strong> Define success beyond button clicks—trial activations, qualified leads, or paid conversions. A flashy CTR can hide low-quality intent, so optimize for the highest-value completion you can measure. If attribution is messy, use consistent UTM naming and server-side events where possible.</li>
+      </ul>
+
+      <h2 id="wrap">To sum up</h2>
+      <p>CTAs convert when they are clear, specific, and low-friction. Use these patterns as your toolbox, pair them with thoughtful placement, and iterate with real data. Your future self (and your pipeline) will thank you.</p>
+    </article>
+
+    <!-- Right rail -->
+    <aside class="rail" aria-label="Author and CTA">
+      <div class="author">
+        <div class="row">
+          <img src="/images/author.webp" alt="Author avatar">
+          <div>
+            <strong>Oluwatayo Alofun</strong><br>
+            <span style="opacity:.7">Paid Media Strategist</span>
+          </div>
+        </div>
+        <p>Join 5,000+ marketers leveling up with our resources on copy, CRO, and paid media.</p>
+      </div>
+      <div class="promo">
+        <h4>Want higher CTRs this week?</h4>
+        <p>We’ll audit your top journeys and ship testable CTA variants in 7 days.</p>
+        <button class="btn" onclick="location.href='/contact'">Book a Strategy Call</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Related -->
+  <section class="related" aria-labelledby="relTitle">
+    <div class="container">
+      <h2 class="title" id="relTitle">Other articles you may like</h2>
+      <div class="grid">
+        <a class="card" href="/blog/negative-keywords-playbook">
+          <span class="tag">Google Ads</span>
+          <h3>The Negative Keywords Playbook: Save Budget, Keep Intent</h3>
+          <span class="read">Read article →</span>
+        </a>
+        <a class="card" href="/blog/google-ads-naming-conventions">
+          <span class="tag">Process</span>
+          <h3>Naming Conventions That Make Google Ads Scalable</h3>
+          <span class="read">Read article →</span>
+        </a>
+        <a class="card" href="/blog/landing-page-speed-cvr">
+          <span class="tag">Design &amp; CRO</span>
+          <h3>Designing for Speed: How Faster Pages Lift Conversion Rate</h3>
+          <span class="read">Read article →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Ready to turn more clicks into customers?</h2>
+      <p>We’ll refine your CTA strategy, reduce friction, and run experiments that actually move revenue.</p>
+      <a class="btn" href="/contact">Schedule Your Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer (consistent) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.youtube.com" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul class="f-links">
+            <li><a href="/blog/category/copywriting">Copywriting</a></li>
+            <li><a href="/blog/category/google-ads">Google Ads</a></li>
+            <li><a href="/blog/category/linkedin-ads">LinkedIn Ads</a></li>
+            <li><a href="/blog/category/abm">ABM</a></li>
+            <li><a href="/blog/category/design">Design</a></li>
+            <li><a href="/blog/category/branding">Branding</a></li>
+            <li><a href="/blog/category/meta-ads">Meta Ads</a></li>
+            <li><a href="/blog/category/google-analytics">Google Analytics</a></li>
+            <li><a href="/blog/category/google-tag-manager">Google Tag Manager</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Write CTAs That Convert: 9 Patterns that Win Always",
+    "author":{"@type":"Person","name":"Oluwatayo Alofun"},
+    "publisher":{"@type":"Organization","name":"Bora Media","logo":{"@type":"ImageObject","url":"https://www.boramedianetwork.com/images/bora-logo.webp"}},
+    "image":"https://www.boramedianetwork.com/images/og/ctas-that-convert.jpg",
+    "datePublished":"2025-09-11",
+    "dateModified":"2025-09-11",
+    "articleSection":"Copywriting",
+    "keywords":"Copywriting,CRO,UX Writing,CTA,Google Ads",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.boramedianetwork.com/blog/write-ctas-that-convert"}
+  }
+  </script>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{ b.style.transform=''; b.style.opacity=''; }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    // TOC highlight
+    const links = document.querySelectorAll('.toc-link');
+    const headings = [...links].map(a => document.querySelector(a.getAttribute('href')));
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        const id = e.target.getAttribute('id');
+        const link = document.querySelector(`.toc a[href="#${id}"]`);
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.remove('active'));
+          link?.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
+    headings.forEach(h=>h && obs.observe(h));
+  </script>
+</body>
+</html>

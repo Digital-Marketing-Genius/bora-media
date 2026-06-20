@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LinkedIn Remarketing Campaign Launch Checklist | Bora Media</title>
+  <meta name="description" content="Step-by-step LinkedIn remarketing checklist: audiences, exclusions, creative by cohort, campaign naming, and QA so you can launch with confidence." />
+  <link rel="canonical" href="https://www.boramedianetwork.com/resources/linkedin-remarketing-checklist" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="LinkedIn Remarketing Campaign Launch Checklist" />
+  <meta property="og:description" content="Step-by-step LinkedIn remarketing checklist you can download or follow on-page." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.boramedianetwork.com/resources/linkedin-remarketing-checklist" />
+  <meta property="og:image" content="https://www.boramedianetwork.com/images/og/linkedin-remarketing.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LinkedIn Remarketing Campaign Launch Checklist" />
+  <meta name="twitter:description" content="Step-by-step LinkedIn remarketing checklist you can download or follow on-page." />
+  <meta name="twitter:image" content="https://www.boramedianetwork.com/images/og/linkedin-remarketing.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp" />
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+      --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+      --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (consistent with site) */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;gap:26px;list-style:none}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+    nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+    .has-dd{position:relative}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.1)}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:12px 18px;font-weight:800;cursor:pointer}
+    .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.15)}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:110px 0 70px;position:relative;overflow:hidden}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22;animation:float 16s infinite ease-in-out}
+    .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+    .hero h1{font-size:clamp(30px,5vw,52px);line-height:1.1;margin:0 auto 12px;max-width:980px;text-align:center;font-weight:900}
+    .hero p.lead{text-align:center;color:rgba(255,255,255,.9);font-size:clamp(16px,2.2vw,20px);max-width:760px;margin:0 auto 22px}
+    .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+    /* Page layout */
+    .section{padding:70px 0}
+    .muted{background:var(--muted)}
+
+    .grid-2{display:grid;grid-template-columns:1.3fr .7fr;gap:22px}
+    .panel{background:#fff;border:1px solid rgba(6,26,56,.08);border-radius:16px;box-shadow:var(--shadow)}
+    .panel h3{font-size:20px;padding:16px;border-bottom:1px solid rgba(6,26,56,.08)}
+    .panel .body{padding:16px}
+
+    .checklist{display:grid;gap:14px}
+    .item{background:#fff;border:1px solid rgba(6,26,56,.08);border-radius:14px;padding:16px}
+    .item h4{font-size:18px;margin-bottom:8px}
+    .sub{margin:10px 0 0 18px}
+
+    .table{width:100%;border-collapse:separate;border-spacing:0 10px}
+    .table th,.table td{padding:12px 14px;background:#fff;border:1px solid rgba(6,26,56,.08)}
+    .table th:first-child,.table td:first-child{border-top-left-radius:12px;border-bottom-left-radius:12px}
+    .table th:last-child,.table td:last-child{border-top-right-radius:12px;border-bottom-right-radius:12px}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(25,208,201,.12);border:1px solid rgba(25,208,201,.35);font-weight:700;color:#0b5b58;font-size:13px}
+
+    .protip{background:rgba(25,208,201,.12);border:1px dashed rgba(25,208,201,.5);padding:14px;border-radius:12px;margin-top:12px}
+
+    /* Related (matches pattern) */
+    .related{background:var(--muted);padding:70px 0}
+    .title{text-align:center;font-weight:900;font-size:clamp(24px,4vw,34px);margin-bottom:8px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .card{background:var(--card);color:#fff;border-radius:16px;padding:16px;text-decoration:none;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+    .card .small{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:#8AF1EC;font-weight:800}
+    .card h4{margin-top:8px;font-size:20px;line-height:1.3}
+    .read{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:800;border:1px solid rgba(255,255,255,.22);padding:8px 10px;border-radius:10px}
+
+    /* Footer (consistent) */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .social{display:flex;gap:12px;margin-top:14px}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+    /* Responsive */
+    @media (max-width:980px){ .grid-2{grid-template-columns:1fr} }
+    @media (max-width:860px){ nav{display:none}.hamburger{display:block}.cards{grid-template-columns:1fr 1fr} }
+    @media (max-width:560px){ .cards{grid-template-columns:1fr} .f-cols{grid-template-columns:1fr} .f-bottom{flex-direction:column;text-align:center} }
+  </style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" role="banner">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob2" aria-hidden="true"></div>
+    <div class="container">
+      <h1>LinkedIn Remarketing Campaign Launch Checklist</h1>
+      <p class="lead">Launch LinkedIn remarketing with a clean setup—cohorted audiences, smart exclusions, right-fit creative, and dependable QA.</p>
+      <div class="cta-row">
+        <!-- Update the href to your hosted file path -->
+        <a class="btn" href="/resources/linkedIn-remarketing-checklist.pdf" download>Download the Checklist</a>
+        <a class="btn alt" href="#checklist">Scroll the Checklist</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <main class="section muted" id="checklist">
+    <div class="container grid-2">
+      <!-- Left: written checklist -->
+      <div class="checklist">
+        <!-- 1 -->
+        <div class="item">
+          <h4>1) Verify tracking</h4>
+          <ul class="sub">
+            <li>LinkedIn Insight Tag installed on all pages (base + event pixels).</li>
+            <li>Conversion events mapped (e.g., Lead, Download, Purchase) and test-fired.</li>
+            <li>UTM parameters standardized for reporting (<code>utm_source=linkedin</code>, etc.).</li>
+          </ul>
+        </div>
+
+        <!-- 2 Audiences -->
+        <div class="item">
+          <h4>2) Build remarketing audiences</h4>
+          <p>Create cohorts across available windows (30/60/90/180 days) so you can match intent with message.</p>
+          <table class="table" aria-label="Audiences table">
+            <thead>
+              <tr><th>Segment</th><th>Timeframe</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>All website visitors</td><td>30, 60, 90, 180</td><td>Anyone who visited your site.</td></tr>
+              <tr><td>Pricing / demo / trial / case-study viewers (bouncers)</td><td>30</td><td>High-intent landers who didn’t convert.</td></tr>
+              <tr><td>Lead Gen Form openers</td><td>30, 90</td><td>Opened a LinkedIn native form but didn’t submit.</td></tr>
+              <tr><td>Lead Gen Form submitters</td><td>30, 90</td><td>Submitted a native form (for nurturing/exclusion).</td></tr>
+              <tr><td>Video viewers (25%, 50%, 75%, 97%)</td><td>30, 90</td><td>Engaged with your video ads.</td></tr>
+              <tr><td>Company page engagers / ad engagers</td><td>90, 180</td><td>People who interacted with your company content.</td></tr>
+              <tr><td>Event registrants/attendees (if used)</td><td>90</td><td>Warm audience from LinkedIn Events.</td></tr>
+            </tbody>
+          </table>
+          <div class="protip"><strong>Pro tip:</strong> Mirror these cohorts in your CRM/CDP when possible—budget and bids can then follow value by cohort.</div>
+        </div>
+
+        <!-- 3 Exclusions -->
+        <div class="item">
+          <h4>3) Set exclusions</h4>
+          <table class="table" aria-label="Exclusions table">
+            <thead><tr><th>Exclusion</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>All “thank you” page visits</td><td>Block recent converters from seeing the same offer.</td></tr>
+              <tr><td>Existing customers (CRM list)</td><td>Prevent paid spend on active customers unless upselling.</td></tr>
+              <tr><td>Employees</td><td>Upload company domain list to exclude internal traffic.</td></tr>
+              <tr><td>Competitors / job seekers</td><td>Company &amp; job title filters to remove poor-fit clicks.</td></tr>
+              <tr><td>Past unsubscribes / hard bounces</td><td>Respect compliance and avoid wasted impressions.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 4 Creative -->
+        <div class="item">
+          <h4>4) Create ads by cohort</h4>
+          <table class="table" aria-label="Creative cohorts">
+            <thead><tr><th>Asset</th><th>Timeframe</th><th>Purpose</th></tr></thead>
+            <tbody>
+              <tr><td>Product Marketing</td><td>30, 90</td><td>Demonstrate capabilities tied to buyer pains.</td></tr>
+              <tr><td>Thought Leadership</td><td>90, 180</td><td>Teach and build authority; move mid-funnel.</td></tr>
+              <tr><td>Social Proof</td><td>30, 90</td><td>Case studies, reviews, stats—reduce risk.</td></tr>
+              <tr><td>Offers</td><td>30, 90</td><td>Trials, demos, calculators, guides—clear CTA.</td></tr>
+            </tbody>
+          </table>
+          <ul class="sub">
+            <li>Formats: Single Image, Video, Document, Carousel, Conversation/Message Ads (as appropriate).</li>
+            <li>UTMs baked into all final URLs; hero metric aligned to objective (Leads vs. Website conversions).</li>
+          </ul>
+        </div>
+
+        <!-- 5 Campaigns -->
+        <div class="item">
+          <h4>5) Build campaigns</h4>
+          <ul class="sub">
+            <li>Separate campaigns for each cohort window (30D / 90D / 180D) and <em>Offer Bouncers (30D)</em>.</li>
+            <li>Objectives: <strong>Website Conversions</strong> or <strong>Lead Generation</strong> (native forms).</li>
+            <li>Locations &amp; languages scoped; Frequency caps appropriate for spend.</li>
+            <li><strong>Audience expansion OFF</strong> for remarketing.</li>
+            <li>Placements: Start with LinkedIn only; test Audience Network after baseline established.</li>
+          </ul>
+          <div class="protip"><strong>Naming convention:</strong> <code>{Location} | {Offer} | Remarketing (30D/90D/180D) | {Format} | {Objective}</code></div>
+        </div>
+
+        <!-- 6 QA -->
+        <div class="item">
+          <h4>6) QA before launch</h4>
+          <ul class="sub">
+            <li>Insight Tag &amp; events verified (Tag Assistant / real-time conversions).</li>
+            <li>Budgets split by value (example: 40% to 30D, 35% to 90D, 25% to 180D).</li>
+            <li>Ad previews reviewed across devices; links &amp; UTMs tested.</li>
+            <li>Conversion goal mapped to the right event; attribution window confirmed.</li>
+            <li>Reporting view ready (dashboard or Looker Studio) with cohort filters.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right: compact side panels -->
+      <aside class="stack">
+        <div class="panel">
+          <h3>Quick facts</h3>
+          <div class="body">
+            <p class="tag">Remarketing</p>
+            <p style="margin-top:10px">Warm audiences deserve specific messages. Pair campaign windows with creative intent and keep expansion off until you’ve hit efficiency.</p>
+          </div>
+        </div>
+        <div class="panel" style="margin-top:16px">
+          <h3>Need help implementing?</h3>
+          <div class="body">
+            <p>We’ll set up audiences, exclusions, conversion tracking and a cohort-based naming system—so optimization stays simple.</p>
+            <button class="btn" onclick="location.href='/contact'">Book a Strategy Call</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Related -->
+  <section class="related" aria-labelledby="relTitle">
+    <div class="container">
+      <h2 class="title" id="relTitle">Other resources you may like</h2>
+      <div class="cards">
+        <a class="card" href="/resources/youtube-remarketing-checklist">
+          <span class="small">Templates</span>
+          <h4>YouTube Remarketing Launch Checklist</h4>
+          <span class="read">Open →</span>
+        </a>
+        <a class="card" href="/blog/negative-keywords-playbook">
+          <span class="small">Google Ads</span>
+          <h4>The Negative Keywords Playbook</h4>
+          <span class="read">Read →</span>
+        </a>
+        <a class="card" href="/blog/track-form-submissions-gtm">
+          <span class="small">Google Tag Manager</span>
+          <h4>Track Form Submissions (without breaking UX)</h4>
+          <span class="read">Read →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Ready to launch LinkedIn remarketing with confidence?</h2>
+      <p>We’ll configure tracking, build audiences, and ship creative mapped to intent—then prove results in your dashboard.</p>
+      <a class="btn" href="/contact">Schedule Your Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer (consistent with site) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.youtube.com" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul class="f-links">
+            <li><a href="/blog/category/copywriting">Copywriting</a></li>
+            <li><a href="/blog/category/google-ads">Google Ads</a></li>
+            <li><a href="/blog/category/linkedin-ads">LinkedIn Ads</a></li>
+            <li><a href="/blog/category/abm">ABM</a></li>
+            <li><a href="/blog/category/design">Design</a></li>
+            <li><a href="/blog/category/branding">Branding</a></li>
+            <li><a href="/blog/category/meta-ads">Meta Ads</a></li>
+            <li><a href="/blog/category/google-analytics">Google Analytics</a></li>
+            <li><a href="/blog/category/google-tag-manager">Google Tag Manager</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{ b.style.transform=''; b.style.opacity=''; }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+  </script>
+</body>
+</html>

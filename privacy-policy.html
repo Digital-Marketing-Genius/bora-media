@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy | Bora Media</title>
+
+  <!-- Core SEO -->
+  <meta name="description" content="Learn how Bora Media collects, uses, and protects your data. This Privacy Policy covers cookies, analytics, advertising, data rights, and more." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://boramedianetwork.com/privacy-policy" />
+  <meta name="theme-color" content="#061A38" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Bora Media" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://boramedianetwork.com/privacy-policy" />
+  <meta property="og:title" content="Privacy Policy | Bora Media" />
+  <meta property="og:description" content="Learn how Bora Media collects, uses, and protects your data. This Privacy Policy covers cookies, analytics, advertising, data rights, and more." />
+  <meta property="og:image" content="https://boramedianetwork.com/images/og/privacy.jpg" />
+  <meta property="og:image:alt" content="Bora Media privacy policy" />
+  <meta property="og:locale" content="en_CA" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacy Policy | Bora Media" />
+  <meta name="twitter:description" content="Learn how Bora Media collects, uses, and protects your data. This Privacy Policy covers cookies, analytics, advertising, data rights, and more." />
+  <meta name="twitter:image" content="https://boramedianetwork.com/images/og/privacy.jpg" />
+
+  <!-- Performance hint -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+  <!-- Favicon & App Icons -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    :root{
+      --ink:#061A38;
+      --muted:#F6F8FB;
+      --aqua:#19D0C9;
+      --blue:#3B73FF;
+      --magenta:#FF278E;
+      --orange:#FF8650;
+      --radius:14px;
+      --shadow:0 8px 30px rgba(6,26,56,.08);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Skip link */
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:12px;top:12px;width:auto;height:auto;z-index:2000;background:#fff;border:2px solid var(--aqua);padding:8px 12px;border-radius:10px}
+
+    /* Header (consistent) */
+    header{position:sticky; top:0; z-index:1000; background:#fff; box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;letter-spacing:.2px}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    .brand span{font-size:18px}
+
+    nav ul{display:flex;list-style:none;gap:26px}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;position:relative;font-weight:600}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s ease}
+    nav a:hover::after{width:100%}
+
+    .has-dd{position:relative}
+    .chev{width:14px;height:14px;vertical-align:-2px;margin-left:6px}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.10)}
+
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:700;cursor:pointer;transition:transform .15s ease, filter .2s ease}
+    .btn:hover{transform:translateY(-1px);filter:brightness(.95)}
+    .btn.outline{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.12)}
+
+    /* Mobile nav */
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;border-radius:12px}
+    .hamburger:focus-visible{outline:2px solid var(--aqua)}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#071B3A 0%, #0C254B 100%);color:#fff;padding:120px 0 86px}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(40px);opacity:.22;animation:float 16s infinite ease-in-out}
+    .blob{width:420px;height:420px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+    .hero h1{font-size:clamp(32px,5vw,56px);letter-spacing:-.5px;line-height:1.15;text-align:center;margin:0 auto 14px;max-width:980px;font-weight:900}
+    .hero p.lead{text-align:center;color:rgba(255,255,255,.88);font-size:clamp(16px,2.2vw,20px);max-width:760px;margin:0 auto 28px}
+
+    /* Content */
+    .section{padding:80px 0}
+    .muted{background:var(--muted)}
+    .eyebrow{letter-spacing:2px;color:var(--aqua);font-weight:700;text-transform:uppercase;font-size:12px;text-align:center;margin-bottom:10px}
+    .title{text-align:center;font-size:clamp(26px,4vw,40px);line-height:1.2;margin-bottom:14px;font-weight:900}
+    .center-note{max-width:860px;margin:0 auto 22px;text-align:center;color:rgba(6,26,56,.8)}
+
+    .policy{display:grid;grid-template-columns:1fr 320px;gap:24px}
+    .policy article{background:#fff;border:1px solid rgba(6,26,56,.08);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+    .policy h2{font-size:24px;margin:14px 0 8px}
+    .policy h3{font-size:18px;margin:16px 0 8px}
+    .policy p{margin:10px 0}
+    .policy ul{margin:8px 0 12px 18px}
+    .policy .rail{position:sticky;top:92px;height:max-content}
+    .toc{background:#fff;border:1px solid rgba(6,26,56,.08);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+    .toc h4{margin-bottom:8px}
+    .toc a{display:block;text-decoration:none;color:var(--ink);padding:6px 8px;border-radius:8px}
+    .toc a:hover{background:rgba(25,208,201,.08)}
+    .notice{background:rgba(25,208,201,.1);border:1px dashed rgba(25,208,201,.5);padding:12px;border-radius:12px;margin:12px 0}
+
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .cta-row .btn.outline{border-color:rgba(6,26,56,.2)}
+
+    /* Footer (consistent) */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .f-col{min-width:0}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-links a:hover{color:var(--ink)}
+    .social{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12);transition:transform .15s ease, box-shadow .2s ease}
+    .social a:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
+    .social svg{width:18px;height:18px}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .mini{display:flex;gap:16px;list-style:none}
+    .mini a{text-decoration:none;color:rgba(6,26,56,.75);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .policy{grid-template-columns:1fr}
+      .policy .rail{position:static}
+    }
+    @media (max-width:860px){
+      nav{display:none}
+      .hamburger{display:block}
+      .hero{padding:100px 0 70px}
+      .f-cols{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:620px){
+      .f-bottom{flex-direction:column;text-align:center}
+      .mini{flex-wrap:wrap;justify-content:center}
+    }
+    @media (max-width:520px){
+      .f-cols{grid-template-columns:1fr}
+    }
+  </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Privacy Policy",
+    "url":"https://boramedianetwork.com/privacy-policy",
+    "description":"Learn how Bora Media collects, uses, and protects your data.",
+    "inLanguage":"en-CA",
+    "dateModified":""
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End GTM (noscript) -->
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner" role="navigation" aria-label="Primary">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services
+              <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+            <div class="dropdown" role="menu" aria-label="Services submenu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+
+    <div class="container mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn outline" href="/contact" style="margin-top:6px">Book a Call</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="blob" aria-hidden="true"></div>
+      <div class="blob2" aria-hidden="true"></div>
+      <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="lead">Your privacy matters. This page explains what we collect, why we collect it, how we use it, and the choices you have.</p>
+      </div>
+    </section>
+
+    <!-- Policy -->
+    <section class="section">
+      <div class="container policy">
+        <article>
+          <p class="notice"><strong>Last updated:</strong> <span id="lastUpdated"></span>. If you have questions, email us at <a href="mailto:hello@boramedianetwork.com">hello@boramedianetwork.com</a>.</p>
+
+          <h2 id="scope">1) Who we are &amp; scope</h2>
+          <p>Bora Media (“we,” “us,” “our”) provides performance marketing services and educational resources. This Privacy Policy applies to boramedianetwork.com and any pages where it’s posted. By using our site, you agree to the terms described here.</p>
+
+          <h2 id="data-we-collect">2) Data we collect</h2>
+          <h3>Information you provide</h3>
+          <ul>
+            <li>Contact details (name, email, phone, company) via forms, downloads, or inquiries</li>
+            <li>Application &amp; enrollment info for trainings/bootcamps</li>
+            <li>Support messages and survey responses</li>
+          </ul>
+          <h3>Information collected automatically</h3>
+          <ul>
+            <li>Usage &amp; device data (IP, pages viewed, links clicked, referrer, approximate location)</li>
+            <li>Cookies, pixels, and similar technologies for analytics, personalization, and ads</li>
+          </ul>
+          <h3>Information from third parties</h3>
+          <ul>
+            <li>Lead sources, ad platforms, analytics tools, and partners (in accordance with their policies)</li>
+          </ul>
+
+          <h2 id="how-we-use">3) How we use your data</h2>
+          <ul>
+            <li>To provide content, services, quotes, and support</li>
+            <li>To analyze performance and improve site experience</li>
+            <li>To personalize messaging and advertising</li>
+            <li>To send updates, offers, and educational materials (you can unsubscribe anytime)</li>
+            <li>To meet legal, security, and compliance obligations</li>
+          </ul>
+
+          <h2 id="lawful-basis">4) Lawful bases (where applicable)</h2>
+          <p>We rely on consent, performance of a contract, legitimate interests (e.g., improving services, preventing fraud), and compliance with legal obligations.</p>
+
+          <h2 id="cookies">5) Cookies &amp; tracking</h2>
+          <p>We use cookies and similar tech for essential functionality, analytics, and advertising. You can manage preferences via your browser settings and our cookie controls below.</p>
+          <div class="cta-row">
+            <button class="btn outline" id="manageCookies">Manage Cookies</button>
+            <a class="btn outline" id="doNotSell" href="#rights">Do Not Sell/Share My Personal Information</a>
+          </div>
+
+          <h2 id="analytics-ads">6) Analytics &amp; advertising</h2>
+          <p>We may use Google Analytics, Google Ads, Meta, LinkedIn, and other platforms to measure performance and deliver relevant ads. These providers use cookies or mobile IDs per their policies. You can opt out via platform settings or industry tools (e.g., NAI/DAA).</p>
+
+          <h2 id="sharing">7) How we share data</h2>
+          <ul>
+            <li>Vendors &amp; processors (hosting, email, analytics, payment, CRM) under contracts</li>
+            <li>Advertising/measurement partners (aggregated or pseudonymous where possible)</li>
+            <li>Legal or safety reasons (court orders, preventing fraud or abuse)</li>
+            <li>Business transfers (merger, acquisition, asset sale)</li>
+          </ul>
+
+          <h2 id="retention">8) Data retention</h2>
+          <p>We retain data only as long as necessary for the purposes noted above or as required by law. We also consider contract terms and operational needs.</p>
+
+          <h2 id="security">9) Security</h2>
+          <p>We employ administrative, technical, and physical safeguards. No method of transmission or storage is 100% secure, so we can’t guarantee absolute security.</p>
+
+          <h2 id="international">10) International transfers</h2>
+          <p>Your data may be stored or processed in countries with different laws than your own. Where required, we implement appropriate safeguards for cross-border transfers.</p>
+
+          <h2 id="children">11) Children’s privacy</h2>
+          <p>Our site is not intended for children under 13 (or 16 where applicable). We don’t knowingly collect data from children.</p>
+
+          <h2 id="rights">12) Your choices &amp; rights</h2>
+          <h3>Marketing preferences</h3>
+          <p>Opt out of marketing emails by using the “unsubscribe” link or by contacting us.</p>
+          <h3>Cookies &amp; ads</h3>
+          <p>Use your browser settings to block cookies and visit platform ad settings to control personalization.</p>
+          <h3>GDPR (EEA/UK/Swiss) rights</h3>
+          <p>Access, correct, delete, restrict or object to processing, and data portability. You may withdraw consent at any time (does not affect prior processing).</p>
+          <h3>California (CPRA) rights</h3>
+          <p>Know, delete, correct, opt out of “sale”/“sharing,” and limit certain uses of sensitive data. Use the controls on this page or contact us to exercise rights.</p>
+          <div class="cta-row">
+            <a class="btn outline" href="mailto:hello@boramedianetwork.com?subject=Privacy%20Request">Submit a Privacy Request</a>
+          </div>
+
+          <h2 id="third-parties">13) Links &amp; third parties</h2>
+          <p>Our site may link to other websites. We aren’t responsible for their content or privacy practices. Review their policies before providing information.</p>
+
+          <h2 id="changes">14) Changes to this policy</h2>
+          <p>We may update this policy from time to time. We’ll revise the “Last updated” date above and, where appropriate, provide additional notice.</p>
+
+          <h2 id="contact">15) Contact us</h2>
+          <p>Email: <a href="mailto:hello@boramedianetwork.com">hello@boramedianetwork.com</a><br>
+             Address: Bora Media Network — Toronto, ON, Canada</p>
+        </article>
+
+        <aside class="rail" aria-label="On this page">
+          <nav class="toc">
+            <h4>On this page</h4>
+            <a href="#scope">Who we are &amp; scope</a>
+            <a href="#data-we-collect">Data we collect</a>
+            <a href="#how-we-use">How we use your data</a>
+            <a href="#lawful-basis">Lawful bases</a>
+            <a href="#cookies">Cookies &amp; tracking</a>
+            <a href="#analytics-ads">Analytics &amp; advertising</a>
+            <a href="#sharing">How we share data</a>
+            <a href="#retention">Data retention</a>
+            <a href="#security">Security</a>
+            <a href="#international">International transfers</a>
+            <a href="#children">Children’s privacy</a>
+            <a href="#rights">Your choices &amp; rights</a>
+            <a href="#third-parties">Links &amp; third parties</a>
+            <a href="#changes">Changes to this policy</a>
+            <a href="#contact">Contact us</a>
+          </nav>
+          <div class="cta-row" style="margin-top:14px">
+            <button class="btn outline" id="exportPolicy">Download PDF</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final">
+      <div class="container">
+        <h2>Have questions about privacy?</h2>
+        <p>We’re happy to clarify how we handle data, cookies, analytics, and more.</p>
+        <button class="btn" onclick="location.href='mailto:hello@boramedianetwork.com?subject=Privacy%20Question'">Email Our Team</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (consistent) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div class="f-col">
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo" loading="lazy" decoding="async"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.youtube.com" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+            <a href="https://x.com" aria-label="X"><svg viewBox="0 0 24 24" fill="none"><path d="M18 3h3l-7.5 8.6L22 21h-6.6L9.8 14l-4.6 7H2l8-9.7L2.8 3h6.7l4.3 5.9L18 3Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+
+        <div class="f-col">
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+
+        <div class="f-col">
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="f-col">
+          <h4>Resources</h4>
+          <ul class="f-links">
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/guides">Guides</a></li>
+            <li><a href="/webinars">Webinars</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="f-bottom">
+        <p>© <span id="year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="mini">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Dynamic year + last updated + schema update
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const today = new Date().toISOString().slice(0,10);
+    document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString(undefined, {year:'numeric', month:'long', day:'numeric'});
+    // Patch JSON-LD dateModified
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(s=>{
+      try{
+        const j = JSON.parse(s.textContent);
+        if(j['@type']==='WebPage'){ j.dateModified = today; s.textContent = JSON.stringify(j); }
+      }catch(e){}
+    });
+
+    // Mobile menu toggle + animated hamburger
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{
+          b.style.transform=''; b.style.opacity='';
+        }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    // Optional: link anchors highlight (basic)
+    const tocLinks = document.querySelectorAll('.toc a');
+    tocLinks.forEach(a=>{
+      a.addEventListener('click', ()=> {
+        tocLinks.forEach(x=>x.classList.remove('active'));
+        a.classList.add('active');
+      });
+    });
+
+    // Cookie manager (hook to your CMP if available)
+    document.getElementById('manageCookies')?.addEventListener('click', ()=>{
+      // Replace this with your Consent Manager trigger (e.g., window.OneTrust.ToggleInfoDisplay())
+      alert('Open cookie preferences… (hook this button to your CMP)');
+    });
+
+    // Do Not Sell/Share (CPRA) link could open a form/modal
+    document.getElementById('doNotSell')?.addEventListener('click', (e)=>{
+      // You can route to a dedicated form or leave as anchor to rights section
+      // e.preventDefault(); window.location.href = '/do-not-sell';
+    });
+
+    // Export to PDF (client print dialog; for server-rendered PDFs integrate your generator)
+    document.getElementById('exportPolicy')?.addEventListener('click', ()=>{
+      window.print();
+    });
+  </script>
+</body>
+</html>

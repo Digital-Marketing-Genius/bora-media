@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meta Remarketing Campaign Launch Checklist | Bora Media</title>
+  <meta name="description" content="Step-by-step Meta remarketing launch checklist: pixel, audiences, exclusions, creative mix, and campaign setup so your retargeting scales with clarity." />
+  <link rel="canonical" href="https://www.boramedianetwork.com/resources/meta-remarketing-checklist" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Meta Remarketing Campaign Launch Checklist" />
+  <meta property="og:description" content="Everything you need to launch high-performing Meta remarketing campaigns—audiences, exclusions, assets, and setup." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.boramedianetwork.com/resources/meta-remarketing-checklist" />
+  <meta property="og:image" content="https://www.boramedianetwork.com/images/og/meta-remarketing.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meta Remarketing Campaign Launch Checklist" />
+  <meta name="twitter:description" content="Everything you need to launch high-performing Meta remarketing campaigns—audiences, exclusions, assets, and setup." />
+  <meta name="twitter:image" content="https://www.boramedianetwork.com/images/og/meta-remarketing.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp" />
+
+  <!-- Google Tag Manager (head) -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+      --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+      --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Inter var,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (consistent) */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;gap:26px;list-style:none}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+    nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+    .has-dd{position:relative}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.1)}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.15)}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:96px 0 60px;position:relative;overflow:hidden}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22;animation:float 16s infinite ease-in-out}
+    .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin-bottom:10px;font-weight:900;text-align:center}
+    .hero p.lead{color:rgba(255,255,255,.88);text-align:center;max-width:860px;margin:0 auto 16px}
+    .cta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;justify-content:center}
+
+    /* Section */
+    .section{padding:70px 0}
+    .muted{background:var(--muted)}
+    .title{text-align:center;font-size:clamp(24px,4vw,34px);font-weight:900;margin-bottom:6px}
+    .sub{color:rgba(6,26,56,.75);text-align:center;max-width:760px;margin:0 auto}
+    .stack{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+    .pill{border:1px solid rgba(255,255,255,.28);color:#fff;background:rgba(255,255,255,.12);padding:6px 10px;border-radius:999px;font-weight:700}
+    .pill.dark{color:var(--ink);background:#fff;border:1px solid rgba(6,26,56,.12)}
+
+    /* Checklist */
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px;margin-top:22px}
+    .col-6{grid-column:span 6}
+    .col-4{grid-column:span 4}
+    .col-8{grid-column:span 8}
+    .col-12{grid-column:span 12}
+    .card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:16px;box-shadow:var(--shadow);padding:18px}
+    .card h3{font-size:20px;margin-bottom:6px}
+    .desc{color:rgba(6,26,56,.7);margin-bottom:10px}
+    .list{list-style:none;display:grid;gap:10px}
+    .li{display:flex;gap:10px;align-items:flex-start}
+    .li svg{flex-shrink:0;margin-top:2px}
+    .muted-note{font-size:14px;color:rgba(6,26,56,.65)}
+
+    .hint{background:rgba(25,208,201,.12);border:1px dashed rgba(25,208,201,.5);padding:12px;border-radius:12px;margin-top:12px}
+
+    /* Related / Final CTA / Footer (consistent) */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08);margin-top:10px}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-links a:hover{color:var(--ink)}
+    .social{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .mini{display:flex;gap:16px;list-style:none}
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .grid{grid-template-columns:repeat(12,1fr)}
+      .col-6,.col-4,.col-8{grid-column:span 12}
+    }
+    @media (max-width:860px){
+      nav{display:none}.hamburger{display:block}
+      .f-cols{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      .f-cols{grid-template-columns:1fr}
+      .f-bottom{flex-direction:column;text-align:center}
+      .mini{flex-wrap:wrap;justify-content:center}
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources" aria-current="page">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources" aria-current="page">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob2" aria-hidden="true"></div>
+    <div class="container">
+      <h1>Meta Remarketing Campaign Launch Checklist</h1>
+      <p class="lead">Use this field-tested checklist to launch Meta retargeting that’s cleanly measured, properly segmented, and built to scale.</p>
+      <div class="cta-row">
+        <a class="btn" href="/downloads/meta-remarketing-checklist.pdf" target="_blank" rel="noopener">Download the Checklist</a>
+        <a class="btn alt" href="#checklist">Or scroll the checklist</a>
+      </div>
+      <div class="stack" style="margin-top:16px">
+        <span class="pill">Meta Pixel</span>
+        <span class="pill">Audiences</span>
+        <span class="pill">Exclusions</span>
+        <span class="pill">Creative Mix</span>
+        <span class="pill">Campaign Setup</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checklist -->
+  <main class="section muted" id="checklist">
+    <div class="container grid">
+      <!-- Column 1 -->
+      <div class="col-6 card">
+        <h3>Before You Launch</h3>
+        <p class="desc">Make sure your foundation is solid.</p>
+        <ul class="list">
+          <li class="li">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Confirm the <strong>Meta Pixel is installed and firing</strong> on all key pages/events.
+          </li>
+          <li class="li">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Validate event deduplication if using CAPI + Pixel.
+          </li>
+        </ul>
+        <div class="hint">Tip: Verify in Events Manager, test across devices, and ensure consistent parameters.</div>
+      </div>
+
+      <div class="col-6 card">
+        <h3>Audiences to Build</h3>
+        <p class="desc">Create remarketing segments across multiple timeframes (<strong>30 / 90 / 180 days</strong>) to match intent.</p>
+        <ul class="list">
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>All website visitors</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Past event RSVPs / attendees</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Video viewers (25–95%)</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Facebook page visitors</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Lead gen forms: opens + submits</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Pricing / demo / trial / case-study page bouncers (30D)</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Instagram account visitors</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Meeting no-shows (30D)</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Closed-lost opportunities (90/180D)</li>
+        </ul>
+        <p class="muted-note">Layer recency windows to modulate bids, budgets, and offers by intent depth.</p>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-6 card">
+        <h3>Exclusions (Protect Budget)</h3>
+        <p class="desc">Add exclusions to avoid wasted impressions and duplicated conversions.</p>
+        <ul class="list">
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Age ranges &lt; 21 (or per policy)</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Thank-you page visitors</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Lead gen form submits</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Existing customers & partners</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Competitors</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Poor-fit titles / irrelevant industries</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Lookalike of disqualified leads</li>
+        </ul>
+      </div>
+
+      <div class="col-6 card">
+        <h3>Creative &amp; Offers by Timeframe</h3>
+        <p class="desc">Map messages to buyer readiness using multiple recency windows.</p>
+        <ul class="list">
+          <li class="li">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>
+            <strong>Product Marketing (30/90D):</strong> capability highlights, feature carousels, comparison points.
+          </li>
+          <li class="li">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>
+            <strong>Thought Leadership (90/180D):</strong> educational content, POVs, frameworks.
+          </li>
+          <li class="li">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>
+            <strong>Social Proof (30/90D):</strong> testimonials, case stats, earned media.
+          </li>
+          <li class="li">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>
+            <strong>Offers (30/90D):</strong> demo, trial, quote, pricing—aligned to funnel stage.
+          </li>
+        </ul>
+        <div class="hint">Tip: Build distinct ad sets per timeframe; rotate creatives to prevent fatigue and maintain recency fit.</div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-6 card">
+        <h3>Campaign Setup &amp; Naming</h3>
+        <p class="desc">Create separate campaigns for each timeframe and “offer bouncers.”</p>
+        <ul class="list">
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg><strong>30-Day Campaign:</strong> {Location} | {Offer} | Remarketing (30D) | {Ad Type} | {Objective}</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg><strong>90-Day Campaign:</strong> {Location} | {Offer} | Remarketing (90D) | {Ad Type} | {Objective}</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg><strong>180-Day Campaign:</strong> {Location} | {Offer} | Remarketing (180D) | {Ad Type} | {Objective}</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg><strong>Offer Bouncer (30D):</strong> {Location} | {Offer} | {Offer Name Bouncers} (30D) | {Ad Type} | {Objective}</li>
+        </ul>
+        <div class="hint">Targeting: disable Audience Network/Expansion; focus on feed &amp; stories placements for intent-heavy cohorts.</div>
+      </div>
+
+      <div class="col-6 card">
+        <h3>QA Before Publish</h3>
+        <p class="desc">Final checks to keep data clean and performance predictable.</p>
+        <ul class="list">
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Campaign objectives match optimization goals.</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>UTMs standardized; pixels + events verified.</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Frequency controls & creative rotation set.</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Exclusions applied at the right levels.</li>
+        </ul>
+      </div>
+
+      <div class="col-12 card">
+        <h3>Rollout Notes</h3>
+        <p class="desc">Start with recent windows for highest intent, then expand:</p>
+        <ul class="list">
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Launch 30D + Bouncers first; add 90D/180D as performance stabilizes.</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Use separate ad sets for timeframes to control budgets and reporting.</li>
+          <li class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="#19D0C9" stroke-width="2"/></svg>Refresh creative every 3–4 weeks for 30D cohorts; every 6–8 weeks for 90/180D.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Want us to set this up for you?</h2>
+      <p>We’ll configure your pixel, build audiences and exclusions, and launch a clean, scalable remarketing program on Meta.</p>
+      <a class="btn" href="/contact">Book a Strategy Call</a>
+    </div>
+  </section>
+
+  <!-- Footer (consistent) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.youtube.com" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+            <a href="https://x.com" aria-label="X"><svg viewBox="0 0 24 24" fill="none"><path d="M18 3h3l-7.5 8.6L22 21h-6.6L9.8 14l-4.6 7H2l8-9.7L2.8 3h6.7l4.3 5.9L18 3Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="f-links">
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/guides">Guides</a></li>
+            <li><a href="/webinars">Webinars</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="mini">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TechArticle",
+    "headline":"Meta Remarketing Campaign Launch Checklist",
+    "description":"A step-by-step checklist for launching high-performing Meta remarketing campaigns.",
+    "about":["Meta Ads","Remarketing","Paid Media"],
+    "publisher":{"@type":"Organization","name":"Bora Media","logo":{"@type":"ImageObject","url":"https://www.boramedianetwork.com/images/bora-logo.webp"}},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.boramedianetwork.com/resources/meta-remarketing-checklist"}
+  }
+  </script>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{ b.style.transform=''; b.style.opacity=''; }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+  </script>
+
+  <!-- Source: Meta checklist reference -->
+  <!-- :contentReference[oaicite:0]{index=0} -->
+</body>
+</html>

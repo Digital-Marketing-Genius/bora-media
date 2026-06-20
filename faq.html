@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Marketing Glossary | Bora Media</title>
+<meta name="description" content="A comprehensive, searchable marketing glossary for modern growth teams." />
+
+<!-- Canonical & robots -->
+<link rel="canonical" href="https://www.boramedianetwork.com/resources/marketing-glossary" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Marketing Glossary | Bora Media" />
+<meta property="og:description" content="A comprehensive, searchable marketing glossary for modern growth teams." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.boramedianetwork.com/resources/marketing-glossary" />
+<meta property="og:image" content="https://www.boramedianetwork.com/images/og/marketing-glossary.jpg" />
+<meta property="og:site_name" content="Bora Media" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Marketing Glossary | Bora Media" />
+<meta name="twitter:description" content="A comprehensive, searchable marketing glossary for modern growth teams." />
+<meta name="twitter:image" content="https://www.boramedianetwork.com/images/og/marketing-glossary.jpg" />
+
+<!-- Favicons / theme -->
+<link rel="icon" href="/images/favicon.webp" sizes="32x32" />
+<meta name="theme-color" content="#071B3A" />
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+</script>
+<!-- End Google Tag Manager -->
+
+<style>
+  :root{
+    /* Page palette (kept) */
+    --ink:#061A38; --muted:#0F1C2E; --card:#13243A; --line:#1D3556;
+    --aqua:#19D0C9; --blue:#3B73FF; --radius:14px; --shadow:0 10px 28px rgba(6,26,56,.15);
+    /* Shell palette */
+    --shell-ink:#061A38; --shell-bg:#ffffff; --shell-muted:#F6F8FB;
+  }
+  *{box-sizing:border-box} html,body{height:100%}
+  body{margin:0;font:16px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0A1423 0%,#0B182A 100%);color:#E7EEF9}
+  img{max-width:100%;height:auto;display:block}
+  .container{max-width:1180px;margin:0 auto;padding:0 20px}
+
+  /* ===== Site Shell: Header (matches homepage/case study pattern) ===== */
+  header{position:sticky;top:0;z-index:1000;background:var(--shell-bg);box-shadow:0 4px 16px rgba(0,0,0,.06)}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--shell-ink);font-weight:900}
+  .brand img{width:34px;height:34px;border-radius:8px}
+  nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+  nav a{text-decoration:none;color:var(--shell-ink);padding:8px 0;font-weight:700;position:relative}
+  nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+  nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+  .has-dd{position:relative}
+  .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+  .has-dd:hover .dropdown{display:block}
+  .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+  .dropdown a:hover{background:rgba(25,208,201,.1)}
+  .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+  .btn.alt{background:#fff;color:var(--shell-ink);border:1px solid rgba(6,26,56,.15)}
+  .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+  .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--shell-ink);transition:.25s}
+  .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+  .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--shell-ink)}
+  .mobile-sub{padding-left:14px}
+  .show{display:block}
+
+  /* ===== Page-specific (kept exactly, with minor spacing improvements) ===== */
+  .hero{padding:64px 0 18px} /* slightly more top space to clear sticky header */
+  .eyebrow{opacity:.7;letter-spacing:.12em;text-transform:uppercase;font-weight:800}
+  h1{font-size:clamp(28px,4.6vw,46px);line-height:1.15;margin:.12em 0}
+  p.lead{max-width:820px;color:#BFD3F2}
+
+  /* Controls */
+  .bar{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:18px 0}
+  .alpha{display:flex;gap:8px;flex-wrap:wrap}
+  .alpha button{background:#0E2036;border:1px solid #1B314F;color:#DCE8FA;border-radius:10px;padding:6px 9px;font-weight:800;cursor:pointer}
+  .alpha button.active,.alpha button:hover{border-color:var(--aqua);box-shadow:0 0 0 2px #19D0C933 inset}
+  .search{flex:1;display:flex;align-items:center;gap:10px;background:#0E2036;border:1px solid #1B314F;border-radius:12px;padding:10px 12px}
+  .search svg{width:18px;height:18px}
+  .search input{flex:1;background:transparent;border:0;outline:0;color:#E7EEF9;font:inherit}
+
+  /* Grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 60px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+  .term{display:flex;align-items:center;gap:8px;font-weight:900;font-size:17px;margin:0 0 6px}
+  .term .up{font-size:12px;padding:3px 7px;border-radius:999px;background:#0E2036;border:1px solid #20426D;color:#A6C6F7}
+  .def{margin:0;color:#CFE2FF}
+  .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  .chip{font-size:12px;letter-spacing:.4px;text-transform:uppercase;color:#8AF1EC;border:1px solid #2C4A75;border-radius:999px;padding:4px 8px}
+
+  /* ===== Site Shell: Footer (matches homepage/case study) ===== */
+  footer{background:var(--shell-muted);margin-top:40px;color:var(--shell-ink)}
+  .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+  .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--shell-ink);font-weight:900}
+  .footer-logo img{width:28px;height:28px;border-radius:6px}
+  .f-links{list-style:none;margin-top:10px;padding:0}
+  .f-links li{margin:8px 0}
+  .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+  .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+  .social{display:flex;gap:12px;margin-top:14px}
+  .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+  /* Responsive */
+  @media (max-width:1100px){ nav{display:none}.hamburger{display:block} .grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:640px){
+    .grid{grid-template-columns:1fr}
+    .f-cols{grid-template-columns:1fr}
+    .f-bottom{flex-direction:column;text-align:center}
+  }
+</style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- ===== Site Shell Header (navigation consistent with homepage) ===== -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources" aria-current="page">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- ===== Your Content (unchanged) ===== -->
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Marketing Glossary</p>
+      <h1>A Robust Library of Marketing Terminologies</h1>
+      <p class="lead">This marketing glossary is a comprehensive reference library of over 400 key terms that every modern marketer, business leader, or student should know. It covers concepts across the full spectrum of marketing — from digital advertising and SEO to sales funnels, customer experience, analytics, and revenue operations.</p>
+
+      <div class="bar">
+        <div class="alpha" id="alpha"></div>
+        <label class="search" for="q">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="#8AB6FF" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="#8AB6FF" stroke-width="2"/></svg>
+          <input id="q" type="search" placeholder="Search digital marketing terms…" />
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="grid" id="grid" role="list"></div>
+  </main>
+
+  <!-- ===== Site Shell Footer (consistent) ===== -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.youtube.com" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="f-links">
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/guides">Guides</a></li>
+            <li><a href="/webinars">Webinars</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none;margin:0;padding:0">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  // footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // mobile menu
+  const burger = document.getElementById('hamburger');
+  const panel = document.getElementById('mobilePanel');
+  burger?.addEventListener('click', () => {
+    const open = panel.classList.toggle('show');
+    burger.setAttribute('aria-expanded', String(open));
+    burger.querySelectorAll('.bar').forEach((b,i)=>{
+      if(open){
+        if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+        if(i===1){b.style.opacity='0'}
+        if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+      }else{ b.style.transform=''; b.style.opacity=''; }
+    });
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  // --- DATA ------------------------------------------------------
+  // Tip: Add/modify terms here. letter = first letter for A–Z filter.
+  const TERMS = [
+    // A (samples shown from your doc; the list continues through Z)
+    {term:"Account Based Marketing (ABM)",letter:"A",def:"A B2B strategy that focuses marketing and sales resources on a specific set of target accounts with personalized campaigns."},
+    {term:"Acquisition",letter:"A",def:"The process of gaining new customers, leads, or users through marketing and sales efforts."},
+    {term:"Ad Auction",letter:"A",def:"The real-time bidding process that determines which ads appear in a search result or platform placement."},
+    {term:"Ad Copy",letter:"A",def:"The written text within an advertisement designed to persuade the audience to take action."},
+    {term:"Ad Extension (Google Ads)",letter:"A",def:"Additional information (e.g., links, phone) that expands a text ad to improve visibility and performance."},
+    {term:"Ad Fatigue / Ad Saturation",letter:"A",def:"When audiences see the same ad too often, causing engagement and performance to decline."},
+    {term:"Ad Formats",letter:"A",def:"The different creative types or structures in which ads can be displayed (text, video, carousel, etc.)."},
+    {term:"Ad Groups (Google Ads)",letter:"A",def:"A collection of ads that share a set of keywords and targeting settings within a campaign."},
+    {term:"Ad Impression",letter:"A",def:"A single display of an ad to a user on a webpage, app, or platform."},
+    {term:"Ad Platform",letter:"A",def:"A system for creating, managing, and delivering digital ads (e.g., Google Ads, Meta Ads)."},
+    {term:"Ad Rank (Google Ads)",letter:"A",def:"The value Google uses to determine ad position, based on bid, quality, and other factors."},
+    {term:"Ad Relevance (Google Ads)",letter:"A",def:"How closely an ad matches the intent behind a user’s search query."},
+    {term:"Ads Manager",letter:"A",def:"A tool (e.g., Meta Ads Manager) used to manage, monitor, and analyze ad campaigns."},
+    {term:"Advocate Marketing",letter:"A",def:"Leveraging satisfied customers to promote a brand through referrals, reviews, and word-of-mouth."},
+    {term:"Affiliate Marketing",letter:"A",def:"A performance model where partners earn commissions for driving traffic or sales."},
+    {term:"Analytics Tool",letter:"A",def:"Software that collects and analyzes data to measure marketing performance and user behavior."},
+    {term:"Annual Contract Value (ACV)",letter:"A",def:"The yearly revenue generated from a single customer contract."},
+    {term:"Attribution",letter:"A",def:"Identifying which marketing touchpoints contribute to a desired outcome such as a conversion."},
+    {term:"Audience",letter:"A",def:"A defined group of people a business targets with marketing messages."},
+    {term:"Audience Segmentation / Audience Targeting",letter:"A",def:"Dividing an audience into smaller groups for more personalized marketing."},
+    {term:"Automated Bidding Strategies (Google Ads)",letter:"A",def:"AI-driven methods that automatically set bids to maximize results."},
+    {term:"Average CPC",letter:"A",def:"The average cost paid for each click on an ad."},
+    {term:"Average Deal Size",letter:"A",def:"The typical revenue value generated per closed sale."},
+    {term:"Average Order Value (AOV)",letter:"A",def:"The average amount spent each time a customer places an order."},
+    {term:"Average Revenue Per User (ARPU)",letter:"A",def:"The average income generated per user over a period."},
+    {term:"Average Session Duration",letter:"A",def:"Average length of time users spend on a website session."},
+    {term:"Average Time On Page",letter:"A",def:"Average time a user spends viewing a specific webpage."},
+    {term:"Average Visit Duration",letter:"A",def:"Another term for average session length on a site."},
+     // B
+    {term:"Awareness",letter:"A",def:"Stage where potential customers first become familiar with a brand, product, or service."},
+    {term:"B2B Content",letter:"B",def:"Content created to educate and engage business decision-makers."},
+    {term:"B2B Marketing",letter:"B",def:"Marketing from one business to another."},
+    {term:"B2C Marketing",letter:"B",def:"Marketing directly to individual consumers."},
+    {term:"Benchmarking",letter:"B",def:"Comparing performance against standards or competitors."},
+    {term:"Bid Auction (Google Ads)",letter:"B",def:"How Google evaluates bids, quality, and context to determine ad placement."},{term:"Bid Strategy Type (Google Ads)",letter:"B",def:"Defines how Google Ads manages bids in your campaign, e.g., Manual CPC, Target CPA, Target ROAS, Maximize Conversions."},
+{term:"Blocklist / Blacklist",letter:"B",def:"A list of websites, publishers, or placements where advertisers choose not to serve ads."},
+{term:"Bottom Of Funnel (BOFU)",letter:"B",def:"The final stage of the marketing funnel, where prospects are closest to making a purchase decision."},
+{term:"Bottom of Funnel Conversion Rate",letter:"B",def:"The percentage of leads at the bottom of the funnel that convert into paying customers."},
+{term:"Bounce Rate (BR)",letter:"B",def:"The percentage of visitors who land on a page and leave without engaging further."},
+{term:"Brand Affinity",letter:"B",def:"The emotional connection and loyalty a consumer feels toward a brand."},
+{term:"Brand Awareness",letter:"B",def:"The extent to which consumers recognize or recall a brand in different situations."},
+{term:"Brand Engagement",letter:"B",def:"How actively consumers interact with a brand across touchpoints (likes, shares, mentions, reviews)."},
+{term:"Brand Positioning",letter:"B",def:"How a brand is perceived in the market relative to competitors, based on its value proposition."},
+{term:"Brand Storytelling",letter:"B",def:"The use of narratives and emotional content to communicate a brand’s values and purpose."},
+{term:"Brand Values",letter:"B",def:"The core beliefs and principles that guide a brand’s actions and messaging."},
+{term:"Brand Visibility",letter:"B",def:"How often and easily a brand is seen across channels and touchpoints."},
+{term:"Business Development Representative (BDR)",letter:"B",def:"A sales role focused on generating and qualifying leads for account executives."},
+{term:"Business Goals / Business Objectives",letter:"B",def:"Measurable outcomes that an organization aims to achieve, often tied to growth, revenue, or market share."},
+{term:"Business Value Proposition (BVP)",letter:"B",def:"The unique combination of benefits that make a product or service attractive to customers."},
+{term:"Business-To-Business (B2B)",letter:"B",def:"Transactions or marketing activities conducted between two businesses."},
+{term:"Business-To-Consumer (B2C)",letter:"B",def:"Transactions or marketing activities conducted directly between a business and individual consumers."},
+{term:"Buyer Intent Data",letter:"B",def:"Signals and data that indicate a prospect’s likelihood to purchase soon, often tracked by online behaviors."},
+{term:"Buyer Persona",letter:"B",def:"A semi-fictional representation of an ideal customer, based on demographics, behaviors, and goals."},
+{term:"Buyer's Journey",letter:"B",def:"The process customers go through from awareness to decision when purchasing a product or service."},
+{term:"Buying Cycle",letter:"B",def:"The typical time and steps it takes for a lead to progress from awareness to purchase."},
+{term:"Buying Signal",letter:"B",def:"Actions or behaviors that suggest a prospect is close to making a purchase decision."},
+    // C
+{term:"C-Level",letter:"C",def:"Refers to executive-level positions in a company, such as CEO, CFO, or CMO."},
+{term:"CSV Lists",letter:"C",def:"Comma-Separated Values files often used to upload or manage contact and campaign data."},
+{term:"Call-To-Action (CTA)",letter:"C",def:"A message designed to prompt an immediate response, such as 'Buy Now' or 'Sign Up Today.'"},
+{term:"Carousel Ad",letter:"C",def:"An ad format allowing multiple images or videos in a single unit that users can swipe through."},
+{term:"Case Studies",letter:"C",def:"Detailed stories highlighting how a company’s products or services solved a client’s problem."},
+{term:"Champion",letter:"C",def:"An advocate within a client’s organization who supports and pushes for your solution internally."},
+{term:"Channel",letter:"C",def:"The medium through which marketing messages are delivered, such as social media, email, or paid search."},
+{term:"Chatbot",letter:"C",def:"Automated software that simulates human conversation to assist customers or prospects online."},{term:"Churn Rate",letter:"C",def:"The percentage of customers who stop using a product or service during a given period."},
+{term:"Click Share",letter:"C",def:"A Google Ads metric showing the percentage of total possible clicks your ad received compared to competitors."},
+{term:"Click-Through Rate (CTR)",letter:"C",def:"The percentage of people who click on an ad after seeing it. Calculated as clicks ÷ impressions."},
+{term:"Clicks",letter:"C",def:"The total number of times users click on an ad, link, or button."},
+{term:"Client Lifecycle",letter:"C",def:"The stages a client goes through in their relationship with a business, from acquisition to retention."},
+{term:"Close Plan",letter:"C",def:"A structured approach to managing and closing a sales opportunity."},
+{term:"Closed Won",letter:"C",def:"A sales opportunity that has successfully resulted in a customer deal."},
+{term:"Cold Calling",letter:"C",def:"The practice of contacting potential customers by phone without prior interaction."},
+{term:"Company Page",letter:"C",def:"A business profile on a social platform (e.g., LinkedIn Company Page) used for branding and engagement."},
+{term:"Competitive Insights",letter:"C",def:"Data and analysis that reveal how competitors are performing in the market."},
+{term:"Competitive Landscape",letter:"C",def:"The overall market environment, including competitors, trends, and customer expectations."},
+{term:"Competitive Research",letter:"C",def:"The process of analyzing competitors’ strategies, strengths, and weaknesses."},
+{term:"Competitor Analysis",letter:"C",def:"An assessment of rival companies to understand their products, strategies, and performance."},
+{term:"Consideration",letter:"C",def:"The funnel stage where prospects are actively evaluating potential solutions."},
+{term:"Consumer Barometer",letter:"C",def:"A Google tool that provides insights into consumer behavior and online research habits."},
+{term:"Consumer Insights",letter:"C",def:"Understanding consumer attitudes, preferences, and behaviors to inform marketing decisions."},
+{term:"Content Audit",letter:"C",def:"A review of existing content to evaluate quality, performance, and alignment with goals."},
+{term:"Content Calendar",letter:"C",def:"A schedule used to plan, organize, and publish content across channels."},
+{term:"Content Creation",letter:"C",def:"The process of producing written, visual, or video materials for marketing."},
+{term:"Content Curation",letter:"C",def:"The practice of finding, organizing, and sharing third-party content relevant to an audience."},
+{term:"Content Discovery",letter:"C",def:"The process by which users find new content through search, recommendations, or platforms."},
+{term:"Content Distribution",letter:"C",def:"The methods used to share content across platforms and channels."},
+{term:"Content Engagement Rate",letter:"C",def:"A metric measuring how audiences interact with content (likes, shares, comments, etc.)."},
+{term:"Content Management",letter:"C",def:"The process of organizing and controlling the creation, publication, and governance of content."},
+{term:"Content Management System (CMS)",letter:"C",def:"Software that enables creating, managing, and publishing digital content (e.g., WordPress, Drupal)."},
+{term:"Content Marketing",letter:"C",def:"A strategy that involves creating and distributing valuable content to attract and engage audiences."},
+{term:"Content Optimization System (COS)",letter:"C",def:"A platform that optimizes content for SEO, personalization, and performance."},
+{term:"Content ROI",letter:"C",def:"The return on investment generated from content marketing activities."},
+{term:"Content Reach",letter:"C",def:"The total number of people exposed to a piece of content."},
+{term:"Content Repurposing",letter:"C",def:"Reusing existing content in different formats or channels to extend its value."},
+{term:"Content Strategy",letter:"C",def:"A plan for creating, managing, and distributing content to achieve marketing goals."},
+{term:"Content Syndication",letter:"C",def:"Distributing content on third-party platforms to increase visibility and reach."},
+{term:"Content Targeting",letter:"C",def:"Delivering ads or promotions based on the content being consumed."},
+{term:"Conversion",letter:"C",def:"A desired action taken by a user, such as a purchase, signup, or download."},
+{term:"Conversion Objective",letter:"C",def:"The specific outcome a campaign is optimized to achieve, such as leads or purchases."},
+{term:"Conversion Path",letter:"C",def:"The journey a user takes through touchpoints before completing a conversion."},
+{term:"Conversion Rate",letter:"C",def:"The percentage of visitors who complete a desired action, calculated as conversions ÷ visitors."},
+{term:"Conversion Tracking",letter:"C",def:"A method of measuring when ads lead to desired actions, using pixels, tags, or integrations."},
+{term:"Cookie Tracking",letter:"C",def:"Using browser cookies to track user behavior, ad performance, or preferences."},
+{term:"Cost / Conversion",letter:"C",def:"The average cost incurred to generate one conversion."},
+{term:"Cost Per Acquisition (CPA)",letter:"C",def:"The cost to acquire a new customer or lead."},
+{term:"Cost Per Action (CPA)",letter:"C",def:"The amount paid each time a user completes a defined action, such as signing up or downloading."},
+{term:"Cost Per Click (CPC)",letter:"C",def:"The cost incurred when a user clicks on an ad."},
+{term:"Cost Per Conversion (CPC)",letter:"C",def:"The average cost spent to generate one conversion."},
+{term:"Cost Per Download (CPD)",letter:"C",def:"The cost to generate one download of content, app, or file."},
+{term:"Cost Per Engagement (CPE)",letter:"C",def:"The cost associated with each engagement action, like clicks, likes, or shares."},
+{term:"Cost Per Mille (CPM)",letter:"C",def:"The cost per thousand ad impressions served."},
+{term:"Cost Per Opportunity (CpOpp or CPO)",letter:"C",def:"The average cost required to generate a qualified sales opportunity."},
+{term:"Cost Per View (CPV)",letter:"C",def:"The cost incurred each time a video ad is viewed."},
+{term:"Cost per Lead (CPL)",letter:"C",def:"The cost required to generate one new lead."},
+{term:"Cost per Qualified Lead (CpQL)",letter:"C",def:"The cost to acquire a lead that meets qualification criteria."},
+{term:"Cost per Thousand Impressions (CPM)",letter:"C",def:"Another term for the cost per thousand ad impressions."},
+{term:"Creative Brief",letter:"C",def:"A document outlining objectives, messaging, and guidelines for a creative project."},
+{term:"Creative Strategy",letter:"C",def:"The overarching plan for using creative assets to achieve marketing goals."},
+{term:"Customer Acquisition Cost (CAC)",letter:"C",def:"The total cost of acquiring a new customer, including ads, sales, and marketing expenses."},
+{term:"Customer Churn Rate",letter:"C",def:"The percentage of customers lost over a period of time."},
+{term:"Customer Engagement",letter:"C",def:"The level of interaction customers have with a brand across touchpoints."},
+{term:"Customer Experience (CX)",letter:"C",def:"The overall perception customers have of a brand across all interactions."},
+{term:"Customer Journey",letter:"C",def:"The complete path a customer takes from awareness to loyalty."},
+{term:"Customer Lifetime Value (CLV or CLTV)",letter:"C",def:"The predicted total revenue a business can expect from a customer over their lifetime."},
+{term:"Customer Persona",letter:"C",def:"A detailed profile of an ideal customer including demographics, behavior, and goals."},
+{term:"Customer Relationship Management (CRM)",letter:"C",def:"Software or strategies used to manage customer data, interactions, and relationships."},
+{term:"Customer Testimonials",letter:"C",def:"Statements from customers highlighting satisfaction and benefits of a product or service."},
+    
+    //D
+{term:"Data Management Platform (DMP)",letter:"D",def:"Technology that collects and organizes large sets of audience data for targeting."},
+{term:"Decision Maker",letter:"D",def:"An individual with authority to make purchase decisions."},
+{term:"Deliverables",letter:"D",def:"Tangible or intangible outputs promised in a marketing or project plan."},
+{term:"Delivery Rate",letter:"D",def:"The percentage of emails or ads successfully delivered to recipients."},
+{term:"Demand Generation",letter:"D",def:"Marketing activities aimed at creating awareness and interest in products or services."},
+{term:"Demand Waterfall",letter:"D",def:"A model used to track lead progression through the funnel."},
+{term:"Demand-Side Platform (DSP)",letter:"D",def:"A system that allows advertisers to buy digital ad inventory programmatically."},
+{term:"Demographics",letter:"D",def:"Statistical data describing a population such as age, gender, income, or education."},
+{term:"Direct Mail",letter:"D",def:"Physical or digital promotional messages sent directly to prospects or customers."},
+{term:"Direct Mail Or Message (DM)",letter:"D",def:"Personal messages sent directly to individuals on social platforms or channels."},
+{term:"Direct Marketing",letter:"D",def:"Marketing efforts aimed at communicating directly with target customers to drive action."},
+{term:"Direct Traffic",letter:"D",def:"Website visits that arrive without referral, often by typing the URL directly."},
+{term:"Display Ads / Display Advertising",letter:"D",def:"Banner or visual ads shown across websites, apps, or platforms."},
+{term:"Display Network",letter:"D",def:"A group of websites, videos, and apps where ads can appear (e.g., Google Display Network)."},
+{term:"Display Partner",letter:"D",def:"A third-party website or app that shows ads from a network like Google Ads."},
+{term:"Domain Authority/Domain Rating",letter:"D",def:"Metrics predicting how well a site ranks in search, measured by Moz (DA) or Ahrefs (DR)."},
+{term:"Double Opt-In",letter:"D",def:"A process where subscribers confirm their sign-up twice to verify consent."},
+{term:"Dynamic Ads",letter:"D",def:"Personalized ads that automatically adjust content to match viewer interests."},
+{term:"Dynamic Content",letter:"D",def:"Web or email content that changes automatically based on user data or behavior."},
+{term:"Dynamic Keyword Insertion (DKI)",letter:"D",def:"A Google Ads feature that automatically inserts a user’s search query into the ad text."},
+    
+    //E
+{term:"Earned Media",letter:"E",def:"Exposure a brand gains organically through word-of-mouth, press coverage, reviews, or social shares rather than paid advertising."},
+{term:"Email Bounce Rate",letter:"E",def:"The percentage of emails that could not be delivered to recipients' inboxes."},
+{term:"Email Click Rate",letter:"E",def:"The percentage of delivered emails that received at least one click."},
+{term:"Email Deliverability",letter:"E",def:"The ability of an email to successfully reach the recipient's inbox."},
+{term:"Email List Churn Rate",letter:"E",def:"The percentage of subscribers lost over a period due to unsubscribes, bounces, or inactivity."},
+{term:"Email Marketing",letter:"E",def:"The practice of sending targeted emails to nurture leads, engage customers, and drive conversions."},
+{term:"Email Open Rate",letter:"E",def:"The percentage of recipients who opened an email out of total delivered."},
+{term:"Employee Advocacy",letter:"E",def:"When employees promote their company through their own networks to increase brand visibility."},
+{term:"Enablement",letter:"E",def:"Providing sales and marketing teams with tools, resources, and content to be more effective."},
+{term:"Engagement",letter:"E",def:"The level of interaction users have with content, such as clicks, shares, comments, or likes."},
+{term:"Engagement Rate",letter:"E",def:"The percentage of people who engaged with content out of the total who viewed it."},
+{term:"Event Tracking",letter:"E",def:"Monitoring user interactions (e.g., clicks, downloads, form fills) on websites or apps."},
+{term:"Evergreen Content",letter:"E",def:"Content that remains relevant and valuable over time without frequent updates."},
+{term:"Exact Match (Google Ads)",letter:"E",def:"A keyword match type in Google Ads where ads show only for searches with the exact keyword or close variants."},
+{term:"Exclusion Audience",letter:"E",def:"A group of users intentionally excluded from targeting in a campaign."},
+{term:"Executive Profile",letter:"E",def:"A curated description of a business leader highlighting experience, skills, and influence."},
+{term:"Executive Sponsor",letter:"E",def:"A senior leader who champions and supports a project internally."},
+{term:"Expansion",letter:"E",def:"The process of growing customer accounts through upselling, cross-selling, or new use cases."},
+{term:"Expected CTR",letter:"E",def:"A Google Ads metric predicting the likelihood of an ad being clicked when shown."},
+{term:"Expertise, Authority, Trust (E-A-T)",letter:"E",def:"A Google guideline framework assessing the quality of content and its credibility."},
+{term:"Explicit Lead Scoring Metric",letter:"E",def:"Criteria like budget, authority, need, and timeline (BANT) used to score leads."},
+    
+    
+    //F
+{term:"Facebook Business Manager",letter:"F",def:"A tool to manage Facebook assets like ad accounts, Pages, and users in one place."},
+{term:"Facebook Carousel",letter:"F",def:"An ad format allowing multiple images or videos in one swipeable unit."},
+{term:"Facebook Event",letter:"F",def:"An online or offline event created and promoted on Facebook for engagement and attendance."},
+{term:"Facebook Pixel",letter:"F",def:"A tracking code that collects data to help measure conversions and optimize Facebook ads."},
+{term:"Firmographic Segmentation",letter:"F",def:"Dividing B2B audiences based on company attributes like size, industry, or revenue."},
+{term:"First Response Time",letter:"F",def:"The average time it takes a business to respond to a customer inquiry."},
+{term:"First-Party Data",letter:"F",def:"Data collected directly from customers via owned channels, like websites or apps."},
+{term:"Follower Growth Rate",letter:"F",def:"The pace at which a brand’s followers increase across social platforms."},
+{term:"Form",letter:"F",def:"A web element that collects user information for lead generation or signup."},
+{term:"Framework",letter:"F",def:"A structured model or methodology used to organize marketing strategies and tactics."},
+{term:"Frequency",letter:"F",def:"The average number of times a user is exposed to an ad in a given period."},
+{term:"Friction Points",letter:"F",def:"Obstacles or pain points in the customer journey that hinder conversions."},
+{term:"Funnel",letter:"F",def:"The stages of the buyer’s journey: awareness, consideration, and decision."},
+    
+    //G
+{term:"Gated Content",letter:"G",def:"Content that requires users to provide contact details (e.g., email) before access."},
+{term:"General Data Protection Regulation (GDPR)",letter:"G",def:"A European Union regulation governing data protection and privacy."},
+{term:"Geo-Targeting",letter:"G",def:"Delivering ads or content based on a user’s geographic location."},
+{term:"Geofencing",letter:"G",def:"A location-based targeting strategy that uses GPS or RFID to serve ads within a defined boundary."},{term:"Go To Market",letter:"G",def:"A strategy that outlines how a company will launch, promote, and sell a product or service to reach customers."},
+{term:"Google Analytics 4 (GA4)",letter:"G",def:"The latest version of Google Analytics that focuses on event-based tracking and cross-device measurement."},
+{term:"Google Display Network (GDN)",letter:"G",def:"A collection of websites, apps, and videos where Google Ads can appear as display ads."},
+{term:"Google Keyword Planner",letter:"G",def:"A free tool by Google that provides keyword ideas and search volume data for campaign planning."},
+{term:"Google Search Console",letter:"G",def:"A free tool from Google to monitor and troubleshoot a website’s search performance."},
+{term:"Google Tag Manager (GTM)",letter:"G",def:"A free tool that helps manage and deploy marketing and analytics tags without editing code."},
+{term:"Guerrilla Marketing",letter:"G",def:"Unconventional, creative tactics designed to achieve maximum exposure with minimal resources."},
+    
+    //H
+{term:"Hero Image",letter:"H",def:"The main image or visual prominently displayed at the top of a web page or section."},
+{term:"Hybrid (Revenue Model)",letter:"H",def:"A business model that combines multiple revenue streams, such as subscription and ads."},
+    
+    //I
+{term:"Ideal Customer Profile (ICP)",letter:"I",def:"A detailed description of the company or individual that best fits your solution."},
+{term:"Impression Share",letter:"I",def:"The percentage of total available impressions your ad receives compared to competitors."},
+{term:"Impression To Conversion Rate (Imp Cvr)",letter:"I",def:"The percentage of impressions that result directly in a conversion."},
+{term:"Impressions",letter:"I",def:"The number of times an ad or piece of content is displayed to users."},
+{term:"In-Market Audiences",letter:"I",def:"Groups of users actively researching or considering products/services, targetable in Google Ads."},
+{term:"InMail / Conversation Ad",letter:"I",def:"LinkedIn ad formats that deliver personalized messages directly to a user’s inbox."},
+{term:"Inactive Client",letter:"I",def:"A customer who has not engaged or purchased for a significant period."},
+{term:"Inbound Marketing",letter:"I",def:"A strategy that attracts customers through valuable content and experiences tailored to buyer needs."},
+{term:"Inbound Methodology",letter:"I",def:"A structured approach to attract, engage, and delight customers using inbound tactics."},
+{term:"Inbound Strategy",letter:"I",def:"The execution plan for inbound marketing, covering content, SEO, and lead nurturing."},
+{term:"Inclusion List / Whitelist",letter:"I",def:"A list of approved sites or placements where advertisers allow ads to appear."},
+{term:"Industry Influencers",letter:"I",def:"Key people in a niche whose opinions can influence a target audience."},
+{term:"Industry Trend Research",letter:"I",def:"The process of studying market trends to inform strategy."},
+{term:"Influenced Customers",letter:"I",def:"Customers who were exposed to marketing campaigns before making a purchase."},
+{term:"Influencer Engagement Rate",letter:"I",def:"The level of audience interaction with content produced by influencers."},
+{term:"Informational Keyword",letter:"I",def:"A search term used by people looking for information rather than to make a purchase."},
+{term:"Instream Pre-Rolls",letter:"I",def:"Video ads that play before the main video content on platforms like YouTube."},
+{term:"Integrated Marketing",letter:"I",def:"A unified marketing approach that delivers consistent messaging across all channels."},
+{term:"Integrated Marketing Communication (IMC)",letter:"I",def:"The coordination of all promotional tools to provide clarity and consistency of message."},
+{term:"Intent Signals",letter:"I",def:"Behavioral or contextual clues that suggest a user is likely to buy soon."},
+{term:"Interstitial Ad",letter:"I",def:"A full-screen ad that covers the host app or site content, typically shown during transitions."},
+{term:"Inventory",letter:"I",def:"The available supply of ad space or products a company has for sale."},
+    
+    //J
+{term:"Jobs To Be Done",letter:"J",def:"A framework for understanding customer needs based on the jobs they want to accomplish."},
+    
+    //K
+{term:"Key Performance Indicator (KPI)",letter:"K",def:"A measurable value that shows how effectively a company is achieving business objectives."},
+{term:"Keyword",letter:"K",def:"A word or phrase that triggers ads or helps content appear in search results."},
+{term:"Keyword Cannibalization",letter:"K",def:"When multiple pages from the same website compete for the same keyword in search rankings."},
+{term:"Keyword Rankings",letter:"K",def:"The position of a webpage in search engine results for a specific keyword."},
+{term:"Keyword Research",letter:"K",def:"The process of finding and analyzing search terms that people enter into search engines."},
+    
+    //L  
+ {term:"Landing Page",letter:"L",def:"A standalone web page designed to capture leads or drive a specific action, often linked to a marketing campaign."},
+{term:"Landing Page Experience",letter:"L",def:"A Google Ads metric measuring the relevance and quality of the landing page connected to your ad."},
+{term:"Lead",letter:"L",def:"A potential customer who has shown interest in a product or service by providing contact information or engaging with content."},
+{term:"Lead Enrichment",letter:"L",def:"The process of adding more data to existing lead records, such as job title or company size."},
+{term:"Lead Flow",letter:"L",def:"The path and process leads follow from first interaction through conversion."},
+{term:"Lead Generation",letter:"L",def:"The process of attracting and capturing interest in a product or service to build a sales pipeline."},
+{term:"Lead Nurturing",letter:"L",def:"Building relationships with leads through targeted content and campaigns to move them closer to purchase."},
+{term:"Lead Nurturing Funnel",letter:"L",def:"A structured approach to guide leads with relevant content and touchpoints until they are sales-ready."},
+{term:"Lead Response Time",letter:"L",def:"The average time it takes for a sales team to respond to a new lead."},
+{term:"Lead Scoring",letter:"L",def:"A methodology for ranking leads based on likelihood to convert, using explicit and implicit criteria."},
+{term:"Lead to Customer Rate",letter:"L",def:"The percentage of leads that ultimately convert into paying customers."},
+{term:"Lead to Qualified Lead Conversion Rate %",letter:"L",def:"The percentage of leads that become qualified based on agreed criteria."},
+{term:"LifeTime Value (LTV)",letter:"L",def:"The predicted revenue a customer will generate over the duration of their relationship with a company."},
+{term:"Lifecycle Stages",letter:"L",def:"The phases a customer passes through, such as subscriber, lead, MQL, SQL, and customer."},
+{term:"LinkedIn Sales Navigator",letter:"L",def:"A premium LinkedIn tool designed to help sales teams find, target, and nurture prospects."},
+{term:"List Growth Rate",letter:"L",def:"The rate at which a company’s subscriber or lead list grows over time."},
+{term:"Location Targeting",letter:"L",def:"The practice of serving ads or content based on geographic locations of users."},
+{term:"Location-Based Advertising",letter:"L",def:"A strategy that uses a user’s real-time location to deliver relevant ads."},
+{term:"Long Tail Keywords",letter:"L",def:"Highly specific keyword phrases with lower search volume but higher conversion potential."},
+{term:"Lookalike Audience",letter:"L",def:"A targeting option that finds new users similar to your existing customers."},
+    
+    //M
+{term:"Machine Learning",letter:"M",def:"A subset of AI where algorithms learn from data to improve predictions or decisions."},
+{term:"Market Gaps",letter:"M",def:"Opportunities in the market where customer needs are unmet or underserved."},
+{term:"Market Research",letter:"M",def:"The process of collecting and analyzing data about customers, competitors, and the market environment."},
+{term:"Market Share",letter:"M",def:"The portion of total industry sales captured by one company."},
+{term:"Market Trends",letter:"M",def:"Patterns or movements in a market that indicate growth, decline, or shifts in customer behavior."},
+{term:"Marketing Automation (MA)",letter:"M",def:"Technology that automates repetitive marketing tasks like email campaigns, lead scoring, and workflows."},
+{term:"Marketing Automation Workflow",letter:"M",def:"A series of automated steps triggered by user actions to nurture leads or customers."},
+{term:"Marketing Qualified Lead (MQL)",letter:"M",def:"A lead deemed more likely to become a customer based on engagement with marketing efforts."},
+{term:"Marketing-360",letter:"M",def:"A holistic approach that integrates multiple marketing channels into one strategy."},
+{term:"Maslow’s Hierarchy Of Needs",letter:"M",def:"A psychological theory often applied to marketing to understand consumer motivations."},
+{term:"Match Type",letter:"M",def:"A Google Ads setting that determines how closely a keyword must match a search term to trigger an ad."},
+{term:"Maximum Bids",letter:"M",def:"The highest amount an advertiser is willing to pay for a click or impression."},
+{term:"Media Brief",letter:"M",def:"A document that outlines goals, audience, and guidelines for a media campaign."},
+{term:"Media Strategy",letter:"M",def:"The planning and selection of media channels to effectively reach a target audience."},
+{term:"Meeting Booking Software",letter:"M",def:"Tools that automate scheduling of meetings between prospects and sales teams."},
+{term:"Meta Description Tag",letter:"M",def:"An HTML attribute providing a short summary of a webpage, often shown in search results."},
+{term:"Metatag",letter:"M",def:"Snippets of code in a webpage’s HTML that provide metadata for search engines."},
+{term:"Metrics",letter:"M",def:"Quantifiable measurements used to assess marketing performance."},
+{term:"Middle of Funnel (MOFU)",letter:"M",def:"The stage where leads are evaluating solutions but haven’t yet made a purchase decision."},
+{term:"Middle of Funnel Conversion Rate",letter:"M",def:"The percentage of leads in the consideration stage that convert to the decision stage."},
+{term:"Milestones",letter:"M",def:"Key points of progress in a marketing or sales project."},
+{term:"Mindmap",letter:"M",def:"A visual diagram used to organize ideas, concepts, or processes hierarchically."},
+{term:"Mobile Ad Server",letter:"M",def:"Technology that delivers and tracks ads specifically on mobile devices."},
+{term:"Mobile Banner",letter:"M",def:"A display ad format optimized for mobile screens."},
+{term:"Mobile Marketing",letter:"M",def:"Marketing strategies designed specifically for mobile device users."},
+{term:"Mobile Optimization",letter:"M",def:"The process of ensuring a website or campaign is fully functional and user-friendly on mobile devices."},
+{term:"Monthly Recurring Revenue (MRR)",letter:"M",def:"Predictable revenue a business expects to earn every month from subscriptions."},
+{term:"Months to Recover CAC",letter:"M",def:"The number of months needed for the revenue from a customer to cover the acquisition cost."},
+{term:"Most Aware",letter:"M",def:"A stage in Eugene Schwartz’s awareness model where the prospect is fully aware of their problem and solution."},
+    
+    //N
+{term:"Naming Convention",letter:"N",def:"A standardized method for naming campaigns, ad groups, or assets to improve organization and reporting."},
+{term:"Native Ads / Native Advertising",letter:"N",def:"Ads that match the look, feel, and function of the media format in which they appear."},
+{term:"Navigational Keyword",letter:"N",def:"Search queries where the user is looking for a specific website or brand."},
+{term:"Negative Keywords",letter:"N",def:"Keywords that prevent ads from being shown for irrelevant or low-value searches."},
+{term:"Net New",letter:"N",def:"Refers to new customers, revenue, or opportunities not included in existing accounts."},
+{term:"Nurturing Prospects",letter:"N",def:"Engaging potential customers with personalized content and touchpoints over time."},
+    
+    //O
+{term:"Off-Page Optimization",letter:"O",def:"SEO tactics performed outside of a website to improve rankings, such as backlinks."},
+{term:"Offer",letter:"O",def:"A specific promotion or incentive provided to prospects to drive conversions."},
+{term:"Offer Aware",letter:"O",def:"A stage in customer awareness where the buyer knows about a product or solution offer."},
+{term:"Omnichannel Marketing",letter:"O",def:"A strategy that integrates all marketing channels to provide a seamless customer experience."},
+{term:"On-Boarding Client",letter:"O",def:"The process of welcoming and integrating a new client into services or systems."},
+{term:"On-Page Optimization",letter:"O",def:"SEO tactics applied directly to webpages, like content, titles, and meta tags."},
+{term:"One-To-Many (ABM)",letter:"O",def:"An Account-Based Marketing approach targeting a larger group of accounts with shared traits."},
+{term:"One-To-One (ABM)",letter:"O",def:"An Account-Based Marketing strategy personalized for a single high-value account."},
+{term:"Open Opportunity Rate",letter:"O",def:"The percentage of active sales opportunities relative to total pipeline."},
+{term:"Open Rate (OR)",letter:"O",def:"The percentage of recipients who open an email compared to total delivered."},
+{term:"Opportunity (Opp)",letter:"O",def:"A qualified sales lead that has shown intent and entered the sales pipeline."},
+{term:"Opportunity Methodologies",letter:"O",def:"Frameworks or approaches used by sales teams to qualify, pursue, and close opportunities."},{term:"Optimization Score",letter:"O",def:"A Google Ads metric (0–100%) estimating how well your campaigns are set to perform, with recommendations to improve performance."},
+{term:"Organic Click-Through Rate",letter:"O",def:"The percentage of people who clicked on an organic search result out of the total who viewed it."},
+{term:"Organic Listing",letter:"O",def:"A search engine result that appears naturally, not through paid advertising."},
+{term:"Organic Search",letter:"O",def:"Traffic that comes from unpaid search engine results."},
+{term:"Organic Search Conversion Rate",letter:"O",def:"The percentage of visitors from organic search who complete a desired action."},
+{term:"Organic Traffic",letter:"O",def:"Website visitors who arrive through unpaid search engine results."},
+{term:"Organizational Flow",letter:"O",def:"The structure and process by which tasks and responsibilities are coordinated within a company."},
+{term:"Organizational Maturity",letter:"O",def:"The level of development and sophistication in a company’s processes, systems, and culture."},
+{term:"Outbound Links",letter:"O",def:"Hyperlinks that point from your website to external websites."},
+{term:"Outbound Marketing",letter:"O",def:"Traditional marketing strategies where a business initiates contact with customers, e.g., cold calls, TV ads, direct mail."},
+{term:"Outreach",letter:"O",def:"Efforts to connect with potential customers, partners, or influencers to promote a business."},
+{term:"Owned Media",letter:"O",def:"Marketing assets a company controls, such as its website, blog, and email list."},
+{term:"Owned Research",letter:"O",def:"Research conducted internally by a company to generate unique insights and data."},
+    
+    //P
+{term:"Page Authority/URL Rating",letter:"P",def:"A score predicting how well a page will rank in search engine results, often measured by tools like Moz or Ahrefs."},
+{term:"Page Experience Signals",letter:"P",def:"Google’s set of signals (including Core Web Vitals) measuring user experience on a page."},
+{term:"PageRank",letter:"P",def:"Google’s original algorithm for ranking web pages based on inbound links and importance."},
+{term:"Paid Media",letter:"P",def:"Any marketing channel where placements are paid for, such as PPC, display, or social ads."},
+{term:"Paid Review",letter:"P",def:"Reviews written in exchange for compensation, which may violate platform policies."},
+{term:"Paid Search",letter:"P",def:"Advertising on search engines where businesses bid on keywords to display ads."},
+{term:"Paid Social",letter:"P",def:"Advertising on social platforms like Facebook, Instagram, or LinkedIn."},
+{term:"Pain Points",letter:"P",def:"Specific problems or challenges customers want to solve."},
+{term:"Pareto Principle",letter:"P",def:"Also known as the 80/20 rule, it suggests that 80% of results come from 20% of efforts."},
+{term:"Pay Per Click (PPC)",letter:"P",def:"An advertising model where advertisers pay a fee each time their ad is clicked."},
+{term:"Permission-Based Marketing",letter:"P",def:"Marketing that requires consumer consent before sending promotional messages."},
+{term:"Personas",letter:"P",def:"Semi-fictional profiles that represent segments of your target audience."},
+{term:"Phone-Through Rate (PTR)",letter:"P",def:"The percentage of ad impressions that result in phone calls."},
+{term:"Pipe-to-Spend",letter:"P",def:"A ratio comparing sales pipeline value to marketing spend."},
+{term:"Pipeline",letter:"P",def:"A visual representation of prospects and opportunities at different stages of the sales cycle."},
+{term:"Pipeline-to-Spend Ratio",letter:"P",def:"A metric comparing the value of opportunities in the pipeline against marketing spend."},
+{term:"Pixel",letter:"P",def:"A snippet of code placed on a website to track user behavior and conversions."},
+{term:"Placement Targeting",letter:"P",def:"Choosing specific websites, apps, or placements where display ads will appear."},
+{term:"Point Of Contact (POC)",letter:"P",def:"The main person of communication between a company and a client."},
+{term:"Position Zero",letter:"P",def:"The featured snippet at the very top of Google’s search results."},
+{term:"Positioning",letter:"P",def:"The strategy of defining how a brand is perceived in the minds of customers relative to competitors."},
+{term:"Predictive Analysis",letter:"P",def:"Using historical data and statistical techniques to forecast future outcomes."},
+{term:"Predictive Analytics",letter:"P",def:"Data analysis that uses machine learning and algorithms to predict customer behavior."},
+{term:"Predictive Content",letter:"P",def:"Content tailored dynamically based on a user’s behavior or profile to improve engagement."},
+{term:"Premium Network Buy",letter:"P",def:"Purchasing ad placements on high-quality, brand-safe publishers at premium prices."},
+{term:"Primary Data",letter:"P",def:"Data collected directly from original sources, such as surveys or interviews."},
+{term:"Problem Aware",letter:"P",def:"A stage in customer awareness where the buyer knows they have a problem but not the solution."},
+{term:"Product Aware",letter:"P",def:"A stage in customer awareness where the buyer knows about your product but hasn’t decided to purchase."},
+{term:"Product-Led",letter:"P",def:"A growth strategy where the product itself drives acquisition, conversion, and expansion."},
+{term:"Programmatic Advertising",letter:"P",def:"Automated buying and selling of digital advertising using software and algorithms."},
+{term:"Programmatic Display",letter:"P",def:"A type of programmatic advertising focused on buying display ads across websites."},
+{term:"Project Brief",letter:"P",def:"A document outlining objectives, scope, and deliverables of a marketing project."},
+{term:"Psychographics",letter:"P",def:"Segmentation based on personality traits, values, attitudes, and lifestyles."},
+    
+    //Q
+{term:"Qualified Lead",letter:"Q",def:"A prospect that meets the criteria to be pursued by the sales team."},
+{term:"Qualified Lead to Closed Won Opp Conversion Rate %",letter:"Q",def:"The percentage of qualified leads that turn into closed deals."},
+{term:"Qualified Lead to Meetings Booked Conversion Rate %",letter:"Q",def:"The percentage of qualified leads that result in booked sales meetings."},
+{term:"Qualified Lead to Opportunity Conversion Rate %",letter:"Q",def:"The percentage of qualified leads that advance to sales opportunities."},
+{term:"Quality Score",letter:"Q",def:"A Google Ads metric (1–10) that measures ad relevance, CTR, and landing page experience."},
+    
+    //R
+{term:"Ranking Factors",letter:"R",def:"Criteria search engines use to determine how content ranks in results pages."},
+{term:"Reach",letter:"R",def:"The total number of unique users exposed to a piece of content or ad."},
+{term:"Real-Time Bidding",letter:"R",def:"A programmatic process where ad impressions are bought and sold in real time auctions."},
+{term:"Redirect",letter:"R",def:"A technique that sends users and search engines to a different URL than the one requested."},
+{term:"Referral Traffic",letter:"R",def:"Website visitors that arrive via links from other sites rather than search engines."},
+{term:"Remarketing",letter:"R",def:"Targeting ads to users who previously visited your site or engaged with your brand."},
+{term:"Renewal Rate",letter:"R",def:"The percentage of customers who renew subscriptions or contracts over a given time."},
+{term:"Request for Proposal (RFP)",letter:"R",def:"A formal request issued by a company seeking proposals from vendors or agencies."},
+{term:"Responsive Web Design",letter:"R",def:"A design approach ensuring websites adapt seamlessly to different screen sizes and devices."},
+{term:"Responsive Website",letter:"R",def:"A website designed to provide optimal viewing and interaction across devices."},
+{term:"Retargeting Audience",letter:"R",def:"A segment of users who have already interacted with your site or ads and can be re-engaged."},
+{term:"Retention Stage",letter:"R",def:"The phase of the customer lifecycle focused on keeping existing customers engaged and loyal."},{term:"Return On Ad Spend (ROAS)",letter:"R",def:"A metric that measures revenue earned for every dollar spent on advertising."},
+{term:"Return On Marketing Investment (ROMI)",letter:"R",def:"The revenue generated compared to the cost of marketing activities."},
+{term:"Return on Investment (ROI)",letter:"R",def:"A measure of profitability that compares net profit to the cost of an investment."},
+{term:"Revenue",letter:"R",def:"The total income generated by a business from its activities."},
+{term:"Revenue Churn (MRR churn rate)",letter:"R",def:"The amount of recurring revenue lost due to cancellations or downgrades."},
+{term:"Revenue Operations (RevOps)",letter:"R",def:"A business function that aligns sales, marketing, and customer success to drive growth."},
+{term:"Revenue Per Email Sent",letter:"R",def:"The average amount of revenue generated from each email sent in a campaign."},
+{term:"Rich Media",letter:"R",def:"Digital ads that include interactive elements like video, audio, or animation."},
+    
+    //S
+{term:"SEO Audit",letter:"S",def:"A comprehensive analysis of a website to identify issues affecting search performance."},
+{term:"SEO ROI",letter:"S",def:"A measure of the return on investment from SEO efforts compared to costs."},
+{term:"SMART Goals",letter:"S",def:"Specific, Measurable, Achievable, Relevant, and Time-bound goals used in marketing planning."},
+{term:"SWOT Analysis",letter:"S",def:"A framework that identifies strengths, weaknesses, opportunities, and threats."},
+{term:"Sales Accepted Lead (SAL)",letter:"S",def:"A lead that has been vetted by marketing and formally accepted by the sales team."},
+{term:"Sales Development Representative (SDR)",letter:"S",def:"A sales team member responsible for qualifying leads and setting up meetings."},
+{term:"Sales Enablement",letter:"S",def:"Processes and tools that help sales teams close deals more effectively."},
+{term:"Sales Funnel",letter:"S",def:"A model showing the journey from awareness to purchase."},
+{term:"Sales Method",letter:"S",def:"A structured approach sales teams use to engage prospects and close deals."},
+{term:"Sales Qualified Lead (SQL)",letter:"S",def:"A lead that has been deemed ready for direct sales engagement."},
+{term:"Sales Qualified Opportunity (SQO)",letter:"S",def:"An opportunity that meets the criteria to be pursued by the sales team."},
+{term:"Sales-Led",letter:"S",def:"A growth approach where sales teams drive customer acquisition and expansion."},
+{term:"Search Engine Advertising (SEA)",letter:"S",def:"The practice of running ads on search engines to reach users actively searching."},
+{term:"Search Engine Algorithm",letter:"S",def:"A complex formula used by search engines to rank web pages."},
+{term:"Search Engine Index",letter:"S",def:"The database of web pages a search engine has crawled and stored for retrieval."},
+{term:"Search Engine Marketing (SEM)",letter:"S",def:"The use of paid ads on search engines to drive traffic and conversions."},
+{term:"Search Engine Optimization (SEO)",letter:"S",def:"The practice of optimizing content and websites to rank higher in organic search results."},
+{term:"Search Engine Results Pages (SERPs)",letter:"S",def:"The pages displayed by search engines in response to a query."},
+{term:"Search Impression Share",letter:"S",def:"The percentage of impressions your ads receive compared to the total available."},
+{term:"Search Intent",letter:"S",def:"The goal behind a user’s search query (informational, navigational, transactional)."},
+{term:"Search Query",letter:"S",def:"The actual words typed into a search engine by a user."},
+{term:"Search lost IS (budget)",letter:"S",def:"The percentage of impressions lost due to insufficient campaign budget."},
+{term:"Search lost IS (rank)",letter:"S",def:"The percentage of impressions lost due to poor ad rank."},
+{term:"Search top IS",letter:"S",def:"The percentage of impressions that appear at the top of the search results page."},
+{term:"Second Price Auction",letter:"S",def:"An auction model where the highest bidder wins but pays the second-highest bid amount."},
+{term:"Secondary Data",letter:"S",def:"Information collected by others that is available for use in research."},
+{term:"Segmentation",letter:"S",def:"Dividing a market into smaller groups of people with similar characteristics."},
+{term:"Sentiment Analysis",letter:"S",def:"Using AI or analytics to determine the sentiment behind customer messages or reviews."},
+{term:"Service Level Agreement (SLA)",letter:"S",def:"A formal agreement between teams or companies defining service expectations."},
+{term:"Service Organization Control Type 2 (SOC 2)",letter:"S",def:"A compliance standard for managing customer data securely."},
+{term:"Session Duration",letter:"S",def:"The total time a user spends on a website during a single visit."},
+{term:"Share Of Wallet (SOW)",letter:"S",def:"The percentage of a customer’s total spending in a category that goes to your brand."},
+{term:"Short-Tail Keywords",letter:"S",def:"Broad search terms with high volume but low specificity."},
+{term:"Single Opt-In",letter:"S",def:"A subscription method where a user signs up once without additional confirmation."},
+{term:"Site Speed",letter:"S",def:"The time it takes for a web page to fully load."},
+{term:"Site Traffic",letter:"S",def:"The total volume of visitors to a website."},
+{term:"Situation Analysis",letter:"S",def:"An assessment of a company’s current environment, including strengths and weaknesses."},
+{term:"Small and Medium Business (SMB)",letter:"S",def:"Companies with limited size in terms of employees or revenue, typically under 500 staff."},
+{term:"Social Account Management Tools",letter:"S",def:"Platforms used to schedule, publish, and analyze social media posts."},
+{term:"Social Account Plan",letter:"S",def:"A strategy document outlining goals, audiences, and tactics for a social media account."},
+{term:"Social Assets",letter:"S",def:"Content and creative materials used across social platforms."},
+{term:"Social Channels",letter:"S",def:"Platforms where social interactions occur, like Facebook, LinkedIn, TikTok, and Instagram."},
+{term:"Social Listening",letter:"S",def:"Monitoring online conversations about a brand, industry, or competitors."},
+{term:"Social Media Traffic to Website",letter:"S",def:"The number of visitors that arrive at a site from social media platforms."},
+{term:"Soft Bounce",letter:"S",def:"An email that reaches the recipient’s server but is returned due to temporary issues."},
+{term:"Software As A Service (SaaS)",letter:"S",def:"A software delivery model where applications are accessed online by subscription."},
+{term:"Solution Aware",letter:"S",def:"A stage in awareness where buyers know solutions exist but not your product specifically."},
+{term:"Source",letter:"S",def:"The origin of a lead, visitor, or conversion in analytics systems."},
+{term:"Source Report",letter:"S",def:"A marketing report that breaks down performance by traffic source."},
+{term:"Sponsored Content",letter:"S",def:"Content paid for by an advertiser but published in a way that resembles editorial content."},
+{term:"Sponsorships",letter:"S",def:"Partnerships where a company pays to support an event, activity, or content in exchange for exposure."},
+{term:"Stakeholder",letter:"S",def:"An individual or group with interest or influence in a business decision or project."},
+{term:"Style Guide",letter:"S",def:"A set of brand rules covering design, tone, and messaging consistency."},
+{term:"Submission Rate",letter:"S",def:"The percentage of visitors who complete and submit a form."},
+{term:"Subscribe",letter:"S",def:"The action of signing up for recurring updates or content, often via email."},
+    
+    //T
+{term:"T-Shaped Marketer",letter:"T",def:"A marketer with deep expertise in one area and broad skills across multiple disciplines."},
+{term:"Tactic",letter:"T",def:"A specific action taken to execute a broader strategy."},
+{term:"Target Account Audience",letter:"T",def:"Accounts identified as priorities in Account-Based Marketing."},
+{term:"Target Bids",letter:"T",def:"Specific bid values set for keywords, placements, or audiences in paid campaigns."},
+{term:"Target Persona",letter:"T",def:"A semi-fictional profile that represents an ideal customer for targeted campaigns."},
+{term:"Targeting",letter:"T",def:"Selecting specific audiences, geographies, or demographics for marketing campaigns."},
+{term:"Technical SEO",letter:"T",def:"Optimizations that improve a website’s infrastructure and crawlability for search engines."},
+{term:"Technographic Segmentation",letter:"T",def:"Market segmentation based on the technology tools and platforms customers use."},
+{term:"Technographic Tools",letter:"T",def:"Platforms that identify and analyze the technology stack of businesses."},
+{term:"Text Link",letter:"T",def:"A hyperlink within text, often used in SEO and affiliate marketing."},
+{term:"Thank-You Page",letter:"T",def:"A page users see after completing a form or purchase, often used for tracking."},
+{term:"Third-Party Data",letter:"T",def:"Data collected by organizations not directly connected to the customer relationship."},
+{term:"Thought Leadership",letter:"T",def:"Content or positioning that establishes authority and expertise in an industry."},
+{term:"Tone Of Voice",letter:"T",def:"The style and personality expressed in communication, reflecting a brand’s character."},
+{term:"Top of Funnel (TOFU)",letter:"T",def:"The awareness stage in the funnel where potential customers first engage with your brand."},
+{term:"Top of Funnel Conversion Rate",letter:"T",def:"The percentage of top-of-funnel visitors who convert to leads."},
+{term:"Total Order Value (TOV)",letter:"T",def:"The sum of the value of all orders placed within a certain period."},
+{term:"Touchpoint",letter:"T",def:"Any interaction between a customer and a brand along the journey."},
+{term:"Tracking",letter:"T",def:"Monitoring user actions and metrics to measure performance."},
+{term:"Tracking Pixel",letter:"T",def:"A 1x1 pixel embedded in a website/email that tracks user behavior."},
+{term:"Traditional Marketing",letter:"T",def:"Offline marketing methods like print, TV, radio, and direct mail."},
+{term:"Traffic",letter:"T",def:"The number of visitors to a website or app."},
+{term:"Transactional Keyword",letter:"T",def:"A keyword indicating strong purchase intent, e.g., 'buy shoes online'."},
+{term:"Trend",letter:"T",def:"A general direction in which something is developing or changing in the market."},
+{term:"Trigger Event",letter:"T",def:"An occurrence that signals a potential sales opportunity, such as funding or expansion."},
+{term:"TrueView (YouTube)",letter:"T",def:"YouTube’s skippable video ad format, where advertisers pay only if viewers watch or interact."},
+{term:"TrueView In-Stream",letter:"T",def:"YouTube skippable video ads that run before or during other videos."},
+{term:"TrueView Video Discovery",letter:"T",def:"YouTube ads that appear in search results or related videos to drive discovery."},
+    
+    //U
+{term:"URL Parameter",letter:"U",def:"A value appended to a URL to track campaign or user information."},
+{term:"UTM",letter:"U",def:"Urchin Tracking Module codes added to URLs to track performance in analytics."},
+{term:"Unaware",letter:"U",def:"A stage of awareness where prospects don’t realize they have a problem."},
+{term:"Unique Selling Point (USP)",letter:"U",def:"The distinct value or benefit that sets a product apart from competitors."},
+{term:"Unsubscribe Rate",letter:"U",def:"The percentage of subscribers who opt out of an email list over time."},
+{term:"Uplift Modelling",letter:"U",def:"A predictive modeling technique estimating the impact of marketing actions on customer behavior."},
+{term:"Upselling",letter:"U",def:"Encouraging customers to purchase a higher-end product or add-on."},
+{term:"Usability Testing",letter:"U",def:"The practice of testing a product with users to identify issues and improve experience."},
+{term:"User Experience (UX)",letter:"U",def:"The overall quality of interactions a user has with a product or service."},
+{term:"User Intent",letter:"U",def:"The underlying goal or purpose behind a user’s action or search."},
+{term:"User Interface (UI)",letter:"U",def:"The layout and design of the visual elements through which users interact with a product."},
+{term:"User Journey",letter:"U",def:"The full series of interactions a user has with a brand before conversion."},
+{term:"User Persona",letter:"U",def:"A semi-fictional representation of an ideal customer based on data and research."},
+{term:"User-Generated Content (UGC)",letter:"U",def:"Content created by customers or users rather than the brand itself."},
+    
+    //V
+{term:"Vanity Metrics",letter:"V",def:"Metrics that look impressive but don’t correlate strongly with business outcomes."},
+{term:"Video Aspect Ratio",letter:"V",def:"The proportional relationship between a video’s width and height, e.g., 16:9."},
+{term:"Video Interstitial",letter:"V",def:"Full-screen video ads that interrupt user activity within an app or site."},
+{term:"Video On Demand (VOD)",letter:"V",def:"Video content available at any time, such as streaming platforms."},
+{term:"Video Thumbnail",letter:"V",def:"The preview image for a video that can influence whether users click to watch."},
+{term:"View-Through Conversion",letter:"V",def:"A conversion that happens after a user sees (but doesn’t click) an ad and later converts."},
+{term:"Viral Coefficient of Social Content",letter:"V",def:"A measure of how many additional users each existing user brings through sharing."},
+{term:"Viral Content",letter:"V",def:"Content that spreads rapidly online through sharing."},
+{term:"Voice Search",letter:"V",def:"Searches conducted through voice-enabled devices or assistants."},
+    
+    //W
+{term:"Web Crawler",letter:"W",def:"An automated bot used by search engines to index and discover web pages."},
+{term:"Webhook",letter:"W",def:"A way for apps to send real-time data to other apps via HTTP callbacks."},
+{term:"Webinar",letter:"W",def:"A seminar or presentation conducted online."},
+{term:"Website Optimization",letter:"W",def:"The process of improving website performance to increase traffic and conversions."},
+{term:"White Hat SEO",letter:"W",def:"SEO techniques that comply with search engine guidelines and best practices."},
+{term:"White Paper",letter:"W",def:"An authoritative report that informs readers about a complex issue or solution."},
+{term:"Wide Skyscraper",letter:"W",def:"A popular display ad format sized 160x600 pixels."},
+{term:"WireFrame",letter:"W",def:"A blueprint for a website layout showing structure and functionality before design."},
+{term:"Word Of Mouth (WOM)",letter:"W",def:"Marketing driven by customer recommendations and organic sharing."},
+{term:"Workflow",letter:"W",def:"A sequence of tasks that are necessary to complete a process."},
+    
+    //Y
+{term:"YouTube Masthead",letter:"Y",def:"A premium placement on YouTube’s homepage featuring large-scale video ads."}
+
+
+    // (…rest of your list continues)
+  ];
+
+  // --- UI logic --------------------------------------------------
+  const grid = document.getElementById('grid');
+  const q = document.getElementById('q');
+  const alpha = document.getElementById('alpha');
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+  // A–Z buttons
+  let activeLetter = "All";
+  const mkBtn = (label) => {
+    const b = document.createElement('button');
+    b.textContent = label;
+    b.className = (label === 'All') ? 'active' : '';
+    b.addEventListener('click', () => {
+      [...alpha.children].forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      activeLetter = label;
+      render();
+    });
+    return b;
+  };
+  alpha.appendChild(mkBtn('All'));
+  letters.forEach(l=>alpha.appendChild(mkBtn(l)));
+
+  // Render cards
+  function render(){
+    const term = q.value.trim().toLowerCase();
+    const items = TERMS
+      .filter(t => activeLetter==='All' ? true : t.letter===activeLetter)
+      .filter(t => !term || t.term.toLowerCase().includes(term) || (t.def||"").toLowerCase().includes(term))
+      .sort((a,b)=>a.term.localeCompare(b.term));
+
+    grid.innerHTML = items.map(t => `
+      <article class="card" role="listitem">
+        <h3 class="term"><span class="up">↑</span> ${t.term}</h3>
+        <p class="def">${t.def || ""}</p>
+        <div class="chips">
+          <span class="chip">${t.letter}</span>
+        </div>
+      </article>
+    `).join('') || `<p style="opacity:.8">No matches. Try a different search.</p>`;
+  }
+  q.addEventListener('input', render);
+  render();
+</script>
+</body>
+</html>

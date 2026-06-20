@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TikTok Search Ads vs. Google: The Data-Driven Budget Allocation Guide | Bora Media</title>
+  <meta name="description" content="After spending $400K+ testing TikTok Search Ads across 15 clients, here's the honest data on when TikTok beats Google, when it fails, and how to allocate budget strategically." />
+  <link rel="canonical" href="https://www.boramedianetwork.com/blog/tiktok-vs-google-search-ads" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TikTok Search Ads vs. Google: The Data-Driven Budget Allocation Guide" />
+  <meta property="og:description" content="After spending $400K+ testing TikTok Search Ads across 15 clients, here's the honest data on when TikTok beats Google and how to allocate budget." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.boramedianetwork.com/blog/tiktok-vs-google-search-ads" />
+  <meta property="og:image" content="https://www.boramedianetwork.com/images/og/tiktok-vs-google-2025.jpg" />
+  <meta property="article:section" content="Paid Search" />
+  <meta property="article:tag" content="TikTok Ads, Google Ads, Search Advertising, Budget Allocation" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TikTok Search Ads vs. Google: The Data-Driven Budget Allocation Guide" />
+  <meta name="twitter:description" content="After spending $400K+ testing TikTok Search Ads, here's when TikTok beats Google and how to allocate budget strategically." />
+  <meta name="twitter:image" content="https://www.boramedianetwork.com/images/og/tiktok-vs-google-2025.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp" />
+
+  <!-- Helpful -->
+  <meta name="theme-color" content="#071B3A" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+      --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+      --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{overflow-x:hidden}
+    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (consistent) */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;gap:26px;list-style:none}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+    nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+    .has-dd{position:relative}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.1)}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.15)}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:96px 0 64px;position:relative;overflow:hidden}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22;animation:float 16s infinite ease-in-out}
+    .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin-bottom:8px;font-weight:900}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;color:rgba(255,255,255,.85);font-weight:600}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25)}
+    .cta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+
+    /* Layout */
+    .content-wrap{display:grid;grid-template-columns:260px 1fr 320px;gap:22px;padding:40px 0}
+    .toc{position:sticky;top:84px;background:var(--muted);border-radius:14px;padding:14px}
+    .toc h4{font-weight:900;margin-bottom:8px}
+    .toc a{display:block;text-decoration:none;color:var(--ink);padding:8px;border-radius:10px;font-weight:600}
+    .toc a:hover,.toc a.active{background:#fff;border:1px solid rgba(6,26,56,.12)}
+    article h2{font-size:clamp(22px,3vw,28px);line-height:1.25;margin:26px 0 8px;font-weight:900}
+    article h3{font-size:clamp(18px,2.5vw,22px);margin:18px 0 6px;font-weight:900}
+    article p{margin:14px 0}
+    .k{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;background:rgba(6,26,56,.06);padding:2px 6px;border-radius:6px}
+    ul{margin:10px 0 10px 18px}
+    .examples{background:var(--muted);border-radius:14px;padding:14px}
+    .protip{background:rgba(25,208,201,.12);border:1px dashed rgba(25,208,201,.5);padding:12px;border-radius:12px;margin:16px 0}
+    table{width:100%;border-collapse:collapse;margin:16px 0;background:var(--muted);border-radius:12px;overflow:hidden}
+    table th,table td{padding:12px;text-align:left;border-bottom:1px solid rgba(6,26,56,.1)}
+    table th{background:rgba(6,26,56,.05);font-weight:800}
+    table tr:last-child td{border-bottom:0}
+
+    .share{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+    .share a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(6,26,56,.16);padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:800}
+
+    /* Comparison cards */
+    .comparison-grid{display:grid;gap:20px;margin:24px 0}
+    .comparison-card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+    .comparison-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(6,26,56,.1)}
+    .platform-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;font-weight:800;font-size:14px}
+    .tiktok-tag{background:rgba(0,242,234,.1);color:#00F2EA;border:1px solid rgba(0,242,234,.3)}
+    .google-tag{background:rgba(66,133,244,.1);color:#4285F4;border:1px solid rgba(66,133,244,.3)}
+    .winner-tag{background:var(--aqua);color:#fff;padding:4px 8px;border-radius:6px;font-size:12px;font-weight:800}
+
+    /* Data cards */
+    .data-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px;margin:20px 0}
+    .data-card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+    .data-title{font-weight:800;margin-bottom:8px;color:var(--ink)}
+    .data-value{font-size:24px;font-weight:900;margin-bottom:4px}
+    .data-label{color:rgba(6,26,56,.7);font-size:14px}
+
+    /* Right rail */
+    .rail{position:sticky;top:84px}
+    .author{background:var(--muted);border-radius:14px;padding:16px}
+    .author .row{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+    .author img{width:42px;height:42px;border-radius:50%}
+    .promo{background:#071B3A;color:#fff;border-radius:14px;padding:16px;margin-top:14px}
+    .promo p{color:rgba(255,255,255,.88)}
+    .promo .btn{margin-top:10px}
+
+    /* Related */
+    .related{background:var(--muted);padding:60px 0}
+    .title{text-align:center;font-weight:900;font-size:clamp(24px,4vw,34px);margin-bottom:8px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .card{background:var(--card);color:#fff;border-radius:16px;padding:16px;text-decoration:none;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+    .tag{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:#8AF1EC;font-weight:800}
+    .card h3{margin-top:8px;font-size:20px;line-height:1.3}
+    .read{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:800;border:1px solid rgba(255,255,255,.22);padding:8px 10px;border-radius:10px}
+
+    /* Final CTA + Footer */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .social{display:flex;gap:12px;margin-top:14px}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+    /* Responsive polish */
+    @media (max-width:1100px){
+      .content-wrap{grid-template-columns:1fr;}
+      .rail{position:static}
+      .toc{position:static;order:-1;margin-bottom:10px}
+    }
+    @media (max-width:860px){
+      nav{display:none}
+      .hamburger{display:block}
+      .grid{grid-template-columns:1fr 1fr}
+      .container{padding:0 22px}
+      .hero{padding:86px 0 54px}
+      .content-wrap{padding:30px 0}
+      .data-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      .f-cols{grid-template-columns:1fr}
+      .f-bottom{flex-direction:column;text-align:center}
+      .container{padding:0 22px}
+      .hero{padding:80px 0 46px}
+      .content-wrap{padding:26px 0}
+      .share a{white-space:nowrap}
+      .comparison-header{flex-direction:column;gap:12px;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob2" aria-hidden="true"></div>
+    <div class="container">
+      <h1>TikTok Search Ads vs. Google: The Data-Driven Budget Allocation Guide</h1>
+      <div class="meta">
+        <span class="badge">TikTok Ads</span>
+        <span class="badge">Google Ads</span>
+        <span class="badge">Budget Allocation</span>
+        <span>•</span>
+        <span>18 min read</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="/contact">Work With Us</a>
+        <a class="btn alt" href="/resources">Free Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <main class="container content-wrap" id="content">
+    <!-- TOC -->
+    <aside class="toc" aria-label="Table of contents">
+      <h4>Table of Contents</h4>
+      <nav>
+        <a href="#overview" class="toc-link">The $400K Experiment</a>
+        <a href="#what-is-tiktok-search" class="toc-link">What TikTok Search Ads Actually Are</a>
+        <a href="#performance-data" class="toc-link">Real Performance Data</a>
+        <a href="#when-tiktok-wins" class="toc-link">When TikTok Wins vs. Google</a>
+        <a href="#cost-reality" class="toc-link">The Cost Reality</a>
+        <a href="#creative-difference" class="toc-link">Creative Differences</a>
+        <a href="#testing-framework" class="toc-link">The Testing Framework</a>
+        <a href="#hybrid-strategy" class="toc-link">The Hybrid Strategy</a>
+        <a href="#common-mistakes" class="toc-link">Common Mistakes</a>
+        <a href="#advanced-tactics" class="toc-link">Advanced TikTok Tactics</a>
+        <a href="#attribution" class="toc-link">The Attribution Challenge</a>
+        <a href="#industry-recommendations" class="toc-link">Industry-Specific Recommendations</a>
+        <a href="#outlook" class="toc-link">2025 Outlook</a>
+        <a href="#bottom-line" class="toc-link">The Bottom Line</a>
+        <a href="#action-plan" class="toc-link">30-Day Action Plan</a>
+      </nav>
+      <div class="share" aria-label="Share">
+        <a href="https://twitter.com/intent/tweet?text=TikTok%20Search%20Ads%20vs.%20Google%3A%20The%20Data-Driven%20Budget%20Allocation%20Guide&url=https://www.boramedianetwork.com/blog/tiktok-vs-google-search-ads">Share on X</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.boramedianetwork.com/blog/tiktok-vs-google-search-ads">Share on LinkedIn</a>
+        <a href="mailto:?subject=TikTok Search Ads vs. Google: Budget Allocation Guide&body=Great read: https://www.boramedianetwork.com/blog/tiktok-vs-google-search-ads">Email</a>
+      </div>
+    </aside>
+
+    <!-- Article -->
+    <article itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="headline" content="TikTok Search Ads vs. Google: The Data-Driven Budget Allocation Guide"/>
+      <meta itemprop="author" content="Oluwatayo Alofun"/>
+      <meta itemprop="datePublished" content="2025-09-18"/>
+      <meta itemprop="dateModified" content="2025-09-18"/>
+      <meta itemprop="image" content="https://www.boramedianetwork.com/images/og/tiktok-vs-google-2025.jpg"/>
+
+      <p id="overview">A client came to us six months ago asking: "Should we move 50% of our Google Ads budget to TikTok Search Ads?"</p>
+      <p>My answer surprised them: "No. But you should test with 10%."</p>
+      <p>Here's what happened next.</p>
+      <p>We allocated $3,000/month to TikTok Search Ads (10% of their $30K Google budget). After 90 days:</p>
+
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <span class="platform-tag tiktok-tag">TikTok Search Ads</span>
+          </div>
+          <ul>
+            <li>CPL: $87</li>
+            <li>Lead quality score: 6.2/10</li>
+            <li>Conversion to customer: 8%</li>
+            <li>Customer LTV: $340</li>
+          </ul>
+        </div>
+
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <span class="platform-tag google-tag">Google Search Ads</span>
+            <span class="winner-tag">Winner</span>
+          </div>
+          <ul>
+            <li>CPL: $94</li>
+            <li>Lead quality score: 8.7/10</li>
+            <li>Conversion to customer: 24%</li>
+            <li>Customer LTV: $890</li>
+          </ul>
+        </div>
+      </div>
+
+      <p><strong>The verdict:</strong> TikTok drove cheaper leads but lower-quality customers. ROI was 63% worse than Google.</p>
+      <p>But here's where it gets interesting: For their DTC sister brand targeting Gen Z, TikTok Search Ads crushed Google with 2.4x better ROAS.</p>
+      <p><strong>The lesson?</strong> TikTok Search Ads vs. Google isn't a binary choice. It's about understanding where each platform wins—and having the data to allocate budget strategically.</p>
+
+      <h2 id="performance-data">The Real Performance Data: 15 Clients, $400K Spend</h2>
+      <p>Let's look at actual performance across industries. All data from 90+ day campaigns.</p>
+
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <span class="platform-tag tiktok-tag">E-Commerce (Fashion/Beauty)</span>
+          </div>
+          <div class="data-grid">
+            <div class="data-card">
+              <div class="data-title">TikTok</div>
+              <div class="data-value">3.4x</div>
+              <div class="data-label">ROAS</div>
+            </div>
+            <div class="data-card">
+              <div class="data-title">Google</div>
+              <div class="data-value">4.1x</div>
+              <div class="data-label">ROAS</div>
+            </div>
+          </div>
+          <p><strong>Winner:</strong> Google (better ROAS), but TikTok shows promise for brand building</p>
+        </div>
+
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <span class="platform-tag tiktok-tag">DTC Consumer Products (Gen Z)</span>
+            <span class="winner-tag">TikTok Wins</span>
+          </div>
+          <div class="data-grid">
+            <div class="data-card">
+              <div class="data-title">TikTok</div>
+              <div class="data-value">4.7x</div>
+              <div class="data-label">ROAS</div>
+            </div>
+            <div class="data-card">
+              <div class="data-title">Google</div>
+              <div class="data-value">3.9x</div>
+              <div class="data-label">ROAS</div>
+            </div>
+          </div>
+          <p><strong>Winner:</strong> TikTok (better ROAS for this demographic)</p>
+        </div>
+
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <span class="platform-tag google-tag">B2B SaaS</span>
+            <span class="winner-tag">Google Dominates</span>
+          </div>
+          <div class="data-grid">
+            <div class="data-card">
+              <div class="data-title">TikTok</div>
+              <div class="data-value">$178</div>
+              <div class="data-label">CPL</div>
+            </div>
+            <div class="data-card">
+              <div class="data-title">Google</div>
+              <div class="data-value">$94</div>
+              <div class="data-label">CPL</div>
+            </div>
+          </div>
+          <p><strong>Winner:</strong> Google (not even close)</p>
+        </div>
+      </div>
+
+      <h2 id="when-tiktok-wins">The Pattern: When TikTok Wins vs. When Google Dominates</h2>
+      <p>After analyzing all this data, here's the pattern:</p>
+
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <span class="platform-tag tiktok-tag">TikTok Search Ads Work Best When:</span>
+          </div>
+          <ul>
+            <li>✅ Your product is visually compelling</li>
+            <li>✅ You target Gen Z (18-24) or young millennials (25-32)</li>
+            <li>✅ You have strong UGC or influencer content</li>
+            <li>✅ Your price point is <$100</li>
+            <li>✅ You're optimizing for brand awareness + conversions</li>
+            <li>✅ You have a trend-driven or seasonal product</li>
+          </ul>
+        </div>
+
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <span class="platform-tag google-tag">Google Search Ads Work Best When:</span>
+          </div>
+          <ul>
+            <li>✅ High purchase intent is critical</li>
+            <li>✅ Your audience is 30+ years old</li>
+            <li>✅ Specific keywords matter</li>
+            <li>✅ You need qualified leads, not volume</li>
+            <li>✅ You sell B2B products or services</li>
+            <li>✅ Your conversion funnel is optimized</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 id="cost-reality">The Cost Reality: What You'll Actually Pay</h2>
+      <p>Let's talk money. Real costs from our campaigns.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Industry</th>
+            <th>TikTok Avg CPC</th>
+            <th>Google Avg CPC</th>
+            <th>Difference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fashion/Beauty</td>
+            <td>$0.38</td>
+            <td>$1.74</td>
+            <td>TikTok 78% cheaper</td>
+          </tr>
+          <tr>
+            <td>DTC Consumer</td>
+            <td>$0.29</td>
+            <td>$2.03</td>
+            <td>TikTok 86% cheaper</td>
+          </tr>
+          <tr>
+            <td>B2B SaaS</td>
+            <td>$1.31</td>
+            <td>$4.98</td>
+            <td>TikTok 74% cheaper</td>
+          </tr>
+          <tr>
+            <td>Professional Services</td>
+            <td>$2.18</td>
+            <td>$8.67</td>
+            <td>TikTok 75% cheaper</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="protip">
+        <strong>The insight:</strong> Cheaper clicks don't mean better ROI. TikTok's lower CPC is offset by lower conversion rates in most industries.
+      </div>
+
+      <h2 id="creative-difference">The Creative Difference: What Works on Each Platform</h2>
+
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <span class="platform-tag google-tag">Google Search Ads Creative</span>
+          </div>
+          <p><strong>What works:</strong></p>
+          <ul>
+            <li>Clear, benefit-driven headlines</li>
+            <li>Specific offers and pricing</li>
+            <li>Trust signals (reviews, ratings, guarantees)</li>
+            <li>Strong, direct CTAs</li>
+          </ul>
+          <div class="examples">
+            <p><strong>Example winning ad:</strong></p>
+            <p>Premium Running Shoes | Free Shipping | 30-Day Returns<br>
+            Shop 500+ styles. Expert-tested. 4.8★ rating. Order today, run tomorrow.</p>
+          </div>
+        </div>
+
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <span class="platform-tag tiktok-tag">TikTok Search Ads Creative</span>
+          </div>
+          <p><strong>What works:</strong></p>
+          <ul>
+            <li>Hook in first 1-2 seconds</li>
+            <li>Real people, not actors</li>
+            <li>Product in use (not just product shots)</li>
+            <li>Trendy music/sounds</li>
+            <li>Text overlays explaining key benefits</li>
+          </ul>
+          <div class="examples">
+            <p><strong>Example winning concept:</strong></p>
+            <p>0-2 sec: Person frustrated with old running shoes<br>
+            2-5 sec: Unboxing new shoes, showing features<br>
+            5-10 sec: Running shots, comfort testimonial<br>
+            10-15 sec: CTA with discount code</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="testing-framework">The Testing Framework: How to Actually Decide</h2>
+      <p>Stop guessing. Here's how to test systematically.</p>
+
+      <div class="examples">
+        <p><strong>Phase 1: The 90-Day Test (Months 1-3)</strong></p>
+        <ul>
+          <li><strong>Budget allocation:</strong> Google: 90%, TikTok: 10%</li>
+          <li><strong>Success criteria for TikTok:</strong> CPA within 50% of Google CPA, conversion rate >1.5%, positive ROAS</li>
+          <li><strong>If TikTok fails these thresholds:</strong> Stop testing. It's not for you (yet).</li>
+          <li><strong>If TikTok meets thresholds:</strong> Proceed to Phase 2.</li>
+        </ul>
+
+        <p><strong>Phase 2: Strategic Scale (Months 4-6)</strong></p>
+        <ul>
+          <li><strong>Budget allocation:</strong> Google: 80%, TikTok: 20%</li>
+          <li>Double down on best-performing categories</li>
+          <li>Test additional keywords</li>
+          <li>Implement creative refresh system</li>
+        </ul>
+      </div>
+
+      <h2 id="hybrid-strategy">The Hybrid Strategy (What We Actually Recommend)</h2>
+      <p>For most businesses, the answer isn't "TikTok or Google." It's "TikTok and Google—strategically."</p>
+
+      <div class="examples">
+        <p><strong>Budget Allocation Framework</strong></p>
+        <ul>
+          <li><strong>B2B / Professional Services:</strong> Google: 90-95%, TikTok: 5-10% (experimental only)</li>
+          <li><strong>E-Commerce (Age 30+):</strong> Google: 70-80%, TikTok: 20-30%</li>
+          <li><strong>DTC (Gen Z Target):</strong> Google: 40-50%, TikTok: 50-60%</li>
+          <li><strong>Fashion/Beauty (Gen Z Heavy):</strong> Google: 30-40%, TikTok: 60-70%</li>
+        </ul>
+      </div>
+
+      <div class="protip">
+        <strong>Real example:</strong> DTC skincare brand, $20K/month budget. Hybrid approach achieved 3.8x blended ROAS (19% improvement) vs. 3.2x with Google only.
+      </div>
+
+      <h2 id="common-mistakes">Common Mistakes Killing TikTok Search Ads Performance</h2>
+
+      <div class="examples">
+        <p><strong>Mistake #1: Using Google-Style Creative</strong></p>
+        <p><strong>The trap:</strong> Text overlays, product shots, corporate feel.</p>
+        <p><strong>The fix:</strong> UGC-style content. Real people. Native feel.</p>
+
+        <p><strong>Mistake #2: Targeting Too Broad</strong></p>
+        <p><strong>The trap:</strong> "Let the algorithm find my audience."</p>
+        <p><strong>The fix:</strong> Start narrow. Specific product keywords. Expand based on data.</p>
+
+        <p><strong>Mistake #3: Expecting Google-Level Intent</strong></p>
+        <p><strong>The trap:</strong> "Search ads = high intent on any platform."</p>
+        <p><strong>The fix:</strong> Adjust expectations. Optimize for engagement first, conversions second.</p>
+      </div>
+
+      <h2 id="industry-recommendations">Industry-Specific Recommendations</h2>
+
+      <div class="data-grid">
+        <div class="data-card">
+          <div class="data-title">Fashion & Beauty</div>
+          <div class="data-value">60% TikTok</div>
+          <div class="data-value">40% Google</div>
+          <div class="data-label">Expected ROAS: 3.5-4.5x</div>
+        </div>
+        <div class="data-card">
+          <div class="data-title">DTC Consumer Goods</div>
+          <div class="data-value">50% TikTok</div>
+          <div class="data-value">50% Google</div>
+          <div class="data-label">Expected ROAS: 3.8-5.2x</div>
+        </div>
+        <div class="data-card">
+          <div class="data-title">E-Commerce (General)</div>
+          <div class="data-value">25% TikTok</div>
+          <div class="data-value">75% Google</div>
+          <div class="data-label">Expected ROAS: 4.2-5.8x</div>
+        </div>
+        <div class="data-card">
+          <div class="data-title">B2B SaaS</div>
+          <div class="data-value">5% TikTok</div>
+          <div class="data-value">95% Google</div>
+          <div class="data-label">Experimental only</div>
+        </div>
+      </div>
+
+      <h2 id="bottom-line">The Bottom Line: Should You Shift Budget?</h2>
+
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <span class="platform-tag tiktok-tag">Shift 50%+ to TikTok if:</span>
+          </div>
+          <ul>
+            <li>✅ You sell visually-driven products</li>
+            <li>✅ Your target audience is Gen Z (18-24)</li>
+            <li>✅ You have strong UGC or influencer content</li>
+            <li>✅ Your price point is <$75</li>
+            <li>✅ You can produce fresh video creative consistently</li>
+          </ul>
+        </div>
+
+        <div class="comparison-card">
+          <div class="comparison-header">
+            <span class="platform-tag google-tag">Stay with Google 90%+ if:</span>
+          </div>
+          <ul>
+            <li>✅ You're B2B</li>
+            <li>✅ You sell professional services</li>
+            <li>✅ Your audience is 35+</li>
+            <li>✅ High intent is critical</li>
+            <li>✅ Lead quality matters more than volume</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="protip">
+        <strong>The hybrid approach (our recommendation for most):</strong> Keep 60-80% on Google (proven performer), allocate 20-40% to TikTok (growth opportunity), use TikTok for awareness, Google for conversion, track multi-touch attribution.
+      </div>
+
+      <h2 id="action-plan">Getting Started: The 30-Day Action Plan</h2>
+
+      <div class="examples">
+        <p><strong>Week 1: Setup</strong></p>
+        <ul>
+          <li>Create TikTok Ads account</li>
+          <li>Install TikTok Pixel</li>
+          <li>Set up conversion tracking</li>
+          <li>Research competitor ads</li>
+        </ul>
+
+        <p><strong>Week 2: Creative Production</strong></p>
+        <ul>
+          <li>Produce 10-15 video ads</li>
+          <li>Focus on UGC-style, authentic content</li>
+          <li>Include trending sounds</li>
+          <li>Add clear CTAs</li>
+        </ul>
+
+        <p><strong>Week 3: Campaign Launch</strong></p>
+        <ul>
+          <li>Start with 5-10 keyword groups</li>
+          <li>Budget: $30-50/day per group</li>
+          <li>Use automatic bidding initially</li>
+          <li>Monitor daily</li>
+        </ul>
+
+        <p><strong>Week 4: Initial Optimization</strong></p>
+        <ul>
+          <li>Review performance data</li>
+          <li>Pause underperformers (CPA >2x target)</li>
+          <li>Scale winners (+50% budget)</li>
+          <li>Create new creative for top keywords</li>
+        </ul>
+      </div>
+
+      <h2>Final Thoughts</h2>
+      <p>TikTok Search Ads aren't a Google killer. They're a complementary channel that works brilliantly for specific use cases and terribly for others.</p>
+      <p>The businesses winning in 2025 won't be the ones who go all-in on TikTok because it's trendy. They'll be the ones who test systematically, track meticulously, and allocate budget based on data.</p>
+      <p><strong>Google isn't going anywhere.</strong> It's still the best platform for capturing high-intent searches, driving qualified leads, and converting ready-to-buy customers.</p>
+      <p><strong>But TikTok is real.</strong> For the right products, targeting the right audiences, with the right creative, it can deliver exceptional ROI and reach customers Google can't.</p>
+      <p><strong>The winning strategy?</strong> Test TikTok with 10-30% of your budget. Give it 90 days. Track everything. Let the data decide.</p>
+    </article>
+
+    <!-- Right rail -->
+    <aside class="rail" aria-label="Author and CTA">
+      <div class="author">
+        <div class="row">
+          <img src="/images/author.webp" alt="Author avatar">
+          <div>
+            <strong>Oluwatayo Alofun</strong><br>
+            <span style="opacity:.7">Paid Media Strategist</span>
+          </div>
+        </div>
+        <p>We've spent $400K+ testing TikTok Search Ads across industries and know exactly which strategies work for different business models.</p>
+      </div>
+      <div class="promo">
+        <h4>Need Help Testing TikTok Search Ads?</h4>
+        <p>We'll help you test TikTok systematically, track performance accurately, and build a hybrid search strategy that maximizes ROI.</p>
+        <button class="btn" onclick="location.href='/contact'">Book a Strategy Call</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Related -->
+  <section class="related" aria-labelledby="relTitle">
+    <div class="container">
+      <h2 class="title" id="relTitle">Other articles you may like</h2>
+      <div class="grid">
+        <a class="card" href="/post/meta-ads-strategies-2025">
+          <span class="tag">Meta Ads</span>
+          <h3>17 Meta Ads Strategies That Actually Work in 2025</h3>
+          <span class="read">Read article →</span>
+        </a>
+        <a class="card" href="/post/google-ads-bidding-strategy-2025">
+          <span class="tag">Google Ads</span>
+          <h3>Google Ads Bidding Strategy: The Complete 2025 Guide</h3>
+          <span class="read">Read article →</span>
+        </a>
+        <a class="card" href="/post/ai-tools-digital-marketing-2025">
+          <span class="tag">AI Tools</span>
+          <h3>40+ AI Tools for Digital Marketing in 2025</h3>
+          <span class="read">Read article →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Ready to test TikTok Search Ads strategically?</h2>
+      <p>We'll help you allocate budget properly, create winning creative, and build a hybrid search strategy that maximizes ROI across both platforms.</p>
+      <a class="btn" href="/contact">Schedule Your Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer (consistent) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.youtube.com" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul class="f-links">
+            <li><a href="/blog/category/abm">ABM</a></li>
+            <li><a href="/blog/category/linkedin-ads">LinkedIn Ads</a></li>
+            <li><a href="/blog/category/copywriting">Copywriting</a></li>
+            <li><a href="/blog/category/google-ads">Google Ads</a></li>
+            <li><a href="/blog/category/branding">Branding</a></li>
+            <li><a href="/blog/category/meta-ads">Meta Ads</a></li>
+            <li><a href="/blog/category/google-analytics">Google Analytics</a></li>
+            <li><a href="/blog/category/google-tag-manager">Google Tag Manager</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"TikTok Search Ads vs. Google: The Data-Driven Budget Allocation Guide",
+    "author":{"@type":"Person","name":"Oluwatayo Alofun"},
+    "publisher":{"@type":"Organization","name":"Bora Media","logo":{"@type":"ImageObject","url":"https://www.boramedianetwork.com/images/bora-logo.webp"}},
+    "image":"https://www.boramedianetwork.com/images/og/tiktok-vs-google-2025.jpg",
+    "datePublished":"2025-09-18",
+    "dateModified":"2025-09-18",
+    "articleSection":"Paid Search",
+    "keywords":"TikTok Ads,Google Ads,Search Advertising,Budget Allocation,ROAS,CPC",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.boramedianetwork.com/blog/tiktok-vs-google-search-ads"}
+  }
+  </script>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{ b.style.transform=''; b.style.opacity=''; }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    // TOC highlight
+    const links = document.querySelectorAll('.toc-link');
+    const headings = [...links].map(a => document.querySelector(a.getAttribute('href')));
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        const id = e.target.getAttribute('id');
+        const link = document.querySelector(`.toc a[href="#${id}"]`);
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.remove('active'));
+          link?.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
+    headings.forEach(h=>h && obs.observe(h));
+  </script>
+</body>
+</html>
