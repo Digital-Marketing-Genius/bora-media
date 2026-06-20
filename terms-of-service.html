@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Service | Bora Media</title>
+
+  <!-- Core SEO -->
+  <meta name="description" content="Read the Terms of Service governing your use of Bora Media’s website, resources, and services." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://boramedianetwork.com/terms-of-service" />
+  <meta name="theme-color" content="#061A38" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Bora Media Network" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://boramedianetwork.com/terms-of-service" />
+  <meta property="og:title" content="Terms of Service | Bora Media" />
+  <meta property="og:description" content="Read the Terms of Service governing your use of Bora Media’s website, resources, and services." />
+  <meta property="og:image" content="https://boramedianetwork.com/images/og/terms.jpg" />
+  <meta property="og:image:alt" content="Bora Media terms of service" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Terms of Service | Bora Media" />
+  <meta name="twitter:description" content="Read the Terms of Service governing your use of Bora Media’s website, resources, and services." />
+  <meta name="twitter:image" content="https://boramedianetwork.com/images/og/terms.jpg" />
+
+  <!-- Performance hint -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+  <!-- Favicon & App Icons -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    :root{
+      --ink:#061A38;
+      --muted:#F6F8FB;
+      --aqua:#19D0C9;
+      --blue:#3B73FF;
+      --magenta:#FF278E;
+      --orange:#FF8650;
+      --radius:14px;
+      --shadow:0 8px 30px rgba(6,26,56,.08);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Skip link */
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:12px;top:12px;width:auto;height:auto;z-index:2000;background:#fff;border:2px solid var(--aqua);padding:8px 12px;border-radius:10px}
+
+    /* Header */
+    header{position:sticky; top:0; z-index:1000; background:#fff; box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;letter-spacing:.2px}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    .brand span{font-size:18px}
+
+    nav ul{display:flex;list-style:none;gap:26px}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;position:relative;font-weight:600}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s ease}
+    nav a:hover::after{width:100%}
+
+    .has-dd{position:relative}
+    .chev{width:14px;height:14px;vertical-align:-2px;margin-left:6px}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.10)}
+
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:700;cursor:pointer;transition:transform .15s ease, filter .2s ease}
+    .btn:hover{transform:translateY(-1px);filter:brightness(.95)}
+    .btn.outline{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.12)}
+
+    /* Mobile nav */
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;border-radius:12px}
+    .hamburger:focus-visible{outline:2px solid var(--aqua)}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#071B3A 0%, #0C254B 100%);color:#fff;padding:110px 0 70px}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(40px);opacity:.22;animation:float 16s infinite ease-in-out}
+    .blob{width:420px;height:420px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+    .hero h1{font-size:clamp(30px,5vw,52px);letter-spacing:-.3px;line-height:1.15;text-align:center;margin:0 auto 10px;max-width:980px;font-weight:900}
+    .hero p.lead{text-align:center;color:rgba(255,255,255,.88);font-size:clamp(16px,2.1vw,19px);max-width:760px;margin:0 auto}
+
+    /* Content */
+    .section{padding:70px 0}
+    .section.muted{background:var(--muted)}
+    .toc{background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+    .toc h3{font-size:18px;margin-bottom:8px}
+    .toc a{display:block;color:var(--ink);text-decoration:none;padding:8px;border-radius:10px}
+    .toc a:hover{background:rgba(25,208,201,.10)}
+    .grid{display:grid;grid-template-columns:320px 1fr;gap:22px}
+    .legal h2{font-size:24px;margin:18px 0 8px}
+    .legal h3{font-size:18px;margin:16px 0 6px}
+    .legal p{margin:10px 0}
+    .legal ul{margin:10px 0 10px 22px}
+    .note{font-size:14px;color:rgba(6,26,56,.75)}
+
+    /* Final CTA */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+    .final h2{font-size:clamp(24px, 4vw, 40px); margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+
+    /* Footer */
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .f-col{min-width:0}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-links a:hover{color:var(--ink)}
+    .social{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12);transition:transform .15s ease, box-shadow .2s ease}
+    .social a:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
+    .social svg{width:18px;height:18px}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .mini{display:flex;gap:16px;list-style:none}
+    .mini a{text-decoration:none;color:rgba(6,26,56,.75);font-size:14px}
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .grid{grid-template-columns:1fr}
+      .toc{position:sticky; top:78px}
+    }
+    @media (max-width:860px){
+      nav{display:none}
+      .hamburger{display:block}
+      .hero{padding:100px 0 64px}
+      .f-cols{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:620px){
+      .f-bottom{flex-direction:column;text-align:center}
+      .mini{flex-wrap:wrap;justify-content:center}
+      .f-cols{grid-template-columns:1fr}
+    }
+  </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Terms of Service",
+    "url":"https://boramedianetwork.com/terms-of-service",
+    "description":"Terms of Service for Bora Media’s website, resources, and services."
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End GTM (noscript) -->
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner" role="navigation" aria-label="Primary">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services
+              <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+            <div class="dropdown" role="menu" aria-label="Services submenu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+
+    <div class="container mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn outline" href="/contact" style="margin-top:6px">Book a Call</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="blob" aria-hidden="true"></div>
+      <div class="blob2" aria-hidden="true"></div>
+      <div class="container">
+        <h1>Terms of Service</h1>
+        <p class="lead">These Terms govern your access to and use of Bora Media’s website, resources, and services.</p>
+      </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="section">
+      <div class="container grid">
+        <!-- TOC -->
+        <aside class="toc" aria-label="On-page navigation">
+          <h3>Contents</h3>
+          <nav>
+            <a href="#acceptance">1. Acceptance of Terms</a>
+            <a href="#updates">2. Changes to Terms</a>
+            <a href="#eligibility">3. Eligibility & Accounts</a>
+            <a href="#use">4. Permitted Use</a>
+            <a href="#payments">5. Fees, Payments & Trials</a>
+            <a href="#ip">6. Intellectual Property</a>
+            <a href="#ugc">7. User Content</a>
+            <a href="#thirdparty">8. Third-Party Links & Tools</a>
+            <a href="#privacy">9. Privacy</a>
+            <a href="#compliance">10. Acceptable Use</a>
+            <a href="#disclaimers">11. Disclaimers</a>
+            <a href="#liability">12. Limitation of Liability</a>
+            <a href="#indemnity">13. Indemnification</a>
+            <a href="#termination">14. Termination</a>
+            <a href="#law">15. Governing Law & Venue</a>
+            <a href="#misc">16. Miscellaneous</a>
+            <a href="#contact">17. Contact</a>
+          </nav>
+          <p class="note" style="margin-top:10px">Effective date: <time datetime="2025-09-01">September 1, 2025</time></p>
+        </aside>
+
+        <!-- Legal Body -->
+        <article class="legal">
+          <section id="acceptance">
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing or using boramedianetwork.com and related services (the “Services”), you agree to be bound by these Terms of Service (“Terms”). If you do not agree, do not use the Services.</p>
+          </section>
+
+          <section id="updates">
+            <h2>2. Changes to Terms</h2>
+            <p>We may update these Terms from time to time. Material changes will be posted on this page with an updated effective date. Continued use after changes constitutes acceptance.</p>
+          </section>
+
+          <section id="eligibility">
+            <h2>3. Eligibility & Accounts</h2>
+            <p>You must be at least the age of majority in your jurisdiction to use the Services. When you create an account or submit forms, you agree to provide accurate information and to maintain the security of your credentials.</p>
+          </section>
+
+          <section id="use">
+            <h2>4. Permitted Use</h2>
+            <p>You may use the Services only for lawful purposes and in accordance with these Terms and applicable guidelines. We reserve the right to suspend or restrict access for violations.</p>
+          </section>
+
+          <section id="payments">
+            <h2>5. Fees, Payments & Trials</h2>
+            <p>Certain offerings may be fee-based. Prices, billing cycles, and payment terms will be disclosed at the point of purchase or in a written agreement. Trials, promotions, or performance-based fees, where offered, are subject to specific terms.</p>
+          </section>
+
+          <section id="ip">
+            <h2>6. Intellectual Property</h2>
+            <p>All content on the Services—designs, text, graphics, logos, icons, images, videos, software, and other materials—is owned by or licensed to Bora Media and protected by intellectual property laws. You may not copy, modify, distribute, or create derivative works without prior written permission.</p>
+          </section>
+
+          <section id="ugc">
+            <h2>7. User Content</h2>
+            <p>If you submit content (e.g., comments, reviews, files), you grant Bora Media a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and display such content for operating and improving the Services. You represent you have all necessary rights to grant this license.</p>
+          </section>
+
+          <section id="thirdparty">
+            <h2>8. Third-Party Links & Tools</h2>
+            <p>The Services may include links to third-party sites or tools. Bora Media is not responsible for third-party content, policies, or practices. Use of third-party services is at your own risk and may be subject to separate terms.</p>
+          </section>
+
+          <section id="privacy">
+            <h2>9. Privacy</h2>
+            <p>Your use of the Services is also governed by our <a href="/privacy-policy">Privacy Policy</a>, which explains how we collect, use, and share information.</p>
+          </section>
+
+          <section id="compliance">
+            <h2>10. Acceptable Use</h2>
+            <ul>
+              <li>No unlawful, harmful, fraudulent, or infringing activity.</li>
+              <li>No attempts to interfere with or disrupt the Services or security.</li>
+              <li>No scraping, automated collection, or reverse engineering except as permitted by law.</li>
+              <li>No transmission of malware, spam, or unauthorized advertising.</li>
+            </ul>
+          </section>
+
+          <section id="disclaimers">
+            <h2>11. Disclaimers</h2>
+            <p>THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE.</p>
+          </section>
+
+          <section id="liability">
+            <h2>12. Limitation of Liability</h2>
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, BORA MEDIA AND ITS AFFILIATES, DIRECTORS, EMPLOYEES, AND AGENTS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOOD-WILL, OR OTHER INTANGIBLE LOSSES.</p>
+          </section>
+
+          <section id="indemnity">
+            <h2>13. Indemnification</h2>
+            <p>You agree to indemnify and hold harmless Bora Media and its affiliates, officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses arising out of or in any way connected with your use of the Services or violation of these Terms.</p>
+          </section>
+
+          <section id="termination">
+            <h2>14. Termination</h2>
+            <p>We may suspend or terminate access to the Services at any time with or without cause or notice. Upon termination, your right to use the Services will cease immediately, subject to any surviving provisions of these Terms.</p>
+          </section>
+
+          <section id="law">
+            <h2>15. Governing Law & Venue</h2>
+            <p>These Terms are governed by the laws of the Province of Ontario and the federal laws of Canada applicable therein, without regard to conflict-of-law principles. You agree to the exclusive jurisdiction of the courts located in Ontario, Canada.</p>
+          </section>
+
+          <section id="misc">
+            <h2>16. Miscellaneous</h2>
+            <p>If any provision of these Terms is found unenforceable, the remaining provisions will remain in full force and effect. No waiver of any term shall be deemed a further or continuing waiver of such term.</p>
+          </section>
+
+          <section id="contact">
+            <h2>17. Contact</h2>
+            <p>Questions about these Terms? Reach us at <a href="mailto:hello@boramedianetwork.com">hello@boramedianetwork.com</a>.</p>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final">
+      <div class="container">
+        <h2>Ready to work with a partner who’s obsessed with ROI?</h2>
+        <p>We align strategy, creative, and measurement to deliver meaningful growth—without the fluff.</p>
+        <button class="btn" onclick="location.href='/contact'">Schedule Your Free Consultation</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div class="f-col">
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo" loading="lazy" decoding="async"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.youtube.com" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+            <a href="https://x.com" aria-label="X"><svg viewBox="0 0 24 24" fill="none"><path d="M18 3h3l-7.5 8.6L22 21h-6.6L9.8 14l-4.6 7H2l8-9.7L2.8 3h6.7l4.3 5.9L18 3Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+
+        <div class="f-col">
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+
+        <div class="f-col">
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="f-col">
+          <h4>Resources</h4>
+          <ul class="f-links">
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/guides">Guides</a></li>
+            <li><a href="/webinars">Webinars</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="f-bottom">
+        <p>© <span id="year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="mini">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle + animated hamburger
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{
+          b.style.transform=''; b.style.opacity='';
+        }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+  </script>
+</body>
+</html>

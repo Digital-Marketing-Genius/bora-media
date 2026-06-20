@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Top 12 Reporting Tools for Campaign Deep Dives | Bora Media</title>
+  <meta name="description" content="A practitioner’s guide to the 12 best reporting tools for PPC and paid social deep dives—features, use cases, watchouts, and how to pick the right stack." />
+  <link rel="canonical" href="https://www.boramedianetwork.com/blog/top-reporting-tools-campaign-deep-dive" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Top 12 Reporting Tools for Campaign Deep Dives" />
+  <meta property="og:description" content="From free to enterprise: Looker Studio, GA4 Explorations, Optmyzr, Supermetrics, and more—what to use, when, and why." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.boramedianetwork.com/blog/top-reporting-tools-campaign-deep-dive" />
+  <meta property="og:image" content="https://www.boramedianetwork.com/images/og/top-reporting-tools.jpg" />
+  <meta property="article:section" content="Analytics" />
+  <meta property="article:tag" content="Reporting, Analytics, PPC, Paid Social" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Top 12 Reporting Tools for Campaign Deep Dives" />
+  <meta name="twitter:description" content="Features, strengths, and watchouts across the best reporting tools for PPC and paid social." />
+  <meta name="twitter:image" content="https://www.boramedianetwork.com/images/og/top-reporting-tools.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp" />
+
+  <!-- Helpful -->
+  <meta name="theme-color" content="#071B3A" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+      --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+      --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{overflow-x:hidden}
+    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (consistent) */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;gap:26px;list-style:none}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+    nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+    .has-dd{position:relative}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.1)}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.15)}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:96px 0 64px;position:relative;overflow:hidden}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22;animation:float 16s infinite ease-in-out}
+    .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin-bottom:8px;font-weight:900}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;color:rgba(255,255,255,.85);font-weight:600}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25)}
+    .cta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+
+    /* Layout */
+    .content-wrap{display:grid;grid-template-columns:260px 1fr 320px;gap:22px;padding:40px 0}
+    .toc{position:sticky;top:84px;background:var(--muted);border-radius:14px;padding:14px}
+    .toc h4{font-weight:900;margin-bottom:8px}
+    .toc a{display:block;text-decoration:none;color:var(--ink);padding:8px;border-radius:10px;font-weight:600}
+    .toc a:hover,.toc a.active{background:#fff;border:1px solid rgba(6,26,56,.12)}
+    article h2{font-size:clamp(22px,3vw,28px);line-height:1.25;margin:26px 0 8px;font-weight:900}
+    article h3{font-size:clamp(18px,2.4vw,22px);margin:18px 0 6px;font-weight:900}
+    article p{margin:14px 0}
+    ul{margin:10px 0 10px 18px}
+    .k{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;background:rgba(6,26,56,.06);padding:2px 6px;border-radius:6px}
+    .protip{background:rgba(25,208,201,.12);border:1px dashed rgba(25,208,201,.5);padding:12px;border-radius:12px;margin:16px 0}
+    .examples{background:var(--muted);border-radius:14px;padding:14px}
+
+    .share{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+    .share a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(6,26,56,.16);padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:800}
+
+    /* Right rail */
+    .rail{position:sticky;top:84px}
+    .author{background:var(--muted);border-radius:14px;padding:16px}
+    .author .row{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+    .author img{width:42px;height:42px;border-radius:50%}
+    .promo{background:#071B3A;color:#fff;border-radius:14px;padding:16px;margin-top:14px}
+    .promo p{color:rgba(255,255,255,.88)}
+    .promo .btn{margin-top:10px}
+
+    /* Related */
+    .related{background:var(--muted);padding:60px 0}
+    .title{text-align:center;font-weight:900;font-size:clamp(24px,4vw,34px);margin-bottom:8px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .card{background:var(--card);color:#fff;border-radius:16px;padding:16px;text-decoration:none;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+    .tag{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:#8AF1EC;font-weight:800}
+    .card h3{margin-top:8px;font-size:20px;line-height:1.3}
+    .read{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:800;border:1px solid rgba(255,255,255,.22);padding:8px 10px;border-radius:10px}
+
+    /* Final CTA + Footer */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .social{display:flex;gap:12px;margin-top:14px}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+    /* Responsive polish */
+    @media (max-width:1100px){
+      .content-wrap{grid-template-columns:1fr;}
+      .rail{position:static}
+      .toc{position:static;order:-1;margin-bottom:10px}
+    }
+    @media (max-width:860px){
+      nav{display:none}
+      .hamburger{display:block}
+      .grid{grid-template-columns:1fr 1fr}
+      .container{padding:0 22px}
+      .hero{padding:86px 0 54px}
+      .content-wrap{padding:30px 0}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      .f-cols{grid-template-columns:1fr}
+      .f-bottom{flex-direction:column;text-align:center}
+      .container{padding:0 22px}
+      .hero{padding:80px 0 46px}
+      .content-wrap{padding:26px 0}
+      .share a{white-space:nowrap}
+    }
+  </style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob2" aria-hidden="true"></div>
+    <div class="container">
+      <h1>Top 12 Reporting Tools for Campaign Deep Dives</h1>
+      <div class="meta">
+        <span class="badge">Analytics</span>
+        <span class="badge">Reporting</span>
+        <span class="badge">PPC</span>
+        <span>•</span>
+        <span>12 min read</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="/contact">Work With Us</a>
+        <a class="btn alt" href="/resources">Free Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <main class="container content-wrap" id="content">
+    <!-- TOC -->
+    <aside class="toc" aria-label="Table of contents">
+      <h4>Table of Contents</h4>
+      <nav>
+        <a href="#intro" class="toc-link">Why reporting stacks matter</a>
+        <a href="#criteria" class="toc-link">Selection criteria</a>
+        <a href="#tools" class="toc-link">The 12 tools</a>
+        <a href="#compare" class="toc-link">Quick comparison</a>
+        <a href="#build" class="toc-link">How to build your stack</a>
+        <a href="#wrap" class="toc-link">To sum up</a>
+      </nav>
+      <div class="share" aria-label="Share">
+        <a href="https://twitter.com/intent/tweet?text=Top%2012%20reporting%20tools%20for%20campaign%20deep%20dives&url=https://www.boramedianetwork.com/blog/top-reporting-tools-campaign-deep-dive">Share on X</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.boramedianetwork.com/blog/top-reporting-tools-campaign-deep-dive">Share on LinkedIn</a>
+        <a href="mailto:?subject=Top 12 reporting tools for campaign deep dives&body=https://www.boramedianetwork.com/blog/top-reporting-tools-campaign-deep-dive">Email</a>
+      </div>
+    </aside>
+
+    <!-- Article -->
+    <article itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="headline" content="Top 12 Reporting Tools for Campaign Deep Dives"/>
+      <meta itemprop="author" content="Oluwatayo Alofun"/>
+      <meta itemprop="datePublished" content="2025-09-18"/>
+      <meta itemprop="dateModified" content="2025-09-18"/>
+      <meta itemprop="image" content="https://www.boramedianetwork.com/images/og/top-reporting-tools.jpg"/>
+
+      <p id="intro">Dashboards don’t make decisions—people do. But the right reporting stack turns raw platform data into the kind of narratives that unlock budget, fix leaks, and scale what’s actually working. Below are the 12 tools we rely on for real “deep dives” across PPC and paid social—what they’re great at, when to use them, and what to watch out for.</p>
+
+      <h2 id="criteria">Selection criteria</h2>
+      <ul>
+        <li><strong>Granularity:</strong> Can you drill to query/ad/asset and slice by audience, geo, device, match type, etc.?</li>
+        <li><strong>Blending:</strong> Can you blend cross-channel + CRM to tell a revenue story?</li>
+        <li><strong>Speed-to-insight:</strong> Time from question → answer (without a data engineer).</li>
+        <li><strong>QA & governance:</strong> Version control, naming conventions, freshness indicators.</li>
+      </ul>
+
+      <h2 id="tools">The 12 tools</h2>
+
+      <h3 id="ls">1) Looker Studio (Google)</h3>
+      <p><strong>Best for:</strong> Free visual dashboards, stakeholder-friendly reporting, quick prototypes.</p>
+      <ul>
+        <li><strong>Standout:</strong> Free, huge connector ecosystem, easy sharing.</li>
+        <li><strong>Deep-dive play:</strong> Build a “search anatomy” page: query → match type → device → landing page with CVR and CPA bands.</li>
+        <li><strong>Watchouts:</strong> Can get slow without extracts; complex modeling is limited.</li>
+      </ul>
+
+      <h3 id="ga4">2) GA4 Explorations</h3>
+      <p><strong>Best for:</strong> User-level journeys, pathing, cohorts, attribution sanity checks.</p>
+      <ul>
+        <li><strong>Standout:</strong> Funnel/path exploration with event parameters; audience overlaps.</li>
+        <li><strong>Deep-dive play:</strong> Build a “paid-first session” cohort and track payback behaviors.</li>
+        <li><strong>Watchouts:</strong> Sampling and learning curve; make sure events/params are clean.</li>
+      </ul>
+
+      <h3 id="gads-editor">3) Google Ads Reports Editor</h3>
+      <p><strong>Best for:</strong> Fast native pivots without leaving the platform.</p>
+      <ul>
+        <li><strong>Standout:</strong> Drilldowns by search term, assets, audiences; instant filters.</li>
+        <li><strong>Deep-dive play:</strong> “Match type x device x query length” pivot to locate waste.</li>
+        <li><strong>Watchouts:</strong> Google-only; limited blending with non-Google data.</li>
+      </ul>
+
+      <h3 id="optmyzr">4) Optmyzr</h3>
+      <p><strong>Best for:</strong> PPC-specific reporting + optimization workflows.</p>
+      <ul>
+        <li><strong>Standout:</strong> Prebuilt widgets for SQRs, quality score, policy issues, budgets.</li>
+        <li><strong>Deep-dive play:</strong> Outlier analysis to surface “quiet killers” (low-impression losers).</li>
+        <li><strong>Watchouts:</strong> Not a full BI tool; mostly paid search focused.</li>
+      </ul>
+
+      <h3 id="supermetrics">5) Supermetrics</h3>
+      <p><strong>Best for:</strong> Moving platform data into Sheets, Excel, BigQuery, and Looker Studio.</p>
+      <ul>
+        <li><strong>Standout:</strong> Tons of connectors; scheduled refresh; great for analysts.</li>
+        <li><strong>Deep-dive play:</strong> Build a “creative decay” dataset by asset with day-7/14/30 ROAS.</li>
+        <li><strong>Watchouts:</strong> It’s a pipe, not a viz tool; costs add up with many connectors.</li>
+      </ul>
+
+      <h3 id="whatagraph">6) Whatagraph</h3>
+      <p><strong>Best for:</strong> Beautiful client-ready dashboards in minutes.</p>
+      <ul>
+        <li><strong>Standout:</strong> Templates, automated multi-channel reports, email scheduling.</li>
+        <li><strong>Deep-dive play:</strong> Executive “one-pager” plus drilldown tabs for each channel owner.</li>
+        <li><strong>Watchouts:</strong> Less flexible modeling; best for standardized reporting.</li>
+      </ul>
+
+      <h3 id="databox">7) Databox</h3>
+      <p><strong>Best for:</strong> KPI scorecards with mobile-first viewing.</p>
+      <ul>
+        <li><strong>Standout:</strong> Alerts, goals, simple blends, fast setup.</li>
+        <li><strong>Deep-dive play:</strong> “Morning pulse” board: spend anomalies, CPA drift, conversion lag alerts.</li>
+        <li><strong>Watchouts:</strong> Heavy discovery analysis may feel constrained.</li>
+      </ul>
+
+      <h3 id="funnel">8) Funnel.io</h3>
+      <p><strong>Best for:</strong> Centralized marketing data model before your BI layer.</p>
+      <ul>
+        <li><strong>Standout:</strong> Normalizes metrics/dimensions across platforms; strong governance.</li>
+        <li><strong>Deep-dive play:</strong> Harmonize naming conventions → push clean tables to BI for speed.</li>
+        <li><strong>Watchouts:</strong> It’s the data layer—still need a viz tool.</li>
+      </ul>
+
+      <h3 id="improvado">9) Improvado</h3>
+      <p><strong>Best for:</strong> Enterprise marketing ETL with custom schemas.</p>
+      <ul>
+        <li><strong>Standout:</strong> Extensive connectors, data transformation, warehouse destinations.</li>
+        <li><strong>Deep-dive play:</strong> Model ad → opportunity → revenue with CRM joins for true ROAS.</li>
+        <li><strong>Watchouts:</strong> Overkill for small teams; requires clear ownership.</li>
+      </ul>
+
+      <h3 id="windsor">10) Windsor.ai</h3>
+      <p><strong>Best for:</strong> Quick multi-touch views + connectors into BI.</p>
+      <ul>
+        <li><strong>Standout:</strong> Cross-channel attribution options; Looker Studio templates.</li>
+        <li><strong>Deep-dive play:</strong> Compare last-click vs. data-driven models to reallocate spend.</li>
+        <li><strong>Watchouts:</strong> Validate modeling assumptions; keep a “ground truth” report.</li>
+      </ul>
+
+      <h3 id="tableau">11) Tableau</h3>
+      <p><strong>Best for:</strong> Power users who want rich interactivity and custom viz.</p>
+      <ul>
+        <li><strong>Standout:</strong> Robust visuals, calculated fields, parameter controls.</li>
+        <li><strong>Deep-dive play:</strong> Build a “creative matrix” (hook x format x audience) exploration dashboard.</li>
+        <li><strong>Watchouts:</strong> Licenses + learning curve; pair with a reliable data layer.</li>
+      </ul>
+
+      <h3 id="pbi">12) Microsoft Power BI</h3>
+      <p><strong>Best for:</strong> Teams in the Microsoft ecosystem needing scalable BI.</p>
+      <ul>
+        <li><strong>Standout:</strong> DAX modeling, dataflows, strong enterprise sharing controls.</li>
+        <li><strong>Deep-dive play:</strong> Build a spend → pipeline → revenue decomposition with slicers by segment.</li>
+        <li><strong>Watchouts:</strong> Engineering-lite skills help; decide on import vs. direct query early.</li>
+      </ul>
+
+      <div class="protip"><strong>Pro tip:</strong> Separate <span class="k">data plumbing</span> (connectors, models) from <span class="k">story layers</span> (dashboards). That keeps your deep-dive pages fast and trustworthy.</div>
+
+      <h2 id="compare">Quick comparison (when to pick what)</h2>
+      <ul>
+        <li><strong>Need free, fast visuals:</strong> Looker Studio + Supermetrics (or native connectors).</li>
+        <li><strong>Native PPC pivots:</strong> Google Ads Reports Editor; add Optmyzr for structured workflows.</li>
+        <li><strong>Client-friendly:</strong> Whatagraph or Databox for polished “board + drilldown.”</li>
+        <li><strong>Enterprise BI:</strong> Funnel/Improvado → Tableau/Power BI + warehouse.</li>
+        <li><strong>User journey analysis:</strong> GA4 Explorations (ensure events/params are clean).</li>
+      </ul>
+
+      <h2 id="build">How to build your stack (3 steps)</h2>
+      <div class="examples">
+        <ol>
+          <li><strong>Define decisions</strong> you need weekly (e.g., pause losers, scale segments, refresh creative).</li>
+          <li><strong>Map the signals</strong> to those decisions (queries, assets, audiences, funnel stages, revenue).</li>
+          <li><strong>Wire tools</strong> that make those signals obvious (one “exec board,” one “operator deep dive” per channel, one “revenue view”).</li>
+        </ol>
+      </div>
+
+      <h2 id="wrap">To sum up</h2>
+      <p>The best reporting tool is the one that gets you to a confident budget move fastest. Start simple, standardize naming, connect CRM revenue, and give each role the dashboard they need—then add horsepower as questions get harder.</p>
+    </article>
+
+    <!-- Right rail -->
+    <aside class="rail" aria-label="Author and CTA">
+      <div class="author">
+        <div class="row">
+          <img src="/images/author.webp" alt="Author avatar">
+          <div>
+            <strong>Oluwatayo Alofun</strong><br>
+            <span style="opacity:.7">Paid Media Strategist</span>
+          </div>
+        </div>
+        <p>Want us to rebuild your reporting stack and tie spend to pipeline the right way?</p>
+      </div>
+      <div class="promo">
+        <h4>Need a revenue-first dashboard?</h4>
+        <p>We’ll clean tracking, standardize naming, and ship dashboards that change decisions—not just decorate meetings.</p>
+        <button class="btn" onclick="location.href='/contact'">Book a Strategy Call</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Related -->
+  <section class="related" aria-labelledby="relTitle">
+    <div class="container">
+      <h2 class="title" id="relTitle">Other articles you may like</h2>
+      <div class="grid">
+        <a class="card" href="/blog/google-ads-naming-conventions">
+          <span class="tag">Process</span>
+          <h3>Naming Conventions That Make Google Ads Scalable</h3>
+          <span class="read">Read article →</span>
+        </a>
+        <a class="card" href="/blog/what-does-a-performance-marketing-agency-do">
+          <span class="tag">Performance Marketing</span>
+          <h3>What Does a Performance Marketing Agency Actually Do?</h3>
+          <span class="read">Read article →</span>
+        </a>
+        <a class="card" href="/blog/write-ctas-that-convert">
+          <span class="tag">Copywriting</span>
+          <h3>Write CTAs That Convert: 9 Patterns that Win Always</h3>
+          <span class="read">Read article →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Ready to make reporting your unfair advantage?</h2>
+      <p>We’ll connect the dots from click to revenue and give every stakeholder a dashboard they’ll actually use.</p>
+      <a class="btn" href="/contact">Schedule Your Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer (consistent) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.youtube.com" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul class="f-links">
+            <li><a href="/blog/category/analytics">Analytics</a></li>
+            <li><a href="/blog/category/google-ads">Google Ads</a></li>
+            <li><a href="/blog/category/linkedin-ads">LinkedIn Ads</a></li>
+            <li><a href="/blog/category/performance-marketing">Performance Marketing</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Top 12 Reporting Tools for Campaign Deep Dives",
+    "author":{"@type":"Person","name":"Oluwatayo Alofun"},
+    "publisher":{"@type":"Organization","name":"Bora Media","logo":{"@type":"ImageObject","url":"https://www.boramedianetwork.com/images/bora-logo.webp"}},
+    "image":"https://www.boramedianetwork.com/images/og/top-reporting-tools.jpg",
+    "datePublished":"2025-09-18",
+    "dateModified":"2025-09-18",
+    "articleSection":"Analytics",
+    "keywords":"Reporting,Analytics,PPC,Paid Social,Looker Studio,GA4,Optmyzr,Supermetrics,Tableau,Power BI",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.boramedianetwork.com/blog/top-reporting-tools-campaign-deep-dive"}
+  }
+  </script>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{ b.style.transform=''; b.style.opacity=''; }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    // TOC highlight
+    const links = document.querySelectorAll('.toc-link');
+    const headings = [...links].map(a => document.querySelector(a.getAttribute('href')));
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        const id = e.target.getAttribute('id');
+        const link = document.querySelector(`.toc a[href="#${id}"]`);
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.remove('active'));
+          link?.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
+    headings.forEach(h=>h && obs.observe(h));
+  </script>
+</body>
+</html>

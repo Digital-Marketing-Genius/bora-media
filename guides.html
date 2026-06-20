@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Resources Library | Bora Media</title>
+<meta name="description" content="Free checklists, script libraries, and training resources to plan, launch, and optimize your advertising." />
+
+<!-- Canonical & robots -->
+<link rel="canonical" href="https://www.boramedianetwork.com/resources" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Resources Library | Bora Media" />
+<meta property="og:description" content="Free checklists, script libraries, and training resources to plan, launch, and optimize your advertising." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.boramedianetwork.com/resources" />
+<meta property="og:image" content="https://www.boramedianetwork.com/images/og/resources.jpg" />
+<meta property="og:site_name" content="Bora Media" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Resources Library | Bora Media" />
+<meta name="twitter:description" content="Free checklists, script libraries, and training resources to plan, launch, and optimize your advertising." />
+<meta name="twitter:image" content="https://www.boramedianetwork.com/images/og/resources.jpg" />
+
+<!-- Favicons / theme -->
+<link rel="icon" href="/images/favicon.webp" sizes="32x32" />
+<meta name="theme-color" content="#071B3A" />
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+</script>
+<!-- End Google Tag Manager -->
+
+<style>
+  :root{
+    /* Site shell (matches your pages) */
+    --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+    --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+    --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    /* Page */
+    --bg-grad: linear-gradient(180deg,#071B3A 0%, #0C254B 100%);
+  }
+  *{box-sizing:border-box} html,body{height:100%}
+  body{margin:0;font:16px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+  img{max-width:100%;height:auto;display:block}
+  .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+  /* ===== Header (consistent) ===== */
+  header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+  .brand img{width:34px;height:34px;border-radius:8px}
+  nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+  nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+  nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+  nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+  .has-dd{position:relative}
+  .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+  .has-dd:hover .dropdown{display:block}
+  .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+  .dropdown a:hover{background:rgba(25,208,201,.08)}
+  .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+  .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.15)}
+  .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+  .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+  .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+  .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+  .mobile-sub{padding-left:14px}
+  .show{display:block}
+
+  /* ===== Hero ===== */
+  .hero{background:var(--bg-grad);color:#fff;padding:96px 0 22px;position:relative;overflow:hidden}
+  .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22;animation:float 16s infinite ease-in-out}
+  .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+  .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+  .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin:0 0 8px;font-weight:900}
+  .hero p{color:rgba(255,255,255,.9);max-width:820px;margin:8px 0 10px}
+  .filter-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#fff;text-decoration:none;font-weight:800}
+  .pill:hover{background:rgba(255,255,255,.12)}
+
+  /* ===== Sections ===== */
+  .wrap{padding:40px 0 20px}
+  .section{padding:34px 0;border-top:1px solid rgba(6,26,56,.08)}
+  .section h2{font-size:clamp(22px,3vw,30px);line-height:1.2;margin:0 0 6px;font-weight:900}
+  .section p.lead{margin:0 0 12px;color:rgba(6,26,56,.75)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:16px}
+  .card{background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:16px;padding:16px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;justify-content:space-between}
+  .tag{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:#0AAFA9;font-weight:800}
+  .card h3{margin:8px 0 6px;font-size:18px;line-height:1.3}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;color:rgba(6,26,56,.7);font-weight:600}
+  .actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+  .ghost{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.18);border-radius:12px;padding:8px 12px;font-weight:800;text-decoration:none}
+  .primary{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:8px 12px;font-weight:800;text-decoration:none}
+  .note{font-size:13px;color:rgba(6,26,56,.7);margin-top:6px}
+
+  /* ===== Footer (consistent) ===== */
+  footer{background:var(--muted);margin-top:40px}
+  .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+  .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+  .footer-logo img{width:28px;height:28px;border-radius:6px}
+  .f-links{list-style:none;margin-top:10px;padding:0}
+  .f-links li{margin:8px 0}
+  .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+  .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+  .social{display:flex;gap:12px;margin-top:14px}
+  .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+  /* Responsive */
+  @media (max-width:1100px){ .grid{grid-template-columns:repeat(2,1fr)} nav{display:none}.hamburger{display:block} }
+  @media (max-width:640px){
+    .grid{grid-template-columns:1fr}
+    .f-cols{grid-template-columns:1fr}
+    .f-bottom{flex-direction:column;text-align:center}
+  }
+</style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources" aria-current="page">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob2" aria-hidden="true"></div>
+    <div class="container">
+      <h1>Resources Library</h1>
+      <p>Plan smarter launches, optimize faster, and level-up your skills. Browse curated checklists, scripts, and trainings built for performance marketers.</p>
+      <div class="filter-row" role="navigation" aria-label="Resource categories">
+        <a class="pill" href="#learn">Self-Education &amp; Trainings</a>
+        <a class="pill" href="#opt">Ad Optimization Checklists</a>
+        <a class="pill" href="#scripts">Google Ad Script Library</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Content ===== -->
+  <div class="wrap">
+    <!-- Self-Education & Trainings -->
+    <section id="learn" class="section">
+      <div class="container">
+        <h2>Self-Education &amp; Trainings</h2>
+        <p class="lead">Teach yourself the fundamentals and the details—at your pace. Join live cohorts to go deeper.</p>
+        <div class="grid">
+          <a class="card" href="/resource/marketing-glossary">
+            <span class="tag">Reference</span>
+            <h3>Glossary</h3>
+            <p class="meta">500+ terms · Search · Filter A–Z</p>
+            <div class="actions">
+              <span class="primary">Open</span>
+              <span class="ghost">Share</span>
+            </div>
+          </a>
+           <a class="card" href="/resource/marketing-budget-calculator">
+            <span class="tag">Calculator</span>
+            <h3>Marketing Budget Calculator</h3>
+            <p class="meta">Budget tied to measurable outcomes</p>
+            <div class="actions">
+              <span class="primary">Open</span>
+              <span class="ghost">Share</span>
+            </div>
+          </a>
+          <a class="card" href="/training/digital-marketing-bootcamp">
+            <span class="tag">Training</span>
+            <h3>Digital Marketing Bootcamp</h3>
+            <p class="meta">8 weeks (weekends) · Strategy · Measurement · Media planning</p>
+            <div class="actions">
+              <span class="primary">View syllabus</span>
+              <span class="ghost">Enroll</span>
+            </div>
+          </a>
+          <a class="card" href="/blog">
+            <span class="tag">Articles</span>
+            <h3>Blog</h3>
+            <p class="meta">Naming, GTM, CRO, media ops &amp; more</p>
+            <div class="actions">
+              <span class="primary">Read</span>
+              <span class="ghost">RSS</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad Optimization Checklists -->
+    <section id="opt" class="section">
+      <div class="container">
+        <h2>Ad Optimization Checklists</h2>
+        <p class="lead">Repeatable optimization routines to lift ROAS and lower CPA.</p>
+        <div class="grid">
+          <a class="card" href="/resource/google-remarketing-campaign-launch-checklist">
+            <span class="tag">Optimization</span>
+            <h3>Google Ad Remarketing Checklist</h3>
+            <p class="meta">Lists · Cadence · Exclusions · Sequencing</p>
+            <div class="actions">
+              <span class="primary">View</span>
+              <span class="ghost">Download PDF</span>
+            </div>
+          </a>
+          <a class="card" href="/resource/meta-remarketing-campaign-launch-checklist">
+            <span class="tag">Optimization</span>
+            <h3>Meta Ad Remarketing Checklist</h3>
+            <p class="meta">Engagers · 1/7/30-day stacks · Creative angles</p>
+            <div class="actions">
+              <span class="primary">View</span>
+              <span class="ghost">Download PDF</span>
+            </div>
+          </a>
+          <a class="card" href="/resource/Linkedin-remarketing-campaign-launch-checklist">
+            <span class="tag">Optimization</span>
+            <h3>LinkedIn Ad Remarketing Checklist</h3>
+            <p class="meta">Website audiences · Video viewers · Lead nurturing</p>
+            <div class="actions">
+              <span class="primary">View</span>
+              <span class="ghost">Download PDF</span>
+            </div>
+          </a>
+          <a class="card" href="/resource/youtube-remarketing-campaign-launch-checklist">
+            <span class="tag">Optimization</span>
+            <h3>YouTube Ad Remarketing Checklist</h3>
+            <p class="meta">Sequences · Brand lift · Skippable/non-skippable mix</p>
+            <div class="actions">
+              <span class="primary">View</span>
+              <span class="ghost">Download PDF</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Ad Script Library -->
+    <section id="scripts" class="section">
+      <div class="container">
+        <h2>Google Ad Script Library</h2>
+        <p class="lead">Time-saving scripts for monitoring, reporting, and smart automations.</p>
+        <div class="grid">
+          <a class="card" href="/assets/google-ad-scripts.pdf">
+            <span class="tag">Scripts</span>
+            <h3>Essential Google Ad Scripts</h3>
+            <p class="meta">Alerts · Budgets · Anomaly detection</p>
+            <div class="actions">
+              <span class="primary">Browse</span>
+              <span class="ghost">GitHub</span>
+            </div>
+            <span class="note">Step-by-step install instructions included.</span>
+          </a>
+          <a class="card" href="/assets/google-ad-scripts.pdf">
+            <span class="tag">Scripts</span>
+            <h3>Ad Scripts for Ecommerce</h3>
+            <p class="meta">Feed checks · Inventory bids · PMax hygiene</p>
+            <div class="actions">
+              <span class="primary">Browse</span>
+              <span class="ghost">GitHub</span>
+            </div>
+          </a>
+          <a class="card" href="/assets/google-ad-scripts.pdf">
+            <span class="tag">Scripts</span>
+            <h3>Ad Scripts for Lead Gen</h3>
+            <p class="meta">Call QA · Form quality · Keyword mining</p>
+            <div class="actions">
+              <span class="primary">Browse</span>
+              <span class="ghost">GitHub</span>
+            </div>
+          </a>
+          <a class="card" href="/assets/google-ad-scripts.pdf">
+            <span class="tag">Scripts</span>
+            <h3>Ad Scripts for Agencies</h3>
+            <p class="meta">MCC reporting · Naming audits · SLA alerts</p>
+            <div class="actions">
+              <span class="primary">Browse</span>
+              <span class="ghost">GitHub</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== Footer (consistent) ===== -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.youtube.com" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="f-links">
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/guides">Guides</a></li>
+            <li><a href="/webinars">Webinars</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none;margin:0;padding:0">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Resources Library",
+    "description":"Free checklists, script libraries, and training resources to plan, launch, and optimize your advertising.",
+    "url":"https://www.boramedianetwork.com/resources",
+    "isPartOf":{"@type":"WebSite","name":"Bora Media","url":"https://www.boramedianetwork.com"}
+  }
+  </script>
+
+<script>
+  // footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // mobile menu
+  const burger = document.getElementById('hamburger');
+  const panel = document.getElementById('mobilePanel');
+  burger?.addEventListener('click', () => {
+    const open = panel.classList.toggle('show');
+    burger.setAttribute('aria-expanded', String(open));
+    burger.querySelectorAll('.bar').forEach((b,i)=>{
+      if(open){
+        if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+        if(i===1){b.style.opacity='0'}
+        if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+      }else{ b.style.transform=''; b.style.opacity=''; }
+    });
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+</script>
+</body>
+</html>

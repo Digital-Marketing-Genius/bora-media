@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marketing Budget Calculator | Bora Media</title>
+  <meta name="description" content="Estimate a data-driven marketing budget, target CPA, and profit impact based on your revenue goals and LTV. Built for realistic planning—not one-size-fits-all rules." />
+  <link rel="canonical" href="https://www.boramedianetwork.com/tools/marketing-budget-calculator" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Marketing Budget Calculator" />
+  <meta property="og:description" content="Estimate a data-driven marketing budget, target CPA, and profit impact—grounded in your goals and margins." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.boramedianetwork.com/tools/marketing-budget-calculator" />
+  <meta property="og:image" content="https://www.boramedianetwork.com/images/og/marketing-budget-calculator.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Marketing Budget Calculator" />
+  <meta name="twitter:description" content="Estimate a data-driven marketing budget, target CPA, and profit impact—grounded in your goals and margins." />
+  <meta name="twitter:image" content="https://www.boramedianetwork.com/images/og/marketing-budget-calculator.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp" />
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+      --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+      --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+      --line:#DDE6F3;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (site shell consistent) */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;gap:26px;list-style:none}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+    nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+    .has-dd{position:relative}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.1)}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.15)}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:84px 0 48px;position:relative;overflow:hidden}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22;animation:float 16s infinite ease-in-out}
+    .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+    .hero h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin-bottom:10px;font-weight:900}
+    .hero p{max-width:820px;color:rgba(255,255,255,.9)}
+    .cta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+
+    /* Intro */
+    .intro{padding:30px 0 0}
+    .intro p{max-width:900px;color:#334463}
+
+    /* Calculator layout */
+    .wrap{padding:40px 0}
+    .cards{display:grid;grid-template-columns:1fr 1.2fr;gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:18px}
+    .card h2{font-size:20px;margin:0 0 6px}
+    .divider{height:1px;background:var(--line);margin:10px 0}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .row{display:grid;gap:6px}
+    label.contact-field-label{font-weight:800}
+    label.contact-field-description{font-size:13px;color:#526180}
+    .contact-field{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px}
+    select.contact-field{background:#fff}
+    .full{grid-column:1/-1}
+    .hint{font-size:13px;color:#6a7891;margin-top:-4px}
+    .button{display:inline-block;background:var(--blue);color:#fff;border:0;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer}
+
+    /* Results (hidden until calculate) */
+    .results{display:none;margin-top:16px;background:var(--muted);border:1px solid var(--line);border-radius:12px;padding:14px}
+    .results strong{display:block;margin-bottom:8px}
+    .error{display:none;margin-top:10px;color:#b00020;font-weight:700}
+
+    /* Final CTA & Footer (consistent) */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08);margin-top:40px}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .social{display:flex;gap:12px;margin-top:14px}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+    /* Responsive */
+    @media (max-width:1100px){ .cards{grid-template-columns:1fr} }
+    @media (max-width:860px){ nav{display:none}.hamburger{display:block} }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      .f-cols{grid-template-columns:1fr}
+      .f-bottom{flex-direction:column;text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob2" aria-hidden="true"></div>
+    <div class="container">
+      <h1>Marketing Budget Calculator</h1>
+      <p>A scientific approach beats guesswork. Budgets should reflect <em>your</em> revenue targets, margins, and LTV—not a one-size-fits-all percentage. Use this tool to turn goals into calibrated investment levels and clear CPA guardrails.</p>
+      <div class="cta-row">
+        <a class="btn" href="#calculator-anchor">Start Calculating</a>
+        <a class="btn alt" href="/contact">Talk to a Strategist</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="intro">
+    <div class="container">
+      <p>Marketing budgets work best when they’re tied to measurable outcomes. This calculator uses your revenue baseline, growth target, customer lifetime value, margin, and growth ambition to estimate a right-sized budget and target CPA—so you can plan confidently and justify spend.</p>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <main class="wrap">
+    <div class="container">
+      <!-- single form to validate -> calculate -> reveal results -> send to Sheets -->
+      <form id="calc-form" novalidate>
+        <div class="cards" id="calculator-anchor">
+          <!-- USER INFORMATION -->
+          <section class="card" aria-labelledby="userInfoTitle">
+            <h2 id="userInfoTitle">Your Info</h2>
+            <div class="divider" aria-hidden="true"></div>
+            <div class="grid">
+              <div class="row">
+                <label for="First-Name" class="contact-field-label">First Name</label>
+                <input class="contact-field calc w-input" maxlength="256" name="First-Name" data-name="First Name" placeholder="Enter your first name" type="text" id="First-Name" required />
+              </div>
+              <div class="row">
+                <label for="Email" class="contact-field-label">Email</label>
+                <input class="contact-field calc w-input" maxlength="256" name="Email" data-name="Email" placeholder="Enter your email" type="email" id="Email" required />
+              </div>
+              <div class="row full">
+                <label for="Company-Name" class="contact-field-label">Company Name</label>
+                <input class="contact-field calc w-input" maxlength="256" name="Company-Name" data-name="Company Name" placeholder="Enter your company name" type="text" id="Company-Name" required />
+              </div>
+            </div>
+            <p class="hint">We’ll only use this to send your results.</p>
+          </section>
+
+          <!-- CALCULATOR -->
+          <section class="card" aria-labelledby="calcTitle">
+            <h2 id="calcTitle">Calculator</h2>
+            <div class="divider" aria-hidden="true"></div>
+            <div class="grid">
+              <div class="row">
+                <label for="annual-revenue" class="contact-field-label">Annual revenue</label>
+                <label for="annual-revenue" class="contact-field-description">Your last fiscal year’s revenue.</label>
+                <input class="contact-field calc w-input" maxlength="256" name="Annual-Revenue" data-name="Annual Revenue" placeholder="i.e. $2,000,000" type="tel" id="annual-revenue" required />
+              </div>
+
+              <div class="row">
+                <label for="growth-goal" class="contact-field-label">Revenue goal (next year)</label>
+                <label for="growth-goal" class="contact-field-description">Your target revenue for the upcoming year.</label>
+                <input class="contact-field calc w-input" maxlength="256" name="Growth-Goal" data-name="Growth Goal" placeholder="i.e. $3,000,000" type="tel" id="growth-goal" required />
+              </div>
+
+              <div class="row">
+                <label for="growth-aggressiveness" class="contact-field-label">Growth aggressiveness</label>
+                <label for="growth-aggressiveness" class="contact-field-description">Pick the ambition that best matches your plan.</label>
+                <select id="growth-aggressiveness" name="Revenue-Ambition" data-name="Revenue Ambition" required class="contact-field calc w-select">
+                  <option value="">Select your growth ambitions</option>
+                  <option value="Low">Low</option>
+                  <option value="Medium / Low">Medium / Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Medium / High">Medium / High</option>
+                  <option value="High">High</option>
+                  <option value="Growth / Aggressive">Growth / Aggressive</option>
+                  <option value="Startup / Aggressive">Startup / Aggressive</option>
+                </select>
+              </div>
+
+              <div class="row">
+                <label for="customer-ltv" class="contact-field-label">Average customer LTV</label>
+                <label for="customer-ltv" class="contact-field-description">Average revenue per customer over their lifetime (e.g., $5,000).</label>
+                <input class="contact-field calc w-input" maxlength="256" name="Average-LTV" data-name="Average LTV" placeholder="i.e. $5,000" type="tel" id="customer-ltv" required />
+              </div>
+
+              <div class="row full">
+                <label for="margin-ltv" class="contact-field-label">Average margin on LTV (%)</label>
+                <label for="margin-ltv" class="contact-field-description">Enter the average profit margin as a percent of LTV (e.g., 25%).</label>
+                <input class="contact-field calc w-input" maxlength="256" name="Average-Margin" data-name="Average Margin" placeholder="i.e. 25%" type="tel" id="margin-ltv" required />
+              </div>
+
+              <!-- CTA -->
+              <div class="row full">
+                <button type="submit" id="calculate-button" class="btn">Calculate</button>
+                <div id="form-error" class="error">Please complete all required fields.</div>
+              </div>
+
+              <!-- RESULTS (hidden until calculate) -->
+              <div class="row full results" id="results">
+                <strong>Calculation Results</strong>
+                <div id="calculation-results" class="calculation-results"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Hidden outputs for Sheets/zaps -->
+        <input type="hidden" id="hidden-marketing-budget" name="marketingBudget" />
+        <input type="hidden" id="hidden-customers-needed" name="customersNeeded" />
+        <input type="hidden" id="hidden-profit-per-customer" name="profitPerCustomer" />
+        <input type="hidden" id="hidden-total-estimated-profit" name="totalProfit" />
+        <input type="hidden" id="hidden-target-cpa" name="targetCPA" />
+      </form>
+    </div>
+  </main>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Want help turning this plan into pipeline?</h2>
+      <p>We’ll translate targets into channel mix, naming conventions, tracking, and dashboards—so budget decisions are backed by data every week.</p>
+      <a class="btn" href="/contact">Book a Strategy Call</a>
+    </div>
+  </section>
+
+  <!-- Footer (consistent) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.youtube.com" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="f-links">
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/guides">Guides</a></li>
+            <li><a href="/webinars">Webinars</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD (WebApplication) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"Marketing Budget Calculator",
+    "url":"https://www.boramedianetwork.com/tools/marketing-budget-calculator",
+    "applicationCategory":"BusinessApplication",
+    "publisher":{
+      "@type":"Organization",
+      "name":"Bora Media",
+      "logo":{"@type":"ImageObject","url":"https://www.boramedianetwork.com/images/bora-logo.webp"}
+    },
+    "description":"Estimate a data-driven marketing budget, target CPA, and profit impact based on goals, LTV, and margins."
+  }
+  </script>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{ b.style.transform=''; b.style.opacity=''; }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    // ====== CONFIG: paste your Google Apps Script Web App URL here ======
+    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyLcBlL1ZCD7RvrZQWHnsdhnSxC9SOXFgyUa7x87Ji5PQSW0DI4u-TJTc2Slv41ieskSQ/exec";
+    // ================================================================
+
+    document.addEventListener("DOMContentLoaded", function() {
+      // --- helper functions (kept from your logic) ---
+      function cleanInput(value) { return value.replace(/[^\d.-]/g, ''); }
+
+      function formatCurrencyOnBlur(inputElement) {
+        let value = cleanInput(inputElement.value);
+        if (value) {
+          inputElement.value = '$' + parseFloat(value).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+      }
+
+      function formatPercentageOnBlur(inputElement) {
+        let value = cleanInput(inputElement.value);
+        if (value) { inputElement.value = value + '%'; }
+      }
+
+      // attach blur formatters (calculation will run only on submit)
+      ["annual-revenue", "growth-goal", "customer-ltv"].forEach(id => {
+        const el = document.getElementById(id);
+        el.addEventListener('blur', function(){ formatCurrencyOnBlur(this); });
+      });
+      const pct = document.getElementById("margin-ltv");
+      pct.addEventListener('blur', function(){ formatPercentageOnBlur(this); });
+
+      // --- core math (unchanged) ---
+      function compute() {
+        const revenue = parseFloat(cleanInput(document.getElementById("annual-revenue").value)) || 0;
+        const goal = parseFloat(cleanInput(document.getElementById("growth-goal").value)) || 0;
+        const ltv = parseFloat(cleanInput(document.getElementById("customer-ltv").value)) || 0;
+        const margin = parseFloat(cleanInput(document.getElementById("margin-ltv").value.replace('%', ''))) || 0;
+        const aggressiveness = document.getElementById("growth-aggressiveness").value;
+
+        const percentages = {
+          "Low": 3, "Medium / Low": 5, "Medium": 7, "Medium / High": 9,
+          "High": 12, "Growth / Aggressive": 14, "Startup / Aggressive": 18
+        };
+        const p = percentages[aggressiveness] || 0;
+        const marketingBudget = revenue * (p / 100);
+        const additionalRevenueNeeded = goal - revenue;
+        const customersNeeded = Math.max(0, Math.ceil(additionalRevenueNeeded / (ltv || 1)));
+        const profitPerCustomer = ltv * (margin / 100);
+        const totalProfit = (profitPerCustomer * customersNeeded) - marketingBudget;
+        const targetCPA = customersNeeded > 0 ? marketingBudget / customersNeeded : 0;
+
+        return { marketingBudget, customersNeeded, profitPerCustomer, totalProfit, targetCPA };
+      }
+
+      // --- submit: validate -> compute -> reveal -> send to Sheets ---
+      const form = document.getElementById('calc-form');
+      const errorBox = document.getElementById('form-error');
+      const resultsBox = document.getElementById('results');
+      const resultsTarget = document.getElementById('calculation-results');
+
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        errorBox.style.display = 'none';
+
+        const requiredIds = [
+          "First-Name","Email","Company-Name",
+          "annual-revenue","growth-goal","growth-aggressiveness","customer-ltv","margin-ltv"
+        ];
+        let missing = [];
+        requiredIds.forEach(id=>{
+          const el = document.getElementById(id);
+          const val = (el.tagName === 'SELECT') ? el.value : el.value.trim();
+          if(!val){ missing.push(id); el.setAttribute('aria-invalid','true'); el.style.outline='2px solid #b00020'; }
+          else { el.removeAttribute('aria-invalid'); el.style.outline=''; }
+        });
+
+        if(missing.length){
+          errorBox.style.display = 'block';
+          resultsBox.style.display = 'none';
+          return;
+        }
+
+        // Compute outputs
+        const out = compute();
+
+        // Hidden fields for integrations
+        document.getElementById("hidden-marketing-budget").value = out.marketingBudget;
+        document.getElementById("hidden-customers-needed").value = out.customersNeeded;
+        document.getElementById("hidden-profit-per-customer").value = out.profitPerCustomer;
+        document.getElementById("hidden-total-estimated-profit").value = out.totalProfit;
+        document.getElementById("hidden-target-cpa").value = out.targetCPA;
+
+        // Reveal results
+        resultsTarget.innerHTML = `
+          Recommended Marketing Budget: $${out.marketingBudget.toLocaleString('en-US')}<br>
+          Customers Needed: ${out.customersNeeded.toLocaleString('en-US')}<br>
+          Profit Per Customer: $${out.profitPerCustomer.toLocaleString('en-US')}<br>
+          Total Estimated Additional Profit: $${out.totalProfit.toLocaleString('en-US')}<br>
+          Target Cost Per Acquisition (CPA): $${out.targetCPA.toLocaleString('en-US')}
+        `;
+        resultsBox.style.display = 'block';
+        resultsBox.scrollIntoView({behavior:'smooth', block:'start'});
+
+        // Submit to Google Sheets via Apps Script Web App
+        try{
+          const payload = {
+            firstName: document.getElementById("First-Name").value.trim(),
+            email: document.getElementById("Email").value.trim(),
+            company: document.getElementById("Company-Name").value.trim(),
+            annualRevenue: document.getElementById("annual-revenue").value.trim(),
+            growthGoal: document.getElementById("growth-goal").value.trim(),
+            growthAggressiveness: document.getElementById("growth-aggressiveness").value,
+            customerLTV: document.getElementById("customer-ltv").value.trim(),
+            marginLTVPercent: document.getElementById("margin-ltv").value.trim(),
+            marketingBudget: out.marketingBudget,
+            customersNeeded: out.customersNeeded,
+            profitPerCustomer: out.profitPerCustomer,
+            totalProfit: out.totalProfit,
+            targetCPA: out.targetCPA,
+            submittedAt: new Date().toISOString()
+          };
+
+          await fetch(APPS_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+        }catch(err){
+          console.warn('Sheets submission error:', err);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

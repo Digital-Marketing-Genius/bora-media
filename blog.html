@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog | B2B Growth, Ads, and Analytics Insights | Bora Media</title>
+  <meta name="description" content="Actionable guides on Google & Meta Ads, ABM, CRO, analytics and brand. Learn how to scale pipeline with data-backed playbooks." />
+  <link rel="canonical" href="https://boramedianetwork.com/blog" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Blog | B2B Growth, Ads, and Analytics Insights | Bora Media" />
+  <meta property="og:description" content="Actionable guides on Google & Meta Ads, ABM, CRO, analytics and brand." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://boramedianetwork.com/blog" />
+  <meta property="og:image" content="https://boramedianetwork.com/images/bora-logo.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog | B2B Growth, Ads, and Analytics Insights | Bora Media" />
+  <meta name="twitter:description" content="Actionable guides on Google & Meta Ads, ABM, CRO, analytics and brand." />
+  <meta name="twitter:image" content="https://boramedianetwork.com/images/bora-logo.webp" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp" />
+
+  <!-- Google Tag Manager (head) -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB;
+      --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+      --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (consistent) */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;list-style:none;gap:26px}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;position:relative;font-weight:600}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s ease}
+    nav a:hover::after, nav a[aria-current="page"]::after{width:100%}
+    .has-dd{position:relative}
+    .chev{width:14px;height:14px;vertical-align:-2px;margin-left:6px}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.10)}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:700;cursor:pointer;transition:transform .15s ease,filter .2s ease}
+    .btn:hover{transform:translateY(-1px);filter:brightness(.95)}
+    .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.12)}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#071B3A 0%, #0C254B 100%);color:#fff;padding:96px 0 70px}
+    .hero h1{font-size:clamp(30px,5vw,52px);line-height:1.15;text-align:center;margin:0 auto 12px;max-width:960px;font-weight:900}
+    .hero p.lead{text-align:center;color:rgba(255,255,255,.88);font-size:clamp(16px,2.2vw,20px);max-width:760px;margin:0 auto 22px}
+    .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+    /* Layout */
+    .section{padding:64px 0}
+    .muted{background:var(--muted)}
+    .blog-wrap{display:grid;grid-template-columns:280px 1fr;gap:24px}
+    .sticky{position:sticky;top:86px}
+    .panel{background:#fff;border:1px solid rgba(6,26,56,.08);border-radius:16px;box-shadow:var(--shadow);padding:16px}
+    .panel h3{font-size:16px;margin-bottom:10px}
+    .cats{list-style:none}
+    .cats li{margin:6px 0}
+    .cats a{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
+    .cats a.active{color:#0D3A8B}
+
+    .search{position:relative;margin-top:14px}
+    .search input{width:100%;padding:10px 12px 10px 36px;border-radius:12px;border:1px solid rgba(6,26,56,.15);outline:none}
+    .search svg{position:absolute;left:10px;top:9px;width:18px;height:18px;opacity:.6}
+
+    /* Grid cards */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{display:block;background:#0E233F;color:#fff;border-radius:16px;padding:16px;text-decoration:none;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08);min-height:210px;position:relative;overflow:hidden}
+    .card .tag{font-size:12px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:#8AF1EC}
+    .card h2{font-size:20px;line-height:1.25;margin:6px 0 8px}
+    .meta{opacity:.85;font-size:13px}
+    .thumb{border-radius:12px;margin:10px 0;aspect-ratio:16/9;object-fit:cover;width:100%}
+    .cta-mini{display:inline-flex;gap:8px;align-items:center;margin-top:10px;font-weight:700;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:8px 10px;border-radius:10px}
+    .card::after{content:"";position:absolute;right:-30px;bottom:-30px;width:180px;height:180px;background:radial-gradient(circle at 50% 50%, rgba(59,115,255,.28), transparent 60%);opacity:.25}
+
+    /* Footer (consistent) */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .f-col{min-width:0}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-links a:hover{color:var(--ink)}
+    .social{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12);transition:transform .15s ease, box-shadow .2s ease}
+    .social a:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
+    .social svg{width:18px;height:18px}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .mini{display:flex;gap:16px;list-style:none}
+
+    /* Responsive */
+    @media (max-width:1100px){ .grid{grid-template-columns:repeat(2,1fr)} .blog-wrap{grid-template-columns:1fr} .sticky{position:static} }
+    @media (max-width:860px){
+      nav{display:none} .hamburger{display:block}
+      .f-cols{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      .f-bottom{flex-direction:column;text-align:center}
+      .mini{flex-wrap:wrap;justify-content:center}
+      .final{padding:72px 0}
+    }
+    @media (max-width:520px){ .f-cols{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services
+              <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+            <div class="dropdown" role="menu" aria-label="Services submenu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/blog" aria-current="page">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/blog" aria-current="page">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" role="banner">
+    <div class="container">
+      <h1>Insights, playbooks & breakdowns for business growth</h1>
+      <p class="lead">Learn what’s working across Google Ads, ABM, analytics, design and more—tested in the field and explained step-by-step.</p>
+      <div class="cta-row">
+        <a class="btn" href="#posts">Explore latest posts</a>
+        <a class="btn alt" href="/contact">Book a Free Strategy Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG LIST -->
+  <main class="section muted" id="posts">
+    <div class="container blog-wrap">
+      <!-- Sidebar -->
+      <aside class="sticky">
+        <div class="panel" aria-labelledby="catHeading">
+          <h3 id="catHeading">Categories</h3>
+          <ul class="cats" id="catList">
+            <!-- The “All” category is the default filter -->
+            <li><a href="#" data-filter="all" class="active">All</a></li>
+            <li><a href="#" data-filter="Copywriting">Copywriting</a></li>
+            <li><a href="#" data-filter="Google Ads">Google Ads</a></li>
+            <li><a href="#" data-filter="Linkedin Ads">Linkedin Ads</a></li>
+            <li><a href="#" data-filter="ABM">ABM</a></li>
+            <li><a href="#" data-filter="ABM">Paid Media</a></li>
+            <li><a href="#" data-filter="Design">Design</a></li>
+            <li><a href="#" data-filter="Branding">Branding</a></li>
+            <li><a href="#" data-filter="Meta Ads">Meta Ads</a></li>
+            <li><a href="#" data-filter="Google Analytics">Google Analytics</a></li>
+            <li><a href="#" data-filter="Google Tag Manager">Google Tag Manager</a></li>
+            <li><a href="#" data-filter="Artificial Intelligence">Artificial Intelligence</a></li>
+             <li><a href="#" data-filter="PPC">PPC</a></li>
+          </ul>
+
+          <label class="search" for="search">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <input id="search" type="search" placeholder="Search posts…" aria-label="Search blog posts">
+          </label>
+        </div>
+
+        <div class="panel" style="margin-top:18px">
+          <h3>Get new posts</h3>
+          <p style="font-size:14px;color:rgba(6,26,56,.8)">One email per week. No fluff—playbooks you can ship.</p>
+          <form action="#" method="post" onsubmit="event.preventDefault();alert('Thanks! You’re on the list.');">
+            <input type="email" required placeholder="Your email" aria-label="Email address" style="width:100%;padding:10px 12px;border-radius:12px;border:1px solid rgba(6,26,56,.15);margin:10px 0;">
+            <button class="btn" style="width:100%">Subscribe</button>
+          </form>
+        </div>
+      </aside>
+
+      <!-- Posts grid -->
+      <section aria-label="Articles">
+        <div class="grid" id="grid">
+          <!-- Sample cards (replace href/thumbnails as needed) -->
+          <a class="card" href="/post/tiktok-search-ads-vs-google" data-category="Google Ads,PPC,Paid Media">
+            <span class="tag">PPC</span>
+            <h2>TikTok Search Ads vs. Google: The Data-Driven Budget Allocation Guide</h2>
+            <p class="meta">8 min read • Framework + template</p>
+            <img class="thumb" src="/images/blog/tikto-vs-google.png" alt="TikTok Search Ads vs. Google" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+        
+         <a class="card" href="/post/google-ads-bidding-strategy-2025" data-category="Google Ads">
+            <span class="tag">Google Ads</span>
+            <h2>Google Ads Bidding Strategy: The Complete 2025 Guide</h2>
+            <p class="meta">11 min read • Framework + template</p>
+            <img class="thumb" src="/images/blog/google-bidding.png" alt="Google Ads Bidding Strategy" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+          
+          <a class="card" href="/post/meta-ads-strategies-2025" data-category="Meta Ads">
+            <span class="tag">Meta Ads</span>
+            <h2>17 Meta Ads Strategies That Actually Work in 2025</h2>
+            <p class="meta">10 min read • Hooks, formats, tests</p>
+            <img class="thumb" src="/images/blog/meta-strategy.png" alt="Meta Ads Strategies" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/post/ai-tools-digital-marketing-2025" data-category="Artificial Intelligence,Paid Media,PPC">
+            <span class="tag">Artificial Intelligence</span>
+            <h2>40+ AI Tools for Digital Marketing in 2025 (Agency-Tested)</h2>
+            <p class="meta">10 min read • Hooks, formats, tests</p>
+            <img class="thumb" src="/images/blog/ai-tools.png" alt="AI Tools for Digital Marketing" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+          
+        <a class="card" href="/post/google-ads-naming-conventions" data-category="Google Ads">
+            <span class="tag">Google Ads</span>
+            <h2>Naming Conventions That Make Google Ads Scalable</h2>
+            <p class="meta">7 min read • Framework + template</p>
+            <img class="thumb" src="/images/blog/ga-naming.webp" alt="Google Ads naming conventions" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/post/write-cta-that-converts" data-category="Copywriting">
+            <span class="tag">Copywriting</span>
+            <h2>Write CTAs That Convert: 9 Patterns that Win in B2B</h2>
+            <p class="meta">6 min read • Examples included</p>
+            <img class="thumb" src="/images/blog/ctas.webp" alt="CTA examples" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/post/linkedin-abm-playbook" data-category="Linkedin Ads,ABM">
+            <span class="tag">Linkedin Ads · ABM</span>
+            <h2>ABM on LinkedIn: From ICP to Pipeline in 30 Days</h2>
+            <p class="meta">8 min read • ICP → creative → routing</p>
+            <img class="thumb" src="/images/blog/abm-linkedin.webp" alt="ABM on LinkedIn" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/post/ga4-boards" data-category="Google Analytics">
+            <span class="tag">Google Analytics</span>
+            <h2>Build a GA4 Board Your Exec Team Will Actually Use</h2>
+            <p class="meta">9 min read • GA4 + Looker Studio</p>
+            <img class="thumb" src="/images/blog/ga4-board.webp" alt="GA4 dashboard" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/post/brand-to-demand" data-category="Branding,Design">
+            <span class="tag">Branding · Design</span>
+            <h2>Brand to Demand: Visual Systems that Boost CVR</h2>
+            <p class="meta">5 min read • Before/after examples</p>
+            <img class="thumb" src="/images/blog/brand-design.jpg" alt="Brand design examples" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/post/gtm-server-side-setup" data-category="Google Tag Manager,Google Analytics">
+            <span class="tag">Google Tag Manager</span>
+            <h2>Server-Side Tagging: A Clean Setup for Accurate Data</h2>
+            <p class="meta">10 min read • Step-by-step guide</p>
+            <img class="thumb" src="/images/blog/gtm-serverside.webp" alt="Server-side tagging" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/post/meta-creative-blueprint" data-category="Meta Ads,Design">
+            <span class="tag">Meta Ads</span>
+            <h2>The Meta Creative Blueprint for Cheaper CPLs</h2>
+            <p class="meta">6 min read • Hooks, formats, tests</p>
+            <img class="thumb" src="/images/blog/meta-creative.webp" alt="Meta Ads creative" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/post/keyword-guardrails" data-category="Google Ads">
+            <span class="tag">Google Ads</span>
+            <h2>Keyword Guardrails: Control Spend Without Killing Scale</h2>
+            <p class="meta">7 min read • Real examples</p>
+            <img class="thumb" src="/images/blog/keyword-guardrails.webp" alt="Keyword guardrails" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/post/designing-offers" data-category="Copywriting,Branding">
+            <span class="tag">Copywriting</span>
+            <h2>Designing Offers: From Message-Market Fit to Conversions</h2>
+            <p class="meta">8 min read • Offer grid template</p>
+            <img class="thumb" src="/images/blog/offers.webp" alt="Offer design framework" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+          
+          <a class="card" href="/post/top-12-reporting-tools" data-category="Google Analytics,Google Tag Manager">
+            <span class="tag">Google Analytics</span>
+            <h2>Top 12 Reporting Tools for Campaign Deep Dives</h2>
+            <p class="meta">9 min read • GA4 + Looker Studio</p>
+            <img class="thumb" src="/images/blog/reporting-tools.png" alt="PPC Reporting" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+          
+          <a class="card" href="/post/what-performance-agency-do" data-category="Paid Media">
+            <span class="tag">Paid Media</span>
+            <h2>What Does a Performance Marketing Agency Actually Do?</h2>
+            <p class="meta">9 min read • Performance Marketing</p>
+            <img class="thumb" src="/images/blog/performance-marketing.png" alt="Performance marketing" loading="lazy">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Need help implementing this?</h2>
+      <p>We’ll audit your funnel, prioritize the highest-ROI fixes, and set up clean tracking so you can scale with confidence.</p>
+      <a class="btn" href="/contact">Schedule Your Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer (consistent) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div class="f-col">
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media">
+            <a href="https://www.linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.youtube.com" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+            <a href="https://x.com" aria-label="X"><svg viewBox="0 0 24 24" fill="none"><path d="M18 3h3l-7.5 8.6L22 21h-6.6L9.8 14l-4.6 7H2l8-9.7L2.8 3h6.7l4.3 5.9L18 3Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div class="f-col">
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Resources</h4>
+          <ul class="f-links">
+            <li><a href="/blog" aria-current="page">Blog</a></li>
+            <li><a href="/guides">Guides</a></li>
+            <li><a href="/webinars">Webinars</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="mini">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD: Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Bora Media Blog",
+    "url": "https://boramedianetwork.com/blog",
+    "description": "Actionable guides on ads, analytics, ABM, and brand for B2B.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Bora Media",
+      "logo": {"@type":"ImageObject","url":"https://boramedianetwork.com/images/bora-logo.webp"}
+    }
+  }
+  </script>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{ b.style.transform=''; b.style.opacity=''; }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    // Filters + search
+    const catLinks = document.querySelectorAll('#catList a');
+    const cards = document.querySelectorAll('.card');
+    const search = document.getElementById('search');
+    let activeCat = 'all';
+
+    function applyFilters(){
+      const q = (search.value || '').toLowerCase().trim();
+      cards.forEach(card=>{
+        const cats = (card.dataset.category || '').toLowerCase();
+        const matchesCat = activeCat === 'all' || cats.includes(activeCat.toLowerCase());
+        const text = (card.textContent || '').toLowerCase();
+        const matchesSearch = !q || text.includes(q);
+        card.style.display = (matchesCat && matchesSearch) ? '' : 'none';
+      });
+    }
+    catLinks.forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        catLinks.forEach(x=>x.classList.remove('active'));
+        a.classList.add('active');
+        activeCat = a.dataset.filter;
+        applyFilters();
+      });
+    });
+    search.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>

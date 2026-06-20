@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Us | Bora Media</title>
+  <meta name="description" content="Bora Media is a performance-driven digital marketing agency helping brands grow with data, creativity, and technology. Learn our story, values, and team." />
+  <link rel="canonical" href="https://www.boramedianetwork.com/about" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Us | Bora Media" />
+  <meta property="og:description" content="Meet Bora Media: a performance-driven marketing partner blending creativity, data, and strategy to drive measurable growth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.boramedianetwork.com/about" />
+  <meta property="og:image" content="https://www.boramedianetwork.com/images/og/about-us.jpg" />
+  <meta property="og:site_name" content="Bora Media" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Us | Bora Media" />
+  <meta name="twitter:description" content="Bora Media is a digital marketing agency driven by performance and strategy. Learn who we are and how we help brands grow." />
+  <meta name="twitter:image" content="https://www.boramedianetwork.com/images/og/about-us.jpg" />
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#071B3A" />
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+      --aqua:#19D0C9; --blue:#3B73FF; --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{overflow-x:hidden}
+    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;gap:26px;list-style:none}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+    nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .show{display:block}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:96px 0 64px;text-align:center}
+    .hero h1{font-size:clamp(28px,5vw,48px);margin-bottom:12px;font-weight:900}
+    .hero p{max-width:760px;margin:0 auto;color:rgba(255,255,255,.85);font-size:18px}
+
+    /* Sections */
+    section{padding:70px 0}
+    section h2{font-size:clamp(22px,3vw,32px);margin-bottom:20px;font-weight:900;text-align:center}
+    section p{margin-bottom:14px;max-width:900px;margin-inline:auto;text-align:center}
+    .grid{display:grid;gap:20px}
+    .team{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:30px}
+    .team .card{background:var(--muted);border-radius:var(--radius);padding:20px;text-align:center;box-shadow:var(--shadow)}
+    .team img{width:90px;height:90px;border-radius:50%;margin-inline:auto}
+    .values{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:30px}
+    .values .card{background:var(--muted);padding:24px;border-radius:var(--radius);box-shadow:var(--shadow)}
+
+    /* CTA */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+
+    /* Footer */
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .social{display:flex;gap:12px;margin-top:14px}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+    /* Responsive */
+    @media(max-width:860px){
+      nav{display:none}
+      .hamburger{display:block}
+      .f-cols{grid-template-columns:1fr}
+      .f-bottom{flex-direction:column;text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/about" aria-current="page">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>About Bora Media</h1>
+      <p>We are a performance-driven digital marketing agency built to help ambitious brands grow with data, creativity, and strategy.</p>
+    </div>
+  </section>
+
+  <!-- Who we are -->
+  <section>
+    <div class="container">
+      <h2>Who We Are</h2>
+      <p>Bora Media is a collective of marketers, strategists, and creators united by one mission: driving measurable growth. Since our launch, we’ve worked with brands across industries—helping them cut through noise, capture demand, and turn clicks into customers.</p>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section style="background:#F6F8FB">
+    <div class="container">
+      <h2>What We Believe</h2>
+      <div class="grid values">
+        <div class="card"><h3>Data + Creativity</h3><p>We balance left-brain analytics with right-brain storytelling for campaigns that win both hearts and wallets.</p></div>
+        <div class="card"><h3>Transparency</h3><p>No black boxes. Clear reporting, clear ROI, and clear communication with our partners.</p></div>
+        <div class="card"><h3>Growth Mindset</h3><p>We test, learn, and adapt quickly—because marketing is always evolving, and so are we.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section>
+    <div class="container">
+      <h2>Meet Our Team</h2>
+      <div class="grid team">
+        <div class="card"><img src="/images/team1.jpg" alt="Team member"><h4>Oluwatayo Alofun</h4><p>Founder & Paid Media Strategist</p></div>
+        <div class="card"><img src="/images/team2.jpg" alt="Team member"><h4>Jane Doe</h4><p>Creative Director</p></div>
+        <div class="card"><img src="/images/team3.jpg" alt="Team member"><h4>John Smith</h4><p>Data & Analytics Lead</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section style="background:#F6F8FB">
+    <div class="container">
+      <h2>Our Approach</h2>
+      <p>We don’t believe in cookie-cutter strategies. Every brand is unique, so we customize solutions that align with your goals—whether it’s scaling revenue, building awareness, or unlocking new markets. Our process blends research, creative, and data-driven iteration for campaigns that perform and scale.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Ready to Grow with Bora Media?</h2>
+      <p>Let’s explore how we can partner with your brand to drive measurable results.</p>
+      <a class="btn" href="/contact">Schedule Your Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt=""><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social">
+            <a href="https://linkedin.com" aria-label="LinkedIn">IN</a>
+            <a href="https://facebook.com" aria-label="Facebook">FB</a>
+            <a href="https://instagram.com" aria-label="Instagram">IG</a>
+            <a href="https://youtube.com" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites & Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding & Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="f-links">
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/guides">Guides</a></li>
+            <li><a href="/webinars">Webinars</a></li>
+            <li><a href="/faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Bora Media",
+    "url": "https://www.boramedianetwork.com",
+    "logo": "https://www.boramedianetwork.com/images/bora-logo.webp",
+    "sameAs": ["https://linkedin.com","https://facebook.com","https://instagram.com","https://youtube.com"],
+    "description": "Bora Media is a performance-driven digital marketing agency helping brands grow with data, creativity, and technology."
+  }
+  </script>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav
+    const burger=document.getElementById('hamburger');
+    const panel=document.getElementById('mobilePanel');
+    burger?.addEventListener('click',()=>{
+      const open=panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded',String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{ b.style.transform=''; b.style.opacity=''; }
+      });
+    });
+  </script>
+</body>
+</html>
