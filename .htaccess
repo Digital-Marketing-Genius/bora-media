@@ -1,11 +1,29 @@
 RewriteEngine On
 
-# Preserve existing links while moving the native blog from /post to /blog.
+# ==========================================
+# 1. GLOBAL .HTML REMOVAL (FOR ALL FILES)
+# ==========================================
+
+# Redirect any request explicitly ending in .html to the clean URL (SEO friendly)
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [L,R=301]
+
+# If the clean URL is requested, quietly serve the .html file behind the scenes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+
+# ==========================================
+# 2. YOUR CUSTOM BLOG ROUTING
+# ==========================================
+
+# Forward old /post/ links to /blog/
 RewriteRule ^post/([^/]+)/?$ /blog/$1 [R=301,L,NE]
 
-# Serve the native HTML blog landing page at /blog.
+# Serve the native HTML blog landing page at /blog
 RewriteRule ^blog/?$ blog.html [L]
 
-# Serve blog/article-name.html at the clean /blog/article-name URL.
+# Serve blog/article-name.html at the clean /blog/article-name URL
 RewriteCond %{DOCUMENT_ROOT}/blog/$1.html -f
 RewriteRule ^blog/([^/]+)/?$ blog/$1.html [L]
