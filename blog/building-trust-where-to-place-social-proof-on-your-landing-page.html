@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Building Trust: Where to Place Social Proof on Your Landing Page | Bora Media</title>
+  <meta name="description" content="You know, when you land on a new website, you’re probably wondering if you can trust the people behind it. It’s like walking into a store you’ve never…">
+  <link rel="canonical" href="https://boramedianetwork.com/blog/building-trust-where-to-place-social-proof-on-your-landing-page/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Building Trust: Where to Place Social Proof on Your Landing Page">
+  <meta property="og:description" content="You know, when you land on a new website, you’re probably wondering if you can trust the people behind it. It’s like walking into a store you’ve never…">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://boramedianetwork.com/blog/building-trust-where-to-place-social-proof-on-your-landing-page/">
+  <meta property="og:image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/03-How-and-How-Not-to-Use-Social-Proof-1020x416-1.png">
+  <meta property="article:section" content="UI/UX &amp; CRO">
+  <meta property="article:tag" content="UI/UX &amp; CRO, Website &amp; Landing Pages">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Building Trust: Where to Place Social Proof on Your Landing Page">
+  <meta name="twitter:description" content="You know, when you land on a new website, you’re probably wondering if you can trust the people behind it. It’s like walking into a store you’ve never…">
+  <meta name="twitter:image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/03-How-and-How-Not-to-Use-Social-Proof-1020x416-1.png">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp">
+
+  <!-- Helpful -->
+  <meta name="theme-color" content="#071B3A">
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+      --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+      --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{overflow-x:hidden}
+    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (consistent) */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;gap:26px;list-style:none}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+    nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+    .has-dd{position:relative}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.1)}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.15)}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:96px 0 64px;position:relative;overflow:hidden}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22;animation:float 16s infinite ease-in-out}
+    .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin-bottom:8px;font-weight:900}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;color:rgba(255,255,255,.85);font-weight:600}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25)}
+    .cta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+
+    /* Layout */
+    .content-wrap{display:grid;grid-template-columns:260px 1fr 320px;gap:22px;padding:40px 0}
+    .toc{position:sticky;top:84px;background:var(--muted);border-radius:14px;padding:14px}
+    .toc h4{font-weight:900;margin-bottom:8px}
+    .toc a{display:block;text-decoration:none;color:var(--ink);padding:8px;border-radius:10px;font-weight:600}
+    .toc a:hover,.toc a.active{background:#fff;border:1px solid rgba(6,26,56,.12)}
+    article h2{font-size:clamp(22px,3vw,28px);line-height:1.25;margin:26px 0 8px;font-weight:900}
+    article h3{font-size:clamp(18px,2.5vw,22px);margin:18px 0 6px;font-weight:900}
+    article p{margin:14px 0}
+    .k{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;background:rgba(6,26,56,.06);padding:2px 6px;border-radius:6px}
+    ul{margin:10px 0 10px 18px}
+    .examples{background:var(--muted);border-radius:14px;padding:14px}
+    .protip{background:rgba(25,208,201,.12);border:1px dashed rgba(25,208,201,.5);padding:12px;border-radius:12px;margin:16px 0}
+    table{width:100%;border-collapse:collapse;margin:16px 0;background:var(--muted);border-radius:12px;overflow:hidden}
+    table th,table td{padding:12px;text-align:left;border-bottom:1px solid rgba(6,26,56,.1)}
+    table th{background:rgba(6,26,56,.05);font-weight:800}
+    table tr:last-child td{border-bottom:0}
+
+    .share{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+    .share a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(6,26,56,.16);padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:800}
+
+    /* Comparison cards */
+    .comparison-grid{display:grid;gap:20px;margin:24px 0}
+    .comparison-card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+    .comparison-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(6,26,56,.1)}
+    .platform-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;font-weight:800;font-size:14px}
+    .tiktok-tag{background:rgba(0,242,234,.1);color:#00F2EA;border:1px solid rgba(0,242,234,.3)}
+    .google-tag{background:rgba(66,133,244,.1);color:#4285F4;border:1px solid rgba(66,133,244,.3)}
+    .winner-tag{background:var(--aqua);color:#fff;padding:4px 8px;border-radius:6px;font-size:12px;font-weight:800}
+
+    /* Data cards */
+    .data-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px;margin:20px 0}
+    .data-card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+    .data-title{font-weight:800;margin-bottom:8px;color:var(--ink)}
+    .data-value{font-size:24px;font-weight:900;margin-bottom:4px}
+    .data-label{color:rgba(6,26,56,.7);font-size:14px}
+
+    /* Right rail */
+    .rail{position:sticky;top:84px}
+    .author{background:var(--muted);border-radius:14px;padding:16px}
+    .author .row{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+    .author img{width:42px;height:42px;border-radius:50%}
+    .promo{background:#071B3A;color:#fff;border-radius:14px;padding:16px;margin-top:14px}
+    .promo p{color:rgba(255,255,255,.88)}
+    .promo .btn{margin-top:10px}
+
+    /* Related */
+    .related{background:var(--muted);padding:60px 0}
+    .title{text-align:center;font-weight:900;font-size:clamp(24px,4vw,34px);margin-bottom:8px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .card{background:var(--card);color:#fff;border-radius:16px;padding:16px;text-decoration:none;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+    .tag{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:#8AF1EC;font-weight:800}
+    .card h3{margin-top:8px;font-size:20px;line-height:1.3}
+    .read{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:800;border:1px solid rgba(255,255,255,.22);padding:8px 10px;border-radius:10px}
+
+    /* Final CTA + Footer */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .social{display:flex;gap:12px;margin-top:14px}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+    /* Responsive polish */
+    @media (max-width:1100px){
+      .content-wrap{grid-template-columns:1fr;}
+      .rail{position:static}
+      .toc{position:static;order:-1;margin-bottom:10px}
+    }
+    @media (max-width:860px){
+      nav{display:none}
+      .hamburger{display:block}
+      .grid{grid-template-columns:1fr 1fr}
+      .container{padding:0 22px}
+      .hero{padding:86px 0 54px}
+      .content-wrap{padding:30px 0}
+      .data-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      .f-cols{grid-template-columns:1fr}
+      .f-bottom{flex-direction:column;text-align:center}
+      .container{padding:0 22px}
+      .hero{padding:80px 0 46px}
+      .content-wrap{padding:26px 0}
+      .share a{white-space:nowrap}
+      .comparison-header{flex-direction:column;gap:12px;align-items:flex-start}
+    }
+  
+
+    /* Imported WordPress article content */
+    article figure{margin:20px 0}
+    article figure img{border-radius:12px}
+    article figcaption,.wp-element-caption{font-size:14px;color:rgba(6,26,56,.7);margin-top:8px;text-align:center}
+    article blockquote{border-left:4px solid var(--aqua);background:var(--muted);padding:14px 18px;margin:18px 0;border-radius:0 12px 12px 0}
+    article ol{margin:10px 0 10px 22px}
+    article li{margin:6px 0}
+    article a{color:#245ee8;text-underline-offset:3px}
+    article .wp-block-table{overflow-x:auto}
+    article .wp-block-separator{border:0;border-top:1px solid rgba(6,26,56,.14);margin:28px 0}
+    article .wp-block-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    article .wp-block-button__link{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:10px 16px;border-radius:12px;font-weight:800}
+</style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob2" aria-hidden="true"></div>
+    <div class="container">
+      <h1>Building Trust: Where to Place Social Proof on Your Landing Page</h1>
+      <div class="meta">
+        <span class="badge">UI/UX &amp; CRO</span><span class="badge">Website &amp; Landing Pages</span><span>•</span><span>January 25, 2026</span><span>•</span><span>14 min read</span></div>
+      <div class="cta-row">
+        <a class="btn" href="/contact">Work With Us</a>
+        <a class="btn alt" href="/resources">Free Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <main class="container content-wrap" id="content">
+    <!-- TOC -->
+    <aside class="toc" aria-label="Table of contents">
+      <h4>Table of Contents</h4>
+      <nav>
+        <a href="#leveraging-customer-voices-for-credibility" class="toc-link">Leveraging Customer Voices for Credibility</a><a href="#strategic-placement-of-social-proof-elements" class="toc-link">Strategic Placement of Social Proof Elements</a><a href="#the-impact-of-social-proof-on-visitor-decisions" class="toc-link">The Impact of Social Proof on Visitor Decisions</a><a href="#diverse-forms-of-social-proof-to-consider" class="toc-link">Diverse Forms of Social Proof to Consider</a><a href="#enhancing-engagement-with-visual-social-proof" class="toc-link">Enhancing Engagement with Visual Social Proof</a><a href="#ensuring-authenticity-in-social-proof" class="toc-link">Ensuring Authenticity in Social Proof</a><a href="#putting-it-all-together" class="toc-link">Putting It All Together</a><a href="#frequently-asked-questions" class="toc-link">Frequently Asked Questions</a></nav>
+      <div class="share" aria-label="Share">
+        <a href="https://twitter.com/intent/tweet?text=Building%20Trust%3A%20Where%20to%20Place%20Social%20Proof%20on%20Your%20Landing%20Page&amp;url=https%3A%2F%2Fboramedianetwork.com%2Fblog%2Fbuilding-trust-where-to-place-social-proof-on-your-landing-page%2F">Share on X</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fboramedianetwork.com%2Fblog%2Fbuilding-trust-where-to-place-social-proof-on-your-landing-page%2F">Share on LinkedIn</a>
+        <a href="mailto:?subject=Building%20Trust%3A%20Where%20to%20Place%20Social%20Proof%20on%20Your%20Landing%20Page&amp;body=Read%20this%20article%3A%20https%3A//boramedianetwork.com/blog/building-trust-where-to-place-social-proof-on-your-landing-page/">Email</a>
+      </div>
+    </aside>
+
+    <!-- Article -->
+    <article itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="headline" content="Building Trust: Where to Place Social Proof on Your Landing Page"><meta itemprop="author" content="Bora Media"><meta itemprop="datePublished" content="2026-01-25"><meta itemprop="dateModified" content="2026-01-25"><meta itemprop="image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/03-How-and-How-Not-to-Use-Social-Proof-1020x416-1.png"><p>You know, when you land on a new website, you’re probably wondering if you can trust the people behind it. It’s like walking into a store you’ve never been to before. You look around, see who else is there, maybe check the reviews. That’s basically what social proof is all about for your landing page. It’s showing potential customers that other people, just like them, have checked you out and liked what they found. It’s not just about saying you’re good; it’s about showing proof. This can make a huge difference in whether someone sticks around or clicks away.</p>
+
+
+
+<h3 class="wp-block-heading" id="Key_Takeaways">Key Takeaways</h3>
+
+
+
+<ul class="wp-block-list">
+<li>Real customer stories, especially with photos, help build trust fast. People like seeing actual faces and hearing real experiences.</li>
+
+
+
+<li>Putting social proof near your ‘buy now’ or ‘sign up’ buttons makes it easier for people to decide when they’re ready.</li>
+
+
+
+<li>Showing off logos of well-known clients or endorsements from industry folks can borrow trust from those bigger names.</li>
+
+
+
+<li>Using different types of proof, like short reviews, social media shout-outs, or even just user counts, can appeal to different visitors.</li>
+
+
+
+<li>Making sure your social proof is honest and easy to see is super important. If people can’t find it or don’t believe it, it won’t help much.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="leveraging-customer-voices-for-credibility">Leveraging Customer Voices for Credibility</h2>
+
+
+
+<p>When people check out your website, especially for the first time, they’re looking for signs that you’re the real deal. They want to know if others have had good experiences with what you offer. That’s where letting your customers do the talking comes in. It’s like having friends recommend a good restaurant – you’re way more likely to try it. <strong>Real people sharing their positive experiences build a bridge of trust that your own marketing words often can’t.</strong></p>
+
+
+
+<h3 class="wp-block-heading" id="Showcasing_Real_Customer_Testimonials_with_Photos">Showcasing Real Customer Testimonials with Photos</h3>
+
+
+
+<p>Nothing beats seeing a face attached to a good word. When you feature testimonials, adding a photo of the person who said it makes a huge difference. It makes the testimonial feel more genuine, less like something you just made up. People connect with other people, so seeing who gave the glowing review helps potential customers picture themselves having a similar positive outcome. It’s not just a quote; it’s a story from someone who’s been there.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Keep it simple:</strong> A clear headshot works best.</li>
+
+
+
+<li><strong>Match the tone:</strong> Use photos that fit your brand’s overall vibe.</li>
+
+
+
+<li><strong>Get permission:</strong> Always ask before using someone’s picture.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="Integrating_Customer_Reviews_and_Ratings">Integrating Customer Reviews and Ratings</h3>
+
+
+
+<p>Think about online shopping. You probably check the star ratings and read a few reviews before buying something, right? It’s the same for your website. Displaying customer reviews and star ratings gives visitors a quick snapshot of how satisfied people are. A product or service with a 4.5-star average and lots of positive comments is a lot more appealing than one with few or no reviews.</p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><tbody><tr><th>Feature</th><th>Example</th></tr><tr><td>Star Ratings</td><td>★★★★☆ (4.5 out of 5)</td></tr><tr><td>Number of Reviews</td><td>“Over 500 satisfied customers”</td></tr><tr><td>Snippet of Review</td><td>“This really solved my problem!”</td></tr></tbody></table></figure>
+
+
+
+<h3 class="wp-block-heading" id="Highlighting_User_Endorsements_from_Industry_Figures">Highlighting User Endorsements from Industry Figures</h3>
+
+
+
+<p>Sometimes, having everyday customers share their thoughts is great. Other times, getting a nod from someone well-known in your field can be even more powerful. If an expert, a respected blogger, or a well-known figure in your industry says good things about your product or service, shout it from the rooftops! It’s like getting a stamp of approval from someone everyone already trusts. This kind of endorsement can really make people sit up and take notice.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Having a respected voice in your niche vouch for you can cut through a lot of skepticism. It suggests that your product or service isn’t just good, but it’s good enough for the pros to notice and recommend.</p>
+</blockquote>
+
+
+
+<p>This section is all about using the voices of actual users to make your business look more trustworthy and reliable. It’s about showing, not just telling, that you deliver on your promises.</p>
+
+
+
+<h2 class="wp-block-heading" id="strategic-placement-of-social-proof-elements">Strategic Placement of Social Proof Elements</h2>
+
+
+
+<p>So, you’ve got some great testimonials, maybe some impressive user numbers, or even logos from big clients. That’s awesome. But where do you actually put all this good stuff on your landing page so it actually does its job? It’s not just about <em>having</em> social proof; it’s about putting it where people will actually see it and, you know, <em>believe</em> it.</p>
+
+
+
+<h3 class="wp-block-heading" id="Positioning_Social_Proof_Near_Call-to-Action_Buttons">Positioning Social Proof Near Call-to-Action Buttons</h3>
+
+
+
+<p>Think about it: someone’s just read all about what you offer, they’re feeling pretty good about it, and they’re about to click that button to sign up or buy. This is the <em>perfect</em> moment to show them that others have done the same and loved it. Placing a short, punchy testimonial or a star rating right next to your main call-to-action (CTA) can really tip the scales. It’s like a final nudge, saying, “Go ahead, you’ll be in good company.”</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Quick Wins:</strong> A short quote from a happy customer.</li>
+
+
+
+<li><strong>Trust Badges:</strong> Small icons indicating security or satisfaction.</li>
+
+
+
+<li><strong>User Counts:</strong> “Join 10,000+ happy users!”</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="Integrating_Trust_Signals_Within_Objection-Addressing_Sections">Integrating Trust Signals Within Objection-Addressing Sections</h3>
+
+
+
+<p>People often have questions or doubts before they commit. Maybe they’re worried about the price, the complexity, or if it will actually work for them. If you have a section on your page that tackles these common worries, that’s a prime spot to weave in social proof. For example, if you’re addressing concerns about ease of use, show a testimonial from someone who specifically mentions how simple it was to get started. This directly counters their hesitation with real-world experience. It makes your reassurances feel much more believable when backed by actual users. You can even use <a target="_blank" rel="noreferrer noopener" href="https://lovable.dev/guides/landing-page-best-practices-convert">customer reviews</a> here to show common positive feedback.</p>
+
+
+
+<h3 class="wp-block-heading" id="Making_Social_Proof_Easily_Visible_and_Accessible">Making Social Proof Easily Visible and Accessible</h3>
+
+
+
+<p>Honestly, the best social proof in the world is useless if people can’t find it. Don’t bury your testimonials deep in the footer or hide them behind a click. Make sure they’re prominent, especially on your landing page where you’re trying to make a strong first impression. Think about putting some key highlights on your homepage, maybe a few strong quotes near the top, and definitely ensure your case studies are easy to locate if someone wants to dig deeper. People are busy; they need to see that proof without having to hunt for it. It should feel natural, not like a scavenger hunt.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>The goal is to make trust signals a natural part of the visitor’s journey, appearing at moments when they are most likely to influence a decision or alleviate doubt.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="the-impact-of-social-proof-on-visitor-decisions">The Impact of Social Proof on Visitor Decisions</h2>
+
+
+
+<h3 class="wp-block-heading" id="Building_Trust_and_Reducing_Visitor_Skepticism">Building Trust and Reducing Visitor Skepticism</h3>
+
+
+
+<p>When someone lands on your page for the first time, they might be a little unsure. They don’t know you, they don’t know your product, and they’re probably wondering if you’re legit. This is where social proof really steps in. Think of it like walking into a restaurant. If you see a place packed with people, you figure the food must be good, right? It’s the same idea online. Seeing that other people have already tried your service or bought your product, and that they liked it, makes a big difference. It cuts down on that initial doubt and makes visitors feel more comfortable sticking around.</p>
+
+
+
+<h3 class="wp-block-heading" id="Providing_Validation_for_Your_Product_or_Service">Providing Validation for Your Product or Service</h3>
+
+
+
+<p>Your website can say all sorts of great things about what you offer, but it’s just your word. When you show testimonials from actual customers, or display ratings from people who’ve used your service, that’s different. It’s like having a friend tell you, “Yeah, this thing is actually worth checking out.” This kind of <em>validation</em> is super important because it backs up your claims with real-world experiences. It shows potential customers that your product or service isn’t just something you <em>say</em> is good; it’s something that has actually helped other people.</p>
+
+
+
+<h3 class="wp-block-heading" id="Giving_Visitors_Confidence_to_Take_Action">Giving Visitors Confidence to Take Action</h3>
+
+
+
+<p>Ultimately, you want visitors to do something on your page, whether it’s signing up for a newsletter, downloading a guide, or making a purchase. Social proof helps give them that final nudge. When people see that others have already taken the desired action and had a positive outcome, it makes them feel more confident about doing it themselves. It reduces the perceived risk and makes the decision feel less like a gamble and more like a sure bet. <strong>This collective endorsement acts as a powerful motivator, turning hesitant visitors into active participants.</strong></p>
+
+
+
+<p>Here’s a quick look at how different types of social proof can influence decisions:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Testimonials:</strong> Personal stories from happy customers build emotional connections and trust.</li>
+
+
+
+<li><strong>Ratings &amp; Reviews:</strong> Star ratings and detailed feedback offer quick, quantifiable validation.</li>
+
+
+
+<li><strong>User Counts:</strong> Displaying numbers like “10,000+ users” suggests popularity and widespread acceptance.</li>
+
+
+
+<li><strong>Media Mentions:</strong> Logos of reputable publications or sites that have featured you add a layer of authority.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="diverse-forms-of-social-proof-to-consider">Diverse Forms of Social Proof to Consider</h2>
+
+
+
+<p>People are naturally inclined to look at what others are doing, especially when they’re unsure. This is where social proof really shines. It’s not just about testimonials; there’s a whole spectrum of ways to show potential customers that others trust and use your product or service. Thinking beyond the obvious can really make a difference in how credible your brand seems.</p>
+
+
+
+<h3 class="wp-block-heading" id="Utilizing_Detailed_Case_Studies_for_In-Depth_Proof">Utilizing Detailed Case Studies for In-Depth Proof</h3>
+
+
+
+<p>Case studies go way beyond a simple quote. They tell a story, showing a real problem a customer faced and how your product or service provided a solution. This kind of detailed narrative is powerful because it demonstrates tangible results. It’s like a mini-success story that potential clients can relate to. When done well, they can really convince someone who’s on the fence.</p>
+
+
+
+<h3 class="wp-block-heading" id="Sharing_Public_Support_from_Social_Media">Sharing Public Support from Social Media</h3>
+
+
+
+<p>Social media is a goldmine for social proof. Think about it: likes, shares, comments, and even just follower counts all signal popularity and engagement. A post that’s getting a lot of shares, for instance, suggests the content is valuable and worth checking out. Similarly, a large follower count can indicate a thriving community around your brand. You can even pull positive mentions or shoutouts from platforms like Twitter or Facebook and display them on your site. This shows that real people are talking about you and liking what you do. It’s a dynamic way to show your brand’s reach and appeal.</p>
+
+
+
+<h3 class="wp-block-heading" id="Displaying_Subscriber_and_User_Counts">Displaying Subscriber and User Counts</h3>
+
+
+
+<p>Numbers can be incredibly persuasive. Showing how many people are already using your service or subscribing to your newsletter provides a clear, quantitative measure of popularity and trust. It’s a straightforward way to say, “Look, lots of people are already here, and they like it.” This is especially effective if you have a well-established user base. It’s a simple yet effective way to build confidence. For example, you might display:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Total Users Served:</strong> The overall number of customers who have benefited from your product.</li>
+
+
+
+<li><strong>Active Subscribers:</strong> The count of people currently receiving your updates or using your platform.</li>
+
+
+
+<li><strong>Community Size:</strong> The number of members in your online forum or group.</li>
+</ul>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Sometimes, the simplest forms of proof are the most effective. Just knowing that a significant number of people have already chosen your offering can be enough to tip the scales for a new visitor. It’s a quiet endorsement that speaks volumes.</p>
+</blockquote>
+
+
+
+<p>This kind of data can be presented clearly, perhaps in a small table or a prominent number on your landing page. It’s a quick win for building trust. You can find more ideas on how to gather and present this information on <a target="_blank" rel="noreferrer noopener" href="https://fomo.com/blog/social-proof-landing-page">customer feedback forms</a>. It’s all about showing, not just telling, that your brand is a solid choice.</p>
+
+
+
+<h2 class="wp-block-heading" id="enhancing-engagement-with-visual-social-proof">Enhancing Engagement with Visual Social Proof</h2>
+
+
+
+<p>Sometimes, just reading about how great something is doesn’t quite cut it. People are visual creatures, right? Showing them rather than just telling them can make a huge difference in how they feel about your product or service. This is where visual social proof comes into play, making your landing page way more interesting and believable.</p>
+
+
+
+<h3 class="wp-block-heading" id="Incorporating_Images_and_Videos_of_Satisfied_Users">Incorporating Images and Videos of Satisfied Users</h3>
+
+
+
+<p>Think about it: a picture of a smiling person holding your product, or a short video of them talking about how it helped them. It feels much more real than just a block of text. These aren’t just random stock photos; they’re actual people who’ve used what you’re offering. Seeing a face, hearing a voice – it builds a connection. It’s like a friend telling you about something cool they found. Studies have shown that video testimonials, in particular, can really push people towards making a purchase, sometimes by a significant amount. It’s not just about what they say, but how they say it, the emotion they convey.</p>
+
+
+
+<h3 class="wp-block-heading" id="Using_Logos_of_Recognizable_Clients">Using Logos of Recognizable Clients</h3>
+
+
+
+<p>If you’ve worked with some well-known companies, showing their logos can be a serious credibility booster. It’s like saying, “Hey, these big names trust us, so you probably should too.” This borrows some of their established reputation and transfers it to you. It’s a quick way for visitors to see that you’re not some fly-by-night operation, but a business that reputable organizations have chosen. This is especially effective if your target audience recognizes and respects those brands.</p>
+
+
+
+<h3 class="wp-block-heading" id="Leveraging_Real-Time_Activity_Notifications">Leveraging Real-Time Activity Notifications</h3>
+
+
+
+<p>This is a bit more dynamic. Imagine a little pop-up that says, “Sarah from Ohio just signed up!” or “Mark just bought the premium package.” These notifications show that your site is alive and kicking, with people actively engaging with your offerings <em>right now</em>. It creates a sense of buzz and can make visitors feel like they might be missing out if they don’t join in. It taps into that natural human tendency to want to be part of what others are doing. It’s a subtle nudge, but it can be surprisingly effective in encouraging action.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>The key here is authenticity. Whether it’s a photo, a video, a logo, or a live notification, it needs to feel genuine. People are pretty good at spotting fakes, and if your social proof seems manufactured, it can backfire. Stick to real people, real clients, and real activity to make this strategy work its best.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="ensuring-authenticity-in-social-proof">Ensuring Authenticity in Social Proof</h2>
+
+
+
+<p>Look, nobody likes being fooled. When you’re trying to build trust with people checking out your landing page, the last thing you want is for them to think you’re pulling a fast one. That’s where making sure your social proof is the real deal comes in. It’s not just about slapping up some quotes; it’s about showing genuine experiences that actually happened.</p>
+
+
+
+<h3 class="wp-block-heading" id="The_Importance_of_Genuine_Testimonials">The Importance of Genuine Testimonials</h3>
+
+
+
+<p>Real talk: fake testimonials are a quick way to lose credibility. People are pretty good at spotting when something feels off. If a testimonial sounds too perfect, too salesy, or just doesn’t ring true, visitors will likely scroll right past it, or worse, leave your site entirely. You want to showcase actual customer feedback, the kind that mentions specific benefits or even a minor challenge overcome. This makes the testimonial relatable and believable.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Focus on specific details:</strong> Instead of “Great product!”, aim for “I was struggling with X, but after using this, Y happened, and it saved me Z hours.”</li>
+
+
+
+<li><strong>Use real names and locations:</strong> Even just a first name and city can add a layer of authenticity.</li>
+
+
+
+<li><strong>Consider video or audio:</strong> Seeing or hearing a real person talk about their experience is much harder to fake and often more impactful.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="Transparency_About_Endorsers">Transparency About Endorsers</h3>
+
+
+
+<p>Who is saying what, and why? Being upfront about your endorsers makes a big difference. If you have an industry expert or a well-known figure vouching for you, make sure it’s clear how they’re connected to your product or service. Are they a paying customer? Did they use it for a specific project? Simply stating “Industry Leader Says So” isn’t as strong as “Jane Doe, CEO of Tech Innovations, used our platform for her award-winning project and said…”. This context helps visitors understand the weight of the endorsement.</p>
+
+
+
+<h3 class="wp-block-heading" id="Avoiding_Misleading_Information">Avoiding Misleading Information</h3>
+
+
+
+<p>This one seems obvious, but it’s worth repeating. Don’t twist reviews, don’t cherry-pick stats to make things look better than they are, and definitely don’t invent endorsements. If you’re showing a user count, make sure it’s current. If you’re highlighting a success rate, be clear about the parameters. Misleading information, even if unintentional, can backfire spectacularly. It erodes trust faster than almost anything else.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Honesty in your social proof isn’t just good practice; it’s the bedrock of building lasting relationships with your audience. When people feel you’re being straight with them, they’re more likely to stick around and consider what you have to offer.</p>
+</blockquote>
+
+
+
+<p>Here’s a quick rundown of what to watch out for:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Outdated statistics</li>
+
+
+
+<li>Vague or overly positive language</li>
+
+
+
+<li>Lack of verifiable details</li>
+
+
+
+<li>Testimonials without context</li>
+
+
+
+<li>Invented endorsements or reviews</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="putting-it-all-together">Putting It All Together</h2>
+
+
+
+<p>So, we’ve talked a lot about how showing people that others like them have had a good experience with your product or service can really make a difference. It’s not just about having a landing page; it’s about making that page work for you. When visitors see real feedback, maybe a familiar face or a well-known company logo, they feel more comfortable. It’s like walking into a busy restaurant versus an empty one – you usually trust the one with the crowd. Don’t just slap any old review on there, though. Make sure it’s honest and easy to see. Think about where it fits best, maybe near that button you want them to click. By adding these little trust signals, you’re basically giving visitors the nudge they need to move forward. It’s a simple idea, but it really helps turn curious visitors into happy customers.</p>
+
+
+
+<h2 class="wp-block-heading" id="frequently-asked-questions">Frequently Asked Questions</h2>
+
+
+
+<h3 class="wp-block-heading" id="What_exactly_is_social_proof">What exactly is social proof?</h3>
+
+
+
+<p>Social proof is like seeing that other people like and trust something. Think about when you see lots of good reviews for a restaurant or a movie – that makes you more likely to try it too. On a website, it means showing that other customers have had good experiences with the product or service.</p>
+
+
+
+<h3 class="wp-block-heading" id="Why_is_social_proof_important_for_a_landing_page">Why is social proof important for a landing page?</h3>
+
+
+
+<p>Landing pages are where you want people to take a specific action, like signing up or buying something. Social proof helps build trust. When visitors see that others have already done what you want them to do and were happy about it, they feel more confident and are more likely to trust you too.</p>
+
+
+
+<h3 class="wp-block-heading" id="What_are_some_easy_ways_to_add_social_proof">What are some easy ways to add social proof?</h3>
+
+
+
+<p>You can add customer reviews with their photos, show star ratings, or share short quotes from happy clients. Displaying logos of companies you’ve worked with or sharing positive comments from social media also works well. Even showing how many people have already signed up can be proof!</p>
+
+
+
+<h3 class="wp-block-heading" id="Where_should_I_put_social_proof_on_my_landing_page">Where should I put social proof on my landing page?</h3>
+
+
+
+<p>It’s best to put social proof where people can easily see it, especially near the buttons that ask them to take action (like ‘Sign Up’ or ‘Buy Now’). Putting it near sections that answer common questions or worries can also be very effective.</p>
+
+
+
+<h3 class="wp-block-heading" id="Does_it_matter_if_the_social_proof_is_real">Does it matter if the social proof is real?</h3>
+
+
+
+<p>Yes, absolutely! Using fake reviews or making things up can really hurt your reputation. People can usually tell if something isn’t genuine. It’s much better to use real stories and honest feedback from actual customers to build real trust.</p>
+
+
+
+<h3 class="wp-block-heading" id="Can_using_pictures_or_videos_help_with_social_proof">Can using pictures or videos help with social proof?</h3>
+
+
+
+<p>Definitely! Seeing a real person’s face in a photo or watching a short video of them talking about their positive experience is often more convincing than just reading words. Visuals make the proof feel more real and relatable.</p>
+</article>
+
+    <!-- Right rail -->
+    <aside class="rail" aria-label="Author and CTA">
+      <div class="author">
+        <div class="row">
+          <img src="/images/author.webp" alt="Author avatar">
+          <div>
+            <strong>Bora Media</strong><br>
+            <span style="opacity:.7">Digital Marketing Team</span>
+          </div>
+        </div>
+        <p>Practical insights and playbooks for measurable business growth.</p>
+      </div>
+      <div class="promo">
+        <h4>Need help putting this into practice?</h4>
+        <p>Let’s turn the strategy into a focused growth plan for your business.</p>
+        <button class="btn" onclick="location.href='/contact'">Book a Strategy Call</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Related -->
+  <section class="related" aria-labelledby="relTitle">
+    <div class="container">
+      <h2 class="title" id="relTitle">Other articles you may like</h2>
+      <div class="grid">
+        <a class="card" href="/blog/the-secret-to-writing-ad-copy-that-actually-converts"><span class="tag">Ad Copy</span><h3>The Secret to Writing Ad Copy That Actually Converts</h3><span class="read">Read article →</span></a><a class="card" href="/blog/the-essential-website-audit-checklist-for-2026"><span class="tag">SEO, AIO &amp; GEO</span><h3>The Essential Website Audit Checklist for 2026</h3><span class="read">Read article →</span></a><a class="card" href="/blog/how-to-use-a-b-testing-to-double-your-conversion-rate"><span class="tag">UI/UX &amp; CRO</span><h3>How to Use A/B Testing to Double Your Conversion Rate</h3><span class="read">Read article →</span></a></div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Ready to turn insight into measurable growth?</h2>
+      <p>We’ll help you apply the right strategy, measurement, and optimization plan to your business.</p>
+      <a class="btn" href="/contact">Schedule Your Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer (consistent) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media" style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+            <a href="https://www.youtube.com/@BoraMediaAgency" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.linkedin.com/company/bora-media-network/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul class="f-links">
+            <li><a href="/blog">ABM</a></li>
+            <li><a href="/blog">LinkedIn Ads</a></li>
+            <li><a href="/blog">Copywriting</a></li>
+            <li><a href="/blog">Google Ads</a></li>
+            <li><a href="/blog">Branding</a></li>
+            <li><a href="/blog">Meta Ads</a></li>
+            <li><a href="/blog">Google Analytics</a></li>
+            <li><a href="/blog">Google Tag Manager</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year" class="current-year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Building Trust: Where to Place Social Proof on Your Landing Page",
+  "author": {
+    "@type": "Organization",
+    "name": "Bora Media"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bora Media",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.boramedianetwork.com/images/bora-logo.webp"
+    }
+  },
+  "image": "https://boramedianetwork.com/blog/wp-content/uploads/2026/01/03-How-and-How-Not-to-Use-Social-Proof-1020x416-1.png",
+  "datePublished": "2026-01-25",
+  "dateModified": "2026-01-25",
+  "articleSection": "UI/UX & CRO, Website & Landing Pages",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://boramedianetwork.com/blog/building-trust-where-to-place-social-proof-on-your-landing-page/"
+  }
+}</script>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{ b.style.transform=''; b.style.opacity=''; }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    // TOC highlight
+    const links = document.querySelectorAll('.toc-link');
+    const headings = [...links].map(a => document.querySelector(a.getAttribute('href')));
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        const id = e.target.getAttribute('id');
+        const link = document.querySelector(`.toc a[href="#${id}"]`);
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.remove('active'));
+          link?.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
+    headings.forEach(h=>h && obs.observe(h));
+  </script>
+
+  <script data-footer-year>
+    document.querySelectorAll('.current-year').forEach((year) => {
+      year.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

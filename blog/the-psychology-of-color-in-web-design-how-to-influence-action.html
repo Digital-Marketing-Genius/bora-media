@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The Psychology of Color in Web Design: How to Influence Action | Bora Media</title>
+  <meta name="description" content="You know, colors are more than just pretty things to look at on a screen. They actually do stuff to how people feel and what they decide to do. In web…">
+  <link rel="canonical" href="https://boramedianetwork.com/blog/the-psychology-of-color-in-web-design-how-to-influence-action/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Psychology of Color in Web Design: How to Influence Action">
+  <meta property="og:description" content="You know, colors are more than just pretty things to look at on a screen. They actually do stuff to how people feel and what they decide to do. In web…">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://boramedianetwork.com/blog/the-psychology-of-color-in-web-design-how-to-influence-action/">
+  <meta property="og:image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-7.jpg">
+  <meta property="article:section" content="Website &amp; Landing Pages">
+  <meta property="article:tag" content="Website &amp; Landing Pages">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Psychology of Color in Web Design: How to Influence Action">
+  <meta name="twitter:description" content="You know, colors are more than just pretty things to look at on a screen. They actually do stuff to how people feel and what they decide to do. In web…">
+  <meta name="twitter:image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-7.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp">
+
+  <!-- Helpful -->
+  <meta name="theme-color" content="#071B3A">
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+      --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+      --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{overflow-x:hidden}
+    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (consistent) */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;gap:26px;list-style:none}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+    nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+    .has-dd{position:relative}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.1)}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.15)}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:96px 0 64px;position:relative;overflow:hidden}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22;animation:float 16s infinite ease-in-out}
+    .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin-bottom:8px;font-weight:900}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;color:rgba(255,255,255,.85);font-weight:600}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25)}
+    .cta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+
+    /* Layout */
+    .content-wrap{display:grid;grid-template-columns:260px 1fr 320px;gap:22px;padding:40px 0}
+    .toc{position:sticky;top:84px;background:var(--muted);border-radius:14px;padding:14px}
+    .toc h4{font-weight:900;margin-bottom:8px}
+    .toc a{display:block;text-decoration:none;color:var(--ink);padding:8px;border-radius:10px;font-weight:600}
+    .toc a:hover,.toc a.active{background:#fff;border:1px solid rgba(6,26,56,.12)}
+    article h2{font-size:clamp(22px,3vw,28px);line-height:1.25;margin:26px 0 8px;font-weight:900}
+    article h3{font-size:clamp(18px,2.5vw,22px);margin:18px 0 6px;font-weight:900}
+    article p{margin:14px 0}
+    .k{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;background:rgba(6,26,56,.06);padding:2px 6px;border-radius:6px}
+    ul{margin:10px 0 10px 18px}
+    .examples{background:var(--muted);border-radius:14px;padding:14px}
+    .protip{background:rgba(25,208,201,.12);border:1px dashed rgba(25,208,201,.5);padding:12px;border-radius:12px;margin:16px 0}
+    table{width:100%;border-collapse:collapse;margin:16px 0;background:var(--muted);border-radius:12px;overflow:hidden}
+    table th,table td{padding:12px;text-align:left;border-bottom:1px solid rgba(6,26,56,.1)}
+    table th{background:rgba(6,26,56,.05);font-weight:800}
+    table tr:last-child td{border-bottom:0}
+
+    .share{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+    .share a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(6,26,56,.16);padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:800}
+
+    /* Comparison cards */
+    .comparison-grid{display:grid;gap:20px;margin:24px 0}
+    .comparison-card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+    .comparison-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(6,26,56,.1)}
+    .platform-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;font-weight:800;font-size:14px}
+    .tiktok-tag{background:rgba(0,242,234,.1);color:#00F2EA;border:1px solid rgba(0,242,234,.3)}
+    .google-tag{background:rgba(66,133,244,.1);color:#4285F4;border:1px solid rgba(66,133,244,.3)}
+    .winner-tag{background:var(--aqua);color:#fff;padding:4px 8px;border-radius:6px;font-size:12px;font-weight:800}
+
+    /* Data cards */
+    .data-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px;margin:20px 0}
+    .data-card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+    .data-title{font-weight:800;margin-bottom:8px;color:var(--ink)}
+    .data-value{font-size:24px;font-weight:900;margin-bottom:4px}
+    .data-label{color:rgba(6,26,56,.7);font-size:14px}
+
+    /* Right rail */
+    .rail{position:sticky;top:84px}
+    .author{background:var(--muted);border-radius:14px;padding:16px}
+    .author .row{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+    .author img{width:42px;height:42px;border-radius:50%}
+    .promo{background:#071B3A;color:#fff;border-radius:14px;padding:16px;margin-top:14px}
+    .promo p{color:rgba(255,255,255,.88)}
+    .promo .btn{margin-top:10px}
+
+    /* Related */
+    .related{background:var(--muted);padding:60px 0}
+    .title{text-align:center;font-weight:900;font-size:clamp(24px,4vw,34px);margin-bottom:8px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .card{background:var(--card);color:#fff;border-radius:16px;padding:16px;text-decoration:none;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+    .tag{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:#8AF1EC;font-weight:800}
+    .card h3{margin-top:8px;font-size:20px;line-height:1.3}
+    .read{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:800;border:1px solid rgba(255,255,255,.22);padding:8px 10px;border-radius:10px}
+
+    /* Final CTA + Footer */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .social{display:flex;gap:12px;margin-top:14px}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+    /* Responsive polish */
+    @media (max-width:1100px){
+      .content-wrap{grid-template-columns:1fr;}
+      .rail{position:static}
+      .toc{position:static;order:-1;margin-bottom:10px}
+    }
+    @media (max-width:860px){
+      nav{display:none}
+      .hamburger{display:block}
+      .grid{grid-template-columns:1fr 1fr}
+      .container{padding:0 22px}
+      .hero{padding:86px 0 54px}
+      .content-wrap{padding:30px 0}
+      .data-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      .f-cols{grid-template-columns:1fr}
+      .f-bottom{flex-direction:column;text-align:center}
+      .container{padding:0 22px}
+      .hero{padding:80px 0 46px}
+      .content-wrap{padding:26px 0}
+      .share a{white-space:nowrap}
+      .comparison-header{flex-direction:column;gap:12px;align-items:flex-start}
+    }
+  
+
+    /* Imported WordPress article content */
+    article figure{margin:20px 0}
+    article figure img{border-radius:12px}
+    article figcaption,.wp-element-caption{font-size:14px;color:rgba(6,26,56,.7);margin-top:8px;text-align:center}
+    article blockquote{border-left:4px solid var(--aqua);background:var(--muted);padding:14px 18px;margin:18px 0;border-radius:0 12px 12px 0}
+    article ol{margin:10px 0 10px 22px}
+    article li{margin:6px 0}
+    article a{color:#245ee8;text-underline-offset:3px}
+    article .wp-block-table{overflow-x:auto}
+    article .wp-block-separator{border:0;border-top:1px solid rgba(6,26,56,.14);margin:28px 0}
+    article .wp-block-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    article .wp-block-button__link{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:10px 16px;border-radius:12px;font-weight:800}
+</style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob2" aria-hidden="true"></div>
+    <div class="container">
+      <h1>The Psychology of Color in Web Design: How to Influence Action</h1>
+      <div class="meta">
+        <span class="badge">Website &amp; Landing Pages</span><span>•</span><span>January 28, 2026</span><span>•</span><span>15 min read</span></div>
+      <div class="cta-row">
+        <a class="btn" href="/contact">Work With Us</a>
+        <a class="btn alt" href="/resources">Free Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <main class="container content-wrap" id="content">
+    <!-- TOC -->
+    <aside class="toc" aria-label="Table of contents">
+      <h4>Table of Contents</h4>
+      <nav>
+        <a href="#understanding-the-power-of-color-psychology" class="toc-link">Understanding The Power Of Color Psychology</a><a href="#emotional-resonance-of-common-website-colors" class="toc-link">Emotional Resonance Of Common Website Colors</a><a href="#strategic-application-of-color-in-web-design" class="toc-link">Strategic Application Of Color In Web Design</a><a href="#avoiding-pitfalls-in-color-implementation" class="toc-link">Avoiding Pitfalls In Color Implementation</a><a href="#cultural-nuances-in-color-perception" class="toc-link">Cultural Nuances In Color Perception</a><a href="#testing-and-refining-your-color-strategy" class="toc-link">Testing And Refining Your Color Strategy</a><a href="#wrapping-up-color-is-your-secret-weapon" class="toc-link">Wrapping Up: Color is Your Secret Weapon</a><a href="#frequently-asked-questions" class="toc-link">Frequently Asked Questions</a></nav>
+      <div class="share" aria-label="Share">
+        <a href="https://twitter.com/intent/tweet?text=The%20Psychology%20of%20Color%20in%20Web%20Design%3A%20How%20to%20Influence%20Action&amp;url=https%3A%2F%2Fboramedianetwork.com%2Fblog%2Fthe-psychology-of-color-in-web-design-how-to-influence-action%2F">Share on X</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fboramedianetwork.com%2Fblog%2Fthe-psychology-of-color-in-web-design-how-to-influence-action%2F">Share on LinkedIn</a>
+        <a href="mailto:?subject=The%20Psychology%20of%20Color%20in%20Web%20Design%3A%20How%20to%20Influence%20Action&amp;body=Read%20this%20article%3A%20https%3A//boramedianetwork.com/blog/the-psychology-of-color-in-web-design-how-to-influence-action/">Email</a>
+      </div>
+    </aside>
+
+    <!-- Article -->
+    <article itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="headline" content="The Psychology of Color in Web Design: How to Influence Action"><meta itemprop="author" content="Bora Media"><meta itemprop="datePublished" content="2026-01-28"><meta itemprop="dateModified" content="2026-01-28"><meta itemprop="image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-7.jpg"><p>You know, colors are more than just pretty things to look at on a screen. They actually do stuff to how people feel and what they decide to do. In web design, picking the right colors can make a huge difference in whether someone sticks around, trusts your brand, or actually buys something. We’re going to talk about color psychology and how you can use it to get people to do what you want on your website.</p>
+
+
+
+<h3 class="wp-block-heading" id="Key_Takeaways">Key Takeaways</h3>
+
+
+
+<ul class="wp-block-list">
+<li>Color psychology is the study of how colors affect human behavior and decision-making, playing a big role in web design.</li>
+
+
+
+<li>Different colors bring out different feelings; for example, blue suggests trust, red signals urgency, and green means growth.</li>
+
+
+
+<li>Using color contrast helps guide users to important buttons and information on your site.</li>
+
+
+
+<li>It’s important to avoid using too many colors and to make sure your color choices are accessible to everyone, including those with color vision issues.</li>
+
+
+
+<li>Always test your color choices with real users to see what works best for your specific audience and goals.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="understanding-the-power-of-color-psychology">Understanding The Power Of Color Psychology</h2>
+
+
+
+<figure class="wp-block-image"><img fetchpriority="high" decoding="async" width="1366" height="768" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-7.jpg" alt="Abstract colors influencing web design choices visually." class="wp-image-67" srcset="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-7.jpg 1366w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-7-300x169.jpg 300w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-7-1024x576.jpg 1024w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-7-768x432.jpg 768w" sizes="(max-width: 1366px) 100vw, 1366px"></figure>
+
+
+
+<h3 class="wp-block-heading" id="Colors_Instant_Impact_On_Perception">Color’s Instant Impact On Perception</h3>
+
+
+
+<p>Ever notice how some websites just <em>feel</em> a certain way the moment you land on them? That’s often the magic of color at play. Before a user even reads a word, colors are already sending signals, shaping their initial thoughts and feelings about your brand. <strong>It takes about 50 milliseconds for someone to form a first impression of a website, and color is a huge part of that.</strong> Think about it: a site with bright, energetic colors might feel playful and exciting, while one with muted blues and grays might come across as serious and professional. This immediate visual feedback is critical for keeping visitors engaged and encouraging them to explore further. It’s not just about making things look pretty; it’s about setting a tone and expectation right from the start.</p>
+
+
+
+<h3 class="wp-block-heading" id="The_Role_Of_Color_In_User_Experience">The Role Of Color In User Experience</h3>
+
+
+
+<p>Beyond that first glance, color continues to play a big role in how people actually use your website. It helps guide their eyes, making it easier to find what they’re looking for. Think about how a bright, contrasting button for a “Sign Up” or “Buy Now” action practically jumps out at you. That’s color working to direct attention. It can also help organize information, making complex pages feel more manageable. When colors are used consistently, users start to learn what different colors mean on your site, which makes their journey smoother and less confusing. A well-thought-out color scheme can turn a potentially frustrating experience into an intuitive one.</p>
+
+
+
+<h3 class="wp-block-heading" id="Leveraging_Color_For_Business_Goals">Leveraging Color For Business Goals</h3>
+
+
+
+<p>So, how does all this translate into actual business results? Well, by understanding the emotional responses colors can trigger, you can strategically use them to influence user behavior. Want people to feel a sense of urgency to buy? Red might be your go-to for a sale banner. Need to build trust with potential clients? Blues and greens often do the trick for financial or health-related sites. Consistent use of your brand colors also helps with recognition – people are more likely to remember and return to a site that has a distinct visual identity. Ultimately, using color psychology isn’t just about aesthetics; it’s a smart way to communicate your brand’s message, build connections, and guide visitors toward taking desired actions, like making a purchase or filling out a form.</p>
+
+
+
+<h2 class="wp-block-heading" id="emotional-resonance-of-common-website-colors">Emotional Resonance Of Common Website Colors</h2>
+
+
+
+<p>Colors aren’t just pretty additions to a webpage; they’re like silent salespeople, whispering messages to your visitors before they even read a word. Each shade carries its own baggage of feelings and associations, and knowing what those are can really help you guide people toward what you want them to do. It’s all about tapping into those gut reactions people have to different hues.</p>
+
+
+
+<h3 class="wp-block-heading" id="Blue_Cultivating_Trust_and_Professionalism">Blue: Cultivating Trust and Professionalism</h3>
+
+
+
+<p>Think about banks or big tech companies. What color do you often see? Blue, right? That’s no accident. Blue is widely seen as a color of stability, dependability, and calm. It makes people feel secure, which is pretty important if you’re asking them to share personal information or make a purchase. It’s a safe bet for businesses that want to project an image of being reliable and professional.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Best for:</strong> Financial services, tech companies, healthcare providers, corporate sites.</li>
+
+
+
+<li><strong>Feeling it evokes:</strong> Trust, security, calm, professionalism, loyalty.</li>
+
+
+
+<li><strong>Watch out for:</strong> Too much dark blue can sometimes feel a bit cold or distant.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="Red_Igniting_Urgency_and_Excitement">Red: Igniting Urgency and Excitement</h3>
+
+
+
+<p>Red is a powerhouse color. It grabs attention like nothing else and is often used to create a sense of urgency or excitement. Think about those “Limited Time Offer!” banners or “Buy Now!” buttons. Red is great for calls to action when you want people to act <em>now</em>. It can also signal passion and energy, but you have to be careful with it. Too much red can feel aggressive or overwhelming.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Best for:</strong> Sales promotions, “buy now” buttons, urgent calls to action, brands wanting to convey energy.</li>
+
+
+
+<li><strong>Feeling it evokes:</strong> Urgency, excitement, passion, boldness, attention.</li>
+
+
+
+<li><strong>Watch out for:</strong> Overuse can lead to anxiety or a feeling of being pressured.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="Green_Symbolizing_Growth_and_Tranquility">Green: Symbolizing Growth and Tranquility</h3>
+
+
+
+<p>Green is the color of nature, growth, and balance. It often brings to mind feelings of health, freshness, and prosperity. This makes it a natural fit for businesses focused on environmental issues, wellness, or anything related to natural products. It’s a calming color that can make users feel relaxed and positive about their experience.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Best for:</strong> Eco-friendly brands, health and wellness sites, financial services (symbolizing wealth), food businesses.</li>
+
+
+
+<li><strong>Feeling it evokes:</strong> Growth, nature, health, balance, prosperity, calm.</li>
+
+
+
+<li><strong>Watch out for:</strong> Can sometimes be associated with inexperience or jealousy if not used carefully.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="Yellow_Conveying_Optimism_and_Warmth">Yellow: Conveying Optimism and Warmth</h3>
+
+
+
+<p>Yellow is like a burst of sunshine. It’s cheerful, optimistic, and can really grab attention. It’s great for making a website feel friendly and approachable. However, it’s also a color that can be a bit tricky. Too much bright yellow can be hard on the eyes, and lighter shades can sometimes get lost. It’s often best used as an accent color to add a pop of happiness and energy.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Best for:</strong> Brands wanting to appear friendly and optimistic, calls to action (used sparingly), highlighting key information.</li>
+
+
+
+<li><strong>Feeling it evokes:</strong> Optimism, happiness, warmth, energy, attention.</li>
+
+
+
+<li><strong>Watch out for:</strong> Can be overwhelming in large amounts; pale yellow can be hard to read against white backgrounds.</li>
+</ul>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>The emotional impact of a color isn’t always set in stone. While these are common associations, personal experiences and cultural backgrounds can shift how someone perceives a particular hue. It’s always a good idea to consider your specific audience when making color choices.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="strategic-application-of-color-in-web-design">Strategic Application Of Color In Web Design</h2>
+
+
+
+<h3 class="wp-block-heading" id="Guiding_User_Actions_With_Contrast">Guiding User Actions With Contrast</h3>
+
+
+
+<p>Color isn’t just about making things look pretty; it’s a powerful tool for directing where people look and what they do on your website. Think of it like a visual roadmap. By using contrasting colors, you can make important elements pop out, catching the user’s eye exactly where you want it. This is especially useful for calls to action (CTAs) like “Buy Now” or “Sign Up.” A bright, contrasting button against a more subdued background is hard to miss. It tells the user, “Hey, pay attention to me! This is important.”</p>
+
+
+
+<p>Here’s a quick breakdown of how contrast works:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>High Contrast:</strong> Makes elements stand out clearly. Great for CTAs, important links, or error messages.</li>
+
+
+
+<li><strong>Low Contrast:</strong> Blends elements into the background. Useful for less critical information or to create a sense of calm.</li>
+
+
+
+<li><strong>Color Temperature:</strong> Warm colors (reds, oranges, yellows) tend to advance and grab attention, while cool colors (blues, greens) tend to recede and create space.</li>
+</ul>
+
+
+
+<p><strong>The goal is to make the path to conversion as clear and effortless as possible.</strong></p>
+
+
+
+<h3 class="wp-block-heading" id="Establishing_Visual_Hierarchy_Through_Color">Establishing Visual Hierarchy Through Color</h3>
+
+
+
+<p>Visual hierarchy is all about organizing information so users can easily understand what’s most important. Color plays a big part in this. You can use different colors to group related content or to distinguish between different levels of information. For instance, a primary brand color might be used for headings, a secondary color for subheadings, and a neutral color for body text. This creates a clear structure that makes your website feel organized and easy to scan. It helps users quickly find what they’re looking for without feeling overwhelmed.</p>
+
+
+
+<h3 class="wp-block-heading" id="Using_Color_To_Direct_Attention">Using Color To Direct Attention</h3>
+
+
+
+<p>Beyond just contrast, specific colors can be used to draw attention to particular areas. A vibrant accent color, used sparingly, can highlight key features, promotions, or important notifications. For example, a small splash of bright orange on a product page might draw attention to a “Limited Stock” notice. This isn’t about overwhelming the user with bright colors everywhere; it’s about strategic placement. Think of it like a spotlight. You use it to illuminate the most important parts of the stage, not the entire theater. This subtle guidance helps users engage with the content you want them to see, improving their overall experience and guiding them towards desired actions.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>When color is used with intention, it quietly leads visitors to where you want them to go — without saying a word. It’s about making the user’s journey intuitive and pleasant.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="avoiding-pitfalls-in-color-implementation">Avoiding Pitfalls In Color Implementation</h2>
+
+
+
+<h3 class="wp-block-heading" id="The_Dangers_Of_An_Overly_Complex_Palette">The Dangers Of An Overly Complex Palette</h3>
+
+
+
+<p>Look, it’s easy to get excited about all the colors out there. You see a cool shade on a competitor’s site, then another one on a design blog, and suddenly you want to use them all. But here’s the thing: too many colors on a website can be a real mess. It’s like trying to listen to five different songs at once – it’s just noise. When your site is a jumble of hues, users get confused. They don’t know where to look, what’s important, or even what your brand is about. <strong>Keep your main color scheme tight, usually two to three core colors with maybe one or two accent shades for buttons or highlights.</strong> This makes your site look clean and professional, and it helps guide people without overwhelming them.</p>
+
+
+
+<h3 class="wp-block-heading" id="Ensuring_Accessibility_For_All_Users">Ensuring Accessibility For All Users</h3>
+
+
+
+<p>This is a big one, and honestly, it’s often overlooked. Not everyone sees colors the same way. We’re talking about color blindness, which affects a significant chunk of the population, especially men. If your main call-to-action button is a specific shade of red that looks like a muddy brown to someone with red-green color blindness, they might just miss it. That’s lost business. You need to make sure there’s enough contrast between text and its background, and that important information isn’t conveyed <em>only</em> through color. Think about using different shapes or icons alongside color cues. It’s not just about looking good; it’s about making sure everyone can actually use your site.</p>
+
+
+
+<p>Here’s a quick rundown on contrast:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Text on Background:</strong> Ensure text is easily readable. Dark text on a light background or light text on a dark background usually works best.</li>
+
+
+
+<li><strong>Interactive Elements:</strong> Buttons and links need to stand out clearly from the surrounding content.</li>
+
+
+
+<li><strong>Information Conveyed:</strong> If color indicates status (like a warning or success message), use text or icons too.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="Balancing_Aesthetics_With_Functional_Design">Balancing Aesthetics With Functional Design</h3>
+
+
+
+<p>It’s tempting to pick colors just because they look pretty. And yeah, aesthetics matter. Your website should look good. But if your beautiful color choices make it impossible for users to figure out what to do next, then the design has failed. <strong>Function has to come first.</strong> That vibrant, eye-catching color you chose for your “Buy Now” button? Great. But if it blends into the background or looks too similar to other elements, it’s useless. Color should serve a purpose, whether that’s to draw attention to a key action, create a sense of calm, or build trust. If it’s just there to fill space or look nice, it’s probably not doing its job effectively.</p>
+
+
+
+<h2 class="wp-block-heading" id="cultural-nuances-in-color-perception">Cultural Nuances In Color Perception</h2>
+
+
+
+<p>So, we’ve talked a lot about how colors make people feel, right? Like blue for trust, red for urgency. But here’s the thing: it’s not a one-size-fits-all situation. What a color means to someone in, say, the United States might be totally different for someone in Japan or India. It’s a bit like how slang can change from one town to another, but on a much bigger scale.</p>
+
+
+
+<h3 class="wp-block-heading" id="Global_Variations_In_Color_Meaning">Global Variations In Color Meaning</h3>
+
+
+
+<p>Think about white. In a lot of Western cultures, it’s all about purity, weddings, and new beginnings. Pretty straightforward. But in some East Asian countries, white is actually the color of mourning. Imagine using a bright white background for a funeral announcement – yikes! That’s a pretty big disconnect. Or take red. While we often see it as passion or danger, in China, it’s a symbol of good luck and prosperity. It’s used for celebrations and important events. So, if you’re designing a site for a global audience, you really need to do your homework.</p>
+
+
+
+<p>Here’s a quick look at how some common colors can shift meaning:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>White:</strong> Purity, peace (West) vs. Mourning, death (East Asia)</li>
+
+
+
+<li><strong>Red:</strong> Passion, urgency, love (West) vs. Luck, joy, celebration (China, India)</li>
+
+
+
+<li><strong>Yellow:</strong> Optimism, happiness (West) vs. Mourning, jealousy (some European cultures)</li>
+
+
+
+<li><strong>Green:</strong> Nature, growth, wealth (West) vs. Infidelity, envy (some European cultures)</li>
+</ul>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>It’s easy to get caught up in what colors mean to us, but when you’re building a website that people from all over the world will visit, you have to step outside your own cultural bubble.</p>
+</blockquote>
+
+
+
+<h3 class="wp-block-heading" id="Tailoring_Color_Choices_For_Diverse_Audiences">Tailoring Color Choices For Diverse Audiences</h3>
+
+
+
+<p>So, how do you actually <em>do</em> this? First off, if your business is super local, you might not need to worry too much. But if you’re aiming for a wider reach, it’s worth considering. You can start by looking at the primary markets you’re targeting. Are they mostly in Europe? Asia? South America? A quick search for “color meanings in [country name]” can give you a good starting point. You might find that a color that works great for a call-to-action button in one region could be a total no-go in another. For example, if you’re selling a product that’s meant to be exciting and energetic, and your target audience is primarily in India, you might lean more into reds and oranges, which are often associated with positive energy there. Conversely, if you’re building a site for a financial institution that wants to project stability and trust, and your audience is global, sticking to blues might be a safer bet, as it’s generally perceived positively across many cultures. It’s all about <a target="_blank" rel="noreferrer noopener" href="https://medium.com/@qamarjafari1717/the-ultimate-guide-to-color-and-color-psychology-in-ux-ui-2025-how-designers-use-color-to-5419f3283951">understanding user perception</a> and making smart choices. Sometimes, it might even mean having slightly different color schemes for different regional versions of your website, though that can get complicated fast. More often, it’s about finding a balance or choosing colors that have broadly positive or neutral associations.</p>
+
+
+
+<h2 class="wp-block-heading" id="testing-and-refining-your-color-strategy">Testing And Refining Your Color Strategy</h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" width="1366" height="768" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-e8507821-b5dc-4aac-8e33-f587c51103b6.jpg" alt="Abstract colorful swirls influencing web design choices." class="wp-image-68" srcset="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-e8507821-b5dc-4aac-8e33-f587c51103b6.jpg 1366w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-e8507821-b5dc-4aac-8e33-f587c51103b6-300x169.jpg 300w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-e8507821-b5dc-4aac-8e33-f587c51103b6-1024x576.jpg 1024w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-e8507821-b5dc-4aac-8e33-f587c51103b6-768x432.jpg 768w" sizes="(max-width: 1366px) 100vw, 1366px"></figure>
+
+
+
+<p>So, you’ve picked out some colors for your website, thinking they’ll do the trick. That’s a good start, but honestly, it’s just the beginning. What looks good on your screen might not land the same way with everyone who visits your site. That’s where testing and tweaking come in. It’s not about guessing; it’s about seeing what actually works.</p>
+
+
+
+<h3 class="wp-block-heading" id="The_Importance_Of_AB_Testing_Color_Choices">The Importance Of A/B Testing Color Choices</h3>
+
+
+
+<p>Think of A/B testing like trying out two different versions of something to see which one people like more. For web design, this often means showing one group of visitors your website with, say, a blue “Buy Now” button, and another group the same page but with a green button. Then, you watch to see which button gets clicked more often. It’s a straightforward way to figure out if a different shade or hue actually makes a difference in what people do.</p>
+
+
+
+<p>Here’s a quick look at what you might test:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Call-to-Action (CTA) Buttons:</strong> This is a big one. Does a brighter color get more clicks? Does a warmer tone feel more inviting?</li>
+
+
+
+<li><strong>Background Colors:</strong> How does a lighter or darker background affect readability and the overall mood of the page?</li>
+
+
+
+<li><strong>Accent Colors:</strong> Are the pops of color you’re using to draw attention actually drawing attention effectively?</li>
+
+
+
+<li><strong>Link Colors:</strong> Do your links stand out enough to be noticed, but not so much that they’re distracting?</li>
+</ul>
+
+
+
+<p><strong>You’re not just picking colors; you’re optimizing user behavior.</strong> It’s about making small changes that can lead to bigger results, like more people signing up or buying something.</p>
+
+
+
+<h3 class="wp-block-heading" id="Iterative_Design_Based_On_User_Feedback">Iterative Design Based On User Feedback</h3>
+
+
+
+<p>Testing isn’t a one-and-done deal. It’s part of a cycle. You test, you learn, you make changes, and then you test again. This process is called iterative design. It means you’re constantly improving your site based on real data and how people are actually using it.</p>
+
+
+
+<p>Sometimes, the feedback might be surprising. Maybe a color you thought was super professional is actually making people feel a bit bored, or a color you chose because it felt ‘energetic’ is coming across as aggressive to some users. That’s okay! The goal is to gather this information and use it to make your website better.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Don’t be afraid to go back to the drawing board, even if it’s just for one element. Small, consistent improvements based on what you learn can add up to a much more effective website over time. It shows you care about your visitors’ experience.</p>
+</blockquote>
+
+
+
+<p>Remember, color is a powerful tool, but its effectiveness isn’t always obvious at first glance. By testing and being willing to adjust, you can make sure your color choices are truly working for you and your audience.</p>
+
+
+
+<h2 class="wp-block-heading" id="wrapping-up-color-is-your-secret-weapon">Wrapping Up: Color is Your Secret Weapon</h2>
+
+
+
+<p>So, we’ve talked a lot about how colors aren’t just pretty pictures on a screen. They actually do things to people, making them feel certain ways and nudging them toward specific actions. Think about it – that bright red button practically screams ‘Click me!’ while a calm blue might make you feel more secure. It’s not magic, it’s just smart design. Using colors wisely means your website won’t just look good, it’ll work better too, helping people find what they need and maybe even buy something. Don’t just slap colors on your site; give them a job to do. Your users will thank you for it, and so will your bottom line.</p>
+
+
+
+<h2 class="wp-block-heading" id="frequently-asked-questions">Frequently Asked Questions</h2>
+
+
+
+<h3 class="wp-block-heading" id="Why_is_color_important_when_making_a_website">Why is color important when making a website?</h3>
+
+
+
+<p>Color is super important because it’s one of the first things people notice. It can make them feel happy, calm, or even a little worried, all before they even read anything. Good color choices can make your website look trustworthy and help people decide to buy something or sign up.</p>
+
+
+
+<h3 class="wp-block-heading" id="What_does_blue_mean_in_web_design">What does blue mean in web design?</h3>
+
+
+
+<p>Blue usually makes people feel safe and professional. That’s why banks and tech companies often use it. It’s a calm color that helps build trust, which is great for websites where you want people to feel confident.</p>
+
+
+
+<h3 class="wp-block-heading" id="When_should_I_use_red_on_my_website">When should I use red on my website?</h3>
+
+
+
+<p>Red is a powerful color that grabs attention fast. It’s good for things like sales or ‘buy now’ buttons because it creates a sense of urgency. But, you don’t want to use too much red, or it might feel too intense or even a bit scary.</p>
+
+
+
+<h3 class="wp-block-heading" id="How_can_I_make_sure_my_website_colors_are_easy_for_everyone_to_see">How can I make sure my website colors are easy for everyone to see?</h3>
+
+
+
+<p>It’s important that everyone can use your website, even people who have trouble seeing certain colors. This means using colors that stand out from each other, especially for important buttons and text. Making sure there’s good contrast helps everyone read and click things easily.</p>
+
+
+
+<h3 class="wp-block-heading" id="Should_I_use_lots_of_different_colors_on_my_website">Should I use lots of different colors on my website?</h3>
+
+
+
+<p>It’s usually better to keep your color choices simple. Using too many colors can make your website look messy and confusing. Sticking to a few main colors and using them consistently helps make your site look neat and easy to understand.</p>
+
+
+
+<h3 class="wp-block-heading" id="Do_colors_mean_the_same_thing_everywhere_in_the_world">Do colors mean the same thing everywhere in the world?</h3>
+
+
+
+<p>No, colors can mean different things in different countries. For example, white is often seen as pure in Western places, but in some Asian countries, it’s linked to funerals. If your website is for people all over the world, you need to think about these differences when picking colors.</p>
+</article>
+
+    <!-- Right rail -->
+    <aside class="rail" aria-label="Author and CTA">
+      <div class="author">
+        <div class="row">
+          <img src="/images/author.webp" alt="Author avatar">
+          <div>
+            <strong>Bora Media</strong><br>
+            <span style="opacity:.7">Digital Marketing Team</span>
+          </div>
+        </div>
+        <p>Practical insights and playbooks for measurable business growth.</p>
+      </div>
+      <div class="promo">
+        <h4>Need help putting this into practice?</h4>
+        <p>Let’s turn the strategy into a focused growth plan for your business.</p>
+        <button class="btn" onclick="location.href='/contact'">Book a Strategy Call</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Related -->
+  <section class="related" aria-labelledby="relTitle">
+    <div class="container">
+      <h2 class="title" id="relTitle">Other articles you may like</h2>
+      <div class="grid">
+        <a class="card" href="/blog/the-essential-website-audit-checklist-for-2026"><span class="tag">SEO, AIO &amp; GEO</span><h3>The Essential Website Audit Checklist for 2026</h3><span class="read">Read article →</span></a><a class="card" href="/blog/how-to-use-a-b-testing-to-double-your-conversion-rate"><span class="tag">UI/UX &amp; CRO</span><h3>How to Use A/B Testing to Double Your Conversion Rate</h3><span class="read">Read article →</span></a><a class="card" href="/blog/pop-ups-are-they-driving-leads-or-driving-users-away"><span class="tag">UI/UX &amp; CRO</span><h3>Pop-ups: Are They Driving Leads or Driving Users Away?</h3><span class="read">Read article →</span></a></div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Ready to turn insight into measurable growth?</h2>
+      <p>We’ll help you apply the right strategy, measurement, and optimization plan to your business.</p>
+      <a class="btn" href="/contact">Schedule Your Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer (consistent) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media" style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+            <a href="https://www.youtube.com/@BoraMediaAgency" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.linkedin.com/company/bora-media-network/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul class="f-links">
+            <li><a href="/blog">ABM</a></li>
+            <li><a href="/blog">LinkedIn Ads</a></li>
+            <li><a href="/blog">Copywriting</a></li>
+            <li><a href="/blog">Google Ads</a></li>
+            <li><a href="/blog">Branding</a></li>
+            <li><a href="/blog">Meta Ads</a></li>
+            <li><a href="/blog">Google Analytics</a></li>
+            <li><a href="/blog">Google Tag Manager</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year" class="current-year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Psychology of Color in Web Design: How to Influence Action",
+  "author": {
+    "@type": "Organization",
+    "name": "Bora Media"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bora Media",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.boramedianetwork.com/images/bora-logo.webp"
+    }
+  },
+  "image": "https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-7.jpg",
+  "datePublished": "2026-01-28",
+  "dateModified": "2026-01-28",
+  "articleSection": "Website & Landing Pages",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://boramedianetwork.com/blog/the-psychology-of-color-in-web-design-how-to-influence-action/"
+  }
+}</script>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{ b.style.transform=''; b.style.opacity=''; }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    // TOC highlight
+    const links = document.querySelectorAll('.toc-link');
+    const headings = [...links].map(a => document.querySelector(a.getAttribute('href')));
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        const id = e.target.getAttribute('id');
+        const link = document.querySelector(`.toc a[href="#${id}"]`);
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.remove('active'));
+          link?.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
+    headings.forEach(h=>h && obs.observe(h));
+  </script>
+
+  <script data-footer-year>
+    document.querySelectorAll('.current-year').forEach((year) => {
+      year.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

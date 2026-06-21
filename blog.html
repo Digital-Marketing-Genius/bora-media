@@ -83,7 +83,9 @@
     .panel h3{font-size:16px;margin-bottom:10px}
     .cats{list-style:none}
     .cats li{margin:6px 0}
-    .cats a{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
+    .cats a{display:flex;align-items:center;justify-content:space-between;gap:8px;text-decoration:none;color:var(--ink);padding:5px 7px;border-radius:8px}
+    .cats a:hover{background:var(--muted)}
+    .cats .count{font-size:12px;font-weight:800;background:var(--muted);padding:2px 7px;border-radius:999px}
     .cats a.active{color:#0D3A8B}
 
     .search{position:relative;margin-top:14px}
@@ -91,6 +93,7 @@
     .search svg{position:absolute;left:10px;top:9px;width:18px;height:18px;opacity:.6}
 
     /* Grid cards */
+    .results-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-weight:800}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .card{display:block;background:#0E233F;color:#fff;border-radius:16px;padding:16px;text-decoration:none;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08);min-height:210px;position:relative;overflow:hidden}
     .card .tag{font-size:12px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:#8AF1EC}
@@ -206,20 +209,23 @@
         <div class="panel" aria-labelledby="catHeading">
           <h3 id="catHeading">Categories</h3>
           <ul class="cats" id="catList">
-            <!-- The “All” category is the default filter -->
-            <li><a href="#" data-filter="all" class="active">All</a></li>
-            <li><a href="#" data-filter="Copywriting">Copywriting</a></li>
-            <li><a href="#" data-filter="Google Ads">Google Ads</a></li>
-            <li><a href="#" data-filter="Linkedin Ads">Linkedin Ads</a></li>
-            <li><a href="#" data-filter="ABM">ABM</a></li>
-            <li><a href="#" data-filter="ABM">Paid Media</a></li>
-            <li><a href="#" data-filter="Design">Design</a></li>
-            <li><a href="#" data-filter="Branding">Branding</a></li>
-            <li><a href="#" data-filter="Meta Ads">Meta Ads</a></li>
-            <li><a href="#" data-filter="Google Analytics">Google Analytics</a></li>
-            <li><a href="#" data-filter="Google Tag Manager">Google Tag Manager</a></li>
-            <li><a href="#" data-filter="Artificial Intelligence">Artificial Intelligence</a></li>
-             <li><a href="#" data-filter="PPC">PPC</a></li>
+            <li><a href="#" data-filter="all" class="active"><span>All</span><span class="count">34</span></a></li>
+            <li><a href="#" data-filter="AI &amp; Automation"><span>AI &amp; Automation</span><span class="count">1</span></a></li>
+            <li><a href="#" data-filter="Ad Copy"><span>Ad Copy</span><span class="count">4</span></a></li>
+            <li><a href="#" data-filter="Agency"><span>Agency</span><span class="count">2</span></a></li>
+            <li><a href="#" data-filter="Analytics &amp; Measurement"><span>Analytics &amp; Measurement</span><span class="count">4</span></a></li>
+            <li><a href="#" data-filter="Branding &amp; Design"><span>Branding &amp; Design</span><span class="count">2</span></a></li>
+            <li><a href="#" data-filter="Google Ads"><span>Google Ads</span><span class="count">9</span></a></li>
+            <li><a href="#" data-filter="Lead Generation"><span>Lead Generation</span><span class="count">8</span></a></li>
+            <li><a href="#" data-filter="LinkedIn Ads &amp; ABM"><span>LinkedIn Ads &amp; ABM</span><span class="count">1</span></a></li>
+            <li><a href="#" data-filter="Meta Ads"><span>Meta Ads</span><span class="count">6</span></a></li>
+            <li><a href="#" data-filter="Performance Marketing"><span>Performance Marketing</span><span class="count">4</span></a></li>
+            <li><a href="#" data-filter="ROAS"><span>ROAS</span><span class="count">3</span></a></li>
+            <li><a href="#" data-filter="SEO, AIO &amp; GEO"><span>SEO, AIO &amp; GEO</span><span class="count">1</span></a></li>
+            <li><a href="#" data-filter="TikTok Ads"><span>TikTok Ads</span><span class="count">1</span></a></li>
+            <li><a href="#" data-filter="UI/UX &amp; CRO"><span>UI/UX &amp; CRO</span><span class="count">10</span></a></li>
+            <li><a href="#" data-filter="Website &amp; Landing Pages"><span>Website &amp; Landing Pages</span><span class="count">6</span></a></li>
+            <li><a href="#" data-filter="YouTube &amp; Video"><span>YouTube &amp; Video</span><span class="count">1</span></a></li>
           </ul>
 
           <label class="search" for="search">
@@ -243,155 +249,345 @@
 
       <!-- Posts grid -->
       <section aria-label="Articles">
+        <div class="results-bar"><p id="resultCount" aria-live="polite">Showing all 34 articles</p></div>
         <div class="grid" id="grid">
-          <!-- Sample cards (replace href/thumbnails as needed) -->
-          <a class="card" href="/post/tiktok-search-ads-vs-google" data-category="Google Ads,PPC,Paid Media">
-            <span class="tag">PPC</span>
-            <h2>TikTok Search Ads vs. Google: The Data-Driven Budget Allocation Guide</h2>
-            <p class="meta">8 min read • Framework + template</p>
-            <img class="thumb" src="/images/blog/tikto-vs-google.png" alt="TikTok Search Ads vs. Google" loading="lazy">
+          <a class="card" href="/blog/youtube-ads-for-beginners-why-video-is-the-new-search" data-category="YouTube &amp; Video">
+            <span class="tag">YouTube &amp; Video</span>
+            <h2>YouTube Ads for Beginners: Why Video is the New Search</h2>
+            <p class="meta">Jan 31, 2026 · 16 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/YouTube-Shopping-scaled.webp" alt="YouTube Ads for Beginners: Why Video is the New Search" loading="lazy" decoding="async">
             <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
           </a>
-        
-         <a class="card" href="/post/google-ads-bidding-strategy-2025" data-category="Google Ads">
+
+          <a class="card" href="/blog/the-secret-to-writing-ad-copy-that-actually-converts" data-category="Ad Copy|UI/UX &amp; CRO">
+            <span class="tag">Ad Copy · UI/UX &amp; CRO</span>
+            <h2>The Secret to Writing Ad Copy That Actually Converts</h2>
+            <p class="meta">Jan 31, 2026 · 15 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-17.jpg" alt="The Secret to Writing Ad Copy That Actually Converts" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/the-future-of-privacy-how-to-track-ad-performance-without-cookies" data-category="Analytics &amp; Measurement|Lead Generation">
+            <span class="tag">Analytics &amp; Measurement · Lead Generation</span>
+            <h2>The Future of Privacy: How to Track Ad Performance Without Cookies</h2>
+            <p class="meta">Jan 31, 2026 · 15 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-15.jpg" alt="The Future of Privacy: How to Track Ad Performance Without Cookies" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/how-to-calculate-a-realistic-roas-target-for-your-business" data-category="ROAS|Lead Generation">
+            <span class="tag">ROAS · Lead Generation</span>
+            <h2>How to Calculate a Realistic ROAS Target for Your Business</h2>
+            <p class="meta">Jan 31, 2026 · 18 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/roas-vs-roi-metrics.webp" alt="How to Calculate a Realistic ROAS Target for Your Business" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/5-common-google-ads-mistakes-that-are-burning-your-budget" data-category="Google Ads">
             <span class="tag">Google Ads</span>
-            <h2>Google Ads Bidding Strategy: The Complete 2025 Guide</h2>
-            <p class="meta">11 min read • Framework + template</p>
-            <img class="thumb" src="/images/blog/google-bidding.png" alt="Google Ads Bidding Strategy" loading="lazy">
+            <h2>5 Common Google Ads Mistakes That Are Burning Your Budget</h2>
+            <p class="meta">Jan 31, 2026 · 11 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-14.jpg" alt="5 Common Google Ads Mistakes That Are Burning Your Budget" loading="lazy" decoding="async">
             <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
           </a>
-          
-          <a class="card" href="/post/meta-ads-strategies-2025" data-category="Meta Ads">
+
+          <a class="card" href="/blog/the-psychology-of-color-in-web-design-how-to-influence-action" data-category="Branding &amp; Design|UI/UX &amp; CRO">
+            <span class="tag">Branding &amp; Design · UI/UX &amp; CRO</span>
+            <h2>The Psychology of Color in Web Design: How to Influence Action</h2>
+            <p class="meta">Jan 28, 2026 · 15 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-7.jpg" alt="The Psychology of Color in Web Design: How to Influence Action" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/the-essential-website-audit-checklist-for-2026" data-category="SEO, AIO &amp; GEO|UI/UX &amp; CRO|Website &amp; Landing Pages">
+            <span class="tag">SEO, AIO &amp; GEO · UI/UX &amp; CRO</span>
+            <h2>The Essential Website Audit Checklist for 2026</h2>
+            <p class="meta">Jan 28, 2026 · 16 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-f43143d6-3dee-4fbb-b2ac-591fd22633eb.jpg" alt="The Essential Website Audit Checklist for 2026" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/retargeting-strategies-that-re-engage-without-being-annoying" data-category="Google Ads|Meta Ads|Lead Generation">
+            <span class="tag">Google Ads · Meta Ads</span>
+            <h2>Retargeting Strategies That Re-Engage Without Being Annoying</h2>
+            <p class="meta">Jan 28, 2026 · 16 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-383e2efd-7fcb-4eeb-80d1-4181aa918008.jpg" alt="Retargeting Strategies That Re-Engage Without Being Annoying" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/mobile-first-design-why-your-desktop-site-doesnt-matter-as-much-as-you-think" data-category="UI/UX &amp; CRO|Website &amp; Landing Pages">
+            <span class="tag">UI/UX &amp; CRO · Website &amp; Landing Pages</span>
+            <h2>Mobile-First Design: Why Your Desktop Site Doesn’t Matter as Much as You Think</h2>
+            <p class="meta">Jan 28, 2026 · 15 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-485fc2b6-c750-450b-bf52-6e39c301b160.jpg" alt="Mobile-First Design: Why Your Desktop Site Doesn’t Matter as Much as You Think" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/local-service-ads-the-hidden-gem-for-home-service-businesses" data-category="Google Ads|Lead Generation">
+            <span class="tag">Google Ads · Lead Generation</span>
+            <h2>Local Service Ads: The Hidden Gem for Home Service Businesses</h2>
+            <p class="meta">Jan 28, 2026 · 17 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-12.jpg" alt="Local Service Ads: The Hidden Gem for Home Service Businesses" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/is-your-website-a-brochure-or-a-salesman-how-to-tell-the-difference" data-category="Website &amp; Landing Pages|Lead Generation">
+            <span class="tag">Website &amp; Landing Pages · Lead Generation</span>
+            <h2>Is Your Website a Brochure or a Salesman? How to Tell the Difference</h2>
+            <p class="meta">Jan 28, 2026 · 17 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-2b69496b-19f5-4d9e-8af0-5bd34f3c42b1.jpg" alt="Is Your Website a Brochure or a Salesman? How to Tell the Difference" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/how-to-use-a-b-testing-to-double-your-conversion-rate" data-category="UI/UX &amp; CRO|Website &amp; Landing Pages">
+            <span class="tag">UI/UX &amp; CRO · Website &amp; Landing Pages</span>
+            <h2>How to Use A/B Testing to Double Your Conversion Rate</h2>
+            <p class="meta">Jan 28, 2026 · 17 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-e66b3f2a-0308-4d05-9ed4-1ee21362bb01.jpg" alt="How to Use A/B Testing to Double Your Conversion Rate" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/why-your-meta-ads-stopped-working-a-troubleshooting-guide" data-category="Meta Ads">
             <span class="tag">Meta Ads</span>
-            <h2>17 Meta Ads Strategies That Actually Work in 2025</h2>
-            <p class="meta">10 min read • Hooks, formats, tests</p>
-            <img class="thumb" src="/images/blog/meta-strategy.png" alt="Meta Ads Strategies" loading="lazy">
+            <h2>Why Your Meta Ads Stopped Working: A Troubleshooting Guide</h2>
+            <p class="meta">Jan 25, 2026 · 16 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-1.jpg" alt="Why Your Meta Ads Stopped Working: A Troubleshooting Guide" loading="lazy" decoding="async">
             <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
           </a>
 
-          <a class="card" href="/post/ai-tools-digital-marketing-2025" data-category="Artificial Intelligence,Paid Media,PPC">
-            <span class="tag">Artificial Intelligence</span>
-            <h2>40+ AI Tools for Digital Marketing in 2025 (Agency-Tested)</h2>
-            <p class="meta">10 min read • Hooks, formats, tests</p>
-            <img class="thumb" src="/images/blog/ai-tools.png" alt="AI Tools for Digital Marketing" loading="lazy">
+          <a class="card" href="/blog/scaling-from-1k-to-10k-monthly-ad-spend-a-step-by-step-guide" data-category="ROAS|Performance Marketing">
+            <span class="tag">ROAS · Performance Marketing</span>
+            <h2>Scaling from $1k to $10k Monthly Ad Spend: A Step-by-Step Guide</h2>
+            <p class="meta">Jan 25, 2026 · 17 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-a8bf5acb-068d-4d4c-96ef-8a4bf74c4f59.jpg" alt="Scaling from $1k to $10k Monthly Ad Spend: A Step-by-Step Guide" loading="lazy" decoding="async">
             <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
-            </span>
-          </a>
-          
-        <a class="card" href="/post/google-ads-naming-conventions" data-category="Google Ads">
-            <span class="tag">Google Ads</span>
-            <h2>Naming Conventions That Make Google Ads Scalable</h2>
-            <p class="meta">7 min read • Framework + template</p>
-            <img class="thumb" src="/images/blog/ga-naming.webp" alt="Google Ads naming conventions" loading="lazy">
-            <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
           </a>
 
-          <a class="card" href="/post/write-cta-that-converts" data-category="Copywriting">
-            <span class="tag">Copywriting</span>
-            <h2>Write CTAs That Convert: 9 Patterns that Win in B2B</h2>
-            <p class="meta">6 min read • Examples included</p>
-            <img class="thumb" src="/images/blog/ctas.webp" alt="CTA examples" loading="lazy">
+          <a class="card" href="/blog/pop-ups-are-they-driving-leads-or-driving-users-away" data-category="UI/UX &amp; CRO|Lead Generation|Website &amp; Landing Pages">
+            <span class="tag">UI/UX &amp; CRO · Lead Generation</span>
+            <h2>Pop-ups: Are They Driving Leads or Driving Users Away?</h2>
+            <p class="meta">Jan 25, 2026 · 16 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-4.jpg" alt="Pop-ups: Are They Driving Leads or Driving Users Away?" loading="lazy" decoding="async">
             <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
           </a>
 
-          <a class="card" href="/post/linkedin-abm-playbook" data-category="Linkedin Ads,ABM">
-            <span class="tag">Linkedin Ads · ABM</span>
-            <h2>ABM on LinkedIn: From ICP to Pipeline in 30 Days</h2>
-            <p class="meta">8 min read • ICP → creative → routing</p>
-            <img class="thumb" src="/images/blog/abm-linkedin.webp" alt="ABM on LinkedIn" loading="lazy">
+          <a class="card" href="/blog/google-ads-vs-meta-ads-which-platform-is-right-for-your-industry" data-category="Google Ads|Meta Ads">
+            <span class="tag">Google Ads · Meta Ads</span>
+            <h2>Google Ads vs. Meta Ads: Which Platform is Right for Your Industry?</h2>
+            <p class="meta">Jan 25, 2026 · 18 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-2.jpg" alt="Google Ads vs. Meta Ads: Which Platform is Right for Your Industry?" loading="lazy" decoding="async">
             <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
           </a>
 
-          <a class="card" href="/post/ga4-boards" data-category="Google Analytics">
-            <span class="tag">Google Analytics</span>
-            <h2>Build a GA4 Board Your Exec Team Will Actually Use</h2>
-            <p class="meta">9 min read • GA4 + Looker Studio</p>
-            <img class="thumb" src="/images/blog/ga4-board.webp" alt="GA4 dashboard" loading="lazy">
+          <a class="card" href="/blog/finding-the-right-digital-marketing-agency-in-calgary-for-your-business-growth" data-category="Agency">
+            <span class="tag">Agency</span>
+            <h2>Finding the Right Digital Marketing Agency in Calgary for Your Business Growth</h2>
+            <p class="meta">Jan 25, 2026 · 14 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-fff1c005-a1ee-4601-a573-712ae96ddbb2.jpg" alt="Finding the Right Digital Marketing Agency in Calgary for Your Business Growth" loading="lazy" decoding="async">
             <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
           </a>
 
-          <a class="card" href="/post/brand-to-demand" data-category="Branding,Design">
-            <span class="tag">Branding · Design</span>
-            <h2>Brand to Demand: Visual Systems that Boost CVR</h2>
-            <p class="meta">5 min read • Before/after examples</p>
-            <img class="thumb" src="/images/blog/brand-design.jpg" alt="Brand design examples" loading="lazy">
+          <a class="card" href="/blog/building-trust-where-to-place-social-proof-on-your-landing-page" data-category="UI/UX &amp; CRO|Website &amp; Landing Pages">
+            <span class="tag">UI/UX &amp; CRO · Website &amp; Landing Pages</span>
+            <h2>Building Trust: Where to Place Social Proof on Your Landing Page</h2>
+            <p class="meta">Jan 25, 2026 · 14 min read</p>
+            <img class="thumb" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/03-How-and-How-Not-to-Use-Social-Proof-1020x416-1.png" alt="Building Trust: Where to Place Social Proof on Your Landing Page" loading="lazy" decoding="async">
             <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
           </a>
 
-          <a class="card" href="/post/gtm-server-side-setup" data-category="Google Tag Manager,Google Analytics">
-            <span class="tag">Google Tag Manager</span>
-            <h2>Server-Side Tagging: A Clean Setup for Accurate Data</h2>
-            <p class="meta">10 min read • Step-by-step guide</p>
-            <img class="thumb" src="/images/blog/gtm-serverside.webp" alt="Server-side tagging" loading="lazy">
-            <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
-            </span>
-          </a>
-
-          <a class="card" href="/post/meta-creative-blueprint" data-category="Meta Ads,Design">
-            <span class="tag">Meta Ads</span>
+          <a class="card" href="/blog/meta-creative-blueprint" data-category="Meta Ads|Ad Copy">
+            <span class="tag">Meta Ads · Ad Copy</span>
             <h2>The Meta Creative Blueprint for Cheaper CPLs</h2>
-            <p class="meta">6 min read • Hooks, formats, tests</p>
-            <img class="thumb" src="/images/blog/meta-creative.webp" alt="Meta Ads creative" loading="lazy">
+            <p class="meta">Oct 4, 2025 · 9 min read</p>
+            <img class="thumb" src="/images/blog/meta-creative.webp" alt="The Meta Creative Blueprint for Cheaper CPLs" loading="lazy" decoding="async">
             <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
           </a>
 
-          <a class="card" href="/post/keyword-guardrails" data-category="Google Ads">
+          <a class="card" href="/blog/gtm-server-side-setup" data-category="Analytics &amp; Measurement">
+            <span class="tag">Analytics &amp; Measurement</span>
+            <h2>Server-Side Tagging: A Clean Setup for Accurate Data</h2>
+            <p class="meta">Oct 4, 2025 · 15 min read</p>
+            <img class="thumb" src="/images/blog/gtm-serverside.webp" alt="Server-Side Tagging: A Clean Setup for Accurate Data" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/keyword-guardrails" data-category="Google Ads">
             <span class="tag">Google Ads</span>
             <h2>Keyword Guardrails: Control Spend Without Killing Scale</h2>
-            <p class="meta">7 min read • Real examples</p>
-            <img class="thumb" src="/images/blog/keyword-guardrails.webp" alt="Keyword guardrails" loading="lazy">
+            <p class="meta">Oct 4, 2025 · 6 min read</p>
+            <img class="thumb" src="/images/blog/keyword-guardrails.webp" alt="Keyword Guardrails: Control Spend Without Killing Scale" loading="lazy" decoding="async">
             <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
           </a>
 
-          <a class="card" href="/post/designing-offers" data-category="Copywriting,Branding">
-            <span class="tag">Copywriting</span>
+          <a class="card" href="/blog/designing-offers" data-category="Ad Copy|Lead Generation|UI/UX &amp; CRO">
+            <span class="tag">Ad Copy · Lead Generation</span>
             <h2>Designing Offers: From Message-Market Fit to Conversions</h2>
-            <p class="meta">8 min read • Offer grid template</p>
-            <img class="thumb" src="/images/blog/offers.webp" alt="Offer design framework" loading="lazy">
+            <p class="meta">Oct 4, 2025 · 7 min read</p>
+            <img class="thumb" src="/images/blog/offers.webp" alt="Designing Offers: From Message-Market Fit to Conversions" loading="lazy" decoding="async">
             <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
           </a>
-          
-          <a class="card" href="/post/top-12-reporting-tools" data-category="Google Analytics,Google Tag Manager">
-            <span class="tag">Google Analytics</span>
-            <h2>Top 12 Reporting Tools for Campaign Deep Dives</h2>
-            <p class="meta">9 min read • GA4 + Looker Studio</p>
-            <img class="thumb" src="/images/blog/reporting-tools.png" alt="PPC Reporting" loading="lazy">
+
+          <a class="card" href="/blog/brand-to-demand" data-category="Branding &amp; Design|UI/UX &amp; CRO">
+            <span class="tag">Branding &amp; Design · UI/UX &amp; CRO</span>
+            <h2>Brand to Demand: Visual Systems that Boost CVR</h2>
+            <p class="meta">Oct 4, 2025 · 11 min read</p>
+            <img class="thumb" src="/images/palette.webp" alt="Brand to Demand: Visual Systems that Boost CVR" loading="lazy" decoding="async">
             <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
           </a>
-          
-          <a class="card" href="/post/what-performance-agency-do" data-category="Paid Media">
-            <span class="tag">Paid Media</span>
+
+          <a class="card" href="/blog/ga4-boards" data-category="Analytics &amp; Measurement">
+            <span class="tag">Analytics &amp; Measurement</span>
+            <h2>Build a GA4 Dashboard that Your Exec Team Will Actually Use</h2>
+            <p class="meta">Sep 30, 2025 · 6 min read</p>
+            <img class="thumb" src="/images/blog/ga4-board.webp" alt="Build a GA4 Dashboard that Your Exec Team Will Actually Use" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/what-performance-agency-do" data-category="Agency|Performance Marketing">
+            <span class="tag">Agency · Performance Marketing</span>
             <h2>What Does a Performance Marketing Agency Actually Do?</h2>
-            <p class="meta">9 min read • Performance Marketing</p>
-            <img class="thumb" src="/images/blog/performance-marketing.png" alt="Performance marketing" loading="lazy">
+            <p class="meta">Sep 18, 2025 · 4 min read</p>
+            <img class="thumb" src="/images/leads.webp" alt="What Does a Performance Marketing Agency Actually Do?" loading="lazy" decoding="async">
             <span class="cta-mini">Read article
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/top-12-reporting-tools" data-category="Analytics &amp; Measurement">
+            <span class="tag">Analytics &amp; Measurement</span>
+            <h2>Top 12 Reporting Tools for Campaign Deep Dives</h2>
+            <p class="meta">Sep 18, 2025 · 3 min read</p>
+            <img class="thumb" src="/images/ga4-board.webp" alt="Top 12 Reporting Tools for Campaign Deep Dives" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/tiktok-search-ads-vs-google" data-category="TikTok Ads|Google Ads|Performance Marketing">
+            <span class="tag">TikTok Ads · Google Ads</span>
+            <h2>TikTok Search Ads vs. Google: The Data-Driven Budget Allocation Guide</h2>
+            <p class="meta">Sep 18, 2025 · 5 min read</p>
+            <img class="thumb" src="/images/ad.webp" alt="TikTok Search Ads vs. Google: The Data-Driven Budget Allocation Guide" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/ad-network-reps" data-category="Google Ads|Meta Ads|Performance Marketing">
+            <span class="tag">Google Ads · Meta Ads</span>
+            <h2>The Truth About Ad Network Representatives: What They Won&#x27;t Tell You</h2>
+            <p class="meta">Sep 18, 2025 · 17 min read</p>
+            <img class="thumb" src="/images/ad.webp" alt="The Truth About Ad Network Representatives: What They Won&#x27;t Tell You" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/google-ads-bidding-strategy-2025" data-category="Google Ads|ROAS">
+            <span class="tag">Google Ads · ROAS</span>
+            <h2>Google Ads Bidding Strategy: The Complete 2025 Guide</h2>
+            <p class="meta">Sep 18, 2025 · 10 min read</p>
+            <img class="thumb" src="/images/ad.webp" alt="Google Ads Bidding Strategy: The Complete 2025 Guide" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/linkedin-abm-playbook" data-category="LinkedIn Ads &amp; ABM|Lead Generation">
+            <span class="tag">LinkedIn Ads &amp; ABM · Lead Generation</span>
+            <h2>ABM on LinkedIn: From ICP to Pipeline in 30 Days</h2>
+            <p class="meta">Sep 18, 2025 · 5 min read</p>
+            <img class="thumb" src="/images/blog/abm-linkedin.webp" alt="ABM on LinkedIn: From ICP to Pipeline in 30 Days" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/ai-tools-digital-marketing-2025" data-category="AI &amp; Automation">
+            <span class="tag">AI &amp; Automation</span>
+            <h2>40+ AI Tools for Digital Marketing in 2025 (Agency-Tested)</h2>
+            <p class="meta">Sep 18, 2025 · 7 min read</p>
+            <img class="thumb" src="/images/robot.webp" alt="40+ AI Tools for Digital Marketing in 2025 (Agency-Tested)" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/meta-ads-strategies-2025" data-category="Meta Ads">
+            <span class="tag">Meta Ads</span>
+            <h2>17 Meta Ads Strategies That Actually Work in 2025</h2>
+            <p class="meta">Sep 18, 2025 · 6 min read</p>
+            <img class="thumb" src="/images/facebook.webp" alt="17 Meta Ads Strategies That Actually Work in 2025" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/write-cta-that-converts" data-category="Ad Copy|UI/UX &amp; CRO">
+            <span class="tag">Ad Copy · UI/UX &amp; CRO</span>
+            <h2>Write CTAs That Convert: 9 Patterns that Win Always</h2>
+            <p class="meta">Sep 11, 2025 · 5 min read</p>
+            <img class="thumb" src="/images/blog/ctas.webp" alt="Write CTAs That Convert: 9 Patterns that Win Always" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+          </a>
+
+          <a class="card" href="/blog/google-ads-naming-conventions" data-category="Google Ads">
+            <span class="tag">Google Ads</span>
+            <h2>Naming Conventions That Make Google Ads Scalable</h2>
+            <p class="meta">Sep 7, 2025 · 2 min read</p>
+            <img class="thumb" src="/images/blog/ga-naming.webp" alt="Naming Conventions That Make Google Ads Scalable" loading="lazy" decoding="async">
+            <span class="cta-mini">Read article
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
             </span>
           </a>
         </div>
@@ -415,12 +611,11 @@
         <div class="f-col">
           <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
           <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
-          <div class="social" aria-label="Social media">
-            <a href="https://www.linkedin.com" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
-            <a href="https://www.facebook.com" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
-            <a href="https://www.instagram.com" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
-            <a href="https://www.youtube.com" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
-            <a href="https://x.com" aria-label="X"><svg viewBox="0 0 24 24" fill="none"><path d="M18 3h3l-7.5 8.6L22 21h-6.6L9.8 14l-4.6 7H2l8-9.7L2.8 3h6.7l4.3 5.9L18 3Z" fill="currentColor"/></svg></a>
+          <div class="social" aria-label="Social media" style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+            <a href="https://www.youtube.com/@BoraMediaAgency" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.linkedin.com/company/bora-media-network/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
           </div>
         </div>
         <div class="f-col">
@@ -452,7 +647,7 @@
         </div>
       </div>
       <div class="f-bottom">
-        <p>© <span id="year"></span> Bora Media Network. All rights reserved.</p>
+        <p>© <span id="year" class="current-year"></span> Bora Media Network. All rights reserved.</p>
         <ul class="mini">
           <li><a href="/privacy-policy">Privacy Policy</a></li>
           <li><a href="/terms-of-service">Terms of Service</a></li>
@@ -463,18 +658,358 @@
 
   <!-- JSON-LD: Blog -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Bora Media Blog",
-    "url": "https://boramedianetwork.com/blog",
-    "description": "Actionable guides on ads, analytics, ABM, and brand for B2B.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Bora Media",
-      "logo": {"@type":"ImageObject","url":"https://boramedianetwork.com/images/bora-logo.webp"}
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Bora Media Blog",
+  "url": "https://boramedianetwork.com/blog",
+  "description": "Actionable guides on ads, analytics, AI, CRO, brand, and business growth.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bora Media",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://boramedianetwork.com/images/bora-logo.webp"
     }
-  }
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "YouTube Ads for Beginners: Why Video is the New Search",
+      "url": "https://boramedianetwork.com/blog/youtube-ads-for-beginners-why-video-is-the-new-search",
+      "datePublished": "2026-01-31",
+      "articleSection": [
+        "YouTube & Video"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "The Secret to Writing Ad Copy That Actually Converts",
+      "url": "https://boramedianetwork.com/blog/the-secret-to-writing-ad-copy-that-actually-converts",
+      "datePublished": "2026-01-31",
+      "articleSection": [
+        "Ad Copy",
+        "UI/UX & CRO"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "The Future of Privacy: How to Track Ad Performance Without Cookies",
+      "url": "https://boramedianetwork.com/blog/the-future-of-privacy-how-to-track-ad-performance-without-cookies",
+      "datePublished": "2026-01-31",
+      "articleSection": [
+        "Analytics & Measurement",
+        "Lead Generation"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "How to Calculate a Realistic ROAS Target for Your Business",
+      "url": "https://boramedianetwork.com/blog/how-to-calculate-a-realistic-roas-target-for-your-business",
+      "datePublished": "2026-01-31",
+      "articleSection": [
+        "ROAS",
+        "Lead Generation"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "5 Common Google Ads Mistakes That Are Burning Your Budget",
+      "url": "https://boramedianetwork.com/blog/5-common-google-ads-mistakes-that-are-burning-your-budget",
+      "datePublished": "2026-01-31",
+      "articleSection": [
+        "Google Ads"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "The Psychology of Color in Web Design: How to Influence Action",
+      "url": "https://boramedianetwork.com/blog/the-psychology-of-color-in-web-design-how-to-influence-action",
+      "datePublished": "2026-01-28",
+      "articleSection": [
+        "Branding & Design",
+        "UI/UX & CRO"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "The Essential Website Audit Checklist for 2026",
+      "url": "https://boramedianetwork.com/blog/the-essential-website-audit-checklist-for-2026",
+      "datePublished": "2026-01-28",
+      "articleSection": [
+        "SEO, AIO & GEO",
+        "UI/UX & CRO",
+        "Website & Landing Pages"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Retargeting Strategies That Re-Engage Without Being Annoying",
+      "url": "https://boramedianetwork.com/blog/retargeting-strategies-that-re-engage-without-being-annoying",
+      "datePublished": "2026-01-28",
+      "articleSection": [
+        "Google Ads",
+        "Meta Ads",
+        "Lead Generation"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Mobile-First Design: Why Your Desktop Site Doesn’t Matter as Much as You Think",
+      "url": "https://boramedianetwork.com/blog/mobile-first-design-why-your-desktop-site-doesnt-matter-as-much-as-you-think",
+      "datePublished": "2026-01-28",
+      "articleSection": [
+        "UI/UX & CRO",
+        "Website & Landing Pages"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Local Service Ads: The Hidden Gem for Home Service Businesses",
+      "url": "https://boramedianetwork.com/blog/local-service-ads-the-hidden-gem-for-home-service-businesses",
+      "datePublished": "2026-01-28",
+      "articleSection": [
+        "Google Ads",
+        "Lead Generation"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Is Your Website a Brochure or a Salesman? How to Tell the Difference",
+      "url": "https://boramedianetwork.com/blog/is-your-website-a-brochure-or-a-salesman-how-to-tell-the-difference",
+      "datePublished": "2026-01-28",
+      "articleSection": [
+        "Website & Landing Pages",
+        "Lead Generation"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "How to Use A/B Testing to Double Your Conversion Rate",
+      "url": "https://boramedianetwork.com/blog/how-to-use-a-b-testing-to-double-your-conversion-rate",
+      "datePublished": "2026-01-28",
+      "articleSection": [
+        "UI/UX & CRO",
+        "Website & Landing Pages"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Why Your Meta Ads Stopped Working: A Troubleshooting Guide",
+      "url": "https://boramedianetwork.com/blog/why-your-meta-ads-stopped-working-a-troubleshooting-guide",
+      "datePublished": "2026-01-25",
+      "articleSection": [
+        "Meta Ads"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Scaling from $1k to $10k Monthly Ad Spend: A Step-by-Step Guide",
+      "url": "https://boramedianetwork.com/blog/scaling-from-1k-to-10k-monthly-ad-spend-a-step-by-step-guide",
+      "datePublished": "2026-01-25",
+      "articleSection": [
+        "ROAS",
+        "Performance Marketing"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Pop-ups: Are They Driving Leads or Driving Users Away?",
+      "url": "https://boramedianetwork.com/blog/pop-ups-are-they-driving-leads-or-driving-users-away",
+      "datePublished": "2026-01-25",
+      "articleSection": [
+        "UI/UX & CRO",
+        "Lead Generation",
+        "Website & Landing Pages"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Google Ads vs. Meta Ads: Which Platform is Right for Your Industry?",
+      "url": "https://boramedianetwork.com/blog/google-ads-vs-meta-ads-which-platform-is-right-for-your-industry",
+      "datePublished": "2026-01-25",
+      "articleSection": [
+        "Google Ads",
+        "Meta Ads"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Finding the Right Digital Marketing Agency in Calgary for Your Business Growth",
+      "url": "https://boramedianetwork.com/blog/finding-the-right-digital-marketing-agency-in-calgary-for-your-business-growth",
+      "datePublished": "2026-01-25",
+      "articleSection": [
+        "Agency"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Building Trust: Where to Place Social Proof on Your Landing Page",
+      "url": "https://boramedianetwork.com/blog/building-trust-where-to-place-social-proof-on-your-landing-page",
+      "datePublished": "2026-01-25",
+      "articleSection": [
+        "UI/UX & CRO",
+        "Website & Landing Pages"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "The Meta Creative Blueprint for Cheaper CPLs",
+      "url": "https://boramedianetwork.com/blog/meta-creative-blueprint",
+      "datePublished": "2025-10-04",
+      "articleSection": [
+        "Meta Ads",
+        "Ad Copy"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Server-Side Tagging: A Clean Setup for Accurate Data",
+      "url": "https://boramedianetwork.com/blog/gtm-server-side-setup",
+      "datePublished": "2025-10-04",
+      "articleSection": [
+        "Analytics & Measurement"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Keyword Guardrails: Control Spend Without Killing Scale",
+      "url": "https://boramedianetwork.com/blog/keyword-guardrails",
+      "datePublished": "2025-10-04",
+      "articleSection": [
+        "Google Ads"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Designing Offers: From Message-Market Fit to Conversions",
+      "url": "https://boramedianetwork.com/blog/designing-offers",
+      "datePublished": "2025-10-04",
+      "articleSection": [
+        "Ad Copy",
+        "Lead Generation",
+        "UI/UX & CRO"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Brand to Demand: Visual Systems that Boost CVR",
+      "url": "https://boramedianetwork.com/blog/brand-to-demand",
+      "datePublished": "2025-10-04",
+      "articleSection": [
+        "Branding & Design",
+        "UI/UX & CRO"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Build a GA4 Dashboard that Your Exec Team Will Actually Use",
+      "url": "https://boramedianetwork.com/blog/ga4-boards",
+      "datePublished": "2025-09-30",
+      "articleSection": [
+        "Analytics & Measurement"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "What Does a Performance Marketing Agency Actually Do?",
+      "url": "https://boramedianetwork.com/blog/what-performance-agency-do",
+      "datePublished": "2025-09-18",
+      "articleSection": [
+        "Agency",
+        "Performance Marketing"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Top 12 Reporting Tools for Campaign Deep Dives",
+      "url": "https://boramedianetwork.com/blog/top-12-reporting-tools",
+      "datePublished": "2025-09-18",
+      "articleSection": [
+        "Analytics & Measurement"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "TikTok Search Ads vs. Google: The Data-Driven Budget Allocation Guide",
+      "url": "https://boramedianetwork.com/blog/tiktok-search-ads-vs-google",
+      "datePublished": "2025-09-18",
+      "articleSection": [
+        "TikTok Ads",
+        "Google Ads",
+        "Performance Marketing"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "The Truth About Ad Network Representatives: What They Won't Tell You",
+      "url": "https://boramedianetwork.com/blog/ad-network-reps",
+      "datePublished": "2025-09-18",
+      "articleSection": [
+        "Google Ads",
+        "Meta Ads",
+        "Performance Marketing"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Google Ads Bidding Strategy: The Complete 2025 Guide",
+      "url": "https://boramedianetwork.com/blog/google-ads-bidding-strategy-2025",
+      "datePublished": "2025-09-18",
+      "articleSection": [
+        "Google Ads",
+        "ROAS"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "ABM on LinkedIn: From ICP to Pipeline in 30 Days",
+      "url": "https://boramedianetwork.com/blog/linkedin-abm-playbook",
+      "datePublished": "2025-09-18",
+      "articleSection": [
+        "LinkedIn Ads & ABM",
+        "Lead Generation"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "40+ AI Tools for Digital Marketing in 2025 (Agency-Tested)",
+      "url": "https://boramedianetwork.com/blog/ai-tools-digital-marketing-2025",
+      "datePublished": "2025-09-18",
+      "articleSection": [
+        "AI & Automation"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "17 Meta Ads Strategies That Actually Work in 2025",
+      "url": "https://boramedianetwork.com/blog/meta-ads-strategies-2025",
+      "datePublished": "2025-09-18",
+      "articleSection": [
+        "Meta Ads"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Write CTAs That Convert: 9 Patterns that Win Always",
+      "url": "https://boramedianetwork.com/blog/write-cta-that-converts",
+      "datePublished": "2025-09-11",
+      "articleSection": [
+        "Ad Copy",
+        "UI/UX & CRO"
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Naming Conventions That Make Google Ads Scalable",
+      "url": "https://boramedianetwork.com/blog/google-ads-naming-conventions",
+      "datePublished": "2025-09-07",
+      "articleSection": [
+        "Google Ads"
+      ]
+    }
+  ]
+}
   </script>
 
   <script>
@@ -501,17 +1036,24 @@
     const catLinks = document.querySelectorAll('#catList a');
     const cards = document.querySelectorAll('.card');
     const search = document.getElementById('search');
+    const resultCount = document.getElementById('resultCount');
     let activeCat = 'all';
 
     function applyFilters(){
       const q = (search.value || '').toLowerCase().trim();
+      let visibleCount = 0;
       cards.forEach(card=>{
-        const cats = (card.dataset.category || '').toLowerCase();
-        const matchesCat = activeCat === 'all' || cats.includes(activeCat.toLowerCase());
+        const categories = (card.dataset.category || '').split('|');
+        const matchesCat = activeCat === 'all' || categories.includes(activeCat);
         const text = (card.textContent || '').toLowerCase();
         const matchesSearch = !q || text.includes(q);
-        card.style.display = (matchesCat && matchesSearch) ? '' : 'none';
+        const visible = matchesCat && matchesSearch;
+        card.hidden = !visible;
+        if(visible) visibleCount += 1;
       });
+      resultCount.textContent = visibleCount === cards.length
+        ? `Showing all ${cards.length} articles`
+        : `Showing ${visibleCount} of ${cards.length} articles`;
     }
     catLinks.forEach(a=>{
       a.addEventListener('click', e=>{
@@ -523,6 +1065,12 @@
       });
     });
     search.addEventListener('input', applyFilters);
+  </script>
+
+  <script data-footer-year>
+    document.querySelectorAll('.current-year').forEach((year) => {
+      year.textContent = new Date().getFullYear();
+    });
   </script>
 </body>
 </html>

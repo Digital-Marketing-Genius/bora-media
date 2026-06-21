@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Keyword Guardrails: Control Spend Without Killing Scale | Bora Media</title>
+<meta name="description" content="Learn how to use strategic guardrails in Google Ads to control wasted spend on Broad Match and Performance Max without sacrificing profitable scale." />
+<link rel="icon" href="/images/favicon.webp" sizes="32x32" />
+<link rel="canonical" href="https://www.boramedianetwork.com/blog/keyword-guardrails" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+
+<meta property="og:title" content="Keyword Guardrails: Control Spend Without Killing Scale" />
+<meta property="og:description" content="Learn how to use strategic guardrails in Google Ads to control wasted spend on Broad Match and Performance Max without sacrificing profitable scale." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.boramedianetwork.com/blog/keyword-guardrails" />
+<meta property="og:image" content="https://www.boramedianetwork.com/images/og/keyword-guardrails.jpg" />
+<meta property="og:site_name" content="Bora Media" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Keyword Guardrails: Control Spend Without Killing Scale" />
+<meta name="twitter:description" content="Learn how to use strategic guardrails in Google Ads to control wasted spend on Broad Match and Performance Max without sacrificing profitable scale." />
+<meta name="twitter:image" content="https://www.boramedianetwork.com/images/og/keyword-guardrails.jpg" />
+
+<meta name="theme-color" content="#071B3A" />
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+</script>
+<style>
+  :root{ --ink:#061A38; --muted:#F6F8FB; --card:#0E233F; --aqua:#19D0C9; --blue:#3B73FF; --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10); }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+  img{max-width:100%;height:auto;display:block}
+  .container{max-width:1200px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+  .brand img{width:34px;height:34px;border-radius:8px}
+  nav ul{display:flex;gap:26px;list-style:none}
+  nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+  nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+  nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+  .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+  .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+  .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+  .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+  .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+  .show{display:block}
+
+  .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:96px 0 64px;position:relative;overflow:hidden}
+  .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22;animation:float 16s infinite ease-in-out}
+  .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+  .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+  .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin-bottom:8px;font-weight:900}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;color:rgba(255,255,255,.85);font-weight:600}
+  .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25)}
+  .cta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+
+  .content-wrap{display:grid;grid-template-columns:260px 1fr 320px;gap:22px;padding:40px 0}
+  .toc{position:sticky;top:84px;background:var(--muted);border-radius:14px;padding:14px}
+  .toc h4{font-weight:900;margin-bottom:8px}
+  .toc a{display:block;text-decoration:none;color:var(--ink);padding:8px;border-radius:10px;font-weight:600}
+  .toc a:hover,.toc a.active{background:#fff;border:1px solid rgba(6,26,56,.12)}
+  article h1{font-size:clamp(26px,4.6vw,40px);line-height:1.2;margin:10px 0 6px;font-weight:900}
+  article h2{font-size:clamp(22px,3vw,28px);line-height:1.25;margin:26px 0 8px;font-weight:900}
+  article h3{font-size:clamp(18px,2.4vw,22px);margin:18px 0 6px;font-weight:900}
+  article p{margin:14px 0}
+  ul, ol{margin:10px 0 10px 22px}
+  .rail{position:sticky;top:84px}
+  .author{background:var(--muted);border-radius:14px;padding:16px}
+  .author .row{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+  .author img{width:42px;height:42px;border-radius:50%}
+  .promo{background:#071B3A;color:#fff;border-radius:14px;padding:16px;margin-top:14px}
+  .promo p{color:rgba(255,255,255,.88)}
+  .promo .btn{margin-top:10px}
+  .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+  .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+  .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+  .final .btn{display:inline-flex;margin-inline:auto}
+  footer{background:#F6F8FB}
+  .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+  .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+  .footer-logo img{width:28px;height:28px;border-radius:6px}
+  .f-links{list-style:none;margin-top:10px}
+  .f-links li{margin:8px 0}
+  .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+  .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+  @media (max-width:1100px){ .content-wrap{grid-template-columns:1fr;}.rail{position:static}.toc{position:static;order:-1;margin-bottom:10px}}
+  @media (max-width:860px){ nav{display:none}.hamburger{display:block}}
+  @media (max-width:560px){ .f-cols{grid-template-columns:1fr} .f-bottom{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header>
+  <div class="container header-inner">
+    <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/case-studies">Case Studies</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+  </div>
+  <div class="container mobile-panel" id="mobilePanel">
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/case-studies">Case Studies</a>
+    <a href="/resources">Resources</a>
+    <a href="/contact">Contact</a>
+    <a class="btn" href="/contact" style="margin-top:6px">Book a Call</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="blob" aria-hidden="true"></div>
+  <div class="blob2" aria-hidden="true"></div>
+  <div class="container">
+    <h1>Keyword Guardrails: Control Spend Without Killing Scale</h1>
+    <div class="meta">
+      <span class="badge">Google Ads</span>
+      <span class="badge">PPC Strategy</span>
+      <span>•</span><span>22 min read</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn" href="/contact">Work With Us</a>
+      <a class="btn" style="background:#fff;color:#061A38;border:1px solid rgba(255,255,255,.25)" href="/resources">Free Resources</a>
+    </div>
+  </div>
+</section>
+
+<main class="container content-wrap" id="content">
+  <aside class="toc" aria-label="Table of contents">
+    <h4>Table of Contents</h4>
+    <nav>
+      <a href="#the-problem" class="toc-link">The Problem: Google Wants Broad</a>
+      <a href="#what-are-guardrails" class="toc-link">What Guardrails Actually Means</a>
+      <a href="#the-framework" class="toc-link">The Guardrail Framework</a>
+      <a href="#search-term-audit" class="toc-link">The Search Term Audit</a>
+      <a href="#performance-max" class="toc-link">Performance Max Challenge</a>
+      <a href="#advanced-tactics" class="toc-link">Advanced Guardrail Tactics</a>
+      <a href="#common-mistakes" class="toc-link">Common Mistakes</a>
+      <a href="#measuring-success" class="toc-link">Measuring Success</a>
+      <a href="#implementation-plan" class="toc-link">90-Day Implementation Plan</a>
+      <a href="#client-results" class="toc-link">Real Client Results</a>
+      <a href="#the-future" class="toc-link">The Future: AI-First Ads</a>
+      <a href="#getting-started" class="toc-link">Getting Started Today</a>
+      <a href="#the-bottom-line" class="toc-link">The Bottom Line</a>
+    </nav>
+  </aside>
+
+  <article itemscope itemtype="https://schema.org/Article">
+    <meta itemprop="headline" content="Keyword Guardrails: Control Spend Without Killing Scale"/>
+    <meta itemprop="author" content="Oluwatayo Alofun"/>
+    <meta itemprop="datePublished" content="2025-10-04"/>
+    <meta itemprop="dateModified" content="2025-10-04"/>
+    <meta itemprop="image" content="https://www.boramedianetwork.com/images/og/keyword-guardrails.jpg"/>
+
+    <p>A client came to us after their Google Ads account spiraled out of control. They'd switched to Broad Match and Performance Max "to unlock scale," like every Google rep recommends. Budget doubled. Conversions... didn't.</p>
+    <p>When we audited the search terms, we found over <strong>$11,400 in wasted spend</strong> in just 30 days on searches for free software, job seekers, and irrelevant competitors.</p>
+    <p>This is the dilemma facing every Google Ads advertiser in 2025: Google's automation wants you to "trust the algorithm" and use broad targeting. But without proper guardrails, you'll scale into irrelevance and waste.</p>
+    <p>At Bora Media Network, we've managed millions in Google Ads spend. Here's what we've learned: The best-performing accounts don't choose between control and scale. They build guardrails that enable both. Here's how to do it.</p>
+
+    <h2 id="the-problem">The Problem: Google Wants Broad, You Want Profitable</h2>
+    <p>Google's narrative is to use Broad Match keywords, trust Smart Bidding, and let the algorithm find opportunities. They're not entirely wrong; this can find high-intent searches you'd never think to target manually.</p>
+    <p>But here's what Google doesn't tell you: <strong>The algorithm doesn't care about your margin.</strong> It optimizes for conversions, any conversions, even the ones that cost you money.</p>
+    <p>The result is wasted spend, diluted conversion data, and budget eaten by low-intent traffic. CPAs might look "okay" on paper but hide unprofitable customers.</p>
+    
+    <h2 id="what-are-guardrails">What "Guardrails" Actually Means</h2>
+    <p>Guardrails aren't restrictions. They're strategic boundaries that keep your campaigns on track while allowing room to scale. Think of them like highway guardrails: they don't stop you from driving fast, they keep you from careening off the road.</p>
+    <p>In Google Ads, guardrails include:</p>
+    <ul>
+        <li>Strategic negative keywords</li>
+        <li>Audience layering</li>
+        <li>Bid adjustments</li>
+        <li>Intent-based campaign structure</li>
+        <li>Constant search term monitoring</li>
+    </ul>
+    <p>Done right, guardrails actually improve algorithm performance by giving it cleaner data to learn from. The goal is the middle path: <strong>guided automation.</strong></p>
+    
+    <h2 id="the-framework">The Guardrail Framework: 5 Layers of Control</h2>
+    <p>Here's the system we use to control spend without sacrificing scale:</p>
+
+    <h3>Layer 1: Intent-Based Campaign Separation</h3>
+    <p>Don't mix high-intent and exploratory traffic in the same campaign. This confuses the algorithm and misallocates budget.</p>
+    <ul>
+        <li><strong>Campaign 1: High-Intent Core (60-70% Budget):</strong> Exact and Phrase Match keywords for your proven, bread-and-butter searches.</li>
+        <li><strong>Campaign 2: Broad Match Expansion (20-30% Budget):</strong> Carefully selected Broad Match keywords for discovery, with lower initial bids.</li>
+        <li><strong>Campaign 3: Brand Protection (5-10% Budget):</strong> Your brand terms and competitor conquesting.</li>
+        <li><strong>Campaign 4: Performance Max (10-20% Budget):</strong> Treated as supplementary, not primary, with its own budget.</li>
+    </ul>
+    <p>This structure gives each campaign a clear job and protects your core business while exploring new opportunities.</p>
+    
+    <h3>Layer 2: Strategic Negative Keywords</h3>
+    <p>The goal is to block wasteful traffic without being overly restrictive. We use a three-tier system.</p>
+    <ul>
+        <li><strong>Tier 1: Universal Negatives (Account-Level):</strong> Block terms that will never be relevant, like "free," "cheap," "jobs," "careers," "course," "DIY," etc.</li>
+        <li><strong>Tier 2: Campaign-Specific Negatives:</strong> Apply negatives based on the campaign's intent (e.g., blocking competitor names in Broad Match campaigns).</li>
+        <li><strong>Tier 3: Reactive Negatives (Added Monthly):</strong> Added from weekly search term reports to block newly discovered irrelevant queries.</li>
+    </ul>
+    
+    <h3>Layer 3: Audience Signals and Layering</h3>
+    <p>Guide the algorithm toward your best customers without excluding others by adding audiences in <strong>Observation mode</strong>.</p>
+    <ul>
+        <li><strong>In-Market Audiences:</strong> People actively researching solutions like yours. (Bid adjustment: +20-40%)</li>
+        <li><strong>Custom Intent Audiences:</strong> People who searched specific keywords or visited specific sites. (Bid adjustment: +30-50%)</li>
+        <li><strong>Remarketing & Customer Match:</strong> Your highest-intent audiences. (Bid adjustment: +50-100%)</li>
+        <li><strong>Similar Audiences:</strong> Google's lookalikes of your converters. (Bid adjustment: +10-20%)</li>
+    </ul>
+
+    <h3>Layer 4: Smart Bid Adjustments</h3>
+    <p>Even with Smart Bidding, you can guide the algorithm with modifiers based on performance data for devices, locations, time of day, and audiences. Nudge the algorithm toward your best-performing segments.</p>
+
+    <h3>Layer 5: Budget Pacing and Allocation</h3>
+    <p>Control how aggressively each campaign spends. Allocate the lion's share (60-70%) to your high-intent core campaign. Give exploratory campaigns room to find opportunities, but ensure your best performers never run out of budget.</p>
+
+    <h2 id="search-term-audit">The Search Term Audit: Your Early Warning System</h2>
+    <p>The most critical guardrail is monitoring what you're actually paying for. A weekly search term audit is non-negotiable.</p>
+    <ol>
+        <li><strong>Export Search Terms (Last 7 Days):</strong> Get the raw data from Google Ads.</li>
+        <li><strong>Categorize Terms:</strong> Mark as Relevant (Yes/No), Intent (High/Low), and Action (Keep/Add/Negative).</li>
+        <li><strong>Identify Patterns:</strong> Look for waste, opportunities, and algorithm drift.</li>
+        <li><strong>Take Action:</strong> Add negatives for waste, add new keywords for opportunities, and adjust bids.</li>
+    </ol>
+    <p>This simple 15-minute routine can have a massive impact, like the client who saved 28% on CPA by blocking "review" searches.</p>
+
+    <h2 id="performance-max">Performance Max: The Guardrail Challenge</h2>
+    <p>Performance Max (PMax) is a black box, but you can still add guardrails.</p>
+    <ul>
+        <li><strong>Separate PMax from Search:</strong> Use negative keywords to exclude your core and brand terms from PMax to prevent cannibalization.</li>
+        <li><strong>Use Strong Audience Signals:</strong> Guide PMax with your best remarketing and customer match lists.</li>
+        <li><strong>Use Account-Level Negatives:</strong> Apply your universal negative list to prevent obvious waste.</li>
+        <li><strong>Use Asset Groups for Segmentation:</strong> Separate by product category or audience for more control.</li>
+        <li><strong>Set Budget Caps:</strong> Don't give PMax unlimited budget. Start with 10-20% of your total and validate performance.</li>
+    </ul>
+    <p>Our stance: PMax can work, but it should be a supplement to, not a replacement for, controlled Search campaigns.</p>
+
+    <h2 id="advanced-tactics">Advanced Guardrail Tactics</h2>
+    <p>Once you've mastered the basics, explore these advanced strategies:</p>
+    <ul>
+        <li><strong>Dynamic Search Ads (DSA) with Tight Guardrails:</strong> Use specific page targeting and aggressive negatives to discover long-tail queries.</li>
+        <li><strong>Exact Match "Broad":</strong> Let Exact Match with Close Variants do the work, giving you more coverage than old exact match with more control than Broad.</li>
+        <li><strong>SKAGs 2.0:</strong> Group 3-5 closely related keywords per ad group for better relevance and Quality Scores.</li>
+        <li><strong>Competitor Conquest with Guardrails:</strong> Run competitor bidding in a separate campaign with lower bids and specific comparison landing pages.</li>
+    </ul>
+
+    <h2 id="common-mistakes">Common Guardrail Mistakes (and How to Fix Them)</h2>
+    <ol>
+        <li><strong>Adding Negatives Too Aggressively:</strong> Don't block terms with low data. Only add negatives for clearly irrelevant searches.</li>
+        <li><strong>Ignoring Phrase Match:</strong> It's the sweet spot between restrictive Exact Match and loose Broad Match. Use it for your core keywords.</li>
+        <li><strong>Ignoring Search Term Reports:</strong> Make weekly audits a routine. "Set it and forget it" is a recipe for waste.</li>
+        <li><strong>Trusting PMax Blindly:</strong> Treat it as a supplement, not your foundation. Always run controlled Search campaigns alongside it.</li>
+    </ol>
+
+    <h2 id="measuring-success">Measuring Success: What to Track</h2>
+    <p>How do you know if your guardrails are working? Track these metrics:</p>
+    <ul>
+        <li><strong>Primary Metrics:</strong> CPA, Conversion Volume, and Wasted Spend (goal: <5% of budget).</li>
+        <li><strong>Secondary Metrics:</strong> Quality Score, CTR, and Conversion Rate should all improve.</li>
+        <li><strong>Diagnostic Metrics:</strong> Manually score search term relevance and track negative keyword counts to ensure you're not over-restricting.</li>
+    </ul>
+
+    <h2 id="implementation-plan">The 90-Day Guardrail Implementation Plan</h2>
+    <p>Here's your roadmap to roll this out:</p>
+    <ul>
+        <li><strong>Month 1: Foundation and Structure.</strong> Audit your current state, restructure campaigns by intent, add universal negatives, and set up audiences.</li>
+        <li><strong>Month 2: Refinement and Testing.</strong> Expand with Phrase Match, implement bid adjustments, add reactive negatives, and test Broad Match carefully.</li>
+        <li><strong>Month 3: Optimization and Scale.</strong> Analyze performance, scale winners, tighten PMax controls, and document your new process.</li>
+    </ul>
+    <p>By Day 90, you should see a 15-30% improvement in CPA and better lead quality.</p>
+    
+    <h2 id="client-results">Real Client Results: Guardrails in Action</h2>
+    <p>Implementing this system for a B2B SaaS client dropped their CPA from <strong>$310 to $198 (a 36% decrease)</strong> and increased conversion volume by 22% in 90 days. For an e-commerce client, it improved ROAS from <strong>3.2x to 4.7x</strong>. The system works.</p>
+
+    <h2 id="the-future">The Future: Guardrails in an AI-First Google Ads</h2>
+    <p>As Google pushes harder toward full automation, guardrails become more important than ever. They are your primary tool for steering performance when traditional levers are removed. The advertisers who master guided automation will outperform those who blindly trust it or fight it.</p>
+
+    <h2 id="getting-started">Getting Started Today</h2>
+    <p>You don't need to implement everything at once. Start this week by running a search term report, identifying your top 10 wasted searches, and adding negatives to block them. This simple action can immediately improve your account's health.</p>
+
+    <h2 id="the-bottom-line">The Bottom Line</h2>
+    <p>The answer isn't to fight automation. It's to guide it with strategic guardrails. When you build the right boundaries, you get the best of both worlds: the <strong>control</strong> to spend profitably and the <strong>scale</strong> to grow your business. Your competitors are either over-controlling (limiting scale) or under-controlling (wasting money). You'll be doing neither. You'll be scaling profitably with guardrails.</p>
+
+    <hr/>
+    <p><strong>Need help building guardrails that drive profitable scale?</strong> At Bora Media Network, we've implemented this system across dozens of accounts, consistently reducing CPA by 20-40% while maintaining or growing conversion volume. <a href="/contact">Let's talk</a>.</p>
+  </article>
+
+  <aside class="rail" aria-label="Author and CTA">
+    <div class="author">
+      <div class="row">
+        <img src="/images/author.webp" alt="Oluwatayo Alofun">
+        <div>
+          <strong>Oluwatayo Alofun</strong><br>
+          <span style="opacity:.7">Paid Media Strategist</span>
+        </div>
+      </div>
+      <p>Join 5,000+ marketers leveling up with our free resources on measurement, CRO, and media.</p>
+    </div>
+    <div class="promo">
+      <h4>Want help implementing this?</h4>
+      <p>We’ll translate your brand standards into a tested conversion system and ship high‑performing templates fast.</p>
+      <button class="btn" onclick="location.href='/contact'">Book a Strategy Call</button>
+    </div>
+  </aside>
+</main>
+
+<section class="final">
+  <div class="container">
+    <h2>Ready to stop wasting ad spend?</h2>
+    <p>We’ll build a strategic guardrail system for your Google Ads account to ensure you scale profitably, not just expensively.</p>
+    <a class="btn" href="/contact">Schedule Your Free Consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="f-cols">
+      <div>
+        <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+        <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+        <div class="social" aria-label="Social media" style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+          <a href="https://www.youtube.com/@BoraMediaAgency" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/bora-media-network/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+          <a href="https://www.instagram.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="f-links">
+          <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+          <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+          <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+          <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul class="f-links">
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul class="f-links">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/resources">Resource Library</a></li>
+          <li><a href="/bootcamp">Digital Marketing Bootcamp</a></li>
+          <li><a href="/faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <p>© <span id="year" class="current-year"></span> Bora Media Network. All rights reserved.</p>
+      <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById('hamburger');
+  const panel = document.getElementById('mobilePanel');
+  burger?.addEventListener('click', () => {
+    const open = panel.classList.toggle('show');
+    burger.setAttribute('aria-expanded', String(open));
+    burger.querySelectorAll('.bar').forEach((bar, index) => {
+      if (open) {
+        if (index === 0) bar.style.transform = 'translateY(7px) rotate(45deg)';
+        if (index === 1) bar.style.opacity = '0';
+        if (index === 2) bar.style.transform = 'translateY(-7px) rotate(-45deg)';
+      } else {
+        bar.style.transform = '';
+        bar.style.opacity = '';
+      }
+    });
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+</script>
+<script data-footer-year>
+  document.querySelectorAll('.current-year').forEach((year) => {
+    year.textContent = new Date().getFullYear();
+  });
+</script>
+</body>
+</html>

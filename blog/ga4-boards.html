@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Build a GA4 Dashboard that Your Exec Team Will Actually Use | Bora Media</title>
+<meta name="description" content="How to build a GA4 executive dashboard that drives decisions: what to include, how to visualize, step-by-step setup, common mistakes, and real before/after examples." />
+
+<!-- Canonical & robots -->
+<link rel="canonical" href="https://www.boramedianetwork.com/blog/ga4-boards" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Build a GA4 Dashboard that Your Exec Team Will Actually Use" />
+<meta property="og:description" content="A practical framework for GA4 dashboards execs will actually open: relevance, clarity, action—plus real before/after examples." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.boramedianetwork.com/blog/ga4-boards" />
+<meta property="og:image" content="https://www.boramedianetwork.com/images/og/ga4-exec-dashboard.jpg" />
+<meta property="article:section" content="Analytics" />
+<meta property="article:tag" content="GA4, Analytics, Reporting, Executive Dashboards" />
+<meta property="og:site_name" content="Bora Media" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Build a GA4 Dashboard that Your Exec Team Will Actually Use" />
+<meta name="twitter:description" content="Step-by-step playbook for GA4 dashboards that answer executive questions and drive decisions." />
+<meta name="twitter:image" content="https://www.boramedianetwork.com/images/og/ga4-exec-dashboard.jpg" />
+
+<!-- Theme + preconnect -->
+<meta name="theme-color" content="#071B3A" />
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+<!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+</script>
+<!-- End Google Tag Manager -->
+
+<link rel="icon" href="/images/favicon.webp" sizes="32x32" />
+
+<style>
+  :root{
+    --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+    --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+    --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+  img{max-width:100%;height:auto;display:block}
+  .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+  /* Header (consistent) */
+  header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+  .brand img{width:34px;height:34px;border-radius:8px}
+  nav ul{display:flex;gap:26px;list-style:none}
+  nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+  nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+  nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+  .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+  .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+  .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+  .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+  .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+  .show{display:block}
+
+  /* Hero */
+  .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:84px 0 46px;position:relative;overflow:hidden}
+  .hero h1{font-size:clamp(28px,5vw,46px);line-height:1.15;margin:4px 0 10px;font-weight:900}
+  .meta{display:flex;gap:10px;flex-wrap:wrap;color:rgba(255,255,255,.9);font-weight:600}
+  .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25)}
+  .cta-row{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+
+  /* Layout */
+  .content-wrap{display:grid;grid-template-columns:1fr 320px;gap:24px;padding:40px 0}
+  article h2{font-size:clamp(22px,3.2vw,30px);line-height:1.25;margin:28px 0 10px;font-weight:900}
+  article h3{font-size:clamp(18px,2.3vw,22px);margin:22px 0 8px;font-weight:900}
+  article p{margin:14px 0}
+  article ul, article ol{margin:12px 0 12px 20px}
+  .note{background:rgba(25,208,201,.12);border:1px dashed rgba(25,208,201,.5);padding:12px;border-radius:12px;margin:16px 0}
+  .callout{background:#0C254B;color:#fff;border-radius:14px;padding:16px;margin:14px 0}
+  .callout p{color:rgba(255,255,255,.9)}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .figure{background:#fff;border:1px solid rgba(6,26,56,.12);border-radius:12px;overflow:hidden}
+  .figure figcaption{padding:10px 12px;font-weight:700;border-top:1px solid rgba(6,26,56,.08);background:var(--muted)}
+  .caption{font-size:14px;opacity:.8;margin-top:-6px}
+
+  /* Right rail */
+  .rail{position:sticky;top:84px;height:fit-content}
+  .author{background:var(--muted);border-radius:14px;padding:16px}
+  .author .row{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+  .author img{width:42px;height:42px;border-radius:50%}
+  .promo{background:#071B3A;color:#fff;border-radius:14px;padding:16px;margin-top:14px}
+  .promo .btn{margin-top:10px}
+
+  /* Final CTA & Footer */
+  .final{background:#071B3A;color:#fff;text-align:center;padding:70px 0;border-top:1px solid rgba(255,255,255,.08)}
+  .final p{max-width:760px;margin:0 auto 22px;color:rgba(255,255,255,.88)}
+  footer{background:#F6F8FB}
+  .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+  .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+  .footer-logo img{width:28px;height:28px;border-radius:6px}
+  .f-links{list-style:none;margin-top:10px}
+  .f-links li{margin:8px 0}
+  .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+  .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+
+  /* Responsive */
+  @media (max-width:1000px){
+    .content-wrap{grid-template-columns:1fr}
+    .rail{position:static}
+  }
+  @media (max-width:560px){
+    .grid-2{grid-template-columns:1fr}
+    .f-cols{grid-template-columns:1fr}
+    .f-bottom{flex-direction:column;text-align:center}
+  }
+</style>
+</head>
+<body>
+<!-- GTM (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Header -->
+<header>
+  <div class="container header-inner">
+    <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/case-studies">Case Studies</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>Build a GA4 Dashboard that Your Exec Team Will Actually Use</h1>
+    <div class="meta">
+      <span class="badge">Analytics</span>
+      <span class="badge">GA4</span>
+      <span>•</span><span>10 min read</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn" href="/contact">Work With Us</a>
+      <a class="btn" style="background:#fff;color:#061A38;border:1px solid rgba(6,26,56,.15)" href="/resources">Free Resources</a>
+    </div>
+  </div>
+</section>
+
+<!-- Body -->
+<main class="container content-wrap">
+  <article itemscope itemtype="https://schema.org/Article">
+    <meta itemprop="headline" content="Build a GA4 Dashboard that Your Exec Team Will Actually Use" />
+    <meta itemprop="author" content="Bora Media Network" />
+    <meta itemprop="datePublished" content="2025-09-30" />
+    <meta itemprop="dateModified" content="2025-09-30" />
+
+    <p>I've sat through dozens of executive meetings where marketers present GA4 dashboards filled with sessions, bounce rates, and pageviews—only to watch executives' eyes glaze over within minutes.</p>
+    <p>The problem isn't that executives don't care about data. It's that most GA4 dashboards are built for marketers, not decision-makers.</p>
+    <p>After building analytics systems for dozens of clients at Bora Media Network, I've learned that the difference between a dashboard that gets ignored and one that drives decisions comes down to three things: <strong>relevance, clarity, and action.</strong></p>
+    <p>Here's how to build a GA4 dashboard your exec team will actually use.</p>
+
+    <hr class="note" style="border:none;height:0;margin:20px 0" />
+
+    <h2>Why Most GA4 Dashboards Fail in the Boardroom</h2>
+    <p>Let's be honest: executives don't care about sessions.</p>
+    <p>They care about pipeline. Revenue. Customer acquisition cost. Whether marketing is pulling its weight.</p>
+    <p>But most GA4 dashboards look like this:</p>
+    <ul>
+      <li>Total sessions: 47,832</li>
+      <li>Bounce rate: 52.3%</li>
+      <li>Average session duration: 2:34</li>
+      <li>Pageviews: 143,291</li>
+    </ul>
+    <p>This data might be useful for optimizing campaigns, but it tells executives absolutely nothing about business performance.</p>
+    <p>The result? Your beautifully crafted dashboard gets a polite nod and never gets opened again.</p>
+
+    <h2>What Executives Actually Want to See</h2>
+    <p>Before you open GA4, ask yourself: <strong>What decisions do executives need to make?</strong></p>
+    <p>In my experience working with leadership teams, they typically want answers to these questions:</p>
+    <ol>
+      <li><strong>Is marketing generating revenue?</strong> (Not traffic—revenue)</li>
+      <li><strong>What's our customer acquisition cost?</strong> (And is it sustainable?)</li>
+      <li><strong>Which channels are working?</strong> (Where should we invest more?)</li>
+      <li><strong>Are we improving over time?</strong> (Month-over-month and year-over-year trends)</li>
+      <li><strong>What needs attention?</strong> (Red flags, opportunities, anomalies)</li>
+    </ol>
+    <p>Your GA4 dashboard should answer these questions at a glance. Nothing more, nothing less.</p>
+
+    <h2>The Framework: Build for Business Outcomes, Not Marketing Metrics</h2>
+
+    <h3>1. Start with Revenue Metrics</h3>
+    <p>Put revenue front and center. Not sessions. Not clicks. Revenue.</p>
+    <p><strong>Key metrics to include:</strong></p>
+    <ul>
+      <li>Total revenue (current period vs. previous period)</li>
+      <li>Revenue by channel (organic, paid, direct, referral, email)</li>
+      <li>Revenue per user</li>
+      <li>Conversion value trends over time</li>
+    </ul>
+    <p>If you're B2B and revenue tracking is complex, use lead value or pipeline contribution as a proxy. The point is to connect marketing activity to business outcomes.</p>
+    <p><em>Pro tip:</em> Set up enhanced ecommerce or custom events in GA4 to track conversions properly. If you're not tracking revenue in GA4, fix that before building any dashboard.</p>
+
+    <h3>2. Show Efficiency Metrics</h3>
+    <p>Executives care about ROI. Show them how efficiently marketing dollars are being spent.</p>
+    <ul>
+      <li>Cost per acquisition (CPA) by channel</li>
+      <li>Return on ad spend (ROAS)</li>
+      <li>Customer lifetime value to CAC ratio (if available)</li>
+      <li>Conversion rate by traffic source</li>
+    </ul>
+    <p>If your GA4 isn't connected to ad platforms, integrate Google Ads and other paid channels so cost data flows automatically.</p>
+
+    <h3>3. Display Channel Performance</h3>
+    <p>Executives need to know which channels are driving results so they can make investment decisions.</p>
+    <ul>
+      <li>Traffic by source/medium (with revenue attribution)</li>
+      <li>Conversion rate by channel</li>
+      <li>New vs. returning user split by channel</li>
+      <li>Top converting landing pages</li>
+    </ul>
+    <p>Use clear visualizations—bar charts work better than pie charts for comparing channels.</p>
+
+    <h3>4. Add Context with Trends</h3>
+    <p>Static numbers mean nothing without context. Show how performance is changing over time.</p>
+    <ul>
+      <li>Month-over-month revenue trends</li>
+      <li>Year-over-year comparisons</li>
+      <li>Weekly performance patterns (to spot seasonality)</li>
+      <li>Goal completion trends</li>
+    </ul>
+    <p>Use comparison periods in GA4 to automatically show percentage changes. Executives love seeing "+23% vs. last month" in green.</p>
+
+    <h3>5. Highlight What Needs Attention</h3>
+    <p>Don't make executives hunt for problems. Surface them automatically.</p>
+    <ul>
+      <li>Channels with declining performance</li>
+      <li>Pages with unusually high drop-off rates</li>
+      <li>Campaigns underperforming benchmarks</li>
+      <li>Anomalies in conversion rates</li>
+    </ul>
+    <p>Use annotations in GA4 to mark significant events (product launches, campaigns, site changes) so context is always visible.</p>
+
+    <h2>Design Principles for Executive Dashboards</h2>
+    <h3>Keep It Simple</h3>
+    <p>Your dashboard should fit on one screen. If executives have to scroll or click through multiple tabs, you've lost them.</p>
+    <p><strong>Rule of thumb:</strong> 6–8 key metrics maximum. If you need more detail, create a separate "deep dive" dashboard for your team.</p>
+
+    <h3>Use Visual Hierarchy</h3>
+    <p>The most important metrics should be the biggest and most prominent. Secondary metrics can be smaller.</p>
+    <p>I typically structure dashboards like this:</p>
+    <ul>
+      <li><strong>Top section:</strong> Revenue and primary business goal</li>
+      <li><strong>Middle section:</strong> Channel performance and efficiency metrics</li>
+      <li><strong>Bottom section:</strong> Trends and context</li>
+    </ul>
+
+    <h3>Make It Scannable</h3>
+    <p>Executives often review dashboards in under 60 seconds. Design for that reality.</p>
+    <ul>
+      <li>Use color intentionally (green for good, red for alerts, gray for neutral)</li>
+      <li>Add clear labels—no jargon or abbreviations</li>
+      <li>Include brief insight text boxes (1–2 sentences max)</li>
+      <li>Use comparison metrics (vs. last period) liberally</li>
+    </ul>
+
+    <h3>Design for Mobile</h3>
+    <p>Many executives check dashboards on their phones or tablets. Make sure your GA4 dashboard is mobile-responsive.</p>
+    <p>Test it on multiple devices before sharing.</p>
+
+    <h2>Step-by-Step: Building Your Executive Dashboard in GA4</h2>
+    <h3>Step 1: Create a New Report in GA4</h3>
+    <ol>
+      <li>Navigate to <strong>Explore</strong> in GA4</li>
+      <li>Select <strong>Blank</strong> to start from scratch</li>
+      <li>Name it something clear: "Executive Dashboard - [Month/Year]"</li>
+    </ol>
+
+    <h3>Step 2: Add Your Key Metrics</h3>
+    <ol>
+      <li>In the <strong>Metrics</strong> section, click the + icon</li>
+      <li>Search for "Purchase revenue" or "Conversions"</li>
+      <li>Add it to your visualization</li>
+    </ol>
+    <p>Repeat for your other key metrics: sessions by channel, conversion rate, etc.</p>
+
+    <h3>Step 3: Build Comparison Views</h3>
+    <ol>
+      <li>In <strong>Date range</strong>, select your primary period (e.g., last 30 days)</li>
+      <li>Click <strong>Compare</strong> and select "Previous period" or "Previous year"</li>
+      <li>GA4 will automatically calculate percentage changes</li>
+    </ol>
+
+    <h3>Step 4: Create Channel Breakdowns</h3>
+    <ol>
+      <li>Add "<strong>Session source/medium</strong>" as a dimension</li>
+      <li>Include metrics: Users, Conversions, Revenue</li>
+      <li>Sort by Revenue (descending)</li>
+    </ol>
+
+    <h3>Step 5: Add Trend Visualizations</h3>
+    <ol>
+      <li>Add a <strong>Line chart</strong> visualization</li>
+      <li>Set the dimension to "Date"</li>
+      <li>Add your key metric (revenue, conversions, etc.)</li>
+      <li>Set the date range to show 3–6 months for context</li>
+    </ol>
+
+    <h3>Step 6: Annotate Key Events</h3>
+    <ol>
+      <li>Go to <strong>Admin</strong> &gt; <strong>Data display</strong> &gt; <strong>Annotations</strong></li>
+      <li>Add notes for major campaigns, launches, site changes, etc.</li>
+      <li>These will appear on your charts automatically</li>
+    </ol>
+
+    <h3>Step 7: Share and Set Permissions</h3>
+    <ol>
+      <li>Click <strong>Share</strong> in the top right</li>
+      <li>Add executive email addresses (view-only)</li>
+      <li>Schedule automatic email delivery (weekly or monthly)</li>
+    </ol>
+
+    <h2>Common Mistakes to Avoid</h2>
+    <h3>Mistake #1: Too Many Metrics</h3>
+    <p>More data doesn't mean better insights. Executives are time-constrained. Stick to 6–8 key metrics.</p>
+
+    <h3>Mistake #2: Focusing on Vanity Metrics</h3>
+    <p>Sessions, pageviews, and time on site are not business outcomes. Connect everything to conversions or revenue.</p>
+
+    <h3>Mistake #3: No Context or Benchmarks</h3>
+    <p>A conversion rate of 3.2% means nothing without context. Always include comparisons.</p>
+
+    <h3>Mistake #4: Ignoring Mobile Experience</h3>
+    <p>If your dashboard looks great on desktop but terrible on mobile, it won't get used. Test on multiple devices.</p>
+
+    <h3>Mistake #5: Building It Once and Forgetting It</h3>
+    <p>Business priorities change. Review and update your dashboard quarterly to ensure it stays relevant.</p>
+
+    <h2>Advanced Tips for Power Users</h2>
+    <h3>Connect GA4 to Looker Studio</h3>
+    <p>For more flexibility and better visualizations, export your GA4 data to Looker Studio and combine with ad/CRM sources.</p>
+
+    <h3>Set Up Custom Events</h3>
+    <p>Track actions that matter to your business but aren't tracked by default (demo requests, form submits, downloads).</p>
+
+    <h3>Use Segments to Tell Better Stories</h3>
+    <p>Create segments for high-value users, traffic sources, or customer types to compare behavior.</p>
+
+    <h3>Automate Insights with Alerts</h3>
+    <p>Configure custom insights for revenue drops, conversion spikes, or channel declines so issues never go unnoticed.</p>
+
+    <h2>Real Example: Before and After</h2>
+    <p>Let me show you a real transformation (client details anonymized).</p>
+
+    <div class="grid-2">
+      <figure class="figure">
+        <!-- Replace src below with your uploaded "before" image URL -->
+        <img src="/images/blog/ga4-before.webp" alt="Before: Marketing-focused GA4 dashboard with sessions, bounce rate, and pageviews" />
+        <figcaption>Before: Marketing-Focused Dashboard</figcaption>
+      </figure>
+      <figure class="figure">
+        <!-- Replace src below with your uploaded "after" image URL -->
+        <img src="/images/blog/ga4-after.webp" alt="After: Executive-focused dashboard with revenue, CPA, channel revenue, and alerts" />
+        <figcaption>After: Business-Focused Dashboard</figcaption>
+      </figure>
+    </div>
+    <p class="caption"><strong>Executive feedback (before):</strong> “This is interesting, but what does it mean for the business?”<br/><strong>Executive feedback (after):</strong> “This is exactly what I need. Send this every Monday.”</p>
+    <p>The difference? The second dashboard answers business questions instead of presenting marketing data.</p>
+
+    <h2>What to Do After Building Your Dashboard</h2>
+    <h3>1. Walk Executives Through It</h3>
+    <p>Don't just email the link. Do a short walkthrough to align on definitions and decisions.</p>
+
+    <h3>2. Set a Regular Cadence</h3>
+    <p>Pick a review rhythm (weekly/biweekly/monthly). Consistency builds trust and usage.</p>
+
+    <h3>3. Add Brief Commentary</h3>
+    <p>Include 2–3 bullets on what changed and why so leaders don’t have to dig for meaning.</p>
+
+    <h3>4. Ask for Feedback</h3>
+    <p>After the first month, ask what’s missing or unnecessary—then iterate.</p>
+
+    <h3>5. Update Regularly</h3>
+    <p>As priorities shift, keep the dashboard aligned. A stale dashboard becomes shelfware.</p>
+
+    <h2>The Bottom Line</h2>
+    <p>Your GA4 dashboard should be a decision-making tool, not a data dump. Start with business questions, connect metrics to outcomes, keep it simple, add context, and make it scannable.</p>
+    <p>Do this, and you’ll build a dashboard that executives actually open, reference in meetings, and use to make smarter marketing investments—and you’ll move from data reporter to strategic advisor.</p>
+
+    <div class="callout">
+      <p><strong>Need help building a dashboard that drives decisions?</strong> At Bora Media Network, we build custom analytics systems that connect marketing activity to business outcomes. <a href="/contact" style="color:#8AF1EC;font-weight:800">Get in touch</a>.</p>
+    </div>
+  </article>
+
+  <aside class="rail" aria-label="Author and CTA">
+    <div class="author">
+      <div class="row">
+        <img src="/images/author.webp" alt="Author avatar">
+        <div>
+          <strong>Bora Media</strong><br>
+          <span style="opacity:.7">Performance Marketing</span>
+        </div>
+      </div>
+      <p>Join 5,000+ marketers leveling up with our free resources on measurement, CRO, and media.</p>
+    </div>
+    <div class="promo">
+      <h4>Want help implementing this?</h4>
+      <p>We’ll design your executive dashboard, instrument GA4, and connect ad/CRM data—so you can scale with confidence.</p>
+      <button class="btn" onclick="location.href='/contact'">Book a Strategy Call</button>
+    </div>
+  </aside>
+</main>
+
+<section class="final">
+  <div class="container">
+    <h2>Ready to make your analytics drive decisions?</h2>
+    <p>We’ll wire revenue tracking, standardize definitions, and build a GA4 executive dashboard your leaders will actually use.</p>
+    <a class="btn" href="/contact">Schedule Your Free Consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="f-cols">
+      <div>
+        <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+        <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media" style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+            <a href="https://www.youtube.com/@BoraMediaAgency" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.linkedin.com/company/bora-media-network/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+          </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="f-links">
+          <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+          <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+          <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+          <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul class="f-links">
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul class="f-links">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/resources">Resource Library</a></li>
+          <li><a href="/resources/marketing-glossary">Glossary</a></li>
+          <li><a href="/bootcamp">Digital Marketing Bootcamp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <p>© <span id="year" class="current-year"></span> Bora Media Network. All rights reserved.</p>
+      <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile menu (optional; add burger if you later include it in the DOM)
+  const burger = document.getElementById('hamburger');
+  const panel = document.getElementById('mobilePanel');
+  burger?.addEventListener('click', () => {
+    const open = panel.classList.toggle('show');
+    burger.setAttribute('aria-expanded', String(open));
+    burger.querySelectorAll('.bar').forEach((b,i)=>{
+      if(open){
+        if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+        if(i===1){b.style.opacity='0'}
+        if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+      }else{ b.style.transform=''; b.style.opacity=''; }
+    });
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+</script>
+
+  <script data-footer-year>
+    document.querySelectorAll('.current-year').forEach((year) => {
+      year.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
