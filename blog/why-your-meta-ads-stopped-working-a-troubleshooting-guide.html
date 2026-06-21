@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Why Your Meta Ads Stopped Working: A Troubleshooting Guide | Bora Media</title>
+  <meta name="description" content="So, your Meta ads aren’t bringing in the results you expected. It happens. You might be tempted to just start changing things randomly, but most of the…">
+  <link rel="canonical" href="https://boramedianetwork.com/blog/why-your-meta-ads-stopped-working-a-troubleshooting-guide/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Why Your Meta Ads Stopped Working: A Troubleshooting Guide">
+  <meta property="og:description" content="So, your Meta ads aren’t bringing in the results you expected. It happens. You might be tempted to just start changing things randomly, but most of the…">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://boramedianetwork.com/blog/why-your-meta-ads-stopped-working-a-troubleshooting-guide/">
+  <meta property="og:image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-1.jpg">
+  <meta property="article:section" content="Meta Ads">
+  <meta property="article:tag" content="Meta Ads">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why Your Meta Ads Stopped Working: A Troubleshooting Guide">
+  <meta name="twitter:description" content="So, your Meta ads aren’t bringing in the results you expected. It happens. You might be tempted to just start changing things randomly, but most of the…">
+  <meta name="twitter:image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-1.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp">
+
+  <!-- Helpful -->
+  <meta name="theme-color" content="#071B3A">
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+      --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+      --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{overflow-x:hidden}
+    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (consistent) */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;gap:26px;list-style:none}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+    nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+    .has-dd{position:relative}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.1)}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.15)}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:96px 0 64px;position:relative;overflow:hidden}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22;animation:float 16s infinite ease-in-out}
+    .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin-bottom:8px;font-weight:900}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;color:rgba(255,255,255,.85);font-weight:600}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25)}
+    .cta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+
+    /* Layout */
+    .content-wrap{display:grid;grid-template-columns:260px 1fr 320px;gap:22px;padding:40px 0}
+    .toc{position:sticky;top:84px;background:var(--muted);border-radius:14px;padding:14px}
+    .toc h4{font-weight:900;margin-bottom:8px}
+    .toc a{display:block;text-decoration:none;color:var(--ink);padding:8px;border-radius:10px;font-weight:600}
+    .toc a:hover,.toc a.active{background:#fff;border:1px solid rgba(6,26,56,.12)}
+    article h2{font-size:clamp(22px,3vw,28px);line-height:1.25;margin:26px 0 8px;font-weight:900}
+    article h3{font-size:clamp(18px,2.5vw,22px);margin:18px 0 6px;font-weight:900}
+    article p{margin:14px 0}
+    .k{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;background:rgba(6,26,56,.06);padding:2px 6px;border-radius:6px}
+    ul{margin:10px 0 10px 18px}
+    .examples{background:var(--muted);border-radius:14px;padding:14px}
+    .protip{background:rgba(25,208,201,.12);border:1px dashed rgba(25,208,201,.5);padding:12px;border-radius:12px;margin:16px 0}
+    table{width:100%;border-collapse:collapse;margin:16px 0;background:var(--muted);border-radius:12px;overflow:hidden}
+    table th,table td{padding:12px;text-align:left;border-bottom:1px solid rgba(6,26,56,.1)}
+    table th{background:rgba(6,26,56,.05);font-weight:800}
+    table tr:last-child td{border-bottom:0}
+
+    .share{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+    .share a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(6,26,56,.16);padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:800}
+
+    /* Comparison cards */
+    .comparison-grid{display:grid;gap:20px;margin:24px 0}
+    .comparison-card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+    .comparison-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(6,26,56,.1)}
+    .platform-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;font-weight:800;font-size:14px}
+    .tiktok-tag{background:rgba(0,242,234,.1);color:#00F2EA;border:1px solid rgba(0,242,234,.3)}
+    .google-tag{background:rgba(66,133,244,.1);color:#4285F4;border:1px solid rgba(66,133,244,.3)}
+    .winner-tag{background:var(--aqua);color:#fff;padding:4px 8px;border-radius:6px;font-size:12px;font-weight:800}
+
+    /* Data cards */
+    .data-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px;margin:20px 0}
+    .data-card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+    .data-title{font-weight:800;margin-bottom:8px;color:var(--ink)}
+    .data-value{font-size:24px;font-weight:900;margin-bottom:4px}
+    .data-label{color:rgba(6,26,56,.7);font-size:14px}
+
+    /* Right rail */
+    .rail{position:sticky;top:84px}
+    .author{background:var(--muted);border-radius:14px;padding:16px}
+    .author .row{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+    .author img{width:42px;height:42px;border-radius:50%}
+    .promo{background:#071B3A;color:#fff;border-radius:14px;padding:16px;margin-top:14px}
+    .promo p{color:rgba(255,255,255,.88)}
+    .promo .btn{margin-top:10px}
+
+    /* Related */
+    .related{background:var(--muted);padding:60px 0}
+    .title{text-align:center;font-weight:900;font-size:clamp(24px,4vw,34px);margin-bottom:8px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .card{background:var(--card);color:#fff;border-radius:16px;padding:16px;text-decoration:none;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+    .tag{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:#8AF1EC;font-weight:800}
+    .card h3{margin-top:8px;font-size:20px;line-height:1.3}
+    .read{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:800;border:1px solid rgba(255,255,255,.22);padding:8px 10px;border-radius:10px}
+
+    /* Final CTA + Footer */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .social{display:flex;gap:12px;margin-top:14px}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+    /* Responsive polish */
+    @media (max-width:1100px){
+      .content-wrap{grid-template-columns:1fr;}
+      .rail{position:static}
+      .toc{position:static;order:-1;margin-bottom:10px}
+    }
+    @media (max-width:860px){
+      nav{display:none}
+      .hamburger{display:block}
+      .grid{grid-template-columns:1fr 1fr}
+      .container{padding:0 22px}
+      .hero{padding:86px 0 54px}
+      .content-wrap{padding:30px 0}
+      .data-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      .f-cols{grid-template-columns:1fr}
+      .f-bottom{flex-direction:column;text-align:center}
+      .container{padding:0 22px}
+      .hero{padding:80px 0 46px}
+      .content-wrap{padding:26px 0}
+      .share a{white-space:nowrap}
+      .comparison-header{flex-direction:column;gap:12px;align-items:flex-start}
+    }
+  
+
+    /* Imported WordPress article content */
+    article figure{margin:20px 0}
+    article figure img{border-radius:12px}
+    article figcaption,.wp-element-caption{font-size:14px;color:rgba(6,26,56,.7);margin-top:8px;text-align:center}
+    article blockquote{border-left:4px solid var(--aqua);background:var(--muted);padding:14px 18px;margin:18px 0;border-radius:0 12px 12px 0}
+    article ol{margin:10px 0 10px 22px}
+    article li{margin:6px 0}
+    article a{color:#245ee8;text-underline-offset:3px}
+    article .wp-block-table{overflow-x:auto}
+    article .wp-block-separator{border:0;border-top:1px solid rgba(6,26,56,.14);margin:28px 0}
+    article .wp-block-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    article .wp-block-button__link{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:10px 16px;border-radius:12px;font-weight:800}
+</style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob2" aria-hidden="true"></div>
+    <div class="container">
+      <h1>Why Your Meta Ads Stopped Working: A Troubleshooting Guide</h1>
+      <div class="meta">
+        <span class="badge">Meta Ads</span><span>•</span><span>January 25, 2026</span><span>•</span><span>16 min read</span></div>
+      <div class="cta-row">
+        <a class="btn" href="/contact">Work With Us</a>
+        <a class="btn alt" href="/resources">Free Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <main class="container content-wrap" id="content">
+    <!-- TOC -->
+    <aside class="toc" aria-label="Table of contents">
+      <h4>Table of Contents</h4>
+      <nav>
+        <a href="#troubleshooting-meta-ads-tracking-issues" class="toc-link">Troubleshooting Meta Ads Tracking Issues</a><a href="#optimizing-your-meta-ads-for-quality-buyers" class="toc-link">Optimizing Your Meta Ads for Quality Buyers</a><a href="#sending-the-right-signals-to-meta-s-algorithm" class="toc-link">Sending the Right Signals to Meta’s Algorithm</a><a href="#streamlining-your-meta-ads-campaign-structure" class="toc-link">Streamlining Your Meta Ads Campaign Structure</a><a href="#navigating-the-meta-ads-learning-phase" class="toc-link">Navigating the Meta Ads Learning Phase</a><a href="#enhancing-meta-ads-relevance-and-engagement" class="toc-link">Enhancing Meta Ads Relevance and Engagement</a><a href="#wrapping-it-up" class="toc-link">Wrapping It Up</a><a href="#frequently-asked-questions" class="toc-link">Frequently Asked Questions</a></nav>
+      <div class="share" aria-label="Share">
+        <a href="https://twitter.com/intent/tweet?text=Why%20Your%20Meta%20Ads%20Stopped%20Working%3A%20A%20Troubleshooting%20Guide&amp;url=https%3A%2F%2Fboramedianetwork.com%2Fblog%2Fwhy-your-meta-ads-stopped-working-a-troubleshooting-guide%2F">Share on X</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fboramedianetwork.com%2Fblog%2Fwhy-your-meta-ads-stopped-working-a-troubleshooting-guide%2F">Share on LinkedIn</a>
+        <a href="mailto:?subject=Why%20Your%20Meta%20Ads%20Stopped%20Working%3A%20A%20Troubleshooting%20Guide&amp;body=Read%20this%20article%3A%20https%3A//boramedianetwork.com/blog/why-your-meta-ads-stopped-working-a-troubleshooting-guide/">Email</a>
+      </div>
+    </aside>
+
+    <!-- Article -->
+    <article itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="headline" content="Why Your Meta Ads Stopped Working: A Troubleshooting Guide"><meta itemprop="author" content="Bora Media"><meta itemprop="datePublished" content="2026-01-25"><meta itemprop="dateModified" content="2026-01-25"><meta itemprop="image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-1.jpg"><p>So, your Meta ads aren’t bringing in the results you expected. It happens. You might be tempted to just start changing things randomly, but most of the time, there’s a specific reason why your Meta ads stopped working. In my experience auditing many ad accounts, the issues usually boil down to a few common problems. This guide will walk you through the most frequent culprits and how to fix them, so you can get your Meta ads back on track.</p>
+
+
+
+<h3 class="wp-block-heading" id="Key_Takeaways">Key Takeaways</h3>
+
+
+
+<ul class="wp-block-list">
+<li>Check your tracking setup carefully. Things like duplicate events or events firing too early can make your Meta ads look successful when they’re not, leading to bad data.</li>
+
+
+
+<li>Make sure you’re attracting the right kind of buyers. Focusing only on cheap, one-time purchases might mean your Meta ads are working, but not for your long-term profit.</li>
+
+
+
+<li>Tell Meta’s algorithm what you really want. If you optimize for clicks, you’ll get clicks. Optimize for purchases or value to get actual sales from your Meta ads.</li>
+
+
+
+<li>Keep your campaign structure simple. Too many ad sets spread your budget too thin, preventing Meta ads from learning and performing well. Combine them.</li>
+
+
+
+<li>Be patient with the learning phase. Don’t make changes too quickly. Let your Meta ads run for at least a week to gather enough data before deciding if something needs fixing.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="troubleshooting-meta-ads-tracking-issues">Troubleshooting Meta Ads Tracking Issues</h2>
+
+
+
+<figure class="wp-block-image"><img fetchpriority="high" decoding="async" width="1366" height="768" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-1.jpg" alt="Meta Ads not working on a smartphone screen." class="wp-image-37" srcset="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-1.jpg 1366w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-1-300x169.jpg 300w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-1-1024x576.jpg 1024w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-1-768x432.jpg 768w" sizes="(max-width: 1366px) 100vw, 1366px"></figure>
+
+
+
+<p>So, you’ve launched your Meta ads, and the numbers in Ads Manager look pretty sweet. Maybe your cost per purchase is low, and your return on ad spend seems sky-high. But then you check your own analytics, like Shopify or your internal sales data, and… crickets. There’s a big gap. This disconnect is a major red flag, and it’s usually not about getting bad traffic; it’s about bad measurement.</p>
+
+
+
+<p><strong>Ghost conversions are a common culprit, making your reports look great but not translating into actual business results.</strong> These phantom sales can pop up for a few reasons, like events firing too early, admin traffic getting counted, or your Meta Pixel and Conversions API sending duplicate signals. It’s like seeing a bunch of people walk into a store on your security camera, but your cash register stays empty.</p>
+
+
+
+<h3 class="wp-block-heading" id="Understanding_Ghost_Conversions">Understanding Ghost Conversions</h3>
+
+
+
+<p>Ghost conversions are essentially fake data points that inflate your campaign’s apparent success. They can happen when:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Events Trigger Too Early:</strong> Your Pixel or CAPI fires a ‘Purchase’ event before the actual transaction is complete on your website.</li>
+
+
+
+<li><strong>Admin or Test Traffic:</strong> Internal team members or automated tests are accidentally triggering conversion events.</li>
+
+
+
+<li><strong>Duplicate Signals:</strong> Both your Meta Pixel and Conversions API are firing the same event, and Meta counts them as two separate conversions.</li>
+</ul>
+
+
+
+<p>It’s frustrating because it makes it really hard to tell what’s actually working. You might think a campaign is a winner when it’s just a tracking error. Fixing this is step one to getting accurate data.</p>
+
+
+
+<h3 class="wp-block-heading" id="Diagnosing_Pixel_and_Conversions_API_Duplicates">Diagnosing Pixel and Conversions API Duplicates</h3>
+
+
+
+<p>Duplicate events are a big reason for ghost conversions. You want both your Meta Pixel (the code on your website) and your Conversions API (server-to-server tracking) to send data to Meta, but you <em>don’t</em> want them to send the <em>same</em> data twice. This usually happens when both systems are set up to track the same action, like a purchase.</p>
+
+
+
+<p>Here’s a quick way to check:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Use Meta’s Event Setup Tool:</strong> This tool can help you see what events are firing on your website.</li>
+
+
+
+<li><strong>Check Your CAPI Integration:</strong> Make sure your CAPI is set up correctly and isn’t just mirroring what the Pixel is already doing.</li>
+
+
+
+<li><strong>Implement Event Deduplication:</strong> The best practice is to use a unique <code>event_id</code> for each conversion. This tells Meta that even if it receives the same event from multiple sources, it’s still just one conversion. This is a key step for accurate <a href="https://www.thebrandamp.com/blog/why-your-meta-campaigns-arent-converting-what-to-fix-first-fb/" target="_blank" rel="noreferrer noopener">Meta ads tracking</a>.</li>
+</ol>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Getting your tracking right is the foundation for everything else. Without clean data, you’re essentially flying blind, making decisions based on faulty information. It’s like trying to bake a cake with a broken scale – the results are unpredictable.</p>
+</blockquote>
+
+
+
+<h3 class="wp-block-heading" id="Validating_Event_Triggers_and_Timing">Validating Event Triggers and Timing</h3>
+
+
+
+<p>Beyond duplicates, you need to make sure your events are firing at the right moment. A ‘Purchase’ event should only fire <em>after</em> the customer has successfully completed their order and landed on the confirmation page. If it fires when they add something to their cart, or even worse, when they just view a product, you’re going to have inflated numbers.</p>
+
+
+
+<p>Here’s how to check:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Walk Through the Purchase Funnel:</strong> Go through the entire buying process yourself on your website. Use browser developer tools or a simple event tracker to see exactly when your Meta events are firing.</li>
+
+
+
+<li><strong>Confirm Page Load Triggers:</strong> Ensure your ‘Purchase’ event is tied to the confirmation page load, not an earlier step.</li>
+
+
+
+<li><strong>Review Server-Side Events:</strong> If you’re using the Conversions API, double-check that your server-side setup is also configured to fire events at the correct, final stage of the purchase.</li>
+</ul>
+
+
+
+<p>Getting these tracking issues sorted is super important. It means you’re not wasting money on campaigns that look good on paper but don’t actually bring in real sales. Once your tracking is clean, you can start looking at other areas, like optimizing your campaigns for the right buyers.</p>
+
+
+
+<h2 class="wp-block-heading" id="optimizing-your-meta-ads-for-quality-buyers">Optimizing Your Meta Ads for Quality Buyers</h2>
+
+
+
+<p>So, your ads are getting clicks, maybe even a decent number of purchases, but the profit isn’t quite there, or customers aren’t sticking around. This often means you’re attracting the wrong kind of buyer. It’s not just about getting <em>any</em> sale; it’s about getting the <em>right</em> sale. We need to train Meta’s algorithm to find people who are not just willing to buy, but who are likely to become repeat, high-value customers.</p>
+
+
+
+<h3 class="wp-block-heading" id="Identifying_One-Time_Buyer_Patterns">Identifying One-Time Buyer Patterns</h3>
+
+
+
+<p>Sometimes, your offers are just too good to be true for a first purchase, but they don’t make sense for repeat business. Think about those massive, one-off discount codes – “90% off your first order!” While this might look great on paper for purchase volume, it often brings in bargain hunters who will never buy again at full price. This can really eat into your profit margins.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Aggressive Discounts:</strong> Offers that are too steep for the first purchase can attract customers who are only looking for a deal, not a long-term relationship with your brand.</li>
+
+
+
+<li><strong>Misleading Creative:</strong> If your ads only show a super cheap, entry-level product, you might attract people who only want that one item and aren’t interested in your other, higher-priced goods.</li>
+
+
+
+<li><strong>Lack of Follow-Up:</strong> Not having a plan for what happens <em>after</em> the first purchase is a missed opportunity. No emails, no retargeting – you’re just letting that new customer walk away.</li>
+</ul>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>The key here is to look at your offers and ad creative. Are they speaking to the right person? Or are they just shouting “cheap!” to everyone?</p>
+</blockquote>
+
+
+
+<h3 class="wp-block-heading" id="Refining_Offers_for_High-Value_Customers">Refining Offers for High-Value Customers</h3>
+
+
+
+<p>To get better customers, you need to send a clearer signal to Meta. Instead of just optimizing for ‘Purchase,’ consider optimizing for ‘Value.’ This tells the algorithm to look for people who are likely to spend more. It’s about quality over quantity.</p>
+
+
+
+<p>Here’s how to start shifting your focus:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Value-Based Optimization (VBO):</strong> If your ad account allows, set up VBO. This tells Meta to prioritize finding customers who will spend more, directly impacting your profitability.</li>
+
+
+
+<li><strong>Tiered Offers:</strong> Instead of one huge discount, consider tiered offers. For example, “Spend $100, get 15% off” or “Spend $200, get 25% off.” This encourages larger order values.</li>
+
+
+
+<li><strong>Bundles and Packages:</strong> Create attractive bundles that offer a slight discount compared to buying items separately. This increases the average order value and introduces customers to more of your products.</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading" id="Improving_Post-Purchase_Engagement">Improving Post-Purchase Engagement</h3>
+
+
+
+<p>Getting the first sale is just the beginning. What you do afterward is what turns a one-time buyer into a loyal fan. This is where you build that relationship and encourage repeat business.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Email Nurturing:</strong> Set up automated email sequences for new customers. Welcome them, thank them for their purchase, and maybe offer a small incentive for their next order.</li>
+
+
+
+<li><strong>Retargeting Campaigns:</strong> Use Meta ads to retarget recent purchasers with complementary products or special offers just for them.</li>
+
+
+
+<li><strong>Loyalty Programs:</strong> If it makes sense for your business, introduce a loyalty program that rewards repeat customers. This gives them a reason to come back.</li>
+</ul>
+
+
+
+<p><strong>Focusing on customer retention can significantly boost profits, so don’t neglect the journey after the initial click.</strong> It’s about building a sustainable business, not just chasing quick sales.</p>
+
+
+
+<h2 class="wp-block-heading" id="sending-the-right-signals-to-meta-s-algorithm">Sending the Right Signals to Meta’s Algorithm</h2>
+
+
+
+<p>It’s easy to get caught up in the creative and targeting, but if you’re not telling Meta’s algorithm what you <em>really</em> want, your ads will just spin their wheels. The algorithm is smart, but it needs clear direction. Think of it like training a dog; you have to be consistent with your commands.</p>
+
+
+
+<h3 class="wp-block-heading" id="The_Dangers_of_Optimizing_for_Vanity_Metrics">The Dangers of Optimizing for Vanity Metrics</h3>
+
+
+
+<p>This is a big one. When you tell Meta to optimize for things like clicks, landing page views, or even just engagement, you’re essentially asking it to find people who are really good at clicking and liking things. That’s not the same as finding people who are ready to buy. These are what we call <em>vanity metrics</em>. They might look good on paper – lots of impressions, lots of clicks – but they don’t actually translate into sales. It’s like having a super popular party that no one actually wants to stay at.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Clicks:</strong> People who click might just be curious, not ready to purchase.</li>
+
+
+
+<li><strong>Landing Page Views:</strong> Similar to clicks, this indicates interest but not commitment.</li>
+
+
+
+<li><strong>Engagement (Likes, Comments, Shares):</strong> While good for brand awareness, these actions don’t directly lead to sales.</li>
+</ul>
+
+
+
+<p><strong>The real goal is to get the algorithm to find buyers, not just browsers.</strong></p>
+
+
+
+<h3 class="wp-block-heading" id="Aligning_Campaign_Objectives_with_Business_Goals">Aligning Campaign Objectives with Business Goals</h3>
+
+
+
+<p>This is where you connect the dots. Your campaign objective in Meta Ads Manager needs to directly match what you want your business to achieve. If your business goal is to sell more products directly from your website, then your campaign objective should be set to optimize for purchases. If you’re trying to get more people to add items to their cart, then optimize for that specific event. Meta’s algorithm is incredibly good at finding the right people, but only if you give it the correct signal to follow. Clean conversion data is key for this process, and recovering lost signals legally through first-party data is a smart move for any advertising strategy [797b].</p>
+
+
+
+<h3 class="wp-block-heading" id="Leveraging_Advantage_Audience_Effectively">Leveraging Advantage+ Audience Effectively</h3>
+
+
+
+<p>Once your tracking is solid and you’re optimizing for the right events (like Purchases or Value), tools like Advantage+ Audience can really shine. These systems work best when they have strong, reliable conversion signals. By giving Meta a clear signal and trusting its ability to find high-intent buyers, you allow it to look beyond your initial audience suggestions and discover customers you might not have even considered. This approach works best when your campaigns are not overly segmented, allowing the algorithm enough data to work with.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>When your Meta ads aren’t performing as expected, it’s often because the algorithm isn’t getting the right instructions. Focusing on purchase events and letting tools like Advantage+ Audience do their job, with clean data, is how you get better results.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="streamlining-your-meta-ads-campaign-structure">Streamlining Your Meta Ads Campaign Structure</h2>
+
+
+
+<p>Sometimes, your Meta ads might be underperforming not because of your creative or targeting, but because your campaign structure is a mess. Think of your budget like water pressure. If you spread it too thin across too many places, you get a weak trickle. But if you focus it, you get a strong flow that actually gets things done. Meta’s algorithm needs enough data in each ad set to figure out what’s working. When you have too many campaigns and ad sets, especially with a smaller budget, you dilute that power.</p>
+
+
+
+<h3 class="wp-block-heading" id="Consolidating_Ad_Sets_for_Budget_Efficiency">Consolidating Ad Sets for Budget Efficiency</h3>
+
+
+
+<p>Budget dilution is a quick way to kill your ad performance. If you have a $100 daily budget split across 10 ad sets, each one only gets $10. That’s not enough for Meta to gather the data it needs to get out of the <em>learning phase</em>. When ad sets are stuck in learning, results are all over the place, and your cost per acquisition goes up. The fix? Simplify. Try running just two main campaigns: one for your proven winners and another for testing new ideas. This keeps your spending focused where it matters and makes it easier to see what’s actually making money. This approach prevents wasted spend and gives each campaign the volume it needs to perform. You can find more details on best practices for <a target="_blank" rel="noreferrer noopener" href="https://www.flighted.co/blog/meta-ads-best-practices">Meta Ads campaign structure</a>.</p>
+
+
+
+<h3 class="wp-block-heading" id="Separating_Testing_Campaigns_from_Winner_Campaigns">Separating Testing Campaigns from Winner Campaigns</h3>
+
+
+
+<p>It’s tempting to throw everything at the wall, but a dedicated testing campaign is a smarter move. This keeps your experiments separate from your established, profitable campaigns. You don’t want a new, unproven creative to mess with the performance of your best-performing ads. By having a distinct testing campaign, you can try out new audiences, offers, or ad copy without risking your current success. Once a test proves itself, you can then move it over to your</p>
+
+
+
+<h2 class="wp-block-heading" id="navigating-the-meta-ads-learning-phase">Navigating the Meta Ads Learning Phase</h2>
+
+
+
+<p>So, you’ve launched a new Meta ad campaign, and maybe the results aren’t quite what you expected right out of the gate. It’s super tempting to jump in and start tweaking things, but hold on a second. That initial period is what Meta calls the ‘learning phase,’ and it’s actually pretty important.</p>
+
+
+
+<h3 class="wp-block-heading" id="Understanding_the_Algorithms_Test_Drive">Understanding the Algorithm’s Test Drive</h3>
+
+
+
+<p>Think of the learning phase as Meta’s algorithm getting to know your business. For about seven days, or until your ad set gets roughly 50 conversion events, the system is in full experiment mode. It’s trying out different ad placements, audiences, and delivery methods to figure out who’s most likely to take the action you want, like making a purchase. Because it’s testing so many variables, your costs (like cost per acquisition) and overall return on ad spend can look pretty wild and jump around a lot during this time. <strong>This volatility is normal and doesn’t necessarily mean something is broken.</strong></p>
+
+
+
+<h3 class="wp-block-heading" id="Avoiding_Premature_Optimization_Decisions">Avoiding Premature Optimization Decisions</h3>
+
+
+
+<p>This is where a lot of advertisers trip up. If you see your ad costs spike on day two or your ROAS dips on day three, your first instinct might be to pause the ad, slash the budget, or swap out the creative. But doing that resets the learning phase. The algorithm has to start all over again, and all the ‘testing’ it did before is basically wasted. You end up spending more money and taking longer to find what actually works.</p>
+
+
+
+<p>Here’s a quick rundown of what <em>not</em> to do during learning:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Don’t pause the ad set.</li>
+
+
+
+<li>Don’t make big budget changes (like cutting it in half).</li>
+
+
+
+<li>Don’t swap out your main creative or targeting.</li>
+</ul>
+
+
+
+<p>Making these kinds of changes too early just throws a wrench in the works and forces Meta to start its learning process from scratch.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>It’s easy to get caught up in the day-to-day numbers, but Meta’s ad delivery is designed to smooth out over time. Focusing on daily fluctuations is like trying to predict the weather by looking at a single cloud – you’re missing the bigger picture. The algorithm works in cycles, and what looks like a bad day might just be part of a larger, stabilizing trend.</p>
+</blockquote>
+
+
+
+<h3 class="wp-block-heading" id="Analyzing_Aggregate_Performance_Over_Time">Analyzing Aggregate Performance Over Time</h3>
+
+
+
+<p>Instead of obsessing over daily results, try looking at your performance over a full week. This gives you a much clearer picture. If your budget is on the smaller side (say, under $100 a day), you really need to let a full 7-day cycle play out before you even think about making changes. For larger budgets, you might get enough data sooner, but even then, only make adjustments if your cost per acquisition is consistently double what you’d expect, even after a decent amount of spend.</p>
+
+
+
+<p>Keep an eye on your performance in 7-day chunks. You can set up custom reports in Ads Manager to see this data side-by-side with your sales figures. This way, you’re less likely to kill a winning ad too early and you can spot trends that you’d completely miss if you were just checking numbers every 24 hours.</p>
+
+
+
+<h2 class="wp-block-heading" id="enhancing-meta-ads-relevance-and-engagement">Enhancing Meta Ads Relevance and Engagement</h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" width="1366" height="768" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-45f6fbf7-97ce-4acc-ad2f-c4deeb6b7141.jpg" alt="Meta Ads stopped working, troubleshooting guide image." class="wp-image-38" srcset="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-45f6fbf7-97ce-4acc-ad2f-c4deeb6b7141.jpg 1366w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-45f6fbf7-97ce-4acc-ad2f-c4deeb6b7141-300x169.jpg 300w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-45f6fbf7-97ce-4acc-ad2f-c4deeb6b7141-1024x576.jpg 1024w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-45f6fbf7-97ce-4acc-ad2f-c4deeb6b7141-768x432.jpg 768w" sizes="(max-width: 1366px) 100vw, 1366px"></figure>
+
+
+
+<h3 class="wp-block-heading" id="Improving_Ad_Quality_and_Creative_Messaging">Improving Ad Quality and Creative Messaging</h3>
+
+
+
+<p>Look, your ads might be getting seen, but are they actually <em>connecting</em> with people? If your engagement metrics are low or the comments you’re getting suggest the wrong crowd is clicking, that’s a big signal problem. This isn’t about spending more money or getting cheaper clicks; it’s about telling Meta’s system who you actually want to reach. Optimizing for simple clicks or likes trains the algorithm to find people who are good at clicking and liking, not necessarily people who are ready to buy.</p>
+
+
+
+<p><strong>The real fix is making sure your campaign’s main goal and the event you’re optimizing for actually match what you want for your business.</strong> If you’re selling products directly to consumers and want actual sales, you need to tell Meta to optimize for ‘Purchase’ events. If you’re trying to get people to add items to their cart, then optimize for ‘Add to Cart’. Meta’s algorithm is pretty smart at finding the right audience, but it needs clear instructions – the right signal – to do its job.</p>
+
+
+
+<h3 class="wp-block-heading" id="Optimizing_Post-Click_Landing_Page_Experience">Optimizing Post-Click Landing Page Experience</h3>
+
+
+
+<p>So, someone clicked your ad. Great! But what happens next? If they land on a page that’s slow to load, confusing, or doesn’t immediately show them what they were promised in the ad, they’re likely to bounce. This hurts your ad performance more than you might think. Meta looks at what happens <em>after</em> the click to understand if your ad is actually leading to good outcomes.</p>
+
+
+
+<p>Here’s a quick checklist for your landing pages:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Speed:</strong> Is your page loading quickly on both desktop and mobile? Slow pages lose customers.</li>
+
+
+
+<li><strong>Clarity:</strong> Is the main offer or product from the ad immediately obvious?</li>
+
+
+
+<li><strong>Call to Action:</strong> Is it clear what you want the visitor to do next (e.g., ‘Buy Now’, ‘Add to Cart’, ‘Learn More’)?</li>
+
+
+
+<li><strong>Mobile Friendliness:</strong> Does the page look and work well on a smartphone?</li>
+</ul>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>A clunky or slow landing page can completely undo the good work of a great ad. It’s like having a fantastic storefront but a messy, disorganized shop inside. People won’t stick around.</p>
+</blockquote>
+
+
+
+<h3 class="wp-block-heading" id="Leveraging_Audience_Insights_for_Better_Targeting">Leveraging Audience Insights for Better Targeting</h3>
+
+
+
+<p>These days, a lot of the detailed audience building we used to do manually is being handled by Meta’s automated tools, like Advantage+ Audience. These tools work best when you give them solid data to work with. Instead of trying to guess every single interest or demographic, focus on providing clean conversion data. This allows Meta to look beyond your initial guesses and find high-intent buyers you might not have even considered. Over-segmenting your campaigns with tons of narrow ad sets can actually make it harder for the algorithm to find the best people, especially if your budget is spread too thin. Trusting the algorithm, with good data, is often the way forward.</p>
+
+
+
+<h2 class="wp-block-heading" id="wrapping-it-up">Wrapping It Up</h2>
+
+
+
+<p>So, if your Meta ads have been feeling a bit sluggish lately, don’t just throw your hands up. Usually, there’s a pretty clear reason why things aren’t clicking like they used to. It’s not some magic trick or secret code; it’s more about getting the basics right. Start by double-checking that your tracking is actually counting what it should be, make sure your campaign setup isn’t spread too thin, and give the platform enough time and the right signals to do its thing. Fixing these common issues often gets campaigns back on track faster than you might think. It takes a little patience and a systematic approach, but you can definitely get your ads working for you again.</p>
+
+
+
+<h2 class="wp-block-heading" id="frequently-asked-questions">Frequently Asked Questions</h2>
+
+
+
+<h3 class="wp-block-heading" id="Why_are_my_Meta_ads_not_working">Why are my Meta ads not working?</h3>
+
+
+
+<p>Usually, it’s because of tracking mistakes, weak signals sent to Meta, or money spread too thin across different ad groups. Fixing how your ads track actions, making sure you’re telling Meta to find real buyers, and putting your money into fewer, stronger ad groups can help. Also, be patient and let Meta’s system learn.</p>
+
+
+
+<h3 class="wp-block-heading" id="How_can_I_fix_my_Meta_ads_quickly">How can I fix my Meta ads quickly?</h3>
+
+
+
+<p>Check how your ads are tracking events and make sure Meta isn’t counting fake sales. Tell Meta to focus on actual purchases or the total value of sales. Try to use fewer ad campaigns and ad groups. Give any changes you make about seven days to see if they work.</p>
+
+
+
+<h3 class="wp-block-heading" id="What_is_a_%E2%80%98ghost_conversion_in_Meta_ads">What is a ‘ghost conversion’ in Meta ads?</h3>
+
+
+
+<p>A ghost conversion is when Meta ads manager shows a sale that didn’t really happen. This can happen if people from your own team visit your website’s thank-you page, if an event is counted too early, or if your website counts the same sale twice (once from your website and once from Meta’s system).</p>
+
+
+
+<h3 class="wp-block-heading" id="Does_the_Conversions_API_help_Meta_ads_work_better">Does the Conversions API help Meta ads work better?</h3>
+
+
+
+<p>Yes, it does! The Conversions API sends information directly from your website’s server to Meta. This helps catch sales that the regular website tracking might miss. Using it correctly with a unique ID for each sale helps prevent counting sales twice and makes Meta’s system smarter.</p>
+
+
+
+<h3 class="wp-block-heading" id="How_long_does_Metas_%E2%80%98learning_phase_usually_last">How long does Meta’s ‘learning phase’ usually last?</h3>
+
+
+
+<p>Meta’s learning phase is like a test drive for its system. It typically takes about 7 days, or around 50 sales per ad group. It’s best not to make big changes during this time, as it can reset the learning process. Grouping your ad money so each ad group gets enough sales helps it finish learning faster.</p>
+
+
+
+<h3 class="wp-block-heading" id="Whats_the_best_way_to_set_up_Meta_ad_campaigns_for_online_stores">What’s the best way to set up Meta ad campaigns for online stores?</h3>
+
+
+
+<p>Keep your campaign structure simple. Use just a few campaigns and maybe one or two broad ad groups that are set to find purchases or valuable customers. Let Meta’s tools, like Advantage+ Audience, find people as it gets more data. Test new ad ideas one by one instead of splitting your budget across many ad groups.</p>
+</article>
+
+    <!-- Right rail -->
+    <aside class="rail" aria-label="Author and CTA">
+      <div class="author">
+        <div class="row">
+          <img src="/images/author.webp" alt="Author avatar">
+          <div>
+            <strong>Bora Media</strong><br>
+            <span style="opacity:.7">Digital Marketing Team</span>
+          </div>
+        </div>
+        <p>Practical insights and playbooks for measurable business growth.</p>
+      </div>
+      <div class="promo">
+        <h4>Need help putting this into practice?</h4>
+        <p>Let’s turn the strategy into a focused growth plan for your business.</p>
+        <button class="btn" onclick="location.href='/contact'">Book a Strategy Call</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Related -->
+  <section class="related" aria-labelledby="relTitle">
+    <div class="container">
+      <h2 class="title" id="relTitle">Other articles you may like</h2>
+      <div class="grid">
+        <a class="card" href="/blog/retargeting-strategies-that-re-engage-without-being-annoying"><span class="tag">Google Ads</span><h3>Retargeting Strategies That Re-Engage Without Being Annoying</h3><span class="read">Read article →</span></a><a class="card" href="/blog/google-ads-vs-meta-ads-which-platform-is-right-for-your-industry"><span class="tag">Google Ads</span><h3>Google Ads vs. Meta Ads: Which Platform is Right for Your Industry?</h3><span class="read">Read article →</span></a><a class="card" href="/blog/the-secret-to-writing-ad-copy-that-actually-converts"><span class="tag">Ad Copy</span><h3>The Secret to Writing Ad Copy That Actually Converts</h3><span class="read">Read article →</span></a></div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Ready to turn insight into measurable growth?</h2>
+      <p>We’ll help you apply the right strategy, measurement, and optimization plan to your business.</p>
+      <a class="btn" href="/contact">Schedule Your Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer (consistent) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media" style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+            <a href="https://www.youtube.com/@BoraMediaAgency" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.linkedin.com/company/bora-media-network/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul class="f-links">
+            <li><a href="/blog">ABM</a></li>
+            <li><a href="/blog">LinkedIn Ads</a></li>
+            <li><a href="/blog">Copywriting</a></li>
+            <li><a href="/blog">Google Ads</a></li>
+            <li><a href="/blog">Branding</a></li>
+            <li><a href="/blog">Meta Ads</a></li>
+            <li><a href="/blog">Google Analytics</a></li>
+            <li><a href="/blog">Google Tag Manager</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year" class="current-year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why Your Meta Ads Stopped Working: A Troubleshooting Guide",
+  "author": {
+    "@type": "Organization",
+    "name": "Bora Media"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bora Media",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.boramedianetwork.com/images/bora-logo.webp"
+    }
+  },
+  "image": "https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-1.jpg",
+  "datePublished": "2026-01-25",
+  "dateModified": "2026-01-25",
+  "articleSection": "Meta Ads",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://boramedianetwork.com/blog/why-your-meta-ads-stopped-working-a-troubleshooting-guide/"
+  }
+}</script>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{ b.style.transform=''; b.style.opacity=''; }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    // TOC highlight
+    const links = document.querySelectorAll('.toc-link');
+    const headings = [...links].map(a => document.querySelector(a.getAttribute('href')));
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        const id = e.target.getAttribute('id');
+        const link = document.querySelector(`.toc a[href="#${id}"]`);
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.remove('active'));
+          link?.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
+    headings.forEach(h=>h && obs.observe(h));
+  </script>
+
+  <script data-footer-year>
+    document.querySelectorAll('.current-year').forEach((year) => {
+      year.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

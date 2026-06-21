@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How to Calculate a Realistic ROAS Target for Your Business | Bora Media</title>
+  <meta name="description" content="Figuring out how much you should spend on ads to make a profit can feel like a guessing game. You want to spend enough to get results, but not so much…">
+  <link rel="canonical" href="https://boramedianetwork.com/blog/how-to-calculate-a-realistic-roas-target-for-your-business/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="How to Calculate a Realistic ROAS Target for Your Business">
+  <meta property="og:description" content="Figuring out how much you should spend on ads to make a profit can feel like a guessing game. You want to spend enough to get results, but not so much…">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://boramedianetwork.com/blog/how-to-calculate-a-realistic-roas-target-for-your-business/">
+  <meta property="og:image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/roas-vs-roi-metrics.webp">
+  <meta property="article:section" content="Lead Generation">
+  <meta property="article:tag" content="Lead Generation, ROAS">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Calculate a Realistic ROAS Target for Your Business">
+  <meta name="twitter:description" content="Figuring out how much you should spend on ads to make a profit can feel like a guessing game. You want to spend enough to get results, but not so much…">
+  <meta name="twitter:image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/roas-vs-roi-metrics.webp">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp">
+
+  <!-- Helpful -->
+  <meta name="theme-color" content="#071B3A">
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+      --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+      --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{overflow-x:hidden}
+    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (consistent) */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;gap:26px;list-style:none}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+    nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+    .has-dd{position:relative}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.1)}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.15)}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:96px 0 64px;position:relative;overflow:hidden}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22;animation:float 16s infinite ease-in-out}
+    .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin-bottom:8px;font-weight:900}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;color:rgba(255,255,255,.85);font-weight:600}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25)}
+    .cta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+
+    /* Layout */
+    .content-wrap{display:grid;grid-template-columns:260px 1fr 320px;gap:22px;padding:40px 0}
+    .toc{position:sticky;top:84px;background:var(--muted);border-radius:14px;padding:14px}
+    .toc h4{font-weight:900;margin-bottom:8px}
+    .toc a{display:block;text-decoration:none;color:var(--ink);padding:8px;border-radius:10px;font-weight:600}
+    .toc a:hover,.toc a.active{background:#fff;border:1px solid rgba(6,26,56,.12)}
+    article h2{font-size:clamp(22px,3vw,28px);line-height:1.25;margin:26px 0 8px;font-weight:900}
+    article h3{font-size:clamp(18px,2.5vw,22px);margin:18px 0 6px;font-weight:900}
+    article p{margin:14px 0}
+    .k{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;background:rgba(6,26,56,.06);padding:2px 6px;border-radius:6px}
+    ul{margin:10px 0 10px 18px}
+    .examples{background:var(--muted);border-radius:14px;padding:14px}
+    .protip{background:rgba(25,208,201,.12);border:1px dashed rgba(25,208,201,.5);padding:12px;border-radius:12px;margin:16px 0}
+    table{width:100%;border-collapse:collapse;margin:16px 0;background:var(--muted);border-radius:12px;overflow:hidden}
+    table th,table td{padding:12px;text-align:left;border-bottom:1px solid rgba(6,26,56,.1)}
+    table th{background:rgba(6,26,56,.05);font-weight:800}
+    table tr:last-child td{border-bottom:0}
+
+    .share{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+    .share a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(6,26,56,.16);padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:800}
+
+    /* Comparison cards */
+    .comparison-grid{display:grid;gap:20px;margin:24px 0}
+    .comparison-card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+    .comparison-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(6,26,56,.1)}
+    .platform-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;font-weight:800;font-size:14px}
+    .tiktok-tag{background:rgba(0,242,234,.1);color:#00F2EA;border:1px solid rgba(0,242,234,.3)}
+    .google-tag{background:rgba(66,133,244,.1);color:#4285F4;border:1px solid rgba(66,133,244,.3)}
+    .winner-tag{background:var(--aqua);color:#fff;padding:4px 8px;border-radius:6px;font-size:12px;font-weight:800}
+
+    /* Data cards */
+    .data-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px;margin:20px 0}
+    .data-card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+    .data-title{font-weight:800;margin-bottom:8px;color:var(--ink)}
+    .data-value{font-size:24px;font-weight:900;margin-bottom:4px}
+    .data-label{color:rgba(6,26,56,.7);font-size:14px}
+
+    /* Right rail */
+    .rail{position:sticky;top:84px}
+    .author{background:var(--muted);border-radius:14px;padding:16px}
+    .author .row{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+    .author img{width:42px;height:42px;border-radius:50%}
+    .promo{background:#071B3A;color:#fff;border-radius:14px;padding:16px;margin-top:14px}
+    .promo p{color:rgba(255,255,255,.88)}
+    .promo .btn{margin-top:10px}
+
+    /* Related */
+    .related{background:var(--muted);padding:60px 0}
+    .title{text-align:center;font-weight:900;font-size:clamp(24px,4vw,34px);margin-bottom:8px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .card{background:var(--card);color:#fff;border-radius:16px;padding:16px;text-decoration:none;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+    .tag{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:#8AF1EC;font-weight:800}
+    .card h3{margin-top:8px;font-size:20px;line-height:1.3}
+    .read{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:800;border:1px solid rgba(255,255,255,.22);padding:8px 10px;border-radius:10px}
+
+    /* Final CTA + Footer */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .social{display:flex;gap:12px;margin-top:14px}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+    /* Responsive polish */
+    @media (max-width:1100px){
+      .content-wrap{grid-template-columns:1fr;}
+      .rail{position:static}
+      .toc{position:static;order:-1;margin-bottom:10px}
+    }
+    @media (max-width:860px){
+      nav{display:none}
+      .hamburger{display:block}
+      .grid{grid-template-columns:1fr 1fr}
+      .container{padding:0 22px}
+      .hero{padding:86px 0 54px}
+      .content-wrap{padding:30px 0}
+      .data-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      .f-cols{grid-template-columns:1fr}
+      .f-bottom{flex-direction:column;text-align:center}
+      .container{padding:0 22px}
+      .hero{padding:80px 0 46px}
+      .content-wrap{padding:26px 0}
+      .share a{white-space:nowrap}
+      .comparison-header{flex-direction:column;gap:12px;align-items:flex-start}
+    }
+  
+
+    /* Imported WordPress article content */
+    article figure{margin:20px 0}
+    article figure img{border-radius:12px}
+    article figcaption,.wp-element-caption{font-size:14px;color:rgba(6,26,56,.7);margin-top:8px;text-align:center}
+    article blockquote{border-left:4px solid var(--aqua);background:var(--muted);padding:14px 18px;margin:18px 0;border-radius:0 12px 12px 0}
+    article ol{margin:10px 0 10px 22px}
+    article li{margin:6px 0}
+    article a{color:#245ee8;text-underline-offset:3px}
+    article .wp-block-table{overflow-x:auto}
+    article .wp-block-separator{border:0;border-top:1px solid rgba(6,26,56,.14);margin:28px 0}
+    article .wp-block-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    article .wp-block-button__link{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:10px 16px;border-radius:12px;font-weight:800}
+</style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob2" aria-hidden="true"></div>
+    <div class="container">
+      <h1>How to Calculate a Realistic ROAS Target for Your Business</h1>
+      <div class="meta">
+        <span class="badge">Lead Generation</span><span class="badge">ROAS</span><span>•</span><span>January 31, 2026</span><span>•</span><span>18 min read</span></div>
+      <div class="cta-row">
+        <a class="btn" href="/contact">Work With Us</a>
+        <a class="btn alt" href="/resources">Free Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <main class="container content-wrap" id="content">
+    <!-- TOC -->
+    <aside class="toc" aria-label="Table of contents">
+      <h4>Table of Contents</h4>
+      <nav>
+        <a href="#understanding-your-break-even-roas" class="toc-link">Understanding Your Break-Even ROAS</a><a href="#setting-profitable-roas-targets" class="toc-link">Setting Profitable ROAS Targets</a><a href="#differentiating-roas-targets-across-campaigns" class="toc-link">Differentiating ROAS Targets Across Campaigns</a><a href="#leveraging-data-for-realistic-roas-goals" class="toc-link">Leveraging Data for Realistic ROAS Goals</a><a href="#key-factors-influencing-your-roas" class="toc-link">Key Factors Influencing Your ROAS</a><a href="#beyond-the-roas-calculation-holistic-marketing-metrics" class="toc-link">Beyond the ROAS Calculation: Holistic Marketing Metrics</a><a href="#dynamic-roas-management-and-optimization" class="toc-link">Dynamic ROAS Management and Optimization</a><a href="#putting-it-all-together" class="toc-link">Putting It All Together</a><a href="#frequently-asked-questions" class="toc-link">Frequently Asked Questions</a></nav>
+      <div class="share" aria-label="Share">
+        <a href="https://twitter.com/intent/tweet?text=How%20to%20Calculate%20a%20Realistic%20ROAS%20Target%20for%20Your%20Business&amp;url=https%3A%2F%2Fboramedianetwork.com%2Fblog%2Fhow-to-calculate-a-realistic-roas-target-for-your-business%2F">Share on X</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fboramedianetwork.com%2Fblog%2Fhow-to-calculate-a-realistic-roas-target-for-your-business%2F">Share on LinkedIn</a>
+        <a href="mailto:?subject=How%20to%20Calculate%20a%20Realistic%20ROAS%20Target%20for%20Your%20Business&amp;body=Read%20this%20article%3A%20https%3A//boramedianetwork.com/blog/how-to-calculate-a-realistic-roas-target-for-your-business/">Email</a>
+      </div>
+    </aside>
+
+    <!-- Article -->
+    <article itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="headline" content="How to Calculate a Realistic ROAS Target for Your Business"><meta itemprop="author" content="Bora Media"><meta itemprop="datePublished" content="2026-01-31"><meta itemprop="dateModified" content="2026-01-31"><meta itemprop="image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/roas-vs-roi-metrics.webp"><p>Figuring out how much you should spend on ads to make a profit can feel like a guessing game. You want to spend enough to get results, but not so much that you’re losing money. That’s where Return on Ad Spend, or ROAS, comes in. It’s a way to measure how well your advertising is actually working. But setting a target ROAS isn’t just about picking a number out of thin air. It needs to be realistic for your business, considering all your costs and what you actually want to make. Let’s break down how to set a ROAS target that makes sense.</p>
+
+
+
+<h3 class="wp-block-heading" id="Key_Takeaways">Key Takeaways</h3>
+
+
+
+<ul class="wp-block-list">
+<li>Your break-even ROAS is the minimum you need to earn back to cover ad costs, calculated by dividing 1 by your profit margin. Anything above this is profit.</li>
+
+
+
+<li>To set a profitable ROAS target, work backward from your desired profit margin. Add your profit goal to your break-even point to find the new target.</li>
+
+
+
+<li>Don’t use a single ROAS target for all campaigns; tailor goals for prospecting (lower ROAS) versus retargeting (higher ROAS) efforts.</li>
+
+
+
+<li>Use real-time data to track performance and adjust ROAS goals. Connecting ROAS to overall business goals helps with strategic scaling.</li>
+
+
+
+<li>Consider factors like industry benchmarks, variable costs, and conversion rates when setting your ROAS targets. Also, remember ROAS is just one piece of the puzzle alongside metrics like CLV and ROI.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="understanding-your-break-even-roas">Understanding Your Break-Even ROAS</h2>
+
+
+
+<p>Before you can even think about setting a target for how much profit you want your ads to make, you need to know the absolute minimum they have to achieve just to cover their own costs. This is your break-even ROAS. Think of it as the financial waterline for your advertising; anything below it, and you’re losing money on every sale driven by ads. It’s not just a nice-to-have number; it’s the bedrock of any sustainable ad strategy.</p>
+
+
+
+<h3 class="wp-block-heading" id="Calculating_Your_Minimum_Viable_ROAS">Calculating Your Minimum Viable ROAS</h3>
+
+
+
+<p>Figuring out your break-even ROAS isn’t rocket science. The core of the calculation boils down to your <em>gross profit margin</em>. This is the percentage of revenue left after you’ve paid for the cost of goods sold (COGS) and any other direct costs associated with making or acquiring the product. The formula is pretty straightforward:</p>
+
+
+
+<p><code>Break-even ROAS = 1 / Gross Profit Margin</code></p>
+
+
+
+<p>Let’s say your gross profit margin is 50% (or 0.50). Your break-even ROAS would be <code>1 / 0.50 = 2</code>. This means for every dollar you spend on ads, you need to generate $2 in revenue just to cover your costs. If your margin is tighter, say 25% (0.25), then your break-even ROAS jumps to <code>1 / 0.25 = 4</code>. You can see how a smaller margin means you need a much higher return from your ads.</p>
+
+
+
+<h3 class="wp-block-heading" id="The_Impact_of_Profit_Margins_on_Break-Even">The Impact of Profit Margins on Break-Even</h3>
+
+
+
+<p>Your profit margin is the biggest driver of your break-even ROAS. Businesses with high margins, like software companies or digital course creators, have a much lower break-even point. For example, a digital course seller with a 90% profit margin has a break-even ROAS of just <code>1 / 0.90 = 1.11</code>. They only need to make $1.11 back for every $1 spent on ads to cover costs.</p>
+
+
+
+<p>On the flip side, businesses with lower margins, like many physical product e-commerce stores, face a higher hurdle. A retailer with a 30% profit margin needs a break-even ROAS of <code>1 / 0.30 = 3.33</code>. This means they need to generate over three times their ad spend just to get back to zero.</p>
+
+
+
+<p>Here’s a quick look at how margins affect things:</p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Gross Profit Margin</th><th>Break-Even ROAS</th></tr></thead><tbody><tr><td>80% (0.80)</td><td>1.25x</td></tr><tr><td>60% (0.60)</td><td>1.67x</td></tr><tr><td>40% (0.40)</td><td>2.50x</td></tr><tr><td>20% (0.20)</td><td>5.00x</td></tr></tbody></table></figure>
+
+
+
+<h3 class="wp-block-heading" id="Why_Break-Even_is_Just_the_Starting_Point">Why Break-Even is Just the Starting Point</h3>
+
+
+
+<p>Knowing your break-even ROAS is absolutely critical, but it’s not the end goal. It’s the starting line. If your ads are only hitting break-even, you’re not actually making any money. You’re just covering the costs of advertising and the products sold. <strong>To build a profitable business, your actual ROAS targets need to be significantly higher than your break-even point.</strong></p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Relying solely on break-even ROAS means you’re essentially running your business on a treadmill – you’re working hard, but you’re not actually moving forward towards growth or profit. It’s the bare minimum to avoid losing money, not a target for success.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="setting-profitable-roas-targets">Setting Profitable ROAS Targets</h2>
+
+
+
+<p>Figuring out your Return on Ad Spend (ROAS) target isn’t just about keeping the business afloat—it’s about setting yourself up to thrive. Let’s walk through what makes a ROAS target profitable for your unique business, why your break-even number is only a starting point, and how extra factors like overhead and desired profit margins need to be stitched into your ROAS math.</p>
+
+
+
+<h3 class="wp-block-heading" id="Working_Backwards_from_Your_Profit_Goals">Working Backwards from Your Profit Goals</h3>
+
+
+
+<p><strong>Start with your profit ambitions instead of letting ROAS targets set themselves.</strong> Here’s a straightforward way to do it:</p>
+
+
+
+<ol class="wp-block-list">
+<li>Figure out the total costs (product, shipping, payment fees, etc.) as a percentage of the selling price.</li>
+
+
+
+<li>Decide how much net profit you want to make on each sale—think in terms of an actual dollar or percent goal.</li>
+
+
+
+<li>Use those inputs to calculate the minimum ROAS that will hit your chosen profit mark, not just cover costs.</li>
+</ol>
+
+
+
+<p>Here’s a neat table to visualize common targets:</p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Desired Net Profit Margin</th><th>Effective Margin (after costs)</th><th>Required ROAS</th></tr></thead><tbody><tr><td>0% (break even)</td><td>60%</td><td>1.67</td></tr><tr><td>10%</td><td>70%</td><td>1.43</td></tr><tr><td>20%</td><td>80%</td><td>1.25</td></tr></tbody></table></figure>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>If your ROAS is barely above your break-even point, you’re just treading water—no money left for growth, salaries, or even those surprise repairs that always seem to pop up.</p>
+</blockquote>
+
+
+
+<h3 class="wp-block-heading" id="Incorporating_Fixed_Overhead_and_Net_Profit">Incorporating Fixed Overhead and Net Profit</h3>
+
+
+
+<p>When you set your ROAS target, don’t ignore big fixed costs like rent, salaries, or monthly software fees. You’ll want to include these in your calculations:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Gather all monthly fixed costs.</li>
+
+
+
+<li>Estimate how many sales you expect from your ads.</li>
+
+
+
+<li>Divide overhead by your estimated sales to get a “fixed cost per order.”</li>
+
+
+
+<li>Add this to your per-order cost before recalculating your needed ROAS.</li>
+</ul>
+
+
+
+<p>Failing to bake in these extra costs can make what looks like a profitable campaign into a loss-maker once the bills come around.</p>
+
+
+
+<h3 class="wp-block-heading" id="The_Role_of_Target_Profit_Margin_in_ROAS_Calculation">The Role of Target Profit Margin in ROAS Calculation</h3>
+
+
+
+<p>Your target profit margin acts like a filter for your <em>ROAS</em> number. The higher the margin you want, the tougher the ROAS needed to achieve it.</p>
+
+
+
+<p>Here’s the basic formula:</p>
+
+
+
+<p><code>Target ROAS = 1 / (Profit Margin % + Desired Net Profit %)</code></p>
+
+
+
+<ul class="wp-block-list">
+<li>Let’s say your profit margin is 40% and you want a 20% net profit after all costs:</li>
+
+
+
+<li>Plug into the formula: <code>1 / (0.40 + 0.20) = 1.67</code></li>
+
+
+
+<li>That means for every $1 you spend on ads, you need at least $1.67 in revenue to land at your profit goal.</li>
+</ul>
+
+
+
+<p>Check out how these concepts tie back to business stage and product margins in <a href="https://www.onrampfunds.com/resources/good-roas-ecommerce-2025" rel="noreferrer noopener" target="_blank">approaching ROAS goals for e-commerce</a>. Even a small margin shift can force a big jump in your required ROAS, so be ready to recalculate if your costs or goals swing unexpectedly.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Profit-driven ROAS is about aiming for growth and stability, not just breaking even. Don’t set your sights too low and miss out on real gains.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="differentiating-roas-targets-across-campaigns">Differentiating ROAS Targets Across Campaigns</h2>
+
+
+
+<p>Applying the exact same ROAS target to every single ad campaign you run is a pretty common mistake, and honestly, it can be a costly one. Think about it: not all campaigns are created equal, and they certainly don’t have the same job to do within your overall marketing strategy. Some are out there trying to grab the attention of folks who’ve never heard of you, while others are talking to people who already know and like what you offer. These different roles mean they should have different performance expectations.</p>
+
+
+
+<h3 class="wp-block-heading" id="Why_a_Single_ROAS_Target_is_a_Costly_Mistake">Why a Single ROAS Target is a Costly Mistake</h3>
+
+
+
+<p>Imagine you’re running a campaign focused on finding brand new customers. These people might be scrolling through social media, see your ad, and have no clue who you are. It’s going to take more effort, more ad spend, and probably more touchpoints before they even consider buying. If you expect this campaign to hit the same high ROAS as a campaign targeting people who’ve already added items to their cart, you’re setting yourself up for disappointment. You might end up cutting budget from a campaign that’s actually doing a great job of filling your sales funnel, just because it doesn’t meet an unrealistic ROAS goal.</p>
+
+
+
+<h3 class="wp-block-heading" id="Tailoring_Goals_for_Prospecting_Campaigns">Tailoring Goals for Prospecting Campaigns</h3>
+
+
+
+<p>Prospecting campaigns are all about casting a wide net to bring in new faces. Their main job is to build awareness and introduce your brand to people who aren’t familiar with it. Because you’re reaching a cold audience, it’s totally normal for these campaigns to operate at a lower ROAS. They might be just hovering around your break-even point, and that’s okay. The revenue they generate is still valuable because it’s bringing in new customers who can then be nurtured through other parts of your marketing funnel. The key here is that they are successfully bringing in new potential buyers.</p>
+
+
+
+<h3 class="wp-block-heading" id="Optimizing_Targets_for_Retargeting_Efforts">Optimizing Targets for Retargeting Efforts</h3>
+
+
+
+<p>Now, retargeting campaigns are a different story. You’re talking to people who have already shown interest – they’ve visited your website, maybe even added something to their cart. This audience is much warmer, and their path to purchase is usually shorter and more direct. Because of this, you should absolutely expect a higher ROAS from your retargeting efforts. These campaigns are designed to efficiently convert existing interest into sales. Setting a more aggressive ROAS target here makes sense, as they should be your profit drivers.</p>
+
+
+
+<p>Here’s a general idea of how targets might differ:</p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Campaign Type</th><th>Typical ROAS Target</th><th>Primary Goal</th></tr></thead><tbody><tr><td>Prospecting/Awareness</td><td>1.5x – 3x</td><td>New Customer Acquisition</td></tr><tr><td>Retargeting</td><td>4x – 8x+</td><td>Conversion of Warm Leads</td></tr><tr><td>Branded Search</td><td>5x – 10x+</td><td>Capture High Intent Buyers</td></tr></tbody></table></figure>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>The goal isn’t to make every campaign a profit center on its own. Instead, think of your campaigns as pieces of a puzzle. Prospecting campaigns might bring in the pieces, and retargeting campaigns put them together to form the final picture of a sale. Each has a role, and their ROAS targets should reflect that specific role.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="leveraging-data-for-realistic-roas-goals">Leveraging Data for Realistic ROAS Goals</h2>
+
+
+
+<p>Look, anyone can slap a number on a target ROAS and call it a day. But if you want to actually make money and grow your business, you need to base those targets on real numbers. That means digging into your data and understanding what’s actually happening.</p>
+
+
+
+<h3 class="wp-block-heading" id="The_Power_of_Real-Time_Performance_Measurement">The Power of Real-Time Performance Measurement</h3>
+
+
+
+<p>Trying to manage your ad spend without up-to-the-minute data is like driving blindfolded. Things change fast in the online ad world. What worked yesterday might not work today. You need to see how your campaigns are performing <em>right now</em> so you can make quick adjustments. This isn’t just about seeing if you’re making money; it’s about spotting opportunities before anyone else does.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Monitor key metrics hourly or daily:</strong> Don’t wait for weekly reports.</li>
+
+
+
+<li><strong>Track spend, conversions, and revenue across all platforms:</strong> Get a unified view.</li>
+
+
+
+<li><strong>Identify trends and anomalies immediately:</strong> Catch problems or successes early.</li>
+</ul>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Relying on outdated data or gut feelings for your ROAS targets is a recipe for wasted ad spend. Real-time insights allow for agile decision-making, ensuring your budget is always working as hard as possible.</p>
+</blockquote>
+
+
+
+<h3 class="wp-block-heading" id="Connecting_ROAS_to_Broader_Business_Objectives">Connecting ROAS to Broader Business Objectives</h3>
+
+
+
+<p>ROAS is important, sure, but it’s not the only thing that matters. You need to connect your advertising performance back to the bigger picture of your business. Are your ad campaigns actually helping you hit your overall revenue goals? Are they bringing in customers who will stick around and spend more over time? Thinking about this helps you set ROAS targets that truly support your business’s growth, not just a vanity metric.</p>
+
+
+
+<p>Here’s how to think about it:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Align ROAS with Revenue Goals:</strong> If your business needs to hit $1 million in revenue this quarter, what ROAS do your ad campaigns need to achieve to contribute to that? Calculate this based on your average order value and profit margins.</li>
+
+
+
+<li><strong>Consider Customer Lifetime Value (CLV):</strong> A campaign might have a lower immediate ROAS, but if it brings in customers who spend a lot over their lifetime, it’s still a win. Factor CLV into your target setting, especially for prospecting campaigns.</li>
+
+
+
+<li><strong>Map ROAS to Sales Funnel Stages:</strong> Different parts of your sales funnel have different ROAS expectations. Brand awareness campaigns will naturally have a lower ROAS than a direct retargeting campaign. Set targets that reflect these differences.</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading" id="Utilizing_Analytics_for_Strategic_Scaling">Utilizing Analytics for Strategic Scaling</h3>
+
+
+
+<p>Once you’ve got a handle on your real-time data and how it connects to your business goals, you can start using it to scale smarter. This means knowing when to push the gas and when to ease off. You can’t just double your ad spend and expect the same ROAS. Data helps you figure out the right pace and the right places to invest more.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Identify profitable channels and campaigns:</strong> Double down on what’s working.</li>
+
+
+
+<li><strong>Determine scaling thresholds:</strong> Find out how much you can increase spend before ROAS drops significantly.</li>
+
+
+
+<li><strong>Test and iterate:</strong> Use data to inform your decisions about new ad creatives, targeting, and landing pages.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="key-factors-influencing-your-roas">Key Factors Influencing Your ROAS</h2>
+
+
+
+<p>So, you’ve figured out your break-even point and set some profit goals. That’s awesome. But hitting those targets isn’t just about plugging numbers into a formula. A bunch of real-world stuff can mess with your ROAS, sometimes in ways you don’t expect. It’s like trying to bake a cake – you need the right ingredients, the right oven temperature, and a bit of luck.</p>
+
+
+
+<h3 class="wp-block-heading" id="Industry_Benchmarks_and_Competitive_Landscape">Industry Benchmarks and Competitive Landscape</h3>
+
+
+
+<p>Every industry has its own vibe when it comes to advertising. What’s considered a killer ROAS in one sector might be just okay in another. For instance, search ads on Google might aim for an 8:1 ratio, while display ads might be happy with 2:1. It’s tough to find exact numbers because businesses guard their ad spend and revenue like state secrets. But knowing the general range for your field gives you a ballpark. Are you crushing it, or are you lagging behind the pack? This context is super important for setting realistic goals. If everyone else is getting a 3:1 ROAS and you’re aiming for 10:1 right out of the gate, you might be setting yourself up for disappointment.</p>
+
+
+
+<h3 class="wp-block-heading" id="Variable_Costs_and_Their_Impact_on_ROAS">Variable Costs and Their Impact on ROAS</h3>
+
+
+
+<p>This is where things get a bit more granular. Your ROAS calculation relies on knowing your revenue and your ad costs, sure. But what about everything else? Think about the cost of the product itself, shipping, transaction fees, and any other costs tied directly to making that sale happen. If your profit margin is thin, even a decent-looking ROAS can actually mean you’re losing money. For example, if you spend $1 on ads and make $3 back (a 3:1 ROAS), but your profit margin is only 20%, you’re actually losing money. That $3 revenue only nets you $0.60 profit. After your $1 ad spend, you’re down $0.40. <strong>Always consider your true profit margins, not just top-line revenue, when evaluating ROAS.</strong></p>
+
+
+
+<h3 class="wp-block-heading" id="The_Influence_of_Conversion_Rates_and_Landing_Pages">The Influence of Conversion Rates and Landing Pages</h3>
+
+
+
+<p>Your ads might be amazing, pulling people in with promises of awesome products. But if the page they land on is a mess, all that ad spend goes down the drain. A slow-loading page, confusing navigation, or a weak call-to-action can kill your conversion rate. And a low conversion rate means you’re spending more money to get fewer sales, which tanks your ROAS. It’s a direct relationship: better conversion rates mean more revenue from the same ad spend, directly boosting your <a href="https://www.triplewhale.com/blog/how-to-calculate-roas" rel="noreferrer noopener" target="_blank">return on ad spend</a>.</p>
+
+
+
+<p>Here’s a quick rundown of what impacts those conversions:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Page Speed:</strong> If your page takes too long to load, people bounce.</li>
+
+
+
+<li><strong>Mobile Friendliness:</strong> Most traffic is mobile these days. If it doesn’t work on a phone, you’re losing customers.</li>
+
+
+
+<li><strong>Clear Call-to-Action (CTA):</strong> Tell people exactly what you want them to do next.</li>
+
+
+
+<li><strong>Message Match:</strong> Does the landing page deliver on the promise made in the ad? If not, users get confused and leave.</li>
+</ul>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Continuously testing and improving your landing pages isn’t just a good idea; it’s a necessity for maximizing your ad dollars. Small tweaks can lead to big jumps in conversion rates and, consequently, your ROAS.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="beyond-the-roas-calculation-holistic-marketing-metrics">Beyond the ROAS Calculation: Holistic Marketing Metrics</h2>
+
+
+
+<p>Look, ROAS is a handy number, no doubt about it. It tells you how much money you’re making back for every dollar you put into ads. But honestly, it’s not the whole story. Focusing only on ROAS can sometimes make you miss the bigger picture, and that’s where other metrics come into play.</p>
+
+
+
+<h3 class="wp-block-heading" id="Understanding_ROAS_in_Relation_to_ROI">Understanding ROAS in Relation to ROI</h3>
+
+
+
+<p>Think of ROAS as a snapshot of your ad campaign’s immediate performance. It’s great for seeing if your ads are bringing in revenue. However, Return on Investment (ROI) looks at the entire business picture. It takes into account all your costs – not just ad spend, but also product costs, salaries, rent, and everything else that keeps the lights on. A campaign might have a killer ROAS, but if your overall business costs are super high, that campaign might not actually be making you much profit in the grand scheme of things. It’s like seeing a great sales number but forgetting to subtract the cost of making the product.</p>
+
+
+
+<p>ROAS = Revenue from Ads / Ad Spend</p>
+
+
+
+<p>ROI = (Net Profit – Marketing Investment) / Marketing Investment</p>
+
+
+
+<h3 class="wp-block-heading" id="The_Importance_of_Customer_Lifetime_Value_CLV">The Importance of Customer Lifetime Value (CLV)</h3>
+
+
+
+<p>Another metric that really matters is Customer Lifetime Value, or CLV. This is basically the total amount of money a customer is expected to spend with your business over their entire relationship with you. Why is this important? Well, some customers might not spend a ton on their first purchase (which might give you a lower ROAS on that initial ad spend), but they could become loyal, repeat buyers who spend a lot over years. If you’re only looking at the first sale’s ROAS, you might miss out on acquiring these super valuable customers. It’s about building relationships, not just one-off sales. We need to think about the long game here.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Acquisition Cost vs. Lifetime Value:</strong> Compare how much it costs to get a new customer versus how much they’re likely to spend over time.</li>
+
+
+
+<li><strong>Repeat Purchase Rate:</strong> Track how often customers come back to buy again.</li>
+
+
+
+<li><strong>Customer Retention:</strong> Focus on keeping existing customers happy and engaged.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="Avoiding_Pitfalls_of_Last-Click_Attribution">Avoiding Pitfalls of Last-Click Attribution</h3>
+
+
+
+<p>This is a big one. Many ad platforms use a ‘last-click’ attribution model. This means they give all the credit for a sale to the very last ad or link the customer clicked before buying. This sounds simple, but it’s often misleading. What about all the other ads or content that introduced the customer to your brand earlier in their journey? Those upper-funnel efforts, like social media ads or blog posts, might not get any credit, even though they were super important in getting the customer to that final click. This can lead you to cut budgets for valuable awareness campaigns because their ‘last-click ROAS’ looks low, which is a mistake. You need to look at the whole path a customer takes to understand what’s really working. A more advanced approach might look at <a href="https://malenejorgensen.com/roas-is-dead-smarter-metrics-for-smarter-marketers/" rel="noreferrer noopener" target="_blank">multiple touchpoints</a> in the customer journey.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Relying solely on last-click attribution can skew your understanding of campaign effectiveness, potentially leading to underinvestment in brand-building activities that are crucial for long-term growth.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="dynamic-roas-management-and-optimization">Dynamic ROAS Management and Optimization</h2>
+
+
+
+<h3 class="wp-block-heading" id="Adapting_ROAS_Targets_to_Campaign_Scaling">Adapting ROAS Targets to Campaign Scaling</h3>
+
+
+
+<p>As your ad spend grows, your ROAS target probably needs to change. What worked when you were spending $100 a day might not be realistic when you’re spending $1,000 or $10,000 a day. Scaling often means reaching a wider audience, which can include people less likely to buy immediately. This can naturally bring your ROAS down a bit. <strong>It’s about finding that sweet spot where you’re spending more but still making a good profit.</strong> You can’t just keep the same target ROAS if you’re doubling or tripling your budget. You need to adjust expectations and targets to match the new scale.</p>
+
+
+
+<h3 class="wp-block-heading" id="Identifying_Issues_with_Declining_ROAS">Identifying Issues with Declining ROAS</h3>
+
+
+
+<p>Sometimes, your ROAS just starts to drop. This isn’t always because you’re doing something wrong. It could be that the market has changed, competitors are getting more aggressive, or your ads are just getting a bit stale. It’s important to watch for these drops. A sudden dip could mean a problem with your ads, your targeting, or even your website. Catching these issues early is key. You don’t want a small problem to turn into a big revenue leak.</p>
+
+
+
+<p>Here’s a quick look at what might cause ROAS to fall:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Increased Ad Costs:</strong> Bids go up, especially in competitive markets.</li>
+
+
+
+<li><strong>Audience Saturation:</strong> You’ve shown your ads to the same people too many times.</li>
+
+
+
+<li><strong>Campaign Fatigue:</strong> Ads and creatives become less effective over time.</li>
+
+
+
+<li><strong>External Factors:</strong> Economic changes or new competitor activity.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="Leveraging_Data_to_Double_Down_on_Success">Leveraging Data to Double Down on Success</h3>
+
+
+
+<p>When you see a campaign or ad set performing really well, don’t be shy about putting more money into it. This is where data really helps. If you know that a certain ad creative, targeting group, or even a specific keyword is bringing in a great ROAS, it makes sense to shift more budget there. It’s like finding a gold mine – you want to dig there more. This isn’t just about spending more; it’s about spending <em>smarter</em>. By focusing on what’s already working, you can maximize your returns and grow your business more efficiently.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>The goal isn’t just to hit a number; it’s to make sure your advertising spend is actually contributing to your business’s bottom line in a meaningful way. This means constantly checking in, making adjustments, and being willing to change your targets as your business evolves.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="putting-it-all-together">Putting It All Together</h2>
+
+
+
+<p>So, figuring out your ROAS target isn’t just about picking a number out of thin air. It really comes down to knowing your own business inside and out – your costs, your profit margins, and what you actually want to make. Remember, breaking even is just the start. You need to aim higher to actually grow. Don’t forget that different ads do different jobs, so they’ll need different targets too. Keep an eye on your numbers, adjust as needed, and you’ll be well on your way to making your ad spend work smarter, not just harder.</p>
+
+
+
+<h2 class="wp-block-heading" id="frequently-asked-questions">Frequently Asked Questions</h2>
+
+
+
+<h3 class="wp-block-heading" id="What_exactly_is_ROAS_and_why_does_it_matter">What exactly is ROAS and why does it matter?</h3>
+
+
+
+<p>ROAS stands for Return on Ad Spend. It’s like a report card for your ads, telling you how much money you make for every dollar you spend on advertising. If you spend $1 on ads and make $5 back, your ROAS is 5:1. It’s super important because it shows if your ads are actually making you money or just costing you cash.</p>
+
+
+
+<h3 class="wp-block-heading" id="How_do_I_figure_out_my_%E2%80%98break-even_ROAS">How do I figure out my ‘break-even’ ROAS?</h3>
+
+
+
+<p>Your break-even ROAS is the lowest ROAS you can get without losing money. Think of it as the point where your ad money is exactly balanced by the money you make from sales. You can find this by looking at your profit margin. If your profit margin is 25%, your break-even ROAS is 4:1. That means you need to make $4 for every $1 you spend on ads just to cover your costs.</p>
+
+
+
+<h3 class="wp-block-heading" id="Is_a_3_1_ROAS_always_good">Is a 3:1 ROAS always good?</h3>
+
+
+
+<p>Not necessarily! A 3:1 ROAS might sound okay, but if your business has really low profit margins (like only 20%), you could actually be losing money. You always need to compare your ROAS to how much profit you actually keep after all your costs. A 3:1 ROAS might be great for a business with high profit margins, but bad for one with low margins.</p>
+
+
+
+<h3 class="wp-block-heading" id="Should_all_my_ad_campaigns_have_the_same_ROAS_goal">Should all my ad campaigns have the same ROAS goal?</h3>
+
+
+
+<p>Definitely not! It’s a big mistake to use the same target for every ad campaign. Campaigns have different jobs. For example, ads trying to find new customers (prospecting) might have a lower ROAS goal because they’re introducing people to your brand. Ads trying to get people who already visited your site to buy (retargeting) should have a much higher ROAS goal because those people are already interested.</p>
+
+
+
+<h3 class="wp-block-heading" id="How_can_I_set_a_realistic_ROAS_target_for_my_business">How can I set a realistic ROAS target for my business?</h3>
+
+
+
+<p>To set a realistic target, you need to look at your own business numbers. First, know your break-even ROAS. Then, decide how much profit you want to make. Add that profit goal on top of your break-even number. For example, if your break-even is 2:1 and you want to make a 3:1 ROAS for profit, your target becomes 5:1. It’s about working backward from what you want to earn.</p>
+
+
+
+<h3 class="wp-block-heading" id="What_if_my_ROAS_starts_dropping_What_should_I_do">What if my ROAS starts dropping? What should I do?</h3>
+
+
+
+<p>A dropping ROAS is a warning sign. It could mean your ads are getting old (ad fatigue), your competitors are doing something new, or maybe your landing page isn’t working well anymore. You need to look at your data closely to find the problem. It might be your ads, who you’re showing them to, or even your website. Fixing the issue can help bring your ROAS back up.</p>
+</article>
+
+    <!-- Right rail -->
+    <aside class="rail" aria-label="Author and CTA">
+      <div class="author">
+        <div class="row">
+          <img src="/images/author.webp" alt="Author avatar">
+          <div>
+            <strong>Bora Media</strong><br>
+            <span style="opacity:.7">Digital Marketing Team</span>
+          </div>
+        </div>
+        <p>Practical insights and playbooks for measurable business growth.</p>
+      </div>
+      <div class="promo">
+        <h4>Need help putting this into practice?</h4>
+        <p>Let’s turn the strategy into a focused growth plan for your business.</p>
+        <button class="btn" onclick="location.href='/contact'">Book a Strategy Call</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Related -->
+  <section class="related" aria-labelledby="relTitle">
+    <div class="container">
+      <h2 class="title" id="relTitle">Other articles you may like</h2>
+      <div class="grid">
+        <a class="card" href="/blog/local-service-ads-the-hidden-gem-for-home-service-businesses"><span class="tag">Google Ads</span><h3>Local Service Ads: The Hidden Gem for Home Service Businesses</h3><span class="read">Read article →</span></a><a class="card" href="/blog/the-future-of-privacy-how-to-track-ad-performance-without-cookies"><span class="tag">Google Analytics</span><h3>The Future of Privacy: How to Track Ad Performance Without Cookies</h3><span class="read">Read article →</span></a><a class="card" href="/blog/scaling-from-1k-to-10k-monthly-ad-spend-a-step-by-step-guide"><span class="tag">ROAS</span><h3>Scaling from $1k to $10k Monthly Ad Spend: A Step-by-Step Guide</h3><span class="read">Read article →</span></a></div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Ready to turn insight into measurable growth?</h2>
+      <p>We’ll help you apply the right strategy, measurement, and optimization plan to your business.</p>
+      <a class="btn" href="/contact">Schedule Your Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer (consistent) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media" style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+            <a href="https://www.youtube.com/@BoraMediaAgency" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.linkedin.com/company/bora-media-network/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul class="f-links">
+            <li><a href="/blog">ABM</a></li>
+            <li><a href="/blog">LinkedIn Ads</a></li>
+            <li><a href="/blog">Copywriting</a></li>
+            <li><a href="/blog">Google Ads</a></li>
+            <li><a href="/blog">Branding</a></li>
+            <li><a href="/blog">Meta Ads</a></li>
+            <li><a href="/blog">Google Analytics</a></li>
+            <li><a href="/blog">Google Tag Manager</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year" class="current-year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Calculate a Realistic ROAS Target for Your Business",
+  "author": {
+    "@type": "Organization",
+    "name": "Bora Media"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bora Media",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.boramedianetwork.com/images/bora-logo.webp"
+    }
+  },
+  "image": "https://boramedianetwork.com/blog/wp-content/uploads/2026/01/roas-vs-roi-metrics.webp",
+  "datePublished": "2026-01-31",
+  "dateModified": "2026-01-31",
+  "articleSection": "Lead Generation, ROAS",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://boramedianetwork.com/blog/how-to-calculate-a-realistic-roas-target-for-your-business/"
+  }
+}</script>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{ b.style.transform=''; b.style.opacity=''; }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    // TOC highlight
+    const links = document.querySelectorAll('.toc-link');
+    const headings = [...links].map(a => document.querySelector(a.getAttribute('href')));
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        const id = e.target.getAttribute('id');
+        const link = document.querySelector(`.toc a[href="#${id}"]`);
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.remove('active'));
+          link?.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
+    headings.forEach(h=>h && obs.observe(h));
+  </script>
+
+  <script data-footer-year>
+    document.querySelectorAll('.current-year').forEach((year) => {
+      year.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Preserve existing links while moving the native blog from /post to /blog.
+RewriteRule ^post/([^/]+)/?$ /blog/$1 [R=301,L,NE]
+
+# Serve the native HTML blog landing page at /blog.
+RewriteRule ^blog/?$ blog.html [L]
+
+# Serve blog/article-name.html at the clean /blog/article-name URL.
+RewriteCond %{DOCUMENT_ROOT}/blog/$1.html -f
+RewriteRule ^blog/([^/]+)/?$ blog/$1.html [L]

@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pop-ups: Are They Driving Leads or Driving Users Away? | Bora Media</title>
+  <meta name="description" content="You see them everywhere, right? Those little windows that pop up when you’re just trying to read an article or shop online. Pop-ups have been around for…">
+  <link rel="canonical" href="https://boramedianetwork.com/blog/pop-ups-are-they-driving-leads-or-driving-users-away/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pop-ups: Are They Driving Leads or Driving Users Away?">
+  <meta property="og:description" content="You see them everywhere, right? Those little windows that pop up when you’re just trying to read an article or shop online. Pop-ups have been around for…">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://boramedianetwork.com/blog/pop-ups-are-they-driving-leads-or-driving-users-away/">
+  <meta property="og:image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-4.jpg">
+  <meta property="article:section" content="UI/UX &amp; CRO">
+  <meta property="article:tag" content="UI/UX &amp; CRO, Website &amp; Landing Pages">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pop-ups: Are They Driving Leads or Driving Users Away?">
+  <meta name="twitter:description" content="You see them everywhere, right? Those little windows that pop up when you’re just trying to read an article or shop online. Pop-ups have been around for…">
+  <meta name="twitter:image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-4.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp">
+
+  <!-- Helpful -->
+  <meta name="theme-color" content="#071B3A">
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+      --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+      --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{overflow-x:hidden}
+    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (consistent) */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;gap:26px;list-style:none}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+    nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+    .has-dd{position:relative}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.1)}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.15)}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:96px 0 64px;position:relative;overflow:hidden}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22;animation:float 16s infinite ease-in-out}
+    .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin-bottom:8px;font-weight:900}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;color:rgba(255,255,255,.85);font-weight:600}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25)}
+    .cta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+
+    /* Layout */
+    .content-wrap{display:grid;grid-template-columns:260px 1fr 320px;gap:22px;padding:40px 0}
+    .toc{position:sticky;top:84px;background:var(--muted);border-radius:14px;padding:14px}
+    .toc h4{font-weight:900;margin-bottom:8px}
+    .toc a{display:block;text-decoration:none;color:var(--ink);padding:8px;border-radius:10px;font-weight:600}
+    .toc a:hover,.toc a.active{background:#fff;border:1px solid rgba(6,26,56,.12)}
+    article h2{font-size:clamp(22px,3vw,28px);line-height:1.25;margin:26px 0 8px;font-weight:900}
+    article h3{font-size:clamp(18px,2.5vw,22px);margin:18px 0 6px;font-weight:900}
+    article p{margin:14px 0}
+    .k{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;background:rgba(6,26,56,.06);padding:2px 6px;border-radius:6px}
+    ul{margin:10px 0 10px 18px}
+    .examples{background:var(--muted);border-radius:14px;padding:14px}
+    .protip{background:rgba(25,208,201,.12);border:1px dashed rgba(25,208,201,.5);padding:12px;border-radius:12px;margin:16px 0}
+    table{width:100%;border-collapse:collapse;margin:16px 0;background:var(--muted);border-radius:12px;overflow:hidden}
+    table th,table td{padding:12px;text-align:left;border-bottom:1px solid rgba(6,26,56,.1)}
+    table th{background:rgba(6,26,56,.05);font-weight:800}
+    table tr:last-child td{border-bottom:0}
+
+    .share{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+    .share a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(6,26,56,.16);padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:800}
+
+    /* Comparison cards */
+    .comparison-grid{display:grid;gap:20px;margin:24px 0}
+    .comparison-card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+    .comparison-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(6,26,56,.1)}
+    .platform-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;font-weight:800;font-size:14px}
+    .tiktok-tag{background:rgba(0,242,234,.1);color:#00F2EA;border:1px solid rgba(0,242,234,.3)}
+    .google-tag{background:rgba(66,133,244,.1);color:#4285F4;border:1px solid rgba(66,133,244,.3)}
+    .winner-tag{background:var(--aqua);color:#fff;padding:4px 8px;border-radius:6px;font-size:12px;font-weight:800}
+
+    /* Data cards */
+    .data-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px;margin:20px 0}
+    .data-card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+    .data-title{font-weight:800;margin-bottom:8px;color:var(--ink)}
+    .data-value{font-size:24px;font-weight:900;margin-bottom:4px}
+    .data-label{color:rgba(6,26,56,.7);font-size:14px}
+
+    /* Right rail */
+    .rail{position:sticky;top:84px}
+    .author{background:var(--muted);border-radius:14px;padding:16px}
+    .author .row{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+    .author img{width:42px;height:42px;border-radius:50%}
+    .promo{background:#071B3A;color:#fff;border-radius:14px;padding:16px;margin-top:14px}
+    .promo p{color:rgba(255,255,255,.88)}
+    .promo .btn{margin-top:10px}
+
+    /* Related */
+    .related{background:var(--muted);padding:60px 0}
+    .title{text-align:center;font-weight:900;font-size:clamp(24px,4vw,34px);margin-bottom:8px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .card{background:var(--card);color:#fff;border-radius:16px;padding:16px;text-decoration:none;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+    .tag{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:#8AF1EC;font-weight:800}
+    .card h3{margin-top:8px;font-size:20px;line-height:1.3}
+    .read{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:800;border:1px solid rgba(255,255,255,.22);padding:8px 10px;border-radius:10px}
+
+    /* Final CTA + Footer */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .social{display:flex;gap:12px;margin-top:14px}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+    /* Responsive polish */
+    @media (max-width:1100px){
+      .content-wrap{grid-template-columns:1fr;}
+      .rail{position:static}
+      .toc{position:static;order:-1;margin-bottom:10px}
+    }
+    @media (max-width:860px){
+      nav{display:none}
+      .hamburger{display:block}
+      .grid{grid-template-columns:1fr 1fr}
+      .container{padding:0 22px}
+      .hero{padding:86px 0 54px}
+      .content-wrap{padding:30px 0}
+      .data-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      .f-cols{grid-template-columns:1fr}
+      .f-bottom{flex-direction:column;text-align:center}
+      .container{padding:0 22px}
+      .hero{padding:80px 0 46px}
+      .content-wrap{padding:26px 0}
+      .share a{white-space:nowrap}
+      .comparison-header{flex-direction:column;gap:12px;align-items:flex-start}
+    }
+  
+
+    /* Imported WordPress article content */
+    article figure{margin:20px 0}
+    article figure img{border-radius:12px}
+    article figcaption,.wp-element-caption{font-size:14px;color:rgba(6,26,56,.7);margin-top:8px;text-align:center}
+    article blockquote{border-left:4px solid var(--aqua);background:var(--muted);padding:14px 18px;margin:18px 0;border-radius:0 12px 12px 0}
+    article ol{margin:10px 0 10px 22px}
+    article li{margin:6px 0}
+    article a{color:#245ee8;text-underline-offset:3px}
+    article .wp-block-table{overflow-x:auto}
+    article .wp-block-separator{border:0;border-top:1px solid rgba(6,26,56,.14);margin:28px 0}
+    article .wp-block-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    article .wp-block-button__link{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:10px 16px;border-radius:12px;font-weight:800}
+</style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob2" aria-hidden="true"></div>
+    <div class="container">
+      <h1>Pop-ups: Are They Driving Leads or Driving Users Away?</h1>
+      <div class="meta">
+        <span class="badge">UI/UX &amp; CRO</span><span class="badge">Website &amp; Landing Pages</span><span>•</span><span>January 25, 2026</span><span>•</span><span>16 min read</span></div>
+      <div class="cta-row">
+        <a class="btn" href="/contact">Work With Us</a>
+        <a class="btn alt" href="/resources">Free Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <main class="container content-wrap" id="content">
+    <!-- TOC -->
+    <aside class="toc" aria-label="Table of contents">
+      <h4>Table of Contents</h4>
+      <nav>
+        <a href="#the-evolving-role-of-pop-ups-in-digital-marketing" class="toc-link">The Evolving Role of Pop-ups in Digital Marketing</a><a href="#debunking-common-pop-up-myths" class="toc-link">Debunking Common Pop-up Myths</a><a href="#strategies-for-effective-pop-up-implementation" class="toc-link">Strategies for Effective Pop-up Implementation</a><a href="#maximizing-conversions-with-strategic-pop-ups" class="toc-link">Maximizing Conversions with Strategic Pop-ups</a><a href="#best-practices-for-user-friendly-pop-ups" class="toc-link">Best Practices for User-Friendly Pop-ups</a><a href="#the-future-of-pop-ups-value-driven-engagement" class="toc-link">The Future of Pop-ups: Value-Driven Engagement</a><a href="#so-do-pop-ups-still-work" class="toc-link">So, Do Pop-Ups Still Work?</a><a href="#frequently-asked-questions" class="toc-link">Frequently Asked Questions</a></nav>
+      <div class="share" aria-label="Share">
+        <a href="https://twitter.com/intent/tweet?text=Pop-ups%3A%20Are%20They%20Driving%20Leads%20or%20Driving%20Users%20Away%3F&amp;url=https%3A%2F%2Fboramedianetwork.com%2Fblog%2Fpop-ups-are-they-driving-leads-or-driving-users-away%2F">Share on X</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fboramedianetwork.com%2Fblog%2Fpop-ups-are-they-driving-leads-or-driving-users-away%2F">Share on LinkedIn</a>
+        <a href="mailto:?subject=Pop-ups%3A%20Are%20They%20Driving%20Leads%20or%20Driving%20Users%20Away%3F&amp;body=Read%20this%20article%3A%20https%3A//boramedianetwork.com/blog/pop-ups-are-they-driving-leads-or-driving-users-away/">Email</a>
+      </div>
+    </aside>
+
+    <!-- Article -->
+    <article itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="headline" content="Pop-ups: Are They Driving Leads or Driving Users Away?"><meta itemprop="author" content="Bora Media"><meta itemprop="datePublished" content="2026-01-25"><meta itemprop="dateModified" content="2026-01-25"><meta itemprop="image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-4.jpg"><p>You see them everywhere, right? Those little windows that pop up when you’re just trying to read an article or shop online. Pop-ups have been around for ages, and people have strong feelings about them. Some folks think they’re just annoying interruptions, while others see them as a smart way to get deals or sign up for cool stuff. The truth is, pop-ups aren’t inherently good or bad. It all comes down to how they’re used. If done right, they can actually be pretty helpful for both website owners and visitors. This article is going to look at how pop-ups have changed over time and how you can use them without making people want to hit the back button.</p>
+
+
+
+<h3 class="wp-block-heading" id="Key_Takeaways">Key Takeaways</h3>
+
+
+
+<ul class="wp-block-list">
+<li>Pop-ups still work for getting people to sign up for things, engage more, and make purchases, but only if they’re used smartly.</li>
+
+
+
+<li>Common worries about pop-ups, like them being annoying or bad for your website’s search ranking, are mostly not true anymore.</li>
+
+
+
+<li>What makes a pop-up successful really comes down to when it shows up, how it looks, and if it’s relevant to the person seeing it.</li>
+
+
+
+<li>Pop-ups can work well on phones and computers, as long as they’re designed to fit the screen and follow the rules.</li>
+
+
+
+<li>To get the best results, make sure your pop-ups are clear, easy to close, and respect people’s privacy.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="the-evolving-role-of-pop-ups-in-digital-marketing">The Evolving Role of Pop-ups in Digital Marketing</h2>
+
+
+
+<h3 class="wp-block-heading" id="Understanding_the_Purpose_of_Pop-ups">Understanding the Purpose of Pop-ups</h3>
+
+
+
+<p>Pop-ups. You see them everywhere, right? Those little windows that pop up on websites, sometimes when you least expect them. They’ve been around for a while, and honestly, they’ve gotten a pretty mixed reputation. Initially, they were mostly just annoying ads, the kind you couldn’t wait to close. But things have changed a lot since then. Today, pop-ups are way more than just simple advertisements. They’ve become a pretty smart tool for businesses trying to connect with people online. Think of them as a way to grab attention in a really busy digital world. They can show you a special discount just as you’re about to leave a site, or maybe offer you a free guide if you’re interested in a certain topic. <strong>The main idea is to offer something useful at the right moment.</strong></p>
+
+
+
+<h3 class="wp-block-heading" id="Pop-ups_More_Than_Just_Advertisements">Pop-ups: More Than Just Advertisements</h3>
+
+
+
+<p>It’s easy to think of pop-ups as just ads, but that’s not really the whole story anymore. They’ve grown up, so to speak. Now, they can do all sorts of things. For example, they’re great for building up an email list. You might see one offering a free ebook or a checklist if you sign up with your email address. Or, they can help you snag a sale. Imagine seeing a countdown timer for a limited-time deal – that’s a pop-up working hard to get you to buy something <em>now</em>. They can also guide you to important content you might have missed or help reduce the number of people who leave items in their online shopping cart without buying them. It’s all about giving visitors what they need, or what might tempt them, right when they’re most likely to be interested.</p>
+
+
+
+<h3 class="wp-block-heading" id="The_Shift_from_Intrusive_to_Integrated">The Shift from Intrusive to Integrated</h3>
+
+
+
+<p>Remember those old pop-ups that felt like they were attacking your screen? Yeah, most of us don’t miss those. The good news is that the way pop-ups are made and used has changed dramatically. Instead of just being annoying interruptions, they’re becoming more <em>integrated</em> into the website experience. This means they’re designed to look like they belong, not like a foreign object. They’re timed better, so they don’t show up the second you land on a page. They’re also more relevant to what you’re actually looking at or interested in. This shift makes them feel less like an annoyance and more like a helpful nudge. It’s about making them work <em>with</em> the user, not against them, to create a smoother, more helpful visit to the website.</p>
+
+
+
+<h2 class="wp-block-heading" id="debunking-common-pop-up-myths">Debunking Common Pop-up Myths</h2>
+
+
+
+<p>Let’s be honest, the word ‘pop-up’ can sometimes make people groan. We’ve all encountered those annoying, in-your-face windows that seem to appear out of nowhere, right? But here’s the thing: not all pop-ups are created equal, and many of the negative ideas we have about them are just plain wrong. It’s time to clear the air and look at the facts.</p>
+
+
+
+<h3 class="wp-block-heading" id="Are_Pop-ups_Inherently_Annoying">Are Pop-ups Inherently Annoying?</h3>
+
+
+
+<p>This is probably the biggest myth out there. The idea that pop-ups are <em>always</em> annoying is a bit of a stretch. Think about it – when have you actually welcomed an interruption? Probably never. But when a pop-up offers something genuinely useful, like a discount code just as you’re about to buy something, or a chance to sign up for a newsletter with exclusive content, it feels less like an annoyance and more like a helpful nudge. The key isn’t <em>if</em> you use pop-ups, but <em>how</em> you use them. Timing, design, and what you’re offering all play a huge role. A poorly designed pop-up with too much text or a design that clashes with the website can definitely be irritating. But a well-crafted, relevant pop-up? That’s a different story entirely.</p>
+
+
+
+<h3 class="wp-block-heading" id="The_Impact_of_Pop-ups_on_Website_Speed">The Impact of Pop-ups on Website Speed</h3>
+
+
+
+<p>Another common worry is that pop-ups will slow down your website. This used to be more of a concern with older technology, but modern pop-up tools are built differently. Many load separately from your main website content, meaning they don’t usually mess with your site’s loading speed, especially the important bits that users see first. In fact, some pop-ups can even help by keeping your main content cleaner. If you’re worried about this, look for pop-up solutions that are known for being lightweight and load quickly. It’s not the pop-up itself that’s the problem, but how it’s implemented. You can find tools that are optimized for speed, which is good for user experience and <a target="_blank" rel="noreferrer noopener" href="https://colorwhistle.com/website-design-development-myths/">website performance</a>.</p>
+
+
+
+<h3 class="wp-block-heading" id="Pop-ups_and_Mobile_User_Experience">Pop-ups and Mobile User Experience</h3>
+
+
+
+<p>Some folks think pop-ups just don’t work on phones because the screens are so small. Again, this is an outdated idea. When pop-ups are designed with mobile in mind – meaning they’re responsive and don’t cover up everything – they can work really well. Sometimes, a full-screen pop-up on a mobile device can actually grab attention better than on a desktop because there’s less distraction. The trick is making sure they’re easy to see, easy to read, and, most importantly, easy to close on a smaller screen. Google also has guidelines for mobile pop-ups, so sticking to those is important.</p>
+
+
+
+<h3 class="wp-block-heading" id="Pop-ups_and_Search_Engine_Optimization_SEO">Pop-ups and Search Engine Optimization (SEO)</h3>
+
+
+
+<p>This myth is pretty much ancient history. Back in the day, pop-ups might have opened in new browser windows, which search engines didn’t like. But today’s pop-ups are different. They appear over your existing page content and don’t usually cause problems for search engines. As long as your pop-ups are relevant, well-timed, and don’t interfere with users being able to access your content, they shouldn’t hurt your SEO. In fact, by helping you collect leads or promote content, they can indirectly help your site’s overall engagement, which search engines do notice.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>The effectiveness of a pop-up hinges on its thoughtful integration into the user’s journey, not on its mere presence. A pop-up that provides immediate value or solves a user’s problem is far more likely to be welcomed than one that simply interrupts.</p>
+</blockquote>
+
+
+
+<p>Here’s a quick look at what makes a pop-up work well:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Timing:</strong> When does it appear? Triggering it after a user has spent some time on the page or scrolled a certain amount is usually better than showing it the second they land.</li>
+
+
+
+<li><strong>Design:</strong> Does it look good and fit with your site? Clean design, readable text, and a clear call-to-action are key.</li>
+
+
+
+<li><strong>Relevance:</strong> Is the offer actually useful to the person seeing it? A pop-up offering a discount on shoes to someone browsing for electronics probably won’t go over well.</li>
+
+
+
+<li><strong>Ease of Use:</strong> Can users easily close it if they want to? A tiny ‘x’ button or no way to dismiss it is a recipe for frustration.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="strategies-for-effective-pop-up-implementation">Strategies for Effective Pop-up Implementation</h2>
+
+
+
+<p>Okay, so we’ve talked about why pop-ups aren’t the enemy, but how do you actually make them work without annoying everyone? It really comes down to being smart about <em>when</em> and <em>how</em> you show them. Think of it like this: you wouldn’t interrupt someone mid-sentence, right? Same idea applies here.</p>
+
+
+
+<h3 class="wp-block-heading" id="The_Crucial_Role_of_Timing_in_Pop-up_Triggers">The Crucial Role of Timing in Pop-up Triggers</h3>
+
+
+
+<p>This is probably the biggest one. Showing a pop-up the second someone lands on your page? Yeah, that’s a fast track to them hitting the back button. You want to give people a chance to actually look around first. A good rule of thumb is to wait until they’ve shown some interest, like scrolling down a page or spending a certain amount of time there. Maybe 20-30 seconds is a good starting point, or even better, trigger it when they’re about to leave (that’s the ‘exit-intent’ thing).</p>
+
+
+
+<p>Here are some ideas for when to show a pop-up:</p>
+
+
+
+<ul class="wp-block-list">
+<li>After a visitor scrolls 50% down a page.</li>
+
+
+
+<li>When a visitor’s mouse cursor moves towards the top of the browser window (exit intent).</li>
+
+
+
+<li>After a visitor has been inactive on the page for a set period.</li>
+
+
+
+<li>After they’ve clicked on a specific link or button.</li>
+</ul>
+
+
+
+<p><strong>Timing is everything when it comes to making pop-ups feel helpful, not intrusive.</strong></p>
+
+
+
+<h3 class="wp-block-heading" id="Designing_Pop-ups_for_Maximum_Impact">Designing Pop-ups for Maximum Impact</h3>
+
+
+
+<p>Once you’ve got the timing down, the look and feel of your pop-up matter a lot. Nobody wants to see a giant, ugly box that covers up everything. Keep it clean, simple, and make sure it fits with your website’s overall style. Use clear fonts and a button that’s easy to spot and click.</p>
+
+
+
+<p>Think about what you’re asking them to do. Is it a discount? Exclusive content? Make that super clear. A short, punchy headline and a brief explanation usually work best. People aren’t going to read a novel in a pop-up.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>A well-designed pop-up should grab attention without being a roadblock. It needs to look good, be easy to understand, and most importantly, be simple to close.</p>
+</blockquote>
+
+
+
+<h3 class="wp-block-heading" id="Ensuring_Pop-up_Relevance_and_Personalization">Ensuring Pop-up Relevance and Personalization</h3>
+
+
+
+<p>This is where pop-ups really start to shine. If you show someone a pop-up about cat sweaters when they’ve only been looking at dog toys, they’re going to be confused, or worse, annoyed. You need to make sure the pop-up actually relates to what the person is doing or interested in on your site.</p>
+
+
+
+<p>How do you do that? Use the data you have. If someone has a history of looking at certain products, show them a pop-up related to those. If they’re on a specific blog post, offer them related content or a download that fits that topic. Personalization makes the pop-up feel less like an interruption and more like a helpful suggestion. It shows you’re paying attention to their needs.</p>
+
+
+
+<h2 class="wp-block-heading" id="maximizing-conversions-with-strategic-pop-ups">Maximizing Conversions with Strategic Pop-ups</h2>
+
+
+
+<p>Pop-ups, when done right, aren’t just digital noise; they’re powerful tools for turning visitors into customers. It’s all about being smart with how and when you present them. Forget the old days of annoying pop-ups that just got in the way. Today’s pop-ups are designed to be helpful, offering something of value at just the right moment.</p>
+
+
+
+<h3 class="wp-block-heading" id="Leveraging_Pop-ups_for_Lead_Generation">Leveraging Pop-ups for Lead Generation</h3>
+
+
+
+<p>Getting people to sign up for your newsletter or download a guide can be a game-changer for building relationships. The key here is offering something genuinely useful in return for their contact information. Think free checklists, exclusive articles, or even a small discount on their first purchase. The trick is to present this offer when a visitor shows interest, perhaps after they’ve spent some time on your site. You don’t want to scare them off the second they arrive. Waiting a bit, maybe <a target="_blank" rel="noreferrer noopener" href="https://wisepops.com/blog/popup-best-practice">10-50 seconds</a>, before showing your first pop-up can make a big difference in keeping them engaged.</p>
+
+
+
+<h3 class="wp-block-heading" id="Reducing_Cart_Abandonment_with_Targeted_Pop-ups">Reducing Cart Abandonment with Targeted Pop-ups</h3>
+
+
+
+<p>Seeing shoppers leave items in their cart is frustrating, right? Pop-ups can help fix this. Imagine a visitor is about to leave your site with items still in their cart. A well-timed pop-up offering a small discount or free shipping can be just the nudge they need to complete their purchase. These aren’t generic messages; they’re specifically for people who are already interested in buying. It’s about reminding them of the value and making that final step easier.</p>
+
+
+
+<h3 class="wp-block-heading" id="Driving_Sales_Through_Special_Offers_and_Promotions">Driving Sales Through Special Offers and Promotions</h3>
+
+
+
+<p>Pop-ups are also fantastic for announcing sales, limited-time deals, or new product launches. A visually appealing pop-up with a clear call to action can grab attention quickly. You can use countdown timers to create a sense of urgency for flash sales, encouraging immediate action. The design should be clean and match your site’s look, making it feel like a natural part of the experience, not an interruption. Remember, the goal is to inform and entice, not to annoy.</p>
+
+
+
+<p>Here are some ways to make your promotional pop-ups work harder:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Highlight limited-time discounts:</strong> Offer a percentage off or a fixed amount for a short period.</li>
+
+
+
+<li><strong>Promote free shipping:</strong> This is a huge incentive for many online shoppers.</li>
+
+
+
+<li><strong>Announce new arrivals:</strong> Generate excitement for your latest products.</li>
+
+
+
+<li><strong>Bundle offers:</strong> Encourage larger purchases by offering deals on product combinations.</li>
+</ul>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>The most effective pop-ups offer a clear benefit and are easy to act on. They respect the user’s time and provide a reason to engage, rather than just demanding attention. This thoughtful approach builds trust and encourages repeat visits.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="best-practices-for-user-friendly-pop-ups">Best Practices for User-Friendly Pop-ups</h2>
+
+
+
+<figure class="wp-block-image"><img fetchpriority="high" decoding="async" width="1366" height="768" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-4.jpg" alt="Website pop-up causing frustration versus user satisfaction." class="wp-image-56" srcset="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-4.jpg 1366w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-4-300x169.jpg 300w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-4-1024x576.jpg 1024w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-4-768x432.jpg 768w" sizes="(max-width: 1366px) 100vw, 1366px"></figure>
+
+
+
+<p>Okay, so we’ve talked about how pop-ups can be super useful, but let’s be real, nobody likes a pop-up that feels like a brick wall. Making them user-friendly is key if you don’t want people bouncing off your site faster than you can say ‘unsubscribe’. It’s all about being thoughtful and not just throwing something up there to grab attention.</p>
+
+
+
+<h3 class="wp-block-heading" id="Clarity_and_Conciseness_in_Pop-up_Messaging">Clarity and Conciseness in Pop-up Messaging</h3>
+
+
+
+<p>First off, get straight to the point. Nobody has time to read a novel when a little window pops up. Your message needs to be crystal clear about what you want the user to do and, more importantly, what’s in it for them. Think short, punchy sentences. If you’re offering a discount, say “Get 10% Off Your First Order.” If it’s a download, “Download Our Free Guide.” Avoid jargon or overly complicated language. <strong>The goal is instant understanding.</strong></p>
+
+
+
+<h3 class="wp-block-heading" id="Making_Pop-ups_Easy_to_Close">Making Pop-ups Easy to Close</h3>
+
+
+
+<p>This is a big one. A pop-up that’s a pain to close is just plain annoying. Make sure that ‘X’ button is visible, easy to find, and actually works. It shouldn’t be tiny or hidden in a corner. A good rule of thumb is to place it in the top right or top left corner, with enough contrast against the pop-up’s background. If users can’t easily dismiss it, they’re likely to get frustrated and leave. It’s a simple step that makes a huge difference in user experience.</p>
+
+
+
+<h3 class="wp-block-heading" id="Adhering_to_Privacy_Regulations_and_Compliance">Adhering to Privacy Regulations and Compliance</h3>
+
+
+
+<p>When you’re collecting any kind of user data, even just an email address, you absolutely have to play by the rules. Depending on where your visitors are located, this could mean GDPR, CCPA, or other regulations. This isn’t just about avoiding fines; it’s about building trust. Be upfront about what data you’re collecting and why. Providing clear links to your privacy policy and making sure your pop-ups are compliant shows users you respect their privacy. It’s a sign of a reputable <a target="_blank" rel="noreferrer noopener" href="https://www.eleken.co/blog-posts/popup-ui">online business</a>.</p>
+
+
+
+<p>Here’s a quick checklist to keep in mind:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Clear Call to Action:</strong> What do you want them to do?</li>
+
+
+
+<li><strong>Obvious Close Button:</strong> Make it easy to get rid of.</li>
+
+
+
+<li><strong>Value Proposition:</strong> What’s in it for them?</li>
+
+
+
+<li><strong>Privacy Assurance:</strong> Be transparent about data collection.</li>
+
+
+
+<li><strong>Mobile Responsiveness:</strong> Looks good and works on phones.</li>
+</ul>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Remember, a pop-up is a visitor’s first impression of an offer. If that impression is negative because it’s intrusive or confusing, they might not even consider the offer itself. Think of it as a polite invitation, not a demand.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="the-future-of-pop-ups-value-driven-engagement">The Future of Pop-ups: Value-Driven Engagement</h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" width="1366" height="768" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-ae4a01e0-2ff3-4143-ae89-8077a3fa2aa3.jpg" alt="Person reacting to pop-up, then engaging with a better one." class="wp-image-55" srcset="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-ae4a01e0-2ff3-4143-ae89-8077a3fa2aa3.jpg 1366w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-ae4a01e0-2ff3-4143-ae89-8077a3fa2aa3-300x169.jpg 300w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-ae4a01e0-2ff3-4143-ae89-8077a3fa2aa3-1024x576.jpg 1024w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-ae4a01e0-2ff3-4143-ae89-8077a3fa2aa3-768x432.jpg 768w" sizes="(max-width: 1366px) 100vw, 1366px"></figure>
+
+
+
+<p>Pop-ups aren’t just about grabbing attention anymore; they’re shifting towards giving people something useful. Think less “buy now!” and more “here’s a helpful tip.” The goal is to make the user feel like they’re getting a little something extra, not just being interrupted. This means pop-ups are becoming smarter, showing up when they make sense and offering content that actually fits what the user is doing or looking for.</p>
+
+
+
+<h3 class="wp-block-heading" id="Integrating_Pop-ups_Seamlessly_into_User_Journeys">Integrating Pop-ups Seamlessly into User Journeys</h3>
+
+
+
+<p>Forget those pop-ups that just appear out of nowhere. The future is about making them feel like a natural part of the website experience. This could mean a pop-up that appears after someone spends a good amount of time reading an article, offering a related guide. Or maybe it’s a small pop-up in the corner that appears when you’re about to leave a page, suggesting a discount on the item you were just looking at. It’s all about context. The idea is to guide users without making them feel like they’re being pushed.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Contextual Triggers:</strong> Pop-ups should appear based on user actions, not just random timers.</li>
+
+
+
+<li><strong>Flow Integration:</strong> They should feel like a continuation of the user’s current activity.</li>
+
+
+
+<li><strong>Value Proposition:</strong> Always offer something beneficial, like information or a discount.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading" id="Measuring_Pop-up_Performance_and_ROI">Measuring Pop-up Performance and ROI</h3>
+
+
+
+<p>So, how do you know if these new, smarter pop-ups are actually working? It’s not just about how many people click them. We need to look at the bigger picture. Are they helping to build an email list? Are they leading to more sales? Are they annoying people so much that they leave the site? Tracking these things helps us figure out what’s good and what’s not.</p>
+
+
+
+<p>Here’s a quick look at what to track:</p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><tbody><tr><th>Metric</th><th>What it Tells You</th></tr><tr><td>Conversion Rate</td><td>How many people completed the desired action.</td></tr><tr><td>Exit Rate</td><td>How many people left the site after seeing the pop-up.</td></tr><tr><td>Time on Site</td><td>Did the pop-up encourage longer engagement?</td></tr><tr><td>Lead Quality</td><td>Are the leads generated actually interested?</td></tr></tbody></table></figure>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>The real win is when a pop-up feels helpful, not intrusive. It’s about adding a little bit of value at the right moment, making the user experience better overall.</p>
+</blockquote>
+
+
+
+<h3 class="wp-block-heading" id="Adapting_Pop-ups_to_Evolving_User_Preferences">Adapting Pop-ups to Evolving User Preferences</h3>
+
+
+
+<p>People are getting savvier. They know a pop-up when they see one, and they’re quick to close anything that feels like a nuisance. This means we have to keep changing things up. What worked last year might not work today. We need to pay attention to what users are responding to and what they’re ignoring. This might mean trying different designs, different offers, or even different types of pop-ups altogether. It’s a constant learning process to stay relevant and keep users engaged in a positive way.</p>
+
+
+
+<h2 class="wp-block-heading" id="so-do-pop-ups-still-work">So, Do Pop-Ups Still Work?</h2>
+
+
+
+<p>Look, pop-ups have been around for ages, and yeah, sometimes they’re annoying. We’ve all been there, right? But here’s the thing: they’re not inherently bad. It really comes down to how you use them. If you’re just throwing up a bunch of intrusive ads, people will bounce. But if you’re smart about it – offering something useful at the right time, making it easy to close, and keeping it relevant – pop-ups can actually be pretty great. They can help you connect with visitors, share deals, and build your list without making people want to run for the hills. So, instead of ditching them completely, focus on making them work <em>for</em> your audience, not against them.</p>
+
+
+
+<h2 class="wp-block-heading" id="frequently-asked-questions">Frequently Asked Questions</h2>
+
+
+
+<h3 class="wp-block-heading" id="Are_pop-ups_still_a_good_idea_for_websites">Are pop-ups still a good idea for websites?</h3>
+
+
+
+<p>Yes, pop-ups can still be really helpful for websites! They’re like a friendly nudge to let visitors know about cool deals, new stuff, or important info. When used the right way, they can help get more people to sign up for things or buy products, without being annoying.</p>
+
+
+
+<h3 class="wp-block-heading" id="Do_pop-ups_make_websites_slow_or_hard_to_use">Do pop-ups make websites slow or hard to use?</h3>
+
+
+
+<p>Not if they’re made well! Good pop-ups are designed to load quickly and don’t get in the way of you looking at the website. They can even help by showing you something useful right when you need it. It’s all about making them smart and not too much.</p>
+
+
+
+<h3 class="wp-block-heading" id="Are_pop-ups_annoying_for_people_using_phones">Are pop-ups annoying for people using phones?</h3>
+
+
+
+<p>Pop-ups can be tricky on phones, but they don’t have to be annoying. When they’re made to fit small screens nicely and are easy to close, they work great. Sometimes, a pop-up on a phone can even grab your attention better because it takes up more of the screen.</p>
+
+
+
+<h3 class="wp-block-heading" id="Can_pop-ups_hurt_my_websites_ranking_on_Google">Can pop-ups hurt my website’s ranking on Google?</h3>
+
+
+
+<p>That’s an old worry! Nowadays, pop-ups that are well-designed and don’t block the main content are fine for Google. Websites that use them smartly, showing them at the right time and making them easy to get rid of, usually don’t have problems with search engines.</p>
+
+
+
+<h3 class="wp-block-heading" id="How_can_I_make_sure_my_pop-ups_are_helpful_and_not_annoying">How can I make sure my pop-ups are helpful and not annoying?</h3>
+
+
+
+<p>The secret is to be smart about it! Show pop-ups when they make sense, like after someone has looked around for a bit or is about to leave. Make sure the message is clear and offers something good, like a discount or helpful info. And always make sure there’s an easy way to close it!</p>
+
+
+
+<h3 class="wp-block-heading" id="Whats_the_best_way_to_use_pop-ups_to_get_more_customers">What’s the best way to use pop-ups to get more customers?</h3>
+
+
+
+<p>Think about what you want people to do. If you want them to sign up for your email list, offer a free guide. If they’re about to leave without buying, offer a small discount. The key is to offer something valuable that fits what the visitor is doing on your site at that moment.</p>
+</article>
+
+    <!-- Right rail -->
+    <aside class="rail" aria-label="Author and CTA">
+      <div class="author">
+        <div class="row">
+          <img src="/images/author.webp" alt="Author avatar">
+          <div>
+            <strong>Bora Media</strong><br>
+            <span style="opacity:.7">Digital Marketing Team</span>
+          </div>
+        </div>
+        <p>Practical insights and playbooks for measurable business growth.</p>
+      </div>
+      <div class="promo">
+        <h4>Need help putting this into practice?</h4>
+        <p>Let’s turn the strategy into a focused growth plan for your business.</p>
+        <button class="btn" onclick="location.href='/contact'">Book a Strategy Call</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Related -->
+  <section class="related" aria-labelledby="relTitle">
+    <div class="container">
+      <h2 class="title" id="relTitle">Other articles you may like</h2>
+      <div class="grid">
+        <a class="card" href="/blog/the-secret-to-writing-ad-copy-that-actually-converts"><span class="tag">Ad Copy</span><h3>The Secret to Writing Ad Copy That Actually Converts</h3><span class="read">Read article →</span></a><a class="card" href="/blog/the-essential-website-audit-checklist-for-2026"><span class="tag">SEO, AIO &amp; GEO</span><h3>The Essential Website Audit Checklist for 2026</h3><span class="read">Read article →</span></a><a class="card" href="/blog/how-to-use-a-b-testing-to-double-your-conversion-rate"><span class="tag">UI/UX &amp; CRO</span><h3>How to Use A/B Testing to Double Your Conversion Rate</h3><span class="read">Read article →</span></a></div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Ready to turn insight into measurable growth?</h2>
+      <p>We’ll help you apply the right strategy, measurement, and optimization plan to your business.</p>
+      <a class="btn" href="/contact">Schedule Your Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer (consistent) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media" style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+            <a href="https://www.youtube.com/@BoraMediaAgency" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.linkedin.com/company/bora-media-network/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul class="f-links">
+            <li><a href="/blog">ABM</a></li>
+            <li><a href="/blog">LinkedIn Ads</a></li>
+            <li><a href="/blog">Copywriting</a></li>
+            <li><a href="/blog">Google Ads</a></li>
+            <li><a href="/blog">Branding</a></li>
+            <li><a href="/blog">Meta Ads</a></li>
+            <li><a href="/blog">Google Analytics</a></li>
+            <li><a href="/blog">Google Tag Manager</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year" class="current-year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Pop-ups: Are They Driving Leads or Driving Users Away?",
+  "author": {
+    "@type": "Organization",
+    "name": "Bora Media"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bora Media",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.boramedianetwork.com/images/bora-logo.webp"
+    }
+  },
+  "image": "https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-4.jpg",
+  "datePublished": "2026-01-25",
+  "dateModified": "2026-01-25",
+  "articleSection": "UI/UX & CRO, Website & Landing Pages",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://boramedianetwork.com/blog/pop-ups-are-they-driving-leads-or-driving-users-away/"
+  }
+}</script>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{ b.style.transform=''; b.style.opacity=''; }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    // TOC highlight
+    const links = document.querySelectorAll('.toc-link');
+    const headings = [...links].map(a => document.querySelector(a.getAttribute('href')));
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        const id = e.target.getAttribute('id');
+        const link = document.querySelector(`.toc a[href="#${id}"]`);
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.remove('active'));
+          link?.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
+    headings.forEach(h=>h && obs.observe(h));
+  </script>
+
+  <script data-footer-year>
+    document.querySelectorAll('.current-year').forEach((year) => {
+      year.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

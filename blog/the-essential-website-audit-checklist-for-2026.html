@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>The Essential Website Audit Checklist for 2026 | Bora Media</title>
+  <meta name="description" content="Getting your website ready for 2026 means looking at it from all angles. Think of it like getting your car tuned up before a long trip. You wouldn’t just…">
+  <link rel="canonical" href="https://boramedianetwork.com/blog/the-essential-website-audit-checklist-for-2026/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Essential Website Audit Checklist for 2026">
+  <meta property="og:description" content="Getting your website ready for 2026 means looking at it from all angles. Think of it like getting your car tuned up before a long trip. You wouldn’t just…">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://boramedianetwork.com/blog/the-essential-website-audit-checklist-for-2026/">
+  <meta property="og:image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-f43143d6-3dee-4fbb-b2ac-591fd22633eb.jpg">
+  <meta property="article:section" content="SEO, AIO &amp; GEO">
+  <meta property="article:tag" content="SEO, AIO &amp; GEO, UI/UX &amp; CRO, Website &amp; Landing Pages">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Essential Website Audit Checklist for 2026">
+  <meta name="twitter:description" content="Getting your website ready for 2026 means looking at it from all angles. Think of it like getting your car tuned up before a long trip. You wouldn’t just…">
+  <meta name="twitter:image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-f43143d6-3dee-4fbb-b2ac-591fd22633eb.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/images/favicon.webp" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/bora-logo.webp">
+
+  <!-- Helpful -->
+  <meta name="theme-color" content="#071B3A">
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KS8JBDTG');
+  </script>
+  <!-- End GTM -->
+
+  <style>
+    :root{
+      --ink:#061A38; --muted:#F6F8FB; --card:#0E233F;
+      --aqua:#19D0C9; --blue:#3B73FF; --magenta:#FF278E; --orange:#FF8650;
+      --radius:16px; --shadow:0 10px 28px rgba(6,26,56,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{overflow-x:hidden}
+    body{font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Header (consistent) */
+    header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .brand img{width:34px;height:34px;border-radius:8px}
+    nav ul{display:flex;gap:26px;list-style:none}
+    nav a{text-decoration:none;color:var(--ink);padding:8px 0;font-weight:700;position:relative}
+    nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--aqua);transition:width .2s}
+    nav a:hover::after,nav a[aria-current="page"]::after{width:100%}
+    .has-dd{position:relative}
+    .dropdown{position:absolute;top:120%;left:0;min-width:260px;background:#fff;border:1px solid rgba(6,26,56,.10);border-radius:12px;box-shadow:var(--shadow);padding:8px;display:none}
+    .has-dd:hover .dropdown{display:block}
+    .dropdown a{display:block;padding:10px 12px;border-radius:8px}
+    .dropdown a:hover{background:rgba(25,208,201,.1)}
+    .btn{background:var(--blue);color:#fff;border:0;border-radius:12px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(6,26,56,.15)}
+    .hamburger{display:none;width:44px;height:44px;border:0;background:transparent;border-radius:12px}
+    .hamburger .bar{display:block;width:24px;height:2px;margin:5px auto;background:var(--ink);transition:.25s}
+    .mobile-panel{display:none;background:#fff;border-top:1px solid rgba(6,26,56,.08);padding:10px 0}
+    .mobile-panel a{display:block;padding:10px 4px;text-decoration:none;color:var(--ink)}
+    .mobile-sub{padding-left:14px}
+    .show{display:block}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg,#071B3A 0%,#0C254B 100%);color:#fff;padding:96px 0 64px;position:relative;overflow:hidden}
+    .blob,.blob2{position:absolute;border-radius:50%;filter:blur(42px);opacity:.22;animation:float 16s infinite ease-in-out}
+    .blob{width:430px;height:430px;background:radial-gradient(circle at 30% 30%, #24E4DC, transparent 60%);top:-120px;left:-120px}
+    .blob2{width:380px;height:380px;background:radial-gradient(circle at 70% 70%, #FF6A9F, transparent 60%);bottom:-120px;right:-120px;animation-delay:6s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin-bottom:8px;font-weight:900}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;color:rgba(255,255,255,.85);font-weight:600}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25)}
+    .cta-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+
+    /* Layout */
+    .content-wrap{display:grid;grid-template-columns:260px 1fr 320px;gap:22px;padding:40px 0}
+    .toc{position:sticky;top:84px;background:var(--muted);border-radius:14px;padding:14px}
+    .toc h4{font-weight:900;margin-bottom:8px}
+    .toc a{display:block;text-decoration:none;color:var(--ink);padding:8px;border-radius:10px;font-weight:600}
+    .toc a:hover,.toc a.active{background:#fff;border:1px solid rgba(6,26,56,.12)}
+    article h2{font-size:clamp(22px,3vw,28px);line-height:1.25;margin:26px 0 8px;font-weight:900}
+    article h3{font-size:clamp(18px,2.5vw,22px);margin:18px 0 6px;font-weight:900}
+    article p{margin:14px 0}
+    .k{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;background:rgba(6,26,56,.06);padding:2px 6px;border-radius:6px}
+    ul{margin:10px 0 10px 18px}
+    .examples{background:var(--muted);border-radius:14px;padding:14px}
+    .protip{background:rgba(25,208,201,.12);border:1px dashed rgba(25,208,201,.5);padding:12px;border-radius:12px;margin:16px 0}
+    table{width:100%;border-collapse:collapse;margin:16px 0;background:var(--muted);border-radius:12px;overflow:hidden}
+    table th,table td{padding:12px;text-align:left;border-bottom:1px solid rgba(6,26,56,.1)}
+    table th{background:rgba(6,26,56,.05);font-weight:800}
+    table tr:last-child td{border-bottom:0}
+
+    .share{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+    .share a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(6,26,56,.16);padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:800}
+
+    /* Comparison cards */
+    .comparison-grid{display:grid;gap:20px;margin:24px 0}
+    .comparison-card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+    .comparison-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(6,26,56,.1)}
+    .platform-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;font-weight:800;font-size:14px}
+    .tiktok-tag{background:rgba(0,242,234,.1);color:#00F2EA;border:1px solid rgba(0,242,234,.3)}
+    .google-tag{background:rgba(66,133,244,.1);color:#4285F4;border:1px solid rgba(66,133,244,.3)}
+    .winner-tag{background:var(--aqua);color:#fff;padding:4px 8px;border-radius:6px;font-size:12px;font-weight:800}
+
+    /* Data cards */
+    .data-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px;margin:20px 0}
+    .data-card{background:#fff;border:1px solid rgba(6,26,56,.1);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+    .data-title{font-weight:800;margin-bottom:8px;color:var(--ink)}
+    .data-value{font-size:24px;font-weight:900;margin-bottom:4px}
+    .data-label{color:rgba(6,26,56,.7);font-size:14px}
+
+    /* Right rail */
+    .rail{position:sticky;top:84px}
+    .author{background:var(--muted);border-radius:14px;padding:16px}
+    .author .row{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+    .author img{width:42px;height:42px;border-radius:50%}
+    .promo{background:#071B3A;color:#fff;border-radius:14px;padding:16px;margin-top:14px}
+    .promo p{color:rgba(255,255,255,.88)}
+    .promo .btn{margin-top:10px}
+
+    /* Related */
+    .related{background:var(--muted);padding:60px 0}
+    .title{text-align:center;font-weight:900;font-size:clamp(24px,4vw,34px);margin-bottom:8px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .card{background:var(--card);color:#fff;border-radius:16px;padding:16px;text-decoration:none;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
+    .tag{font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:#8AF1EC;font-weight:800}
+    .card h3{margin-top:8px;font-size:20px;line-height:1.3}
+    .read{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:800;border:1px solid rgba(255,255,255,.22);padding:8px 10px;border-radius:10px}
+
+    /* Final CTA + Footer */
+    .final{background:#071B3A;color:#fff;text-align:center;padding:90px 0;border-top:1px solid rgba(255,255,255,.08)}
+    .final h2{font-size:clamp(24px,4vw,40px);margin-bottom:12px}
+    .final p{max-width:760px;margin:0 auto 24px;color:rgba(255,255,255,.88)}
+    .final .btn{display:inline-flex;margin-inline:auto}
+    footer{background:var(--muted)}
+    .f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;align-items:start;padding:50px 0 20px}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900}
+    .footer-logo img{width:28px;height:28px;border-radius:6px}
+    .f-links{list-style:none;margin-top:10px}
+    .f-links li{margin:8px 0}
+    .f-links a{text-decoration:none;color:rgba(6,26,56,.75)}
+    .f-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-top:1px solid rgba(6,26,56,.1)}
+    .social{display:flex;gap:12px;margin-top:14px}
+    .social a{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)}
+
+    /* Responsive polish */
+    @media (max-width:1100px){
+      .content-wrap{grid-template-columns:1fr;}
+      .rail{position:static}
+      .toc{position:static;order:-1;margin-bottom:10px}
+    }
+    @media (max-width:860px){
+      nav{display:none}
+      .hamburger{display:block}
+      .grid{grid-template-columns:1fr 1fr}
+      .container{padding:0 22px}
+      .hero{padding:86px 0 54px}
+      .content-wrap{padding:30px 0}
+      .data-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      .f-cols{grid-template-columns:1fr}
+      .f-bottom{flex-direction:column;text-align:center}
+      .container{padding:0 22px}
+      .hero{padding:80px 0 46px}
+      .content-wrap{padding:26px 0}
+      .share a{white-space:nowrap}
+      .comparison-header{flex-direction:column;gap:12px;align-items:flex-start}
+    }
+  
+
+    /* Imported WordPress article content */
+    article figure{margin:20px 0}
+    article figure img{border-radius:12px}
+    article figcaption,.wp-element-caption{font-size:14px;color:rgba(6,26,56,.7);margin-top:8px;text-align:center}
+    article blockquote{border-left:4px solid var(--aqua);background:var(--muted);padding:14px 18px;margin:18px 0;border-radius:0 12px 12px 0}
+    article ol{margin:10px 0 10px 22px}
+    article li{margin:6px 0}
+    article a{color:#245ee8;text-underline-offset:3px}
+    article .wp-block-table{overflow-x:auto}
+    article .wp-block-separator{border:0;border-top:1px solid rgba(6,26,56,.14);margin:28px 0}
+    article .wp-block-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    article .wp-block-button__link{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:10px 16px;border-radius:12px;font-weight:800}
+</style>
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS8JBDTG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><span>Bora Media</span></a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="has-dd">
+            <a href="/services">Services</a>
+            <div class="dropdown" role="menu">
+              <a href="/services/digital-advertising">Digital Advertising</a>
+              <a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a>
+              <a href="/services/branding-design">Branding &amp; Design</a>
+              <a href="/services/marketing-automation">Marketing Automation</a>
+            </div>
+          </li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn" onclick="location.href='/contact'">Book a Call</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel">
+      <a href="/">Home</a>
+      <a href="/services">Services</a>
+      <div class="mobile-sub">
+        <a href="/services/digital-advertising">— Digital Advertising</a>
+        <a href="/services/websites-landing-pages">— Websites &amp; Landing Pages</a>
+        <a href="/services/branding-design">— Branding &amp; Design</a>
+        <a href="/services/marketing-automation">— Marketing Automation</a>
+      </div>
+      <a href="/case-studies">Case Studies</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
+      <a class="btn alt" href="/contact" style="margin-top:6px">Schedule Your Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="blob2" aria-hidden="true"></div>
+    <div class="container">
+      <h1>The Essential Website Audit Checklist for 2026</h1>
+      <div class="meta">
+        <span class="badge">SEO, AIO &amp; GEO</span><span class="badge">UI/UX &amp; CRO</span><span class="badge">Website &amp; Landing Pages</span><span>•</span><span>January 28, 2026</span><span>•</span><span>16 min read</span></div>
+      <div class="cta-row">
+        <a class="btn" href="/contact">Work With Us</a>
+        <a class="btn alt" href="/resources">Free Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <main class="container content-wrap" id="content">
+    <!-- TOC -->
+    <aside class="toc" aria-label="Table of contents">
+      <h4>Table of Contents</h4>
+      <nav>
+        <a href="#technical-seo-foundations-for-your-website-audit" class="toc-link">Technical SEO Foundations For Your Website Audit</a><a href="#on-page-optimization-essentials-for-a-website-audit" class="toc-link">On-Page Optimization Essentials For A Website Audit</a><a href="#user-experience-and-conversion-path-analysis" class="toc-link">User Experience and Conversion Path Analysis</a><a href="#content-quality-and-ai-readiness-in-your-audit" class="toc-link">Content Quality and AI Readiness In Your Audit</a><a href="#accessibility-compliance-for-a-comprehensive-website-audit" class="toc-link">Accessibility Compliance For A Comprehensive Website Audit</a><a href="#performance-metrics-and-ongoing-website-audit" class="toc-link">Performance Metrics And Ongoing Website Audit</a><a href="#putting-your-audit-to-work" class="toc-link">Putting Your Audit to Work</a><a href="#frequently-asked-questions" class="toc-link">Frequently Asked Questions</a></nav>
+      <div class="share" aria-label="Share">
+        <a href="https://twitter.com/intent/tweet?text=The%20Essential%20Website%20Audit%20Checklist%20for%202026&amp;url=https%3A%2F%2Fboramedianetwork.com%2Fblog%2Fthe-essential-website-audit-checklist-for-2026%2F">Share on X</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fboramedianetwork.com%2Fblog%2Fthe-essential-website-audit-checklist-for-2026%2F">Share on LinkedIn</a>
+        <a href="mailto:?subject=The%20Essential%20Website%20Audit%20Checklist%20for%202026&amp;body=Read%20this%20article%3A%20https%3A//boramedianetwork.com/blog/the-essential-website-audit-checklist-for-2026/">Email</a>
+      </div>
+    </aside>
+
+    <!-- Article -->
+    <article itemscope itemtype="https://schema.org/Article">
+      <meta itemprop="headline" content="The Essential Website Audit Checklist for 2026"><meta itemprop="author" content="Bora Media"><meta itemprop="datePublished" content="2026-01-28"><meta itemprop="dateModified" content="2026-01-28"><meta itemprop="image" content="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-f43143d6-3dee-4fbb-b2ac-591fd22633eb.jpg"><p>Getting your website ready for 2026 means looking at it from all angles. Think of it like getting your car tuned up before a long trip. You wouldn’t just check the oil, right? You’d want to make sure the tires are good, the brakes work, and everything’s running smoothly. A website audit is kind of the same deal. It’s not just about fixing a few broken links; it’s about making sure your whole online presence is strong, easy for people to use, and visible to search engines. This checklist will help you go through your site step-by-step to find what needs attention.</p>
+
+
+
+<h3 class="wp-block-heading" id="Key_Takeaways">Key Takeaways</h3>
+
+
+
+<ul class="wp-block-list">
+<li>A thorough website audit in 2026 needs to cover technical setup, how your pages are written, how easy the site is to use, the quality of your content, and how well it shows up in AI searches.</li>
+
+
+
+<li>Search engines and users look at your site as a whole now. They check how pages connect, if the content is helpful, how fast it loads, and if you really know your stuff in your topic area.</li>
+
+
+
+<li>Checking for crawlability, indexation, and secure HTTPS is the starting point for any good website audit. If search engines can’t find or understand your pages, nothing else matters much.</li>
+
+
+
+<li>User experience is huge. If people can’t find what they need or the site is slow, they’ll leave. Making sure your site is easy to use and guides people to take action is key.</li>
+
+
+
+<li>Websites need to be ready for AI. This means covering topics deeply, linking related content together, and making sure your answers are clear and direct, especially for AI Overviews.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading" id="technical-seo-foundations-for-your-website-audit">Technical SEO Foundations For Your Website Audit</h2>
+
+
+
+<p>Alright, let’s get down to business with the technical side of things. This is where we make sure the engine under the hood of your website is running smoothly. If search engines can’t find, read, or understand your site properly, all the fancy content and design in the world won’t matter much. <strong>Think of this as building a solid house before you start decorating.</strong> We need to make sure the structure is sound.</p>
+
+
+
+<h3 class="wp-block-heading" id="Crawlability_and_Indexation_Review">Crawlability and Indexation Review</h3>
+
+
+
+<p>First things first, can search engines actually get around your site and add your pages to their results? It sounds basic, but you’d be surprised how often this gets messed up. We’re talking about checking things like your <code>robots.txt</code> file to make sure you’re not accidentally blocking important pages. Also, look at your XML sitemap – it’s like a roadmap for search engines. Is it up-to-date and accurate? We also need to check Google Search Console for any indexation issues. If your <em>crawlability</em> is off, your whole SEO strategy is basically on shaky ground.</p>
+
+
+
+<p>Here’s a quick rundown of what to check:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Google Search Console’s index coverage report.</li>
+
+
+
+<li><code>robots.txt</code> file for any unintended blocks.</li>
+
+
+
+<li>XML sitemap for accuracy and completeness.</li>
+
+
+
+<li><code>noindex</code> tags on pages that should be indexed.</li>
+</ul>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>If your indexation rate falls below 90%, it’s a clear sign something’s not right and needs immediate attention. This could mean search engines are missing pages, which directly impacts your visibility.</p>
+</blockquote>
+
+
+
+<h3 class="wp-block-heading" id="Site_Architecture_and_URL_Structure">Site Architecture and URL Structure</h3>
+
+
+
+<p>How your pages are organized and linked together matters a lot. A logical site structure helps both users and search engines understand your content. Messy URLs, like <code>yourwebsite.com/category?id=123&amp;page=abc</code>, are hard to read and don’t tell anyone what the page is about. Aim for clean, descriptive URLs, like <code>yourwebsite.com/services/web-design</code>. This makes it easier for people to share your links and for search engines to figure out what your content is about. A well-organized site also helps spread authority throughout your pages, which is a big win for <a target="_blank" rel="noreferrer noopener" href="https://medium.com/write-a-catalyst/technical-seo-checklist-for-2026-624975caaf0d">your website’s overall health</a>.</p>
+
+
+
+<h3 class="wp-block-heading" id="HTTPS_and_Security_Setup">HTTPS and Security Setup</h3>
+
+
+
+<p>This one’s pretty straightforward these days. Is your website using HTTPS? If not, you’re basically telling visitors and search engines that your site isn’t secure. Browsers will flag it, and Google definitely prefers secure sites. Make sure your SSL certificate is valid and properly installed across your entire domain. It’s not just about security; it’s a ranking factor, plain and simple. No one wants to do business on a site that looks sketchy.</p>
+
+
+
+<h2 class="wp-block-heading" id="on-page-optimization-essentials-for-a-website-audit">On-Page Optimization Essentials For A Website Audit</h2>
+
+
+
+<p>Alright, so you’ve got the technical stuff sorted – your site can be crawled, indexed, and it’s secure. That’s a huge win! But what about what people actually <em>see</em> and <em>interact with</em> on your pages? This is where on-page optimization comes in, and honestly, it’s where a lot of the magic happens for search engines and visitors alike. We’re talking about making sure each page is a star player, perfectly tuned for its audience and purpose.</p>
+
+
+
+<h3 class="wp-block-heading" id="Keyword_Targeting_and_Search_Intent_Alignment">Keyword Targeting and Search Intent Alignment</h3>
+
+
+
+<p>Every page on your site should have a clear purpose, usually tied to a specific <em>keyword</em> or a small group of related terms. Think about what someone is actually looking for when they type something into Google. Are they trying to learn something (informational), find a specific website (navigational), or buy something (transactional)? Your content needs to match that intent. Trying to sell a product on a page that only offers information? That’s a mismatch, and search engines will notice. It’s not about stuffing keywords everywhere; it’s about creating content that genuinely answers the user’s question or fulfills their need.</p>
+
+
+
+<h3 class="wp-block-heading" id="Title_Tags_and_Meta_Descriptions_Effectiveness">Title Tags and Meta Descriptions Effectiveness</h3>
+
+
+
+<p>These are like your page’s billboards on the search results page. Your title tag is the main headline, and the meta description is the little blurb underneath. They need to be compelling enough to make someone click on <em>your</em> link instead of the one above or below it. When auditing these, check a few things:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Does the title tag include the main keyword for the page?</li>
+
+
+
+<li>Is the title tag clear and descriptive, telling users what the page is about?</li>
+
+
+
+<li>Does the meta description provide a good reason to click, maybe highlighting a benefit or unique selling point?</li>
+
+
+
+<li>Are they within the recommended length limits so they don’t get cut off?</li>
+
+
+
+<li>Are there any duplicate title tags or meta descriptions across your site?</li>
+</ul>
+
+
+
+<p>Getting these right can seriously boost your click-through rate (CTR), which is a good sign for search engines.</p>
+
+
+
+<h3 class="wp-block-heading" id="Header_Structure_and_Content_Hierarchy">Header Structure and Content Hierarchy</h3>
+
+
+
+<p>Think of your headers (H1, H2, H3, etc.) as the chapter titles and subheadings in a book. They break up your content, making it easier for people to read and scan. More importantly, they help search engines understand the structure and importance of different sections on your page. Your main topic should be in the H1, with subsequent sections organized logically using H2s and H3s. This structured approach is especially helpful for longer articles or guides, making them more digestible.</p>
+
+
+
+<h3 class="wp-block-heading" id="Image_Optimization_and_Alt_Text">Image Optimization and Alt Text</h3>
+
+
+
+<p>Images can really make a page pop, but if they’re too large, they can slow down your site, and nobody likes a slow website. When auditing images, look at:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>File Sizes:</strong> Are they compressed appropriately without losing too much quality?</li>
+
+
+
+<li><strong>Alt Text:</strong> This is the text that shows up if an image can’t load, and it’s also read by screen readers for visually impaired users. It should accurately describe the image and ideally include relevant keywords if it makes sense naturally. <strong>Good alt text is a win for both users and SEO.</strong></li>
+
+
+
+<li><strong>File Names:</strong> Are they descriptive (e.g., <code>blue-running-shoes.jpg</code> instead of <code>IMG_1234.jpg</code>)?</li>
+
+
+
+<li><strong>Format:</strong> Are you using modern formats like WebP where appropriate?</li>
+</ul>
+
+
+
+<p>Properly optimized images contribute to a better user experience and can even show up in image search results.</p>
+
+
+
+<h2 class="wp-block-heading" id="user-experience-and-conversion-path-analysis">User Experience and Conversion Path Analysis</h2>
+
+
+
+<figure class="wp-block-image"><img fetchpriority="high" decoding="async" width="1366" height="768" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-10.jpg" alt="Website audit checklist with user experience flow analysis." class="wp-image-80" srcset="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-10.jpg 1366w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-10-300x169.jpg 300w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-10-1024x576.jpg 1024w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-10-768x432.jpg 768w" sizes="(max-width: 1366px) 100vw, 1366px"></figure>
+
+
+
+<p>When people visit your site, how do they actually move around? And more importantly, do they do what you want them to do? This section of your audit looks at how easy it is for visitors to use your site and how well it guides them toward taking a specific action, like buying something or signing up for a newsletter.</p>
+
+
+
+<h3 class="wp-block-heading" id="User_Experience_and_Navigation_Flow">User Experience and Navigation Flow</h3>
+
+
+
+<p>First impressions matter, and for websites, that impression is formed in milliseconds. A clunky or confusing site will send people running. We need to check if your site’s layout makes sense and if people can find what they’re looking for without a struggle. Think about how menus are organized – are they clear and logical? Does the flow from one page to the next feel natural, or are there dead ends? For mobile users, this is even more important; everything needs to be easily tappable and readable without zooming or excessive scrolling. A good user experience means people stick around longer and are more likely to come back.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Menu Clarity:</strong> Are navigation menus easy to understand and use on both desktop and mobile?</li>
+
+
+
+<li><strong>Page Flow:</strong> Does the journey from a landing page to a desired outcome feel smooth?</li>
+
+
+
+<li><strong>Mobile Responsiveness:</strong> Does the site adapt well to different screen sizes and orientations?</li>
+
+
+
+<li><strong>Visual Consistency:</strong> Are design elements and interaction patterns consistent across the site?</li>
+</ul>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>A website that feels intuitive and pleasant to use is one that users will trust and return to. If visitors get frustrated, they’ll just go to a competitor’s site. It’s that simple.</p>
+</blockquote>
+
+
+
+<h3 class="wp-block-heading" id="Conversion_Path_Analysis">Conversion Path Analysis</h3>
+
+
+
+<p>This is where we look at the steps a user takes from arriving on your site to completing a goal – a conversion. We need to map out these paths. Are the calls to action (CTAs) clear? Do they tell people exactly what to do and why they should do it? Are forms easy to fill out, especially on mobile? Every page should ideally guide the user toward a next step. If there are too many steps or unnecessary information, people might drop off. We want to make this journey as friction-free as possible. Improving these paths can directly impact your site’s <a target="_blank" rel="noreferrer noopener" href="https://thrillxdesign.com/the-ultimate-website-audit-checklist/">return on investment</a>.</p>
+
+
+
+<h3 class="wp-block-heading" id="Trust_Signals_and_Credibility_Elements">Trust Signals and Credibility Elements</h3>
+
+
+
+<p>People won’t give you their money or personal information if they don’t trust you. This part of the audit checks for elements that build confidence. Think about security badges, especially if you handle payments. Do you have customer reviews or testimonials displayed prominently? These act as social proof, showing potential customers that others have had positive experiences. Make sure any trust signals are visible and legitimate – fake reviews can do more harm than good. Having clear contact information and an ‘About Us’ page also helps a lot.</p>
+
+
+
+<ul class="wp-block-list">
+<li>SSL certificates and security badges</li>
+
+
+
+<li>Customer reviews and testimonials</li>
+
+
+
+<li>Clear contact information and physical address (if applicable)</li>
+
+
+
+<li>Case studies or success stories</li>
+</ul>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><tbody><tr><th>Element Type</th><th>Audit Focus</th></tr><tr><td>Security</td><td>Visible SSL, trust badges, secure checkout</td></tr><tr><td>Social Proof</td><td>Authentic reviews, testimonials, ratings</td></tr><tr><td>Transparency</td><td>Contact info, About Us, clear policies</td></tr><tr><td>Guarantees/Warranties</td><td>Return policies, product guarantees</td></tr></tbody></table></figure>
+
+
+
+<h2 class="wp-block-heading" id="content-quality-and-ai-readiness-in-your-audit">Content Quality and AI Readiness In Your Audit</h2>
+
+
+
+<h3 class="wp-block-heading" id="Content_Quality_and_Information_Gain">Content Quality and Information Gain</h3>
+
+
+
+<p>When you’re looking at your website’s content, it’s not just about stuffing in keywords anymore. Search engines, especially with the rise of AI, want to see that your pages actually <em>help</em> people. Does your content offer something new, or is it just saying the same things everyone else is saying, but with different words? <strong>Think about what unique value you’re providing.</strong> Is it a fresh perspective, deeper data, or a clearer explanation of a complex topic? AI systems are getting pretty good at spotting thin or repetitive content, so making sure yours is genuinely informative is key.</p>
+
+
+
+<h3 class="wp-block-heading" id="AI_Overviews_and_Generative_Search_Readiness">AI Overviews and Generative Search Readiness</h3>
+
+
+
+<p>This is a big one for 2026. Google’s AI Overviews and other generative search features are changing how people find information. To show up well here, your site needs to be seen as an authority. This means:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Answering questions clearly and early:</strong> Get to the point quickly. Users (and AI) don’t want to hunt for answers.</li>
+
+
+
+<li><strong>Covering topics thoroughly:</strong> Don’t just scratch the surface. Show that you know your stuff inside and out.</li>
+
+
+
+<li><strong>Linking related pages logically:</strong> Help AI understand the connections between your content. If you have a blog post about a specific service, link it back to that service page.</li>
+</ul>
+
+
+
+<p>This structured approach helps AI understand your site’s context and authority, making it more likely to be featured.</p>
+
+
+
+<h3 class="wp-block-heading" id="Content_Silos_and_Topical_Authority">Content Silos and Topical Authority</h3>
+
+
+
+<p>Building on the AI readiness point, think about how your content is organized. Instead of having pages scattered all over the place, group related topics together. This creates what we call ‘content silos’ or ‘topical authority’. For example, if you offer web design services, all your blog posts, case studies, and service pages related to web design should link to each other in a sensible way. This structure tells search engines (and AI) that you’re a go-to source for that specific subject. It’s like building a strong, interconnected library on a particular topic, rather than just a random collection of books.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Organizing your content into clear, related groups makes it easier for both users and search engines to understand your site’s focus and depth. This structured approach is becoming increasingly important for visibility in AI-driven search results.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="accessibility-compliance-for-a-comprehensive-website-audit">Accessibility Compliance For A Comprehensive Website Audit</h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" width="1366" height="768" src="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-f43143d6-3dee-4fbb-b2ac-591fd22633eb.jpg" alt="Website audit checklist on a laptop screen with a magnifying glass." class="wp-image-81" srcset="https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-f43143d6-3dee-4fbb-b2ac-591fd22633eb.jpg 1366w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-f43143d6-3dee-4fbb-b2ac-591fd22633eb-300x169.jpg 300w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-f43143d6-3dee-4fbb-b2ac-591fd22633eb-1024x576.jpg 1024w, https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-f43143d6-3dee-4fbb-b2ac-591fd22633eb-768x432.jpg 768w" sizes="(max-width: 1366px) 100vw, 1366px"></figure>
+
+
+
+<p>Making sure your website works for everyone is a big deal. It’s not just about being nice; it’s about making sure people with different abilities can actually use your site. Think about someone who can’t use a mouse or someone who can’t see the screen clearly. If your site isn’t built with them in mind, you’re basically shutting them out.</p>
+
+
+
+<h3 class="wp-block-heading" id="Keyboard_Navigation_and_Screen_Reader_Compatibility">Keyboard Navigation and Screen Reader Compatibility</h3>
+
+
+
+<p>Can someone get around your whole site using just the keyboard? This means tabbing through links, buttons, and form fields, and being able to activate them. It’s a basic check, but so many sites miss it. You’ll want to test this yourself. Start at the top of a page and just hit Tab. Does it go where you expect? Can you hit Enter or Space to make things happen? It’s surprising how often focus gets lost or interactive elements are skipped.</p>
+
+
+
+<p>Then there are screen readers. These tools read out the content on the page for visually impaired users. If your site’s structure is messy or uses non-standard elements, the screen reader can get confused. This means users might not understand what’s on the page or how to interact with it. Testing with a screen reader like NVDA (which is free) or JAWS is a must. <strong>The goal is for the content to be understandable and operable without sight.</strong></p>
+
+
+
+<h3 class="wp-block-heading" id="Color_Contrast_and_Readability_Standards">Color Contrast and Readability Standards</h3>
+
+
+
+<p>This one is pretty straightforward. Is the text easy to read against its background? We’re talking about color contrast ratios. The general rule of thumb, based on WCAG guidelines, is a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text. You can find free online tools to check this. It’s not just about aesthetics; it’s about making sure people with low vision can actually read what you’ve written. A lot of fancy design choices can accidentally make text disappear into the background.</p>
+
+
+
+<h3 class="wp-block-heading" id="Alt_Text_and_ARIA_Labels_Implementation">Alt Text and ARIA Labels Implementation</h3>
+
+
+
+<p>Images on your site need descriptive <em>alt text</em>. This is text that shows up if an image fails to load, but more importantly, screen readers read it aloud. If an image is just decorative, you can leave the alt text blank. But if it conveys information, like a product photo or a chart, the alt text needs to explain what’s in it. Think about what someone would need to know if they couldn’t see the image.</p>
+
+
+
+<p>ARIA (Accessible Rich Internet Applications) labels come into play when standard HTML isn’t enough. They provide extra information to assistive technologies. For example, if you have an icon button with no visible text, an ARIA label can tell the screen reader what that button does (e.g., <code>aria-label="Close menu"</code>). It’s about adding context where the visual design might be unclear to someone using a screen reader.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Documenting your accessibility efforts is also key. This includes having a public accessibility statement on your site and keeping records of audits and fixes. It shows you’re making a good-faith effort and can help with legal compliance.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="performance-metrics-and-ongoing-website-audit">Performance Metrics And Ongoing Website Audit</h2>
+
+
+
+<p>Your website’s speed is a big deal, seriously. If your pages take longer than three seconds to load, you’re probably losing visitors before they even see what you have to offer. It’s like having a shop with a broken door – people just walk away. A single second delay can really cut into your conversions, sometimes by as much as 20%. That’s a lot of potential business just vanishing.</p>
+
+
+
+<h3 class="wp-block-heading" id="Website_Speed_Optimization">Website Speed Optimization</h3>
+
+
+
+<p>Think about how often you click away from a slow-loading page. Most people do. Mobile users, especially, are not patient. They make up a huge chunk of web traffic, and if your site isn’t snappy on their phones, they’re gone. We’re talking about making sure your images aren’t huge files that take ages to download, cleaning up your code so it’s lean, and getting your server to respond quickly. It’s all about making things as fast as possible.</p>
+
+
+
+<h3 class="wp-block-heading" id="Core_Web_Vitals_and_Performance_Metrics">Core Web Vitals and Performance Metrics</h3>
+
+
+
+<p>Google has these things called Core Web Vitals. They’re basically a set of metrics that measure user experience, focusing on loading, interactivity, and visual stability. If these aren’t looking good, it can really hurt your search rankings. You’ll want to keep an eye on:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Largest Contentful Paint (LCP):</strong> How long it takes for the main content on your page to load.</li>
+
+
+
+<li><strong>First Input Delay (FID):</strong> How long it takes for the page to become interactive after a user first clicks or taps something.</li>
+
+
+
+<li><strong>Cumulative Layout Shift (CLS):</strong> How much unexpected shifting of page content happens while it’s loading.</li>
+</ul>
+
+
+
+<p>Checking these regularly using tools like Google PageSpeed Insights is super important. It gives you a clear picture of how users are actually experiencing your site.</p>
+
+
+
+<h3 class="wp-block-heading" id="Ongoing_Monitoring_and_Iteration">Ongoing Monitoring and Iteration</h3>
+
+
+
+<p>Look, a website audit isn’t a one-and-done thing. The internet changes, Google changes its mind about things, and what users want today might be different tomorrow. You really need to make this a regular habit, maybe every quarter. It’s like getting an oil change for your car; you don’t wait until the engine seizes up. By keeping an eye on your performance metrics and user behavior, you can catch problems early and make small adjustments. This continuous improvement is what separates sites that just get by from the ones that really do well.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>A website audit is not a static report; it’s a living document that guides continuous improvement. Regularly revisiting your site’s performance, user experience, and technical health allows you to adapt to the ever-changing digital landscape and maintain a competitive edge.</p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading" id="putting-your-audit-to-work">Putting Your Audit to Work</h2>
+
+
+
+<p>So, you’ve gone through the whole checklist. That’s a big step! Think of this audit not as a final report card, but more like a to-do list for making your website actually work better. It’s easy to get overwhelmed, but the key is to tackle things one by one. Start with the stuff that’s causing the biggest problems, like pages that load super slow or forms that nobody can fill out. Assign tasks to people, set some deadlines, and then actually do the work. Your website is always changing, so this isn’t a one-and-done thing. Keep checking in, maybe every few months, to catch new issues before they become major headaches. Doing this regularly means your site stays strong, keeps visitors happy, and helps your business grow.</p>
+
+
+
+<h2 class="wp-block-heading" id="frequently-asked-questions">Frequently Asked Questions</h2>
+
+
+
+<h3 class="wp-block-heading" id="Why_is_a_website_audit_so_important_for_2026">Why is a website audit so important for 2026?</h3>
+
+
+
+<p>Think of a website audit like a check-up for your car. In 2026, search engines like Google look at your whole website, not just one part. They check if it’s easy for them to find and understand your pages, if your content is helpful, if your site is fast, and if it’s safe for visitors. An audit helps you find and fix problems so your site can be found easily, keep visitors happy, and help you make sales.</p>
+
+
+
+<h3 class="wp-block-heading" id="What_does_%E2%80%98crawlability_and_indexation_mean_in_a_website_audit">What does ‘crawlability and indexation’ mean in a website audit?</h3>
+
+
+
+<p>Search engines have little robots, called crawlers, that visit websites to see what’s there. ‘Crawlability’ means these robots can easily move around your site and find all your important pages. ‘Indexation’ means the search engine puts those pages into its giant library so people can find them when they search. If crawlers can’t find your pages or the search engine doesn’t add them to its library, they won’t show up in search results.</p>
+
+
+
+<h3 class="wp-block-heading" id="How_does_AI_change_website_audits">How does AI change website audits?</h3>
+
+
+
+<p>AI is changing how people search, and websites need to keep up! AI tools can now give quick answers directly in search results. To be ready, your website needs to have really good, deep content on specific topics. It also helps if your pages are linked together in a smart way so AI can understand how much you know about a subject. Audits now check if your site is set up to be understood by these AI search features.</p>
+
+
+
+<h3 class="wp-block-heading" id="What_is_%E2%80%98user_experience_and_why_is_it_checked_in_an_audit">What is ‘user experience’ and why is it checked in an audit?</h3>
+
+
+
+<p>User experience, or UX, is all about how easy and pleasant it is for someone to use your website. Does it make sense where things are? Can people find what they need quickly? Is it easy to click on buttons, especially on a phone? A good UX keeps visitors on your site longer and makes them more likely to do what you want them to, like buying something or signing up. An audit checks if your site is user-friendly.</p>
+
+
+
+<h3 class="wp-block-heading" id="What_are_%E2%80%98Core_Web_Vitals_and_why_do_they_matter">What are ‘Core Web Vitals’ and why do they matter?</h3>
+
+
+
+<p>Core Web Vitals are specific measurements that tell Google how well your website performs for users, especially on mobile. They look at things like how fast your page loads, how quickly it becomes interactive, and if the layout shifts around while it’s loading. If your Core Web Vitals are good, it means your site is fast and stable, which makes visitors happier and can help your site rank higher in search results.</p>
+
+
+
+<h3 class="wp-block-heading" id="How_often_should_I_do_a_website_audit">How often should I do a website audit?</h3>
+
+
+
+<p>The internet changes really fast! What works today might not work next month. It’s a good idea to do a full website audit at least every few months, or quarterly. This way, you can catch new problems early, keep up with changes in search engines, and make sure your website is always working its best for visitors and search engines alike.</p>
+</article>
+
+    <!-- Right rail -->
+    <aside class="rail" aria-label="Author and CTA">
+      <div class="author">
+        <div class="row">
+          <img src="/images/author.webp" alt="Author avatar">
+          <div>
+            <strong>Bora Media</strong><br>
+            <span style="opacity:.7">Digital Marketing Team</span>
+          </div>
+        </div>
+        <p>Practical insights and playbooks for measurable business growth.</p>
+      </div>
+      <div class="promo">
+        <h4>Need help putting this into practice?</h4>
+        <p>Let’s turn the strategy into a focused growth plan for your business.</p>
+        <button class="btn" onclick="location.href='/contact'">Book a Strategy Call</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Related -->
+  <section class="related" aria-labelledby="relTitle">
+    <div class="container">
+      <h2 class="title" id="relTitle">Other articles you may like</h2>
+      <div class="grid">
+        <a class="card" href="/blog/the-secret-to-writing-ad-copy-that-actually-converts"><span class="tag">Ad Copy</span><h3>The Secret to Writing Ad Copy That Actually Converts</h3><span class="read">Read article →</span></a><a class="card" href="/blog/how-to-use-a-b-testing-to-double-your-conversion-rate"><span class="tag">UI/UX &amp; CRO</span><h3>How to Use A/B Testing to Double Your Conversion Rate</h3><span class="read">Read article →</span></a><a class="card" href="/blog/pop-ups-are-they-driving-leads-or-driving-users-away"><span class="tag">UI/UX &amp; CRO</span><h3>Pop-ups: Are They Driving Leads or Driving Users Away?</h3><span class="read">Read article →</span></a></div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="container">
+      <h2>Ready to turn insight into measurable growth?</h2>
+      <p>We’ll help you apply the right strategy, measurement, and optimization plan to your business.</p>
+      <a class="btn" href="/contact">Schedule Your Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer (consistent) -->
+  <footer>
+    <div class="container">
+      <div class="f-cols">
+        <div>
+          <a class="footer-logo" href="/"><img src="/images/bora-logo.webp" alt="Bora Media logo"><strong>Bora Media</strong></a>
+          <p style="margin-top:8px;color:rgba(6,26,56,.8)">Data-driven marketing that delivers measurable growth.</p>
+          <div class="social" aria-label="Social media" style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+            <a href="https://www.youtube.com/@BoraMediaAgency" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M23 12s0-3-1-4a3 3 0 0 0-2-2C18 5 12 5 12 5s-6 0-8 1a3 3 0 0 0-2 2C1 9 1 12 1 12s0 3 1 4a3 3 0 0 0 2 2c2 1 8 1 8 1s6 0 8-1a3 3 0 0 0 2-2c1-1 1-4 1-4ZM10 8l6 4-6 4V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.linkedin.com/company/bora-media-network/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM3 8h2.9v13H3V8Zm6 0h2.8v1.8h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.3 2.3 4.3 5.2V21H17V14.7c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9V8Z" fill="currentColor"/></svg></a>
+            <a href="https://www.instagram.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M16 2H8A6 6 0 0 0 2 8v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Zm4 14a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4Zm-8 1.5A4.5 4.5 0 1 0 7.5 13 4.51 4.51 0 0 0 12 17.5Zm5-9.9a1.1 1.1 0 1 0-1.1-1.1 1.1 1.1 0 0 0 1.1 1.1Z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com/boramedianetwork/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(59,115,255,.18), rgba(25,208,201,.18));border:1px solid rgba(6,26,56,.12)"><svg viewBox="0 0 24 24" fill="none" width="18" height="18" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.2l.8-3H14V9Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="f-links">
+            <li><a href="/services/digital-advertising">Digital Advertising</a></li>
+            <li><a href="/services/websites-landing-pages">Websites &amp; Landing Pages</a></li>
+            <li><a href="/services/branding-design">Branding &amp; Design</a></li>
+            <li><a href="/services/marketing-automation">Marketing Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="f-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Categories</h4>
+          <ul class="f-links">
+            <li><a href="/blog">ABM</a></li>
+            <li><a href="/blog">LinkedIn Ads</a></li>
+            <li><a href="/blog">Copywriting</a></li>
+            <li><a href="/blog">Google Ads</a></li>
+            <li><a href="/blog">Branding</a></li>
+            <li><a href="/blog">Meta Ads</a></li>
+            <li><a href="/blog">Google Analytics</a></li>
+            <li><a href="/blog">Google Tag Manager</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="f-bottom">
+        <p>© <span id="year" class="current-year"></span> Bora Media Network. All rights reserved.</p>
+        <ul class="f-links" style="display:flex;gap:16px;list-style:none">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Essential Website Audit Checklist for 2026",
+  "author": {
+    "@type": "Organization",
+    "name": "Bora Media"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bora Media",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.boramedianetwork.com/images/bora-logo.webp"
+    }
+  },
+  "image": "https://boramedianetwork.com/blog/wp-content/uploads/2026/01/thumbnail-f43143d6-3dee-4fbb-b2ac-591fd22633eb.jpg",
+  "datePublished": "2026-01-28",
+  "dateModified": "2026-01-28",
+  "articleSection": "SEO, AIO & GEO, UI/UX & CRO, Website & Landing Pages",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://boramedianetwork.com/blog/the-essential-website-audit-checklist-for-2026/"
+  }
+}</script>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    burger?.addEventListener('click', () => {
+      const open = panel.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.querySelectorAll('.bar').forEach((b,i)=>{
+        if(open){
+          if(i===0){b.style.transform='translateY(7px) rotate(45deg)'}
+          if(i===1){b.style.opacity='0'}
+          if(i===2){b.style.transform='translateY(-7px) rotate(-45deg)'}
+        }else{ b.style.transform=''; b.style.opacity=''; }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    // TOC highlight
+    const links = document.querySelectorAll('.toc-link');
+    const headings = [...links].map(a => document.querySelector(a.getAttribute('href')));
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        const id = e.target.getAttribute('id');
+        const link = document.querySelector(`.toc a[href="#${id}"]`);
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.remove('active'));
+          link?.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
+    headings.forEach(h=>h && obs.observe(h));
+  </script>
+
+  <script data-footer-year>
+    document.querySelectorAll('.current-year').forEach((year) => {
+      year.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
